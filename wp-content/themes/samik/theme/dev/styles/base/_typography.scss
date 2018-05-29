@@ -1,0 +1,142 @@
+/*--------------------------------------/
+ Text
+--------------------------------------*/
+
+p{
+    font-size: $base-font-size;
+    line-height: 1.5;
+    margin-bottom: .5em;
+
+    b, strong{
+        font-weight: 600;
+    }
+
+    i, em{
+        font-style: italic;
+    }
+}
+
+.small-text, small{
+    font-size: $small-font-size;
+}
+
+.large-text{
+    font-size: $large-font-size;
+}
+
+.primary-text{
+    color: $primary-color;
+}
+
+/*--------------------------------------/
+ Links
+--------------------------------------*/
+
+.link{
+    @include underline();
+    padding-bottom: 0.1em;
+
+    &.-primary{
+        color: $primary-color;
+    }
+}
+
+/*--------------------------------------/
+ Headers
+--------------------------------------*/
+
+.heading {
+    font-family: $heading-family;
+    line-height: 1.1;
+    display: block;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6{
+    margin: 0 0 .5em 0;
+    @extend .heading;
+
+    &.-strong {
+        font-weight: 600;
+    }
+
+    &.-underline{
+        padding-bottom: .3em;
+        border-bottom: 1px solid $gray-light;
+
+        @include media(sm){
+            border-width: 1px;
+        }
+    }
+}
+
+.h1{
+    font-size: em(40);
+
+    @include media(sm){
+        font-size: 35px;
+    }
+
+    @include media(xs){
+        font-size: 32px;
+    }
+}
+
+.h2{
+    font-size: em(35);
+
+    @include media(sm){
+        font-size: 32px;
+    }
+
+    @include media(xs){
+        font-size: 28px;
+    }
+}
+
+.h3{
+    font-size: em(28);
+
+    @include media(sm){
+        font-size: 24px;
+    }
+
+    @include media(xs){
+        font-size: 22px;
+    }
+}
+
+.h4{
+    font-size: em(24);
+
+    @include media(sm){
+        font-size: 22px;
+    }
+
+    @include media(xs){
+        font-size: 20px;
+    }
+}
+
+.h5{
+    font-size: em(20);
+
+    @include media(sm){
+        font-size: 19px;
+    }
+
+    @include media(xs){
+        font-size: 18px;
+    }
+}
+
+.h6{
+    font-size: em(16);
+
+    @include media(sm){
+        font-size: 16px;
+    }
+
+    @include media(xs){
+        font-size: 16px;
+    }
+}

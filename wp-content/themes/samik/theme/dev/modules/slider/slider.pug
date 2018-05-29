@@ -1,0 +1,10 @@
+mixin slider(data)
+    section.slider
+        div.swiper-container(data-js="swiper")
+            div.swiper-wrapper
+                each item in data
+                    div.swiper-slide
+                        +#{item.module}(item.settings)
+            .swiper-pagination.swiper-pagination-white
+            .swiper-button-next.swiper-button-white
+            .swiper-button-prev.swiper-button-white

@@ -1,0 +1,76 @@
+include ../templates/head
+body
+    .wrapper
+        +header
+        main.content
+            +hero({
+                type: 'large',
+                image: 'img/tmp/hero.jpg',
+                heading_class: 'h2',
+                title: 'Large hero block',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
+                btn_text: 'Read more'
+            })
+            br
+            +hero({
+                type: 'medium',
+                image: 'img/tmp/hero-1.jpg',
+                heading_class: 'h3',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>',
+                title: 'Medium hero block'
+            })
+            br
+            +hero({
+                type: 'small',
+                image: 'img/tmp/hero-2.jpg',
+                heading_class: 'h4',
+                title: 'Small hero block'
+            })
+            br
+            +slider([
+                {
+                    module: 'hero',
+                    settings: {
+                        type: 'large',
+                        image: 'img/tmp/hero.jpg',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
+                        title: 'Hero slide 1',
+                        heading_class: 'h2',
+                        btn_text: 'Read more'
+                    }
+                },
+                {
+                    module: 'hero',
+                    settings: {
+                        type: 'large',
+                        image: 'img/tmp/hero-1.jpg',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
+                        title: 'Hero slide 2',
+                        heading_class: 'h2',
+                        btn_text: 'Read more'
+                    }
+                },
+                {
+                    module: 'hero',
+                    settings: {
+                        type: 'large',
+                        image: 'img/tmp/hero-2.jpg',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
+                        title: 'Hero slide 3',
+                        heading_class: 'h2',
+                        btn_text: 'Read more'
+                    }
+                }
+            ])
+        +footer
+include ../templates/scripts
+
+
+
+
+
+
+
+
+
+

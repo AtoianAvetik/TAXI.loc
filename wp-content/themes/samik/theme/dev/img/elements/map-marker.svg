@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="51px" viewBox="0 0 39 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Location Pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-12.5559685%" y1="-13.7889899%" x2="104.42496%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#CFD600" offset="0%"></stop>
+            <stop stop-color="#009A96" offset="100%"></stop>
+        </linearGradient>
+        <path d="M12.9985799,28.4424119 C15.3919883,32.5948917 24.303582,44.6249374 24.303582,44.6249374 C24.6283744,45.0652287 25.1569321,45.0588686 25.4849386,44.6088265 C25.4849386,44.6088265 34.7332238,31.9676848 36.906174,28.3038701 C39.0791242,24.6400553 40.3040368,21.940319 40.7833412,17.8977397 C40.7833412,9.1176605 33.6683979,2 24.8916706,2 C16.1149433,2 9,9.1176605 9,17.8977397 C9.41436623,22.1640248 10.6051715,24.2899321 12.9985799,28.4424119 Z M24.8916706,23.6787359 C28.0832078,23.6787359 30.6704599,21.0904958 30.6704599,17.8977397 C30.6704599,14.7049836 28.0832078,12.1167434 24.8916706,12.1167434 C21.7001334,12.1167434 19.1128813,14.7049836 19.1128813,17.8977397 C19.1128813,21.0904958 21.7001334,23.6787359 24.8916706,23.6787359 Z" id="path-2"></path>
+        <filter x="-15.7%" y="-9.3%" width="131.5%" height="123.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1.5" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Iconen/Pointer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-6.000000, 1.000000)">
+        <g id="Location-Pin">
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            <use stroke="url(#linearGradient-1)" stroke-width="3" xlink:href="#path-2"></use>
+        </g>
+    </g>
+</svg>

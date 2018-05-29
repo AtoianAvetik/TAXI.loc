@@ -1,0 +1,100 @@
+$hamburger: (
+    width: 28px,
+    line-width: 2px,
+    line-margin: 8px,
+    color: $primary-color
+);
+
+.hamburger{
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    font-size: 0;
+    overflow: visible;
+
+
+    &:hover{
+        opacity: 1;
+
+        .hamburger_inner{
+            background: map-get($hamburger, 'color') - #222;
+
+            &:before, &:after{
+                background: map-get($hamburger, 'color') - #222;
+
+            }
+        }
+
+    }
+
+    &.-active{
+        .hamburger_inner{
+            transform: rotate(45deg);
+            transition-delay: 0.18s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+            &:before{
+                top: 0;
+                opacity: 0;
+                transition: top 0.15s ease, opacity 0.15s 0.18s ease;
+            }
+
+            &:after{
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom 0.15s ease, transform 0.15s 0.18s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+        }
+    }
+
+    .hamburger_box{
+        width: map-get($hamburger, 'width');
+        height: 2 * (map-get($hamburger, 'line-width') + map-get($hamburger, 'line-margin'));
+        display: inline-block;
+        position: relative;
+    }
+
+    .hamburger_inner{
+        display: block;
+        top: 50%;
+        width: 100%;
+        height: map-get($hamburger, 'line-width');
+        background-color: map-get($hamburger, 'color');
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+        &:before, &:after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: map-get($hamburger, 'line-width');
+            background-color: map-get($hamburger, 'color');
+            position: absolute;
+            transition-property: transform;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+        }
+
+        &:before{
+            top: - map-get($hamburger, 'line-margin');
+            transition: top 0.15s 0.18s ease, opacity 0.15s ease;
+        }
+
+
+        &:after{
+            bottom: - map-get($hamburger, 'line-margin');
+            transition: bottom 0.15s 0.18s ease, transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+include ../templates/head
+body
+    .wrapper
+        +header
+        main.content
+            .container.m-gap
+                .grid-3.grid-lg-2.grid-sm-1
+                    .cell
+                        +overview({
+                            title: 'Overview block',
+                            heading_class: 'h6',
+                            image: 'img/tmp/photo-6.jpg',
+                            intro: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaqLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit...',
+                            btn_text: 'read more'
+                        })
+                    .cell
+                        +overview({
+                            title: 'Hier komt de titel met een tweede',
+                            heading_class: 'h6',
+                            image: 'img/tmp/photo-7.jpg',
+                            intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit...',
+                            btn_text: 'read more'
+                        })
+                    .cell
+                        +overview({
+                            title: 'Overview block',
+                            heading_class: 'h6',
+                            image: 'img/tmp/photo-1.jpg',
+                            intro: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit...',
+                            btn_text: 'read more'
+                        })
+                div.text-center
+                    button.btn-primary
+                        span More
+        +footer
+include ../templates/scripts
+
+
+
+
+
+
+
+
+
+

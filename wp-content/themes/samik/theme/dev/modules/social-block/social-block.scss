@@ -1,0 +1,38 @@
+.social-block{
+    $f_s: 24px;
+    font-size: $f_s;
+
+    &_list{
+        display: flex;
+        justify-content: center;
+        
+        li{
+            margin-right: 15px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.social-link{
+    transition: background-color .2s linear;
+    display: block;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: lighten($dark, 10%);
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover{
+        background-color: $primary-color;
+    }
+}

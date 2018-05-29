@@ -1,0 +1,6 @@
+mixin accordion(data)
+    ul.accordion(data-module="accordion" data-harmonica="true")
+        each item in data
+            li.accordion_item(data-js="item" class=item.active && '-active')
+                a.accordion_link(href="#" data-js="trigger") !{item.title}
+                .accordion_content(data-js="content" style=item.active && 'display: block') !{item.content}

@@ -1,0 +1,24 @@
+html
+    include ./templates/head
+    body
+        +top-banner-bar
+        .wrapper
+            +header({active: 'rates'})
+            main.content
+                .container
+                    .content-heading.row.no-gutters.m-gap
+                        .heading.h3.primary-text <strong>Тарифы</strong>
+                    div.m-gap(data-module="tabs")
+                        ul.tabs
+                            li.tab.-active
+                                a.tab_link(href="#airport" data-js="trigger") Аэропорт
+                            li.tab
+                                a.tab_link(href="#railway" data-js="trigger") Ж/Д Вокзал
+                        div.tabs-content
+                            .tab-pane.-active(id="airport")
+                                +table()
+                            .tab-pane(id="railway")
+                                +table()
+            +footer
+            +feedback
+    include ./templates/scripts

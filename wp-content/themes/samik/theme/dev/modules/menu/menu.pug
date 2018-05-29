@@ -1,0 +1,16 @@
+mixin menu(data)
+    nav.navbar-nav.menu(data-module=data.mobile && "menu")
+        ul.menu-list
+            each item in data.data
+                li.menu-item(class=item.sub && '-has-sub')
+                    a.menu-item_link(href=item.link class=item.active && '-active') #{item.title}
+                        if item.sub
+                            button.btn-pure.menu-item_carret(data-js="carret")
+                                i.fa.fa-caret-down
+                    if item.sub
+                        +sub-menu(item.sub)
+
+
+
+
+

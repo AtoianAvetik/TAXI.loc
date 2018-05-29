@@ -1,0 +1,53 @@
+html
+    include ./templates/head
+    body
+        +top-banner-bar
+        .wrapper
+            +header({active: 'contacts'})
+            main.content
+                .container
+                    .content-heading.row.no-gutters.m-gap
+                        .heading.h3.primary-text <strong>Контактная</strong> информация
+                    .row.-equal-height.m-gap
+                        .col-6.col-lg-12
+                            .card.-form
+                                .card_header
+                                    .card_title Номера телефонов
+                                .card_content.card_pd
+                                    .card_row
+                                        br
+                                        p
+                                            strong Качество обслуживания: &nbsp;&nbsp;
+                                            span 0123456789
+                                        p
+                                            strong Тех. поддержка: &nbsp;&nbsp;
+                                            span 0123456789
+                                        br
+                        .col-6.col-lg-12
+                            .card.-form
+                                .card_header
+                                    .card_title EMAIL адреса
+                                .card_content.card_pd
+                                    .card_row
+                                        br
+                                        p
+                                            strong Жалобы: &nbsp;&nbsp;
+                                            a.primary-text.link(href="mailto:info@taxi.com") info@taxi.com
+                                        p
+                                            strong Работа с заказами: &nbsp;&nbsp;
+                                            a.primary-text.link(href="mailto:info@taxi.com") info@taxi.com
+                                        br
+                +map
+            +footer
+            +feedback
+    include ./templates/scripts
+
+
+
+
+
+
+
+
+
+

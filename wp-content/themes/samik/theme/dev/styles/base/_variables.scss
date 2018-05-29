@@ -1,0 +1,78 @@
+/*--------------------------------------/
+ Base
+--------------------------------------*/
+$container-width: 1000px;
+$header-height: 70px;
+$header-height-md: 70px;
+$header-height-sm: 70px;
+$margin-gap: 50px;
+$padding-gap: 50px;
+
+/*--------------------------------------/
+ Colors
+--------------------------------------*/
+$light: #fff;
+$dark: #262A2C;
+$gray-light: #f0f0f0;
+$gray: #e1e1e1;
+$gray-dark: #7b7b7b;
+
+$red: #dc4848;
+$green: #24aa62;
+$blue: #246caa;
+$orange: #ff8d46;
+
+$base-color: $dark;
+$primary-color: $blue;
+
+/*--------------------------------------/
+ Gradients
+--------------------------------------*/
+$primary-gradient: linear-gradient(to bottom, #fc564f 30%, $orange 70%);
+
+/*--------------------------------------/
+ Font size
+--------------------------------------*/
+$base-font-size: 16px;
+$small-font-size: 13px;
+$large-font-size: 18px;
+$button-font-size: 16px;
+
+
+/*--------------------------------------/
+ Fonts
+--------------------------------------*/
+$Montserrat: 'Montserrat', sans-serif;
+
+$text-family: $Montserrat;
+$heading-family: $Montserrat;
+
+/*--------------------------------------/
+ Grid
+--------------------------------------*/
+$grid-columns: 12 !default;
+$grid-gutter-width-base: 30px !default;
+$grid-breakpoints: (
+        wide: 0px,
+        xl: 1360px,
+        lg: 1024px,
+        md: 860px,
+        sm: 640px,
+        xs: 480px
+) !default;
+
+$grid-gutter-widths: (
+    wide: $grid-gutter-width-base,
+    xl: $grid-gutter-width-base,
+    lg: $grid-gutter-width-base / 1.5,
+    md: $grid-gutter-width-base / 1.5,
+    sm: $grid-gutter-width-base / 2,
+    xs: $grid-gutter-width-base / 3
+) !default;
+
+/*--------------------------------------/
+ Path
+--------------------------------------*/
+$image-path: '../img';
+$font-path: '../fonts';
+$fa-font-path: '../fonts/FontAwesome'

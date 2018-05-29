@@ -1,0 +1,13 @@
+mixin gallery(photos)
+    .gallery(data-module="gallery")
+        .gallery_inner
+            .swiper-container.gallery_top(data-js="top")
+                .swiper-wrapper
+                    each photo in photos
+                        .swiper-slide(style="background-image: url(" + photo + ")" )
+            .swiper-container.gallery_thumbs(data-js="thumbs")
+                .swiper-wrapper
+                    each photo in photos
+                        .swiper-slide(style="background-image: url(" + photo + ")" )
+
+

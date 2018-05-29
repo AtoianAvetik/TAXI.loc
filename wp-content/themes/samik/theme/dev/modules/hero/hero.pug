@@ -1,0 +1,9 @@
+mixin hero(data)
+    section.hero(class=data.type && '-'+data.type style="background-image: url(" + data.image + ")" )
+        if (data.type !== 'small')
+            .hero-container.container.-narrow
+                h1.hero_heading.h2= data.title
+                if (data.type === 'large')
+                    .hero_content.text-content !{data.content}
+                if (data.btn_text)
+                    a(href="#" class=data.btn_modifier ? data.btn_modifier : 'btn-light' data-anchor=data.btn_anchor).hero_btn= data.btn_text

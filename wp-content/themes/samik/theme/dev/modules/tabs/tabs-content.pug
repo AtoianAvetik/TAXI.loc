@@ -1,0 +1,81 @@
+
+mixin tabs-content()
+    section.ft-content-block
+        h2.h1 Tabs
+        .ft-example
+            +tabs([
+                {
+                    id: 'tab1',
+                    link: 'HTML',
+                    content: '<p>HTML is a computer language devised to allow website creation. These websites can then be viewed by anyone else connected to the Internet. It is relatively easy to learn, with the basics being accessible to most people in one sitting; and quite powerful in what it allows you to create. It is constantly undergoing revision and evolution to meet the demands and requirements of the growing Internet audience under the direction of the » W3C, the organisation charged with designing and maintaining the language.</p>',
+                    active: true
+                },
+                {
+                    id: 'tab2',
+                    link: 'CSS',
+                    content: '<p>Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable.</p><p>CSS handles the look and feel part of a web page. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs,variations in display for different devices and screen sizes as well as a variety of other effects.</p>'
+                },
+                {
+                    id: 'tab3',
+                    link: 'JavaScript',
+                    content: '<p>JavaScript is a programming language used to make web pages interactive. It is what gives a page life, the interactive elements and animation that engage a user. If you have ever used a search box on a home page, checked a live baseball score on a news site or watched a video, JavaScript is probably running through it.</p>'
+                }
+            ])
+        br
+        h5.h5 Pug Mixin declaration
+        div.code-container
+            pre
+                code.pug
+                    | mixin tabs(data)
+                    |     div(data-module="tabs")
+                    |         ul.tabs
+                    |             each item in data
+                    |                 li.tab(class=item.active ? '-active' : '')
+                    |                     a.tab_link(href="#" + item.id data-js="trigger") \#{item.link}
+                    |         div.tabs-content
+                    |             each item in data
+                    |                 .tab-pane(id=item.id class=item.active ? '-active' : '') \!{item.content}
+        br
+        h5.h5 Pug Mixin use
+        div.code-container
+            pre
+                code.pug
+                    | +tabs([
+                    |     {
+                    |         id: 'tab1',
+                    |         link: 'HTML',
+                    |         content: 'text...',
+                    |         active: true
+                    |     },
+                    |     {
+                    |         id: 'tab2',
+                    |         link: 'CSS',
+                    |         content: 'text...',
+                    |     }
+                    | ])
+        br
+        h5.h5 HTML Output
+        div.code-container
+            pre
+                code.pug
+                    | &lt;div data-module="tabs"&gt;
+                    |     &lt;ul class="tabs"&gt;
+                    |         &lt;li class="tab -active"&gt;
+                    |         &lt;a class="tab_link" href="#tab1" data-js="trigger"&gt;HTML&lt;/a&gt;
+                    |         &lt;/li&gt;
+                    |         &lt;li class="tab"&gt;
+                    |         &lt;a class="tab_link" href="#tab2" data-js="trigger"&gt;CSS&lt;/a&gt;
+                    |         &lt;/li&gt;
+                    |     &lt;/ul&gt;
+                    |     &lt;div class="tabs-content"&gt;
+                    |         &lt;div class="tab-pane -active" id="tab1"&gt;
+                    |             &lt;p&gt;...&lt;/p&gt;
+                    |         &lt;/div&gt;
+                    |         &lt;div class="tab-pane" id="tab2"&gt;
+                    |             &lt;p&gt;...&lt;/p&gt;
+                    |         &lt;/div&gt;
+                    |     &lt;/div&gt;
+                    | &lt;/div&gt;
+
+
+

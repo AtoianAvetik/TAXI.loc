@@ -1,0 +1,57 @@
+mixin select()
+    section.ft-content-block
+        h2.h1 Select2
+        p
+            | Select2 is a jQuery-based replacement for select boxes. It supports searching, remote data sets, and pagination of results.
+            |
+            | To get started, you can see the &nbsp;
+            a(href="https://select2.github.io/examples.html").ft-link examples
+            | &nbsp;and&nbsp;
+            a(href="https://select2.github.io/").ft-link documentation
+            | .
+        br
+        h3.h3 Default simple select with search
+        p Select2 can take a regular select box and turn it into this:
+        div.ft-example-row
+            div.ft-example
+                select.ft-select.select-single(data-js="select2")
+                    option 1
+                    option 2
+                    option 3
+            div.code-container
+                pre
+                    code.html
+                        | &lt;select class="select-single" data-js="select-2"&gt;
+                        |     &lt;option&gt;1&lt;/option&gt;
+                        |     &lt;option&gt;2&lt;/option&gt;
+                        |     &lt;option&gt;3&lt;/option&gt;
+                        | &lt;/select&gt;
+            div.code-container
+                pre
+                    code.javascript
+                        | $(document).ready(function(){
+                        |     $('*[data-js=select2]').select2();
+                        |  });
+            br
+        h3.h3 Multiple select boxes
+        div.ft-example-row
+            p Select2 also supports multi-value select boxes. The select below is declared with the <code>multiple</code> attribute.
+            div.ft-example
+                select(multiple="multiple" data-js="select2").ft-select.select-multiple
+                    option 1
+                    option 2
+                    option 3
+            div.code-container
+                pre
+                    code.html
+                        | &lt;select class="select-multiple" multiple="multiple" data-js="select-2"&gt;
+                        |     &lt;option&gt;1&lt;/option&gt;
+                        |     &lt;option&gt;2&lt;/option&gt;
+                        |     &lt;option&gt;3&lt;/option&gt;
+                        | &lt;/select&gt;
+            div.code-container
+                pre
+                    code.javascript
+                        | $(document).ready(function(){
+                        |     $('*[data-js=select2]').select2();
+                        |  });

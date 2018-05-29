@@ -1,0 +1,14 @@
+mixin lane(data)
+    section.lane(class='-' + data.type + ' ' + '-' + data.direction)
+        .container.-full
+            .row
+                .col-6.col-md-12.lane_block.lane-image
+                    if (data.imageType === 'bg')
+                        figure(style=data.image && "background-image: url(" + data.image + ")")
+                    if (data.imageType === 'img')
+                        img(src=data.image alt="")
+                .col-6.col-md-12.lane_block.lane-details
+                    span.lane_title.h2= data.title
+                    .lane_content.text-content !{data.content}
+                    a(href="#" class=data.type === 'light' ? 'btn-dark' : 'btn-light').lane_btn= data.btn_text
+

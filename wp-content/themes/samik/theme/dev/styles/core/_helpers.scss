@@ -1,0 +1,21 @@
+._text-right{
+    text-align: right;
+}
+
+._text-left{
+    text-align: left;
+}
+
+._text-cetnter{
+    text-align: center;
+}
+
+.md-hide {
+    @include media(md) {
+        display: none !important;
+    }
+}
+
+.-hidden {
+    display: none;
+}

@@ -1,0 +1,58 @@
+.contact-box {
+    $f_s: 8px;
+    font-size: $f_s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        transition: .3s all ease;
+        color: $primary-color;
+        font-size: to-em(18px, $f_s);
+
+        &:hover {
+            color: $gray;
+        }
+    }
+
+    dl {
+        display: inline-block;
+        padding-left: to-em(10px, $f_s);;
+        line-height: 1;
+    }
+
+    dt {
+        line-height: 1;
+        font-size: to-em(18px, $f_s);
+    }
+
+    dd {
+        display: block;
+        margin-top: to-em(4px, $f_s);
+    }
+
+    .icon {
+        position: relative;
+        top: 0;
+        height: auto;
+        width: auto;
+        line-height: 1;
+        display: inline-block;
+        color: $primary-color;
+        font-size: to-em(42px, $f_s);
+    }
+
+}
+
+.bg-pattern {
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 30px;
+        width: 100%;
+        background-image: url('../img/bg_pattern.png');
+        background-repeat: repeat-x;
+        background-size: 30px 30px;
+    }
+}

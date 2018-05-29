@@ -1,0 +1,76 @@
+
+.lane{
+    display: flex;
+
+    &.-light{
+        color: red;
+        .lane-details{
+            background: $light;
+            color: $dark;
+        }
+    }
+
+    &.-dark{
+        .lane-details{
+            background-color: $dark;
+            color: $light;
+        }
+    }
+
+    &.-left{
+        .lane-image{
+            order: 0;
+        }
+    }
+
+    &.-right{
+        .lane-image{
+            order: 1;
+        }
+    }
+
+    &_block{
+        min-height: 350px;
+        display: flex;
+        padding: 25px;
+
+        @include media(md){
+            min-height: 300px;
+        }
+
+        @include media(sm){
+            min-height: 250px;
+        }
+
+        @include media(xs){
+            min-height: 200px;
+        }
+    }
+
+    &_content{
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+.lane-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.lane-image{
+
+
+    figure{
+        @include overlay;
+        @include bg;
+    }
+
+    img{
+        max-width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+}

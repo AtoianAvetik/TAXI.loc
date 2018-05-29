@@ -1,0 +1,60 @@
+$hero: (
+    large: 500px,
+    medium: 300px,
+    small: 150px
+);
+
+.hero{
+    display: flex;
+    align-items: center;
+    @include bg;
+    position: relative;
+    color: $light;
+    min-height: map-get($hero, 'medium');
+    padding: 30px 0;
+
+    &:before{
+        content: '';
+        @include overlay();
+        background: rgba($dark, .4);
+    }
+
+    &.-large{
+        .hero-container{
+            min-height: map-get($hero, 'large');
+        }
+    }
+
+    &.-medium{
+        .hero-container{
+            min-height: map-get($hero, 'medium');
+        }
+    }
+
+    &.-small{
+        .hero-container{
+            min-height: map-get($hero, 'small');
+        }
+    }
+
+    .hero-container{
+        min-height: map-get($hero, 'medium');
+        z-index: 1;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+        z-index: 1;
+        position: relative;
+        text-align: center;
+    }
+    
+    &_content{
+        margin: 15px 0;
+    }
+}

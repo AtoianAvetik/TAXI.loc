@@ -1,0 +1,287 @@
+<style>
+@font-face {
+	font-family: 'thinIconFont';
+	src: url('thinIconFont.eot?1524915904');
+	src: url('thinIconFont.eot?1524915904#iefix') format('embedded-opentype'),
+		 url('thinIconFont.svg?1524915904#thinIconFont') format('svg'),
+		 url('thinIconFont.woff?1524915904') format('woff'),
+		 url('thinIconFont.woff?1524915904') format('woff2'),
+		 url('thinIconFont.ttf?1524915904') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.font-demo-table {
+	border: 2px solid #cccccc;
+	border-radius: 4px;
+	border-collapse: collapse;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.font-demo-table thead {
+	border-bottom: 2px solid #cccccc;
+}
+.font-demo-table tr {
+	border-bottom: 1px solid #cecece;
+}
+.font-demo-table tr:last-child {
+	border: none;
+}
+.font-demo-table td, .font-demo-table th {
+	width: 50%;
+	padding: 10px;
+	text-align: center;
+	font-size: 24px;
+	border-right: 1px solid #cecece;
+}
+.font-demo-table td:last-child, .font-demo-table th:last-child {
+	border: none;
+}
+.font-demo-icon:before {
+	display: inline;
+	font-size: 50px;
+	font-family: thinIconFont;
+	font-style: normal;
+}
+
+[data-icon]:before {
+	font-family: "thinIconFont" !important;
+	content: attr(data-icon);
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: "thinIconFont" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*----icon classes-----*/
+
+.icon-.notdef:before { content: "\-1"; }
+.icon-thin-volume-on:before { content: "\E100"; }
+.icon-thin-gift:before { content: "\E101"; }
+.icon-thin-cup:before { content: "\E102"; }
+.icon-thin-folder:before { content: "\E103"; }
+.icon-thin-dublicate:before { content: "\E104"; }
+.icon-thin-tag:before { content: "\E105"; }
+.icon-thin-chat:before { content: "\E106"; }
+.icon-thin-clock:before { content: "\E107"; }
+.icon-thin-microphone:before { content: "\E108"; }
+.icon-thin-map-marker:before { content: "\E109"; }
+.icon-thin-mobile:before { content: "\E10A"; }
+.icon-thin-cloud-charge:before { content: "\E10B"; }
+.icon-thin-resize:before { content: "\E10C"; }
+.icon-thin-cake:before { content: "\E10D"; }
+.icon-thin-case:before { content: "\E10E"; }
+.icon-thin-address:before { content: "\E10F"; }
+.icon-thin-phone-support:before { content: "\E110"; }
+.icon-thin-fullscreen:before { content: "\E111"; }
+.icon-thin-db:before { content: "\E112"; }
+.icon-thin-music:before { content: "\E113"; }
+.icon-thin-network:before { content: "\E114"; }
+.icon-thin-db-network:before { content: "\E115"; }
+.icon-thin-dropbox-upload:before { content: "\E116"; }
+.icon-thin-phone-call:before { content: "\E117"; }
+.icon-thin-briefcase-2:before { content: "\E118"; }
+.icon-thin-card:before { content: "\E119"; }
+.icon-thin-support:before { content: "\E11A"; }
+.icon-thin-pull:before { content: "\E11B"; }
+.icon-thin-desktop:before { content: "\E11C"; }
+.icon-thin-pass:before { content: "\E11D"; }
+.icon-thin-picture:before { content: "\E11E"; }
+.icon-thin-email:before { content: "\E11F"; }
+.icon-thin-push:before { content: "\E120"; }
+.icon-thin-house:before { content: "\E121"; }
+.icon-thin-download:before { content: "\E122"; }
+.icon-thin-storage:before { content: "\E123"; }
+.icon-thin-milk:before { content: "\E124"; }
+.icon-thin-external-right:before { content: "\E125"; }
+.icon-thin-email-open:before { content: "\E126"; }
+.icon-thin-planet:before { content: "\E127"; }
+.icon-thin-pointer:before { content: "\E128"; }
+.icon-thin-email-search:before { content: "\E129"; }
+.icon-thin-external-left:before { content: "\E12A"; }
+.icon-thin-shirt:before { content: "\E12B"; }
+.icon-thin-document-edit:before { content: "\E12C"; }
+.icon-thin-document-delete:before { content: "\E12D"; }
+.icon-thin-money:before { content: "\E12E"; }
+.icon-thin-eye:before { content: "\E12F"; }
+.icon-thin-settings:before { content: "\E130"; }
+.icon-thin-arrow-bottom-right:before { content: "\E131"; }
+.icon-thin-arrow-right:before { content: "\E132"; }
+.icon-thin-flag:before { content: "\E133"; }
+.icon-thin-star:before { content: "\E134"; }
+.icon-thin-calculator:before { content: "\E135"; }
+.icon-thin-safe:before { content: "\E136"; }
+.icon-thin-cart:before { content: "\E137"; }
+.icon-thin-bullhorn:before { content: "\E138"; }
+.icon-thin-anchor:before { content: "\E139"; }
+.icon-thin-globe:before { content: "\E13A"; }
+.icon-thin-statistics:before { content: "\E13B"; }
+.icon-thin-thumb-up:before { content: "\E13C"; }
+.icon-thin-headphones:before { content: "\E13D"; }
+.icon-thin-bell:before { content: "\E13E"; }
+.icon-thin-study:before { content: "\E13F"; }
+.icon-thin-cart-add:before { content: "\E140"; }
+.icon-thin-cart-delete:before { content: "\E141"; }
+.icon-thin-satelite:before { content: "\E142"; }
+.icon-thin-home:before { content: "\E143"; }
+.icon-thin-time:before { content: "\E144"; }
+.icon-thin-book:before { content: "\E145"; }
+.icon-thin-bookmark:before { content: "\E146"; }
+.icon-thin-key:before { content: "\E147"; }
+.icon-thin-timer:before { content: "\E148"; }
+.icon-thin-saturn:before { content: "\E149"; }
+.icon-thin-notes:before { content: "\E14A"; }
+.icon-thin-ambulance:before { content: "\E14B"; }
+.icon-thin-briefcase:before { content: "\E14C"; }
+.icon-thin-layers:before { content: "\E14D"; }
+.icon-thin-delivery:before { content: "\E14E"; }
+.icon-thin-tint:before { content: "\E14F"; }
+.icon-thin-trash:before { content: "\E150"; }
+.icon-thin-lightbulb:before { content: "\E151"; }
+.icon-thin-calendar:before { content: "\E152"; }
+.icon-thin-chart:before { content: "\E153"; }
+.icon-thin-documents:before { content: "\E154"; }
+.icon-thin-checklist:before { content: "\E155"; }
+.icon-thin-camera-web:before { content: "\E156"; }
+.icon-thin-camera:before { content: "\E157"; }
+.icon-thin-lock:before { content: "\E158"; }
+.icon-thin-umbrella:before { content: "\E159"; }
+.icon-thin-user:before { content: "\E15A"; }
+.icon-thin-love:before { content: "\E15B"; }
+.icon-thin-hanger:before { content: "\E15C"; }
+.icon-thin-car:before { content: "\E15D"; }
+.icon-thin-cloth:before { content: "\E15E"; }
+.icon-thin-box:before { content: "\E15F"; }
+.icon-thin-attachment:before { content: "\E160"; }
+.icon-thin-cd:before { content: "\E161"; }
+.icon-thin-love-broken:before { content: "\E162"; }
+.icon-thin-volume-off:before { content: "\E163"; }
+</style>
+<table width='100%' class="font-demo-table" border="1">
+	<thead>
+		<tr>
+			<th>Class</th>
+			<th>Unicode</th>
+			<th>Icon</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td>.icon-.notdef</td><td>\-1</td><td><i class="font-demo-icon icon-.notdef"></i></td></tr>
+		<tr><td>.icon-thin-volume-on</td><td>\E100</td><td><i class="font-demo-icon icon-thin-volume-on"></i></td></tr>
+		<tr><td>.icon-thin-gift</td><td>\E101</td><td><i class="font-demo-icon icon-thin-gift"></i></td></tr>
+		<tr><td>.icon-thin-cup</td><td>\E102</td><td><i class="font-demo-icon icon-thin-cup"></i></td></tr>
+		<tr><td>.icon-thin-folder</td><td>\E103</td><td><i class="font-demo-icon icon-thin-folder"></i></td></tr>
+		<tr><td>.icon-thin-dublicate</td><td>\E104</td><td><i class="font-demo-icon icon-thin-dublicate"></i></td></tr>
+		<tr><td>.icon-thin-tag</td><td>\E105</td><td><i class="font-demo-icon icon-thin-tag"></i></td></tr>
+		<tr><td>.icon-thin-chat</td><td>\E106</td><td><i class="font-demo-icon icon-thin-chat"></i></td></tr>
+		<tr><td>.icon-thin-clock</td><td>\E107</td><td><i class="font-demo-icon icon-thin-clock"></i></td></tr>
+		<tr><td>.icon-thin-microphone</td><td>\E108</td><td><i class="font-demo-icon icon-thin-microphone"></i></td></tr>
+		<tr><td>.icon-thin-map-marker</td><td>\E109</td><td><i class="font-demo-icon icon-thin-map-marker"></i></td></tr>
+		<tr><td>.icon-thin-mobile</td><td>\E10A</td><td><i class="font-demo-icon icon-thin-mobile"></i></td></tr>
+		<tr><td>.icon-thin-cloud-charge</td><td>\E10B</td><td><i class="font-demo-icon icon-thin-cloud-charge"></i></td></tr>
+		<tr><td>.icon-thin-resize</td><td>\E10C</td><td><i class="font-demo-icon icon-thin-resize"></i></td></tr>
+		<tr><td>.icon-thin-cake</td><td>\E10D</td><td><i class="font-demo-icon icon-thin-cake"></i></td></tr>
+		<tr><td>.icon-thin-case</td><td>\E10E</td><td><i class="font-demo-icon icon-thin-case"></i></td></tr>
+		<tr><td>.icon-thin-address</td><td>\E10F</td><td><i class="font-demo-icon icon-thin-address"></i></td></tr>
+		<tr><td>.icon-thin-phone-support</td><td>\E110</td><td><i class="font-demo-icon icon-thin-phone-support"></i></td></tr>
+		<tr><td>.icon-thin-fullscreen</td><td>\E111</td><td><i class="font-demo-icon icon-thin-fullscreen"></i></td></tr>
+		<tr><td>.icon-thin-db</td><td>\E112</td><td><i class="font-demo-icon icon-thin-db"></i></td></tr>
+		<tr><td>.icon-thin-music</td><td>\E113</td><td><i class="font-demo-icon icon-thin-music"></i></td></tr>
+		<tr><td>.icon-thin-network</td><td>\E114</td><td><i class="font-demo-icon icon-thin-network"></i></td></tr>
+		<tr><td>.icon-thin-db-network</td><td>\E115</td><td><i class="font-demo-icon icon-thin-db-network"></i></td></tr>
+		<tr><td>.icon-thin-dropbox-upload</td><td>\E116</td><td><i class="font-demo-icon icon-thin-dropbox-upload"></i></td></tr>
+		<tr><td>.icon-thin-phone-call</td><td>\E117</td><td><i class="font-demo-icon icon-thin-phone-call"></i></td></tr>
+		<tr><td>.icon-thin-briefcase-2</td><td>\E118</td><td><i class="font-demo-icon icon-thin-briefcase-2"></i></td></tr>
+		<tr><td>.icon-thin-card</td><td>\E119</td><td><i class="font-demo-icon icon-thin-card"></i></td></tr>
+		<tr><td>.icon-thin-support</td><td>\E11A</td><td><i class="font-demo-icon icon-thin-support"></i></td></tr>
+		<tr><td>.icon-thin-pull</td><td>\E11B</td><td><i class="font-demo-icon icon-thin-pull"></i></td></tr>
+		<tr><td>.icon-thin-desktop</td><td>\E11C</td><td><i class="font-demo-icon icon-thin-desktop"></i></td></tr>
+		<tr><td>.icon-thin-pass</td><td>\E11D</td><td><i class="font-demo-icon icon-thin-pass"></i></td></tr>
+		<tr><td>.icon-thin-picture</td><td>\E11E</td><td><i class="font-demo-icon icon-thin-picture"></i></td></tr>
+		<tr><td>.icon-thin-email</td><td>\E11F</td><td><i class="font-demo-icon icon-thin-email"></i></td></tr>
+		<tr><td>.icon-thin-push</td><td>\E120</td><td><i class="font-demo-icon icon-thin-push"></i></td></tr>
+		<tr><td>.icon-thin-house</td><td>\E121</td><td><i class="font-demo-icon icon-thin-house"></i></td></tr>
+		<tr><td>.icon-thin-download</td><td>\E122</td><td><i class="font-demo-icon icon-thin-download"></i></td></tr>
+		<tr><td>.icon-thin-storage</td><td>\E123</td><td><i class="font-demo-icon icon-thin-storage"></i></td></tr>
+		<tr><td>.icon-thin-milk</td><td>\E124</td><td><i class="font-demo-icon icon-thin-milk"></i></td></tr>
+		<tr><td>.icon-thin-external-right</td><td>\E125</td><td><i class="font-demo-icon icon-thin-external-right"></i></td></tr>
+		<tr><td>.icon-thin-email-open</td><td>\E126</td><td><i class="font-demo-icon icon-thin-email-open"></i></td></tr>
+		<tr><td>.icon-thin-planet</td><td>\E127</td><td><i class="font-demo-icon icon-thin-planet"></i></td></tr>
+		<tr><td>.icon-thin-pointer</td><td>\E128</td><td><i class="font-demo-icon icon-thin-pointer"></i></td></tr>
+		<tr><td>.icon-thin-email-search</td><td>\E129</td><td><i class="font-demo-icon icon-thin-email-search"></i></td></tr>
+		<tr><td>.icon-thin-external-left</td><td>\E12A</td><td><i class="font-demo-icon icon-thin-external-left"></i></td></tr>
+		<tr><td>.icon-thin-shirt</td><td>\E12B</td><td><i class="font-demo-icon icon-thin-shirt"></i></td></tr>
+		<tr><td>.icon-thin-document-edit</td><td>\E12C</td><td><i class="font-demo-icon icon-thin-document-edit"></i></td></tr>
+		<tr><td>.icon-thin-document-delete</td><td>\E12D</td><td><i class="font-demo-icon icon-thin-document-delete"></i></td></tr>
+		<tr><td>.icon-thin-money</td><td>\E12E</td><td><i class="font-demo-icon icon-thin-money"></i></td></tr>
+		<tr><td>.icon-thin-eye</td><td>\E12F</td><td><i class="font-demo-icon icon-thin-eye"></i></td></tr>
+		<tr><td>.icon-thin-settings</td><td>\E130</td><td><i class="font-demo-icon icon-thin-settings"></i></td></tr>
+		<tr><td>.icon-thin-arrow-bottom-right</td><td>\E131</td><td><i class="font-demo-icon icon-thin-arrow-bottom-right"></i></td></tr>
+		<tr><td>.icon-thin-arrow-right</td><td>\E132</td><td><i class="font-demo-icon icon-thin-arrow-right"></i></td></tr>
+		<tr><td>.icon-thin-flag</td><td>\E133</td><td><i class="font-demo-icon icon-thin-flag"></i></td></tr>
+		<tr><td>.icon-thin-star</td><td>\E134</td><td><i class="font-demo-icon icon-thin-star"></i></td></tr>
+		<tr><td>.icon-thin-calculator</td><td>\E135</td><td><i class="font-demo-icon icon-thin-calculator"></i></td></tr>
+		<tr><td>.icon-thin-safe</td><td>\E136</td><td><i class="font-demo-icon icon-thin-safe"></i></td></tr>
+		<tr><td>.icon-thin-cart</td><td>\E137</td><td><i class="font-demo-icon icon-thin-cart"></i></td></tr>
+		<tr><td>.icon-thin-bullhorn</td><td>\E138</td><td><i class="font-demo-icon icon-thin-bullhorn"></i></td></tr>
+		<tr><td>.icon-thin-anchor</td><td>\E139</td><td><i class="font-demo-icon icon-thin-anchor"></i></td></tr>
+		<tr><td>.icon-thin-globe</td><td>\E13A</td><td><i class="font-demo-icon icon-thin-globe"></i></td></tr>
+		<tr><td>.icon-thin-statistics</td><td>\E13B</td><td><i class="font-demo-icon icon-thin-statistics"></i></td></tr>
+		<tr><td>.icon-thin-thumb-up</td><td>\E13C</td><td><i class="font-demo-icon icon-thin-thumb-up"></i></td></tr>
+		<tr><td>.icon-thin-headphones</td><td>\E13D</td><td><i class="font-demo-icon icon-thin-headphones"></i></td></tr>
+		<tr><td>.icon-thin-bell</td><td>\E13E</td><td><i class="font-demo-icon icon-thin-bell"></i></td></tr>
+		<tr><td>.icon-thin-study</td><td>\E13F</td><td><i class="font-demo-icon icon-thin-study"></i></td></tr>
+		<tr><td>.icon-thin-cart-add</td><td>\E140</td><td><i class="font-demo-icon icon-thin-cart-add"></i></td></tr>
+		<tr><td>.icon-thin-cart-delete</td><td>\E141</td><td><i class="font-demo-icon icon-thin-cart-delete"></i></td></tr>
+		<tr><td>.icon-thin-satelite</td><td>\E142</td><td><i class="font-demo-icon icon-thin-satelite"></i></td></tr>
+		<tr><td>.icon-thin-home</td><td>\E143</td><td><i class="font-demo-icon icon-thin-home"></i></td></tr>
+		<tr><td>.icon-thin-time</td><td>\E144</td><td><i class="font-demo-icon icon-thin-time"></i></td></tr>
+		<tr><td>.icon-thin-book</td><td>\E145</td><td><i class="font-demo-icon icon-thin-book"></i></td></tr>
+		<tr><td>.icon-thin-bookmark</td><td>\E146</td><td><i class="font-demo-icon icon-thin-bookmark"></i></td></tr>
+		<tr><td>.icon-thin-key</td><td>\E147</td><td><i class="font-demo-icon icon-thin-key"></i></td></tr>
+		<tr><td>.icon-thin-timer</td><td>\E148</td><td><i class="font-demo-icon icon-thin-timer"></i></td></tr>
+		<tr><td>.icon-thin-saturn</td><td>\E149</td><td><i class="font-demo-icon icon-thin-saturn"></i></td></tr>
+		<tr><td>.icon-thin-notes</td><td>\E14A</td><td><i class="font-demo-icon icon-thin-notes"></i></td></tr>
+		<tr><td>.icon-thin-ambulance</td><td>\E14B</td><td><i class="font-demo-icon icon-thin-ambulance"></i></td></tr>
+		<tr><td>.icon-thin-briefcase</td><td>\E14C</td><td><i class="font-demo-icon icon-thin-briefcase"></i></td></tr>
+		<tr><td>.icon-thin-layers</td><td>\E14D</td><td><i class="font-demo-icon icon-thin-layers"></i></td></tr>
+		<tr><td>.icon-thin-delivery</td><td>\E14E</td><td><i class="font-demo-icon icon-thin-delivery"></i></td></tr>
+		<tr><td>.icon-thin-tint</td><td>\E14F</td><td><i class="font-demo-icon icon-thin-tint"></i></td></tr>
+		<tr><td>.icon-thin-trash</td><td>\E150</td><td><i class="font-demo-icon icon-thin-trash"></i></td></tr>
+		<tr><td>.icon-thin-lightbulb</td><td>\E151</td><td><i class="font-demo-icon icon-thin-lightbulb"></i></td></tr>
+		<tr><td>.icon-thin-calendar</td><td>\E152</td><td><i class="font-demo-icon icon-thin-calendar"></i></td></tr>
+		<tr><td>.icon-thin-chart</td><td>\E153</td><td><i class="font-demo-icon icon-thin-chart"></i></td></tr>
+		<tr><td>.icon-thin-documents</td><td>\E154</td><td><i class="font-demo-icon icon-thin-documents"></i></td></tr>
+		<tr><td>.icon-thin-checklist</td><td>\E155</td><td><i class="font-demo-icon icon-thin-checklist"></i></td></tr>
+		<tr><td>.icon-thin-camera-web</td><td>\E156</td><td><i class="font-demo-icon icon-thin-camera-web"></i></td></tr>
+		<tr><td>.icon-thin-camera</td><td>\E157</td><td><i class="font-demo-icon icon-thin-camera"></i></td></tr>
+		<tr><td>.icon-thin-lock</td><td>\E158</td><td><i class="font-demo-icon icon-thin-lock"></i></td></tr>
+		<tr><td>.icon-thin-umbrella</td><td>\E159</td><td><i class="font-demo-icon icon-thin-umbrella"></i></td></tr>
+		<tr><td>.icon-thin-user</td><td>\E15A</td><td><i class="font-demo-icon icon-thin-user"></i></td></tr>
+		<tr><td>.icon-thin-love</td><td>\E15B</td><td><i class="font-demo-icon icon-thin-love"></i></td></tr>
+		<tr><td>.icon-thin-hanger</td><td>\E15C</td><td><i class="font-demo-icon icon-thin-hanger"></i></td></tr>
+		<tr><td>.icon-thin-car</td><td>\E15D</td><td><i class="font-demo-icon icon-thin-car"></i></td></tr>
+		<tr><td>.icon-thin-cloth</td><td>\E15E</td><td><i class="font-demo-icon icon-thin-cloth"></i></td></tr>
+		<tr><td>.icon-thin-box</td><td>\E15F</td><td><i class="font-demo-icon icon-thin-box"></i></td></tr>
+		<tr><td>.icon-thin-attachment</td><td>\E160</td><td><i class="font-demo-icon icon-thin-attachment"></i></td></tr>
+		<tr><td>.icon-thin-cd</td><td>\E161</td><td><i class="font-demo-icon icon-thin-cd"></i></td></tr>
+		<tr><td>.icon-thin-love-broken</td><td>\E162</td><td><i class="font-demo-icon icon-thin-love-broken"></i></td></tr>
+		<tr><td>.icon-thin-volume-off</td><td>\E163</td><td><i class="font-demo-icon icon-thin-volume-off"></i></td></tr>
+	</tbody>
+</table>

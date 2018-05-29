@@ -1,0 +1,39 @@
+.footer{
+    background: $dark;
+    color: $light;
+
+    &_main {
+        padding: 30px 15px;
+        margin-bottom: -20px;
+        overflow: hidden;
+    }
+
+    &_block{
+        margin-bottom: 20px;
+    }
+
+    &_bottom {
+        text-align: center;
+        padding: 15px 10px;
+        background: darken($dark, 3%);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .contact-box {
+        i {
+            color: $light;
+        }
+    }
+
+    .logo-label {
+        color: $light;
+    }
+
+    .logo-sub-label {
+        opacity: 0.85;
+    }
+}
+

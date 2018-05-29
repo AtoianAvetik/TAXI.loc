@@ -1,0 +1,83 @@
+include ../templates/head
+body
+    .wrapper
+        +header
+        main.content
+            .container
+                section.row
+                    .col-6.col-md-12.m-gap.flex-box
+                        +card({
+                            type: 'frame',
+                            title: 'Frame card block with image',
+                            heading_class: 'h4',
+                            img: 'img/tmp/mac.png',
+                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                            btn_text: 'Read more'
+                        })
+                    .col-6.col-md-12.m-gap.flex-box
+                        +card({
+                            type: 'frame',
+                            title: 'Frame card block with image',
+                            heading_class: 'h4',
+                            img: 'img/tmp/mac.png',
+                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                            btn_text: 'Read more'
+                        })
+            .container.-full
+                section.row
+                    .col-4.col-md-12.m-gap
+                        +card({
+                            type: 'frame',
+                            title: 'Frame card block',
+                            bg_image: 'img/tmp/photo-3.jpg',
+                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                            btn_text: 'Read more'
+                        })
+                    .col-4.col-md-12.m-gap
+                        +card({
+                            type: 'frame',
+                            bg_color: '#d4efff',
+                            title: 'Frame card block',
+                            bg_image: 'img/tmp/photo-4.jpg',
+                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                            btn_text: 'Read more'
+                        })
+                    .col-4.col-md-12.m-gap
+                        +card({
+                            type: 'frame',
+                            bg_color: '#d3f3e9',
+                            title: 'Frame card block',
+                            bg_image: 'img/tmp/photo-5.jpg',
+                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                            btn_text: 'Read more'
+                        })
+            .container
+                section.row
+                    .col-6.col-md-12.m-gap
+                        +card({
+                            type: 'solid',
+                            title: 'Solid card block',
+                            bg_image: 'img/tmp/photo-8.jpg',
+                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                            btn_text: 'Read more'
+                        })
+                    .col-6.col-md-12.m-gap
+                        +card({
+                            type: 'solid',
+                            title: 'Solid card block',
+                            bg_image: 'img/tmp/photo-9.jpg',
+                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                            btn_text: 'Read more'
+                        })
+        +footer
+include ../templates/scripts
+
+
+
+
+
+
+
+
+
+

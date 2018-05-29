@@ -1,0 +1,12 @@
+html
+    include ./templates/head
+    body
+        +top-banner-bar
+        .wrapper
+            +header({active: 'autopark'})
+            main.content
+                .container.m-gap
+
+            +footer
+            +feedback
+    include ./templates/scripts

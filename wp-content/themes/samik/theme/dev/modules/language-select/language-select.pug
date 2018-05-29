@@ -1,0 +1,13 @@
+mixin language-select(data)
+    - var defaultItem = data[0];
+    .language-select(data-module="langugeSelect")
+        button.btn-pure.language-select_btn(data-js="btn")
+            img.language-select_flag(src=defaultItem.flag alt="")
+            span.language-select_text= defaultItem.text
+            i.fa.fa-caret-down.language-select_caret
+        ul.language-select_list
+            each item in data
+                li
+                    a(href="/").language-select_option
+                        img.language-select_flag(src=item.flag alt="")
+                        span.language-select_text= item.text

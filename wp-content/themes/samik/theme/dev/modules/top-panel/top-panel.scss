@@ -1,0 +1,8 @@
+.top-panel {
+    background: $blue;
+    color: $light;
+
+    > {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,32 @@
+body.-sitemap {
+    background-color: $blue;
+}
+
+.sitemap {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    color: $light;
+
+    ul {
+        margin-top: 50px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+
+        li {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        a {
+            font-size: em(24);
+
+            @include underline-hover(1px, $light);
+        }
+    }
+}

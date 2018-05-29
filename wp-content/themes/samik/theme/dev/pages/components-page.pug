@@ -1,0 +1,100 @@
+include ../templates/head
+body
+    .wrapper
+        +header
+        main.content
+            .container.-narrow
+                section.m-gap
+                    h2.h3.-underline Anchor link
+                    +anchor-link
+                section.m-gap
+                    h2.h3.-underline Accordion
+                    +accordion([
+                        {
+                            title: 'Angular',
+                            content: '<p>Angular comes with a long list of features that enable building everything, ranging from web to desktop and mobile. Framework is built with TypeScript from Microsoft with an eye to making JavaScript more agile and attractive for large enterprises. ng2 features a component-based architecture, improved DI (dependency injection), efficient logging service, inter-component communications and more.</p>',
+                            active: true
+                        },
+                        {
+                            title: 'React',
+                            content: '<p>It is rightly considered the fastest growing JS framework: as of today, there are about 1,000 contributors on Github. In MVC (Model-View-Controller) pattern React.js acts as “V” and can be smoothly integrated with any architecture. Due to the usage of virtual DOM it provides a great performance boost, comparing to Angular 1.x. In addition to that, React components can be created and re-used among applications or even transferred for public use.</p>'
+                        },
+                        {
+                            title: 'VueJS',
+                            content: '<p>Vue 2.0 was also introduced in 2016 and it took the best from Ember, React and Angular, putting all that into a handy package. It is proved to be faster and leaner, comparing to React and Angular 2.0.</p> <p>Going deeper, Vue.js offers two-way data binding (seen in AngularJS), server-side rendering (like in Angular2 and ReactJS), Vue-cli (scaffolding tool for quick start) and optional JSX support. Its founder states that Vue 2 is one of the fastest frameworks all in all.</p>'
+                        },
+                        {
+                            title: 'Ember',
+                            content: '<p>Back in 2015 Ember was called the best javascript framework for web application, leaving behind React and AngularJS. Today it boasts a huge online community, regular updates and wide appliance of JavaScript best practices to guarantee ultimate experience right out of the box.</p>'
+                        },
+                        {
+                            title: 'Backbone.js',
+                            content: '<p>Backbone supplies structure to JavaScript-heavy applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing application over a RESTful JSON interface.</p>'
+                        }
+                    ])
+
+
+                section.m-gap
+                    h2.h3.-underline Tabs
+                    +tabs([
+                        {
+                            id: 'tab1',
+                            link: 'HTML',
+                            content: '<p>HTML is a computer language devised to allow website creation. These websites can then be viewed by anyone else connected to the Internet. It is relatively easy to learn, with the basics being accessible to most people in one sitting; and quite powerful in what it allows you to create. It is constantly undergoing revision and evolution to meet the demands and requirements of the growing Internet audience under the direction of the » W3C, the organisation charged with designing and maintaining the language.</p>',
+                            active: true
+                        },
+                        {
+                            id: 'tab2',
+                            link: 'CSS',
+                            content: '<p>Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable.</p><p>CSS handles the look and feel part of a web page. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, layout designs,variations in display for different devices and screen sizes as well as a variety of other effects.</p>'
+                        },
+                        {
+                            id: 'tab3',
+                            link: 'JavaScript',
+                            content: '<p>JavaScript is a programming language used to make web pages interactive. It is what gives a page life, the interactive elements and animation that engage a user. If you have ever used a search box on a home page, checked a live baseball score on a news site or watched a video, JavaScript is probably running through it.</p>'
+                        }
+                    ])
+
+                section.m-gap
+                    h2.h3.-underline Modals
+                    a(href="/" data-modal="modal-3").btn-dark.-hollow.-large Large modal
+                    button(data-modal="modal-1").btn-dark.-hollow Default modal
+                    button(data-modal="modal-2").btn-dark.-hollow.-small Small modal
+
+                section.m-gap
+                    h2.h3.-underline Gallery
+                    +gallery([
+                        'img/tmp/photo-1.jpg',
+                        'img/tmp/photo-2.jpg',
+                        'img/tmp/photo-3.jpg',
+                        'img/tmp/photo-4.jpg',
+                        'img/tmp/photo-5.jpg',
+                        'img/tmp/photo-6.jpg',
+                        'img/tmp/photo-7.jpg',
+                        'img/tmp/photo-8.jpg',
+                        'img/tmp/photo-9.jpg'
+                    ])
+
+                section.m-gap
+                    h2.h3.-underline Map
+                    +map
+                section.m-gap
+                    h2.h3.-underline Video
+                    +video-block({
+                        cover: 'img/tmp/hero.jpg',
+                        autoplay: true,
+                        src: 'http://www.youtube.com/embed/cITN7lnCeFE'
+                    })
+        div#bottom
+        +footer
+include ../templates/scripts
+
+
+
+
+
+
+
+
+
+

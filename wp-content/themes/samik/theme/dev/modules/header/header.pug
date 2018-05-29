@@ -1,0 +1,102 @@
+mixin header(data)
+    - var active = (data && data.active) || '';
+    header.header(data-module="header")
+        .navbar-wrap
+            .navbar.navbar_full-width(data-js='navbar')
+                .container
+                    .row.-around.no-gutters.navbar-inner
+                        .navbar_block.navbar_panel
+                            +logo({})
+                            button.menu-btn.btn-pure
+                                +hamburger
+                        .navbar_block.navbar_contact-box-wrap
+                            .contact-box
+                                i.icon.thin-icon-phone-call
+                                dl
+                                    dt Позвоните Нам:
+                                    dd
+                                    a(href="callto:#") +7(978) xxx xx xx
+                        .navbar_block.navbar_nav-wrap
+                            +menu({
+                                mobile: true,
+                                data: [
+                                    {
+                                        title: 'Заказ такси',
+                                        link: 'home.html',
+                                        active: active === 'home'
+                                    },
+                                    {
+                                        title: 'Тарифы',
+                                        link: 'rates.html',
+                                        active: active === 'rates'
+                                    },
+                                    {
+                                        title: 'Автопарк',
+                                        link: 'autopark.html',
+                                        active: active === 'autopark'
+                                    },
+                                    {
+                                        title: 'Наши услуги',
+                                        link: 'services.html',
+                                        active: active === 'services'
+                                    },
+                                    {
+                                        title: 'О нас',
+                                        link: 'about.html',
+                                        active: active === 'about'
+                                    },
+                                    {
+                                        title: 'Контакты',
+                                        link: 'contacts.html',
+                                        active: active === 'contacts'
+                                    }
+                                ]
+                            })
+            .navbar.navbar_is-sticky.navbar_full-width(data-js='navbarSticky')
+                .container
+                    .row.-around.no-gutters.navbar-inner
+                        .navbar_block.navbar_panel
+                            +logo({})
+                        .navbar_block.navbar_contact-box-wrap
+                            .contact-box
+                                i.icon.icon-phone-call
+                                dl
+                                    dt Позвоните Нам:
+                                    dd
+                                    a(href="callto:#") +7(978) xxx xx xx
+                        .navbar_block.navbar_nav-wrap
+                            +menu({
+                                mobile: false,
+                                data: [
+                                    {
+                                        title: 'Заказ такси',
+                                        link: 'home.html',
+                                        active: active === 'home'
+                                    },
+                                    {
+                                        title: 'Тарифы',
+                                        link: 'rates.html',
+                                        active: active === 'rates'
+                                    },
+                                    {
+                                        title: 'Автопарк',
+                                        link: 'autopark.html',
+                                        active: active === 'autopark'
+                                    },
+                                    {
+                                        title: 'Наши услуги',
+                                        link: 'services.html',
+                                        active: active === 'services'
+                                    },
+                                    {
+                                        title: 'О нас',
+                                        link: 'about.html',
+                                        active: active === 'about'
+                                    },
+                                    {
+                                        title: 'Контакты',
+                                        link: 'contacts.html',
+                                        active: active === 'contacts'
+                                    }
+                                ]
+                            })

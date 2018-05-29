@@ -1,0 +1,23 @@
+mixin feedback()
+    .feedback(data-module="feedback")
+        button.feedback-launch-button.btn-pure.feedback-hide(data-js="expandBtn")
+            i.icon-email
+            span Свяжитесь с Нами!
+        .feedback-container.feedback-hide(data-js="container")
+            .feedback-top-bar
+                .feedback-top-bar_text.heading Свяжитесь с Нами!
+                .feedback-top-bar_button(data-js="collapseBtn")
+                    i.icon-arrow-down
+            .feedback-conversation-container
+                .feedback-form-container
+                    form.feedback-form
+                        .form-group.float-label
+                            input.form-control.-wide(type="text" name="userName" id="userName" required)
+                            label.form-control-placeholder(for="userName") Введите Ваше имя
+                        .form-group.float-label
+                            input.form-control.-wide(type="text" name="userEmail" id="userEmail" required)
+                            label.form-control-placeholder(for="userEmail") Введите Ваш email
+                        .form-group.float-label
+                            textarea.form-control.-textarea.-wide(name="userNote" id="userNote" placeholder="Напишите то что думаете" rows="5")
+                        p.error Вы должны заполнить все поля и указать действительный адрес электронной почты
+                        button.btn-primary.-wide Отправить

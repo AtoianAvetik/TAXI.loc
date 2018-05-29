@@ -1,0 +1,76 @@
+html
+    include ./templates/head
+    body
+        +top-banner-bar
+        .wrapper
+            +header({active: 'services'})
+            main.content
+                .container.m-gap
+                    section.row.-equal-height.card-list
+                        .col-4.col-md-6.col-xs-12
+                            +card({
+                                type: 'frame',
+                                full_link: 'img/tmp/media.png',
+                                title: 'ТАКСИ ЭКОНОМ',
+                                heading_class: 'h4',
+                                bg_image: 'img/tmp/media.png'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +card({
+                                type: 'frame',
+                                full_link: 'img/tmp/media.png',
+                                title: 'ТАКСИ КОМФОРТ',
+                                heading_class: 'h4',
+                                bg_image: 'img/tmp/media.png'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +card({
+                                type: 'frame',
+                                full_link: 'img/tmp/media.png',
+                                title: 'ТАКСИ БИЗНЕС',
+                                heading_class: 'h4',
+                                bg_image: 'img/tmp/media.png'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +card({
+                                type: 'frame',
+                                full_link: 'img/tmp/media.png',
+                                title: 'ТАКСИ VIP',
+                                heading_class: 'h4',
+                                bg_image: 'img/tmp/media.png'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +card({
+                                type: 'frame',
+                                full_link: 'img/tmp/media.png',
+                                title: 'ТАКСИ МИНИВЕН',
+                                heading_class: 'h4',
+                                bg_image: 'img/tmp/media.png'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +card({
+                                type: 'frame',
+                                full_link: 'img/tmp/media.png',
+                                title: 'ВЕЖЛИВЫЕ ВОДИТЕЛИ',
+                                heading_class: 'h4',
+                                bg_image: 'img/tmp/media.png'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +card({
+                                type: 'frame',
+                                full_link: 'img/tmp/media.png',
+                                title: 'ТАКСИ В АЭРОПОРТ',
+                                heading_class: 'h4',
+                                bg_image: 'img/tmp/media.png'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +card({
+                                type: 'frame',
+                                full_link: 'img/tmp/media.png',
+                                title: 'МАШИНЫ НА СВАДЬБУ',
+                                heading_class: 'h4',
+                                bg_image: 'img/tmp/media.png'
+                            })
+            +footer
+            +feedback
+    include ./templates/scripts

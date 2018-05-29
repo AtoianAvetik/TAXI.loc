@@ -1,0 +1,125 @@
+mixin controls()
+    .controls
+        .container.m-gap
+            h2.h2.-underline Buttons
+            .row
+                .col-12
+                    h3.h5 Base buttons
+                    a(href="#").btn-default Default
+                    button.btn-primary Primary
+                    button.btn-red Red button
+                    button.btn-green Green button
+                    button.btn-blue Blue button
+                    button.btn-dark Dark
+                    button.btn-light Light
+            br
+            br
+            .row
+                .col-12
+                    h3.h5 Rounded buttons
+                    a(href="#").btn-default.-rounded Default
+                    button.btn-primary.-rounded Primary
+                    button.btn-red.-rounded Red button
+                    button.btn-green.-rounded Green button
+                    button.btn-blue.-rounded Blue button
+                    button.btn-dark.-rounded Dark
+                    button.btn-light.-rounded Light
+            br
+            br
+            .row
+                .col-12
+                    h3.h5 Hollow buttons
+                    a(href="#").btn-default.-hollow Default
+                    button.btn-primary.-hollow Primary
+                    button.btn-red.-hollow Red button
+                    button.btn-green.-hollow Green button
+                    button.btn-blue.-hollow Blue button
+                    button.btn-dark.-hollow Dark
+                    button.btn-light.-hollow Light
+            br
+            br
+            .row
+                .col-12
+                    h3.h5 Button sizes
+                .col-6.col-sm-12
+                    button.btn-green.-wide Wide
+                    br
+                    br
+                .col-6.col-sm-12
+                    button.btn-primary.-large Large
+                    button.btn-primary Medium
+                    button.btn-primary.-small Small
+
+        .container.m-gap
+            h2.h2.-underline Inputs
+            .row
+                .col-4.col-lg-6.col-xs-12
+                    h3.h5 Input sizes
+                    .form-group
+                        input.form-control(type="email" placeholder="Large input").-large
+                    .form-group
+                        input.form-control(type="text" placeholder="Default input")
+                    .form-group
+                        input.form-control(type="password" placeholder="Small input").-small
+                .col-4.col-lg-6.col-xs-12
+                    h3.h5 Input states
+                    .form-group
+                        input.form-control(type="text" placeholder="Active input")
+                    .form-group
+                        input.form-control(type="text" placeholder="Disabled input" disabled)
+                    br
+                    br
+                .col-4.col-lg-6.col-xs-12
+                    h3.h5 Input shapes
+                    .form-group
+                        input.form-control(type="text" placeholder="Square input").-square
+                    .form-group
+                        input.form-control(type="text" placeholder="Radius input").-radius
+                    .form-group
+                        input.form-control(type="text" placeholder="Rounded input").-rounded
+            .row
+                .col-5.col-xs-12
+                    h3.h5 Input modes
+                    .form-group
+                        input.form-control(type="text" placeholder="Hollow input").-hollow
+                    .form-group
+                        input.form-control(type="text" placeholder="Pure input").-pure
+                    br
+                    br
+            .row
+                .col-12
+                    h3.h5 Full width input
+                    .form-group
+                        input.form-control(type="text" placeholder="Wide input").-wide
+                    br
+                    br
+            .row
+                .col-12
+                    h3.h5 Textarea
+                .col-4.col-sm-12
+                    textarea.form-control.-textarea(placeholder="Defaule textarea" rows="6")
+                .col-4.col-sm-12
+                    textarea.form-control.-textarea(placeholder="Static textarea" rows="6").-static
+                .col-4.col-sm-12
+                    textarea.form-control.-textarea(placeholder="Disabled textarea" rows="6" disabled)
+            .row
+                .col-12
+                    h3.h5 Custom checkboxes and radio buttons
+                .col-6.col-sm-12
+                    .form-group
+                        .form-check
+                            input.form-check-input(type="checkbox" id="checkbox1")
+                            label.form-check-label(for="checkbox1") Check 1
+                        .form-check
+                            input.form-check-input(type="checkbox" id="checkbox2")
+                            label.form-check-label(for="checkbox2") Check 2
+                .col-6.col-sm-12
+                    .form-group
+                        .form-radio
+                            input.form-radio-input(type="radio" id="radio1" name="radio")
+                            label.form-radio-label(for="radio1") Radio 1
+                        .form-radio
+                            input.form-radio-input(type="radio" id="radio2" name="radio")
+                            label.form-radio-label(for="radio2") Radio 2
+
+

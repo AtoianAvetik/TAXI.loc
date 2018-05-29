@@ -1,0 +1,9 @@
+mixin footer-menu(data)
+    nav.footer-menu
+        ul.footer-menu-list
+            each item in data
+                li
+                    a(href=item.link)= item.title
+
+
+

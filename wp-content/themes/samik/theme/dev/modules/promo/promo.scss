@@ -1,0 +1,71 @@
+.promo{
+    text-align: center;
+    position: relative;
+    @include bg;
+
+    > *{
+        position: relative;
+        z-index: 1;
+    }
+
+    &.-light{
+        background-color: $light;
+        color: $dark;
+
+        &:before{
+            content: '';
+            @include overlay;
+            background: rgba($light, .4);
+        }
+    }
+
+    &.-dark{
+        background-color: $dark;
+        color: $light;
+
+        &:before{
+            content: '';
+            @include overlay;
+            background: rgba($dark, .4);
+        }
+    }
+
+    &.-blue{
+        background-color: $primary-color;
+        color: $light;
+
+        &:before{
+            content: '';
+            @include overlay;
+            background: rgba($primary-color, .4);
+        }
+    }
+
+    &_content{
+        margin: 20px 0;
+    }
+
+    &.-large-icon {
+        .promo_content {
+            margin: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        i[class*="phone-call"] {
+            font-size: 70px;
+            margin-right: 15px;
+            vertical-align: middle;
+
+            @include media(sm) {
+                font-size: 50px;
+            }
+
+            @include media(xs) {
+                font-size: 40px;
+            }
+        }
+    }
+}

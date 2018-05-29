@@ -1,0 +1,49 @@
+/*--------------------------------------/
+ Here you can pass number value (480)
+ or breakpoint string (xs) according to
+ $grid-breakpoints variables.
+--------------------------------------*/
+
+@mixin media($size){
+
+    @if type_of($size) == 'string'{
+        $value: map-get($grid-breakpoints, $size);
+        @media screen and (max-width: $value){
+            @content;
+        }
+    } @else{
+        @media screen and (max-width: #{$size}px){
+            @content;
+        }
+    }
+}
+
+@mixin media-exact($size){
+
+    @if type_of($size) == 'string'{
+        $value: map-get($grid-breakpoints, $size);
+        @media screen and (width: $value){
+            @content;
+        }
+    } @else{
+        @media screen and (width: #{$size}px){
+            @content;
+        }
+    }
+}
+
+@mixin media-min($size){
+
+    @if type_of($size) == 'string'{
+        $value: map-get($grid-breakpoints, $size);
+        @media screen and (min-width: $value){
+            @content;
+        }
+    } @else{
+        @media screen and (min-width: #{$size}px){
+            @content;
+        }
+    }
+}
+
+

@@ -1,0 +1,1499 @@
+<style>
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('FontAwesome.eot?1524918013');
+	src: url('FontAwesome.eot?1524918013#iefix') format('embedded-opentype'),
+		 url('FontAwesome.svg?1524918013#FontAwesome') format('svg'),
+		 url('FontAwesome.woff?1524918013') format('woff'),
+		 url('FontAwesome.woff?1524918013') format('woff2'),
+		 url('FontAwesome.ttf?1524918013') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.font-demo-table {
+	border: 2px solid #cccccc;
+	border-radius: 4px;
+	border-collapse: collapse;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.font-demo-table thead {
+	border-bottom: 2px solid #cccccc;
+}
+.font-demo-table tr {
+	border-bottom: 1px solid #cecece;
+}
+.font-demo-table tr:last-child {
+	border: none;
+}
+.font-demo-table td, .font-demo-table th {
+	width: 50%;
+	padding: 10px;
+	text-align: center;
+	font-size: 24px;
+	border-right: 1px solid #cecece;
+}
+.font-demo-table td:last-child, .font-demo-table th:last-child {
+	border: none;
+}
+.font-demo-icon:before {
+	display: inline;
+	font-size: 50px;
+	font-family: FontAwesome;
+	font-style: normal;
+}
+
+[data-icon]:before {
+	font-family: "FontAwesome" !important;
+	content: attr(data-icon);
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: "FontAwesome" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*----icon classes-----*/
+
+.icon-.notdef:before { content: "\-1"; }
+.icon-.null:before { content: "\-1"; }
+.icon-nonmarkingreturn:before { content: "\-1"; }
+.icon-space:before { content: "\20"; }
+.icon-dieresis:before { content: "\A8"; }
+.icon-copyright:before { content: "\A9"; }
+.icon-registered:before { content: "\AE"; }
+.icon-acute:before { content: "\B4"; }
+.icon-AE:before { content: "\C6"; }
+.icon-Oslash:before { content: "\D8"; }
+.icon-trademark:before { content: "\2122"; }
+.icon-infinity:before { content: "\221E"; }
+.icon-notequal:before { content: "\2260"; }
+.icon-glass:before { content: "\F000"; }
+.icon-music:before { content: "\F001"; }
+.icon-search:before { content: "\F002"; }
+.icon-envelope:before { content: "\F003"; }
+.icon-heart:before { content: "\F004"; }
+.icon-star:before { content: "\F005"; }
+.icon-star_empty:before { content: "\F006"; }
+.icon-user:before { content: "\F007"; }
+.icon-film:before { content: "\F008"; }
+.icon-th_large:before { content: "\F009"; }
+.icon-th:before { content: "\F00A"; }
+.icon-th_list:before { content: "\F00B"; }
+.icon-ok:before { content: "\F00C"; }
+.icon-remove:before { content: "\F00D"; }
+.icon-zoom_in:before { content: "\F00E"; }
+.icon-zoom_out:before { content: "\F010"; }
+.icon-off:before { content: "\F011"; }
+.icon-signal:before { content: "\F012"; }
+.icon-cog:before { content: "\F013"; }
+.icon-trash:before { content: "\F014"; }
+.icon-home:before { content: "\F015"; }
+.icon-file_alt:before { content: "\F016"; }
+.icon-time:before { content: "\F017"; }
+.icon-road:before { content: "\F018"; }
+.icon-download_alt:before { content: "\F019"; }
+.icon-download:before { content: "\F01A"; }
+.icon-upload:before { content: "\F01B"; }
+.icon-inbox:before { content: "\F01C"; }
+.icon-play_circle:before { content: "\F01D"; }
+.icon-repeat:before { content: "\F01E"; }
+.icon-refresh:before { content: "\F021"; }
+.icon-list_alt:before { content: "\F022"; }
+.icon-lock:before { content: "\F023"; }
+.icon-flag:before { content: "\F024"; }
+.icon-headphones:before { content: "\F025"; }
+.icon-volume_off:before { content: "\F026"; }
+.icon-volume_down:before { content: "\F027"; }
+.icon-volume_up:before { content: "\F028"; }
+.icon-qrcode:before { content: "\F029"; }
+.icon-barcode:before { content: "\F02A"; }
+.icon-tag:before { content: "\F02B"; }
+.icon-tags:before { content: "\F02C"; }
+.icon-book:before { content: "\F02D"; }
+.icon-bookmark:before { content: "\F02E"; }
+.icon-print:before { content: "\F02F"; }
+.icon-camera:before { content: "\F030"; }
+.icon-font:before { content: "\F031"; }
+.icon-bold:before { content: "\F032"; }
+.icon-italic:before { content: "\F033"; }
+.icon-text_height:before { content: "\F034"; }
+.icon-text_width:before { content: "\F035"; }
+.icon-align_left:before { content: "\F036"; }
+.icon-align_center:before { content: "\F037"; }
+.icon-align_right:before { content: "\F038"; }
+.icon-align_justify:before { content: "\F039"; }
+.icon-list:before { content: "\F03A"; }
+.icon-indent_left:before { content: "\F03B"; }
+.icon-indent_right:before { content: "\F03C"; }
+.icon-facetime_video:before { content: "\F03D"; }
+.icon-picture:before { content: "\F03E"; }
+.icon-pencil:before { content: "\F040"; }
+.icon-map_marker:before { content: "\F041"; }
+.icon-adjust:before { content: "\F042"; }
+.icon-tint:before { content: "\F043"; }
+.icon-edit:before { content: "\F044"; }
+.icon-share:before { content: "\F045"; }
+.icon-check:before { content: "\F046"; }
+.icon-move:before { content: "\F047"; }
+.icon-step_backward:before { content: "\F048"; }
+.icon-fast_backward:before { content: "\F049"; }
+.icon-backward:before { content: "\F04A"; }
+.icon-play:before { content: "\F04B"; }
+.icon-pause:before { content: "\F04C"; }
+.icon-stop:before { content: "\F04D"; }
+.icon-forward:before { content: "\F04E"; }
+.icon-fast_forward:before { content: "\F050"; }
+.icon-step_forward:before { content: "\F051"; }
+.icon-eject:before { content: "\F052"; }
+.icon-chevron_left:before { content: "\F053"; }
+.icon-chevron_right:before { content: "\F054"; }
+.icon-plus_sign:before { content: "\F055"; }
+.icon-minus_sign:before { content: "\F056"; }
+.icon-remove_sign:before { content: "\F057"; }
+.icon-ok_sign:before { content: "\F058"; }
+.icon-question_sign:before { content: "\F059"; }
+.icon-info_sign:before { content: "\F05A"; }
+.icon-screenshot:before { content: "\F05B"; }
+.icon-remove_circle:before { content: "\F05C"; }
+.icon-ok_circle:before { content: "\F05D"; }
+.icon-ban_circle:before { content: "\F05E"; }
+.icon-arrow_left:before { content: "\F060"; }
+.icon-arrow_right:before { content: "\F061"; }
+.icon-arrow_up:before { content: "\F062"; }
+.icon-arrow_down:before { content: "\F063"; }
+.icon-share_alt:before { content: "\F064"; }
+.icon-resize_full:before { content: "\F065"; }
+.icon-resize_small:before { content: "\F066"; }
+.icon-plus:before { content: "\F067"; }
+.icon-minus:before { content: "\F068"; }
+.icon-asterisk:before { content: "\F069"; }
+.icon-exclamation_sign:before { content: "\F06A"; }
+.icon-gift:before { content: "\F06B"; }
+.icon-leaf:before { content: "\F06C"; }
+.icon-fire:before { content: "\F06D"; }
+.icon-eye_open:before { content: "\F06E"; }
+.icon-eye_close:before { content: "\F070"; }
+.icon-warning_sign:before { content: "\F071"; }
+.icon-plane:before { content: "\F072"; }
+.icon-calendar:before { content: "\F073"; }
+.icon-random:before { content: "\F074"; }
+.icon-comment:before { content: "\F075"; }
+.icon-magnet:before { content: "\F076"; }
+.icon-chevron_up:before { content: "\F077"; }
+.icon-chevron_down:before { content: "\F078"; }
+.icon-retweet:before { content: "\F079"; }
+.icon-shopping_cart:before { content: "\F07A"; }
+.icon-folder_close:before { content: "\F07B"; }
+.icon-folder_open:before { content: "\F07C"; }
+.icon-resize_vertical:before { content: "\F07D"; }
+.icon-resize_horizontal:before { content: "\F07E"; }
+.icon-bar_chart:before { content: "\F080"; }
+.icon-twitter_sign:before { content: "\F081"; }
+.icon-facebook_sign:before { content: "\F082"; }
+.icon-camera_retro:before { content: "\F083"; }
+.icon-key:before { content: "\F084"; }
+.icon-cogs:before { content: "\F085"; }
+.icon-comments:before { content: "\F086"; }
+.icon-thumbs_up_alt:before { content: "\F087"; }
+.icon-thumbs_down_alt:before { content: "\F088"; }
+.icon-star_half:before { content: "\F089"; }
+.icon-heart_empty:before { content: "\F08A"; }
+.icon-signout:before { content: "\F08B"; }
+.icon-linkedin_sign:before { content: "\F08C"; }
+.icon-pushpin:before { content: "\F08D"; }
+.icon-external_link:before { content: "\F08E"; }
+.icon-signin:before { content: "\F090"; }
+.icon-trophy:before { content: "\F091"; }
+.icon-github_sign:before { content: "\F092"; }
+.icon-upload_alt:before { content: "\F093"; }
+.icon-lemon:before { content: "\F094"; }
+.icon-phone:before { content: "\F095"; }
+.icon-check_empty:before { content: "\F096"; }
+.icon-bookmark_empty:before { content: "\F097"; }
+.icon-phone_sign:before { content: "\F098"; }
+.icon-twitter:before { content: "\F099"; }
+.icon-facebook:before { content: "\F09A"; }
+.icon-github:before { content: "\F09B"; }
+.icon-unlock:before { content: "\F09C"; }
+.icon-credit_card:before { content: "\F09D"; }
+.icon-rss:before { content: "\F09E"; }
+.icon-hdd:before { content: "\F0A0"; }
+.icon-bullhorn:before { content: "\F0A1"; }
+.icon-bell:before { content: "\F0A2"; }
+.icon-certificate:before { content: "\F0A3"; }
+.icon-hand_right:before { content: "\F0A4"; }
+.icon-hand_left:before { content: "\F0A5"; }
+.icon-hand_up:before { content: "\F0A6"; }
+.icon-hand_down:before { content: "\F0A7"; }
+.icon-circle_arrow_left:before { content: "\F0A8"; }
+.icon-circle_arrow_right:before { content: "\F0A9"; }
+.icon-circle_arrow_up:before { content: "\F0AA"; }
+.icon-circle_arrow_down:before { content: "\F0AB"; }
+.icon-globe:before { content: "\F0AC"; }
+.icon-wrench:before { content: "\F0AD"; }
+.icon-tasks:before { content: "\F0AE"; }
+.icon-filter:before { content: "\F0B0"; }
+.icon-briefcase:before { content: "\F0B1"; }
+.icon-fullscreen:before { content: "\F0B2"; }
+.icon-group:before { content: "\F0C0"; }
+.icon-link:before { content: "\F0C1"; }
+.icon-cloud:before { content: "\F0C2"; }
+.icon-beaker:before { content: "\F0C3"; }
+.icon-cut:before { content: "\F0C4"; }
+.icon-copy:before { content: "\F0C5"; }
+.icon-paper_clip:before { content: "\F0C6"; }
+.icon-save:before { content: "\F0C7"; }
+.icon-sign_blank:before { content: "\F0C8"; }
+.icon-reorder:before { content: "\F0C9"; }
+.icon-ul:before { content: "\F0CA"; }
+.icon-ol:before { content: "\F0CB"; }
+.icon-strikethrough:before { content: "\F0CC"; }
+.icon-underline:before { content: "\F0CD"; }
+.icon-table:before { content: "\F0CE"; }
+.icon-magic:before { content: "\F0D0"; }
+.icon-truck:before { content: "\F0D1"; }
+.icon-pinterest:before { content: "\F0D2"; }
+.icon-pinterest_sign:before { content: "\F0D3"; }
+.icon-google_plus_sign:before { content: "\F0D4"; }
+.icon-google_plus:before { content: "\F0D5"; }
+.icon-money:before { content: "\F0D6"; }
+.icon-caret_down:before { content: "\F0D7"; }
+.icon-caret_up:before { content: "\F0D8"; }
+.icon-caret_left:before { content: "\F0D9"; }
+.icon-caret_right:before { content: "\F0DA"; }
+.icon-columns:before { content: "\F0DB"; }
+.icon-sort:before { content: "\F0DC"; }
+.icon-sort_down:before { content: "\F0DD"; }
+.icon-sort_up:before { content: "\F0DE"; }
+.icon-envelope_alt:before { content: "\F0E0"; }
+.icon-linkedin:before { content: "\F0E1"; }
+.icon-undo:before { content: "\F0E2"; }
+.icon-legal:before { content: "\F0E3"; }
+.icon-dashboard:before { content: "\F0E4"; }
+.icon-comment_alt:before { content: "\F0E5"; }
+.icon-comments_alt:before { content: "\F0E6"; }
+.icon-bolt:before { content: "\F0E7"; }
+.icon-sitemap:before { content: "\F0E8"; }
+.icon-umbrella:before { content: "\F0E9"; }
+.icon-paste:before { content: "\F0EA"; }
+.icon-light_bulb:before { content: "\F0EB"; }
+.icon-exchange:before { content: "\F0EC"; }
+.icon-cloud_download:before { content: "\F0ED"; }
+.icon-cloud_upload:before { content: "\F0EE"; }
+.icon-user_md:before { content: "\F0F0"; }
+.icon-stethoscope:before { content: "\F0F1"; }
+.icon-suitcase:before { content: "\F0F2"; }
+.icon-bell_alt:before { content: "\F0F3"; }
+.icon-coffee:before { content: "\F0F4"; }
+.icon-food:before { content: "\F0F5"; }
+.icon-file_text_alt:before { content: "\F0F6"; }
+.icon-building:before { content: "\F0F7"; }
+.icon-hospital:before { content: "\F0F8"; }
+.icon-ambulance:before { content: "\F0F9"; }
+.icon-medkit:before { content: "\F0FA"; }
+.icon-fighter_jet:before { content: "\F0FB"; }
+.icon-beer:before { content: "\F0FC"; }
+.icon-h_sign:before { content: "\F0FD"; }
+.icon-f0fe:before { content: "\F0FE"; }
+.icon-double_angle_left:before { content: "\F100"; }
+.icon-double_angle_right:before { content: "\F101"; }
+.icon-double_angle_up:before { content: "\F102"; }
+.icon-double_angle_down:before { content: "\F103"; }
+.icon-angle_left:before { content: "\F104"; }
+.icon-angle_right:before { content: "\F105"; }
+.icon-angle_up:before { content: "\F106"; }
+.icon-angle_down:before { content: "\F107"; }
+.icon-desktop:before { content: "\F108"; }
+.icon-laptop:before { content: "\F109"; }
+.icon-tablet:before { content: "\F10A"; }
+.icon-mobile_phone:before { content: "\F10B"; }
+.icon-circle_blank:before { content: "\F10C"; }
+.icon-quote_left:before { content: "\F10D"; }
+.icon-quote_right:before { content: "\F10E"; }
+.icon-spinner:before { content: "\F110"; }
+.icon-circle:before { content: "\F111"; }
+.icon-reply:before { content: "\F112"; }
+.icon-github_alt:before { content: "\F113"; }
+.icon-folder_close_alt:before { content: "\F114"; }
+.icon-folder_open_alt:before { content: "\F115"; }
+.icon-expand_alt:before { content: "\F116"; }
+.icon-collapse_alt:before { content: "\F117"; }
+.icon-smile:before { content: "\F118"; }
+.icon-frown:before { content: "\F119"; }
+.icon-meh:before { content: "\F11A"; }
+.icon-gamepad:before { content: "\F11B"; }
+.icon-keyboard:before { content: "\F11C"; }
+.icon-flag_alt:before { content: "\F11D"; }
+.icon-flag_checkered:before { content: "\F11E"; }
+.icon-terminal:before { content: "\F120"; }
+.icon-code:before { content: "\F121"; }
+.icon-reply_all:before { content: "\F122"; }
+.icon-star_half_empty:before { content: "\F123"; }
+.icon-location_arrow:before { content: "\F124"; }
+.icon-crop:before { content: "\F125"; }
+.icon-code_fork:before { content: "\F126"; }
+.icon-unlink:before { content: "\F127"; }
+.icon-question:before { content: "\F128"; }
+.icon-_279:before { content: "\F129"; }
+.icon-exclamation:before { content: "\F12A"; }
+.icon-superscript:before { content: "\F12B"; }
+.icon-subscript:before { content: "\F12C"; }
+.icon-_283:before { content: "\F12D"; }
+.icon-puzzle_piece:before { content: "\F12E"; }
+.icon-microphone:before { content: "\F130"; }
+.icon-microphone_off:before { content: "\F131"; }
+.icon-shield:before { content: "\F132"; }
+.icon-calendar_empty:before { content: "\F133"; }
+.icon-fire_extinguisher:before { content: "\F134"; }
+.icon-rocket:before { content: "\F135"; }
+.icon-maxcdn:before { content: "\F136"; }
+.icon-chevron_sign_left:before { content: "\F137"; }
+.icon-chevron_sign_right:before { content: "\F138"; }
+.icon-chevron_sign_up:before { content: "\F139"; }
+.icon-chevron_sign_down:before { content: "\F13A"; }
+.icon-html5:before { content: "\F13B"; }
+.icon-css3:before { content: "\F13C"; }
+.icon-anchor:before { content: "\F13D"; }
+.icon-unlock_alt:before { content: "\F13E"; }
+.icon-bullseye:before { content: "\F140"; }
+.icon-ellipsis_horizontal:before { content: "\F141"; }
+.icon-ellipsis_vertical:before { content: "\F142"; }
+.icon-_303:before { content: "\F143"; }
+.icon-play_sign:before { content: "\F144"; }
+.icon-ticket:before { content: "\F145"; }
+.icon-minus_sign_alt:before { content: "\F146"; }
+.icon-check_minus:before { content: "\F147"; }
+.icon-level_up:before { content: "\F148"; }
+.icon-level_down:before { content: "\F149"; }
+.icon-check_sign:before { content: "\F14A"; }
+.icon-edit_sign:before { content: "\F14B"; }
+.icon-_312:before { content: "\F14C"; }
+.icon-share_sign:before { content: "\F14D"; }
+.icon-compass:before { content: "\F14E"; }
+.icon-collapse:before { content: "\F150"; }
+.icon-collapse_top:before { content: "\F151"; }
+.icon-_317:before { content: "\F152"; }
+.icon-eur:before { content: "\F153"; }
+.icon-gbp:before { content: "\F154"; }
+.icon-usd:before { content: "\F155"; }
+.icon-inr:before { content: "\F156"; }
+.icon-jpy:before { content: "\F157"; }
+.icon-rub:before { content: "\F158"; }
+.icon-krw:before { content: "\F159"; }
+.icon-btc:before { content: "\F15A"; }
+.icon-file:before { content: "\F15B"; }
+.icon-file_text:before { content: "\F15C"; }
+.icon-sort_by_alphabet:before { content: "\F15D"; }
+.icon-_329:before { content: "\F15E"; }
+.icon-sort_by_attributes:before { content: "\F160"; }
+.icon-sort_by_attributes_alt:before { content: "\F161"; }
+.icon-sort_by_order:before { content: "\F162"; }
+.icon-sort_by_order_alt:before { content: "\F163"; }
+.icon-_334:before { content: "\F164"; }
+.icon-_335:before { content: "\F165"; }
+.icon-youtube_sign:before { content: "\F166"; }
+.icon-youtube:before { content: "\F167"; }
+.icon-xing:before { content: "\F168"; }
+.icon-xing_sign:before { content: "\F169"; }
+.icon-youtube_play:before { content: "\F16A"; }
+.icon-dropbox:before { content: "\F16B"; }
+.icon-stackexchange:before { content: "\F16C"; }
+.icon-instagram:before { content: "\F16D"; }
+.icon-flickr:before { content: "\F16E"; }
+.icon-adn:before { content: "\F170"; }
+.icon-f171:before { content: "\F171"; }
+.icon-bitbucket_sign:before { content: "\F172"; }
+.icon-tumblr:before { content: "\F173"; }
+.icon-tumblr_sign:before { content: "\F174"; }
+.icon-long_arrow_down:before { content: "\F175"; }
+.icon-long_arrow_up:before { content: "\F176"; }
+.icon-long_arrow_left:before { content: "\F177"; }
+.icon-long_arrow_right:before { content: "\F178"; }
+.icon-apple:before { content: "\F179"; }
+.icon-windows:before { content: "\F17A"; }
+.icon-android:before { content: "\F17B"; }
+.icon-linux:before { content: "\F17C"; }
+.icon-dribble:before { content: "\F17D"; }
+.icon-skype:before { content: "\F17E"; }
+.icon-foursquare:before { content: "\F180"; }
+.icon-trello:before { content: "\F181"; }
+.icon-female:before { content: "\F182"; }
+.icon-male:before { content: "\F183"; }
+.icon-gittip:before { content: "\F184"; }
+.icon-sun:before { content: "\F185"; }
+.icon-_366:before { content: "\F186"; }
+.icon-archive:before { content: "\F187"; }
+.icon-bug:before { content: "\F188"; }
+.icon-vk:before { content: "\F189"; }
+.icon-weibo:before { content: "\F18A"; }
+.icon-renren:before { content: "\F18B"; }
+.icon-_372:before { content: "\F18C"; }
+.icon-stack_exchange:before { content: "\F18D"; }
+.icon-_374:before { content: "\F18E"; }
+.icon-arrow_circle_alt_left:before { content: "\F190"; }
+.icon-_376:before { content: "\F191"; }
+.icon-dot_circle_alt:before { content: "\F192"; }
+.icon-_378:before { content: "\F193"; }
+.icon-vimeo_square:before { content: "\F194"; }
+.icon-_380:before { content: "\F195"; }
+.icon-plus_square_o:before { content: "\F196"; }
+.icon-_382:before { content: "\F197"; }
+.icon-_383:before { content: "\F198"; }
+.icon-_384:before { content: "\F199"; }
+.icon-_385:before { content: "\F19A"; }
+.icon-_386:before { content: "\F19B"; }
+.icon-_387:before { content: "\F19C"; }
+.icon-_388:before { content: "\F19D"; }
+.icon-_389:before { content: "\F19E"; }
+.icon-uniF1A0:before { content: "\F1A0"; }
+.icon-f1a1:before { content: "\F1A1"; }
+.icon-_392:before { content: "\F1A2"; }
+.icon-_393:before { content: "\F1A3"; }
+.icon-f1a4:before { content: "\F1A4"; }
+.icon-_395:before { content: "\F1A5"; }
+.icon-_396:before { content: "\F1A6"; }
+.icon-_397:before { content: "\F1A7"; }
+.icon-_398:before { content: "\F1A8"; }
+.icon-_399:before { content: "\F1A9"; }
+.icon-_400:before { content: "\F1AA"; }
+.icon-f1ab:before { content: "\F1AB"; }
+.icon-_402:before { content: "\F1AC"; }
+.icon-_403:before { content: "\F1AD"; }
+.icon-_404:before { content: "\F1AE"; }
+.icon-uniF1B1:before { content: "\F1B0"; }
+.icon-_406:before { content: "\F1B1"; }
+.icon-_407:before { content: "\F1B2"; }
+.icon-_408:before { content: "\F1B3"; }
+.icon-_409:before { content: "\F1B4"; }
+.icon-_410:before { content: "\F1B5"; }
+.icon-_411:before { content: "\F1B6"; }
+.icon-_412:before { content: "\F1B7"; }
+.icon-_413:before { content: "\F1B8"; }
+.icon-_414:before { content: "\F1B9"; }
+.icon-_415:before { content: "\F1BA"; }
+.icon-_416:before { content: "\F1BB"; }
+.icon-_417:before { content: "\F1BC"; }
+.icon-_418:before { content: "\F1BD"; }
+.icon-_419:before { content: "\F1BE"; }
+.icon-uniF1C0:before { content: "\F1C0"; }
+.icon-uniF1C1:before { content: "\F1C1"; }
+.icon-_422:before { content: "\F1C2"; }
+.icon-_423:before { content: "\F1C3"; }
+.icon-_424:before { content: "\F1C4"; }
+.icon-_425:before { content: "\F1C5"; }
+.icon-_426:before { content: "\F1C6"; }
+.icon-_427:before { content: "\F1C7"; }
+.icon-_428:before { content: "\F1C8"; }
+.icon-_429:before { content: "\F1C9"; }
+.icon-_430:before { content: "\F1CA"; }
+.icon-_431:before { content: "\F1CB"; }
+.icon-_432:before { content: "\F1CC"; }
+.icon-_433:before { content: "\F1CD"; }
+.icon-_434:before { content: "\F1CE"; }
+.icon-uniF1D0:before { content: "\F1D0"; }
+.icon-uniF1D1:before { content: "\F1D1"; }
+.icon-uniF1D2:before { content: "\F1D2"; }
+.icon-_438:before { content: "\F1D3"; }
+.icon-_439:before { content: "\F1D4"; }
+.icon-uniF1D5:before { content: "\F1D5"; }
+.icon-uniF1D6:before { content: "\F1D6"; }
+.icon-uniF1D7:before { content: "\F1D7"; }
+.icon-_443:before { content: "\F1D8"; }
+.icon-_444:before { content: "\F1D9"; }
+.icon-_445:before { content: "\F1DA"; }
+.icon-_446:before { content: "\F1DB"; }
+.icon-_447:before { content: "\F1DC"; }
+.icon-_448:before { content: "\F1DD"; }
+.icon-_449:before { content: "\F1DE"; }
+.icon-uniF1E0:before { content: "\F1E0"; }
+.icon-_451:before { content: "\F1E1"; }
+.icon-_452:before { content: "\F1E2"; }
+.icon-_453:before { content: "\F1E3"; }
+.icon-_454:before { content: "\F1E4"; }
+.icon-_455:before { content: "\F1E5"; }
+.icon-_456:before { content: "\F1E6"; }
+.icon-_457:before { content: "\F1E7"; }
+.icon-_458:before { content: "\F1E8"; }
+.icon-_459:before { content: "\F1E9"; }
+.icon-_460:before { content: "\F1EA"; }
+.icon-_461:before { content: "\F1EB"; }
+.icon-_462:before { content: "\F1EC"; }
+.icon-_463:before { content: "\F1ED"; }
+.icon-_464:before { content: "\F1EE"; }
+.icon-uniF1F0:before { content: "\F1F0"; }
+.icon-_466:before { content: "\F1F1"; }
+.icon-_467:before { content: "\F1F2"; }
+.icon-f1f3:before { content: "\F1F3"; }
+.icon-_469:before { content: "\F1F4"; }
+.icon-_470:before { content: "\F1F5"; }
+.icon-_471:before { content: "\F1F6"; }
+.icon-_472:before { content: "\F1F7"; }
+.icon-_473:before { content: "\F1F8"; }
+.icon-_474:before { content: "\F1F9"; }
+.icon-_475:before { content: "\F1FA"; }
+.icon-_476:before { content: "\F1FB"; }
+.icon-f1fc:before { content: "\F1FC"; }
+.icon-_478:before { content: "\F1FD"; }
+.icon-_479:before { content: "\F1FE"; }
+.icon-_480:before { content: "\F200"; }
+.icon-_481:before { content: "\F201"; }
+.icon-_482:before { content: "\F202"; }
+.icon-_483:before { content: "\F203"; }
+.icon-_484:before { content: "\F204"; }
+.icon-_485:before { content: "\F205"; }
+.icon-_486:before { content: "\F206"; }
+.icon-_487:before { content: "\F207"; }
+.icon-_488:before { content: "\F208"; }
+.icon-_489:before { content: "\F209"; }
+.icon-_490:before { content: "\F20A"; }
+.icon-_491:before { content: "\F20B"; }
+.icon-_492:before { content: "\F20C"; }
+.icon-_493:before { content: "\F20D"; }
+.icon-_494:before { content: "\F20E"; }
+.icon-f210:before { content: "\F210"; }
+.icon-_496:before { content: "\F211"; }
+.icon-f212:before { content: "\F212"; }
+.icon-_498:before { content: "\F213"; }
+.icon-_499:before { content: "\F214"; }
+.icon-_500:before { content: "\F215"; }
+.icon-_501:before { content: "\F216"; }
+.icon-_502:before { content: "\F217"; }
+.icon-_503:before { content: "\F218"; }
+.icon-_504:before { content: "\F219"; }
+.icon-_505:before { content: "\F21A"; }
+.icon-_506:before { content: "\F21B"; }
+.icon-_507:before { content: "\F21C"; }
+.icon-_508:before { content: "\F21D"; }
+.icon-_509:before { content: "\F21E"; }
+.icon-venus:before { content: "\F221"; }
+.icon-_511:before { content: "\F222"; }
+.icon-_512:before { content: "\F223"; }
+.icon-_513:before { content: "\F224"; }
+.icon-_514:before { content: "\F225"; }
+.icon-_515:before { content: "\F226"; }
+.icon-_516:before { content: "\F227"; }
+.icon-_517:before { content: "\F228"; }
+.icon-_518:before { content: "\F229"; }
+.icon-_519:before { content: "\F22A"; }
+.icon-_520:before { content: "\F22B"; }
+.icon-_521:before { content: "\F22C"; }
+.icon-_522:before { content: "\F22D"; }
+.icon-_523:before { content: "\F22E"; }
+.icon-_524:before { content: "\F22F"; }
+.icon-_525:before { content: "\F230"; }
+.icon-_526:before { content: "\F231"; }
+.icon-_527:before { content: "\F232"; }
+.icon-_528:before { content: "\F233"; }
+.icon-_529:before { content: "\F234"; }
+.icon-_530:before { content: "\F235"; }
+.icon-_531:before { content: "\F236"; }
+.icon-_532:before { content: "\F237"; }
+.icon-_533:before { content: "\F238"; }
+.icon-_534:before { content: "\F239"; }
+.icon-_535:before { content: "\F23A"; }
+.icon-_536:before { content: "\F23B"; }
+.icon-_537:before { content: "\F23C"; }
+.icon-_538:before { content: "\F23D"; }
+.icon-_539:before { content: "\F23E"; }
+.icon-_540:before { content: "\F240"; }
+.icon-_541:before { content: "\F241"; }
+.icon-_542:before { content: "\F242"; }
+.icon-_543:before { content: "\F243"; }
+.icon-_544:before { content: "\F244"; }
+.icon-_545:before { content: "\F245"; }
+.icon-_546:before { content: "\F246"; }
+.icon-_547:before { content: "\F247"; }
+.icon-_548:before { content: "\F248"; }
+.icon-_549:before { content: "\F249"; }
+.icon-_550:before { content: "\F24A"; }
+.icon-_551:before { content: "\F24B"; }
+.icon-_552:before { content: "\F24C"; }
+.icon-_553:before { content: "\F24D"; }
+.icon-_554:before { content: "\F24E"; }
+.icon-_555:before { content: "\F250"; }
+.icon-_556:before { content: "\F251"; }
+.icon-_557:before { content: "\F252"; }
+.icon-_558:before { content: "\F253"; }
+.icon-_559:before { content: "\F254"; }
+.icon-_560:before { content: "\F255"; }
+.icon-_561:before { content: "\F256"; }
+.icon-_562:before { content: "\F257"; }
+.icon-_563:before { content: "\F258"; }
+.icon-_564:before { content: "\F259"; }
+.icon-_565:before { content: "\F25A"; }
+.icon-_566:before { content: "\F25B"; }
+.icon-_567:before { content: "\F25C"; }
+.icon-_568:before { content: "\F25D"; }
+.icon-_569:before { content: "\F25E"; }
+.icon-f260:before { content: "\F260"; }
+.icon-f261:before { content: "\F261"; }
+.icon-_572:before { content: "\F262"; }
+.icon-f263:before { content: "\F263"; }
+.icon-_574:before { content: "\F264"; }
+.icon-_575:before { content: "\F265"; }
+.icon-_576:before { content: "\F266"; }
+.icon-_577:before { content: "\F267"; }
+.icon-_578:before { content: "\F268"; }
+.icon-_579:before { content: "\F269"; }
+.icon-_580:before { content: "\F26A"; }
+.icon-_581:before { content: "\F26B"; }
+.icon-_582:before { content: "\F26C"; }
+.icon-_583:before { content: "\F26D"; }
+.icon-_584:before { content: "\F26E"; }
+.icon-_585:before { content: "\F270"; }
+.icon-_586:before { content: "\F271"; }
+.icon-_587:before { content: "\F272"; }
+.icon-_588:before { content: "\F273"; }
+.icon-_589:before { content: "\F274"; }
+.icon-_590:before { content: "\F275"; }
+.icon-_591:before { content: "\F276"; }
+.icon-_592:before { content: "\F277"; }
+.icon-_593:before { content: "\F278"; }
+.icon-_594:before { content: "\F279"; }
+.icon-_595:before { content: "\F27A"; }
+.icon-_596:before { content: "\F27B"; }
+.icon-_597:before { content: "\F27C"; }
+.icon-_598:before { content: "\F27D"; }
+.icon-f27e:before { content: "\F27E"; }
+.icon-uniF280:before { content: "\F280"; }
+.icon-uniF281:before { content: "\F281"; }
+.icon-_602:before { content: "\F282"; }
+.icon-_603:before { content: "\F283"; }
+.icon-_604:before { content: "\F284"; }
+.icon-uniF285:before { content: "\F285"; }
+.icon-uniF286:before { content: "\F286"; }
+.icon-_607:before { content: "\F287"; }
+.icon-_608:before { content: "\F288"; }
+.icon-_609:before { content: "\F289"; }
+.icon-_610:before { content: "\F28A"; }
+.icon-_611:before { content: "\F28B"; }
+.icon-_612:before { content: "\F28C"; }
+.icon-_613:before { content: "\F28D"; }
+.icon-_614:before { content: "\F28E"; }
+.icon-_615:before { content: "\F290"; }
+.icon-_616:before { content: "\F291"; }
+.icon-_617:before { content: "\F292"; }
+.icon-_618:before { content: "\F293"; }
+.icon-_619:before { content: "\F294"; }
+.icon-_620:before { content: "\F295"; }
+.icon-_621:before { content: "\F296"; }
+.icon-_622:before { content: "\F297"; }
+.icon-_623:before { content: "\F298"; }
+.icon-_624:before { content: "\F299"; }
+.icon-_625:before { content: "\F29A"; }
+.icon-_626:before { content: "\F29B"; }
+.icon-_627:before { content: "\F29C"; }
+.icon-_628:before { content: "\F29D"; }
+.icon-_629:before { content: "\F29E"; }
+.icon-uniF2A0:before { content: "\F2A0"; }
+.icon-uniF2A1:before { content: "\F2A1"; }
+.icon-uniF2A2:before { content: "\F2A2"; }
+.icon-uniF2A3:before { content: "\F2A3"; }
+.icon-uniF2A4:before { content: "\F2A4"; }
+.icon-uniF2A5:before { content: "\F2A5"; }
+.icon-uniF2A6:before { content: "\F2A6"; }
+.icon-uniF2A7:before { content: "\F2A7"; }
+.icon-uniF2A8:before { content: "\F2A8"; }
+.icon-uniF2A9:before { content: "\F2A9"; }
+.icon-uniF2AA:before { content: "\F2AA"; }
+.icon-uniF2AB:before { content: "\F2AB"; }
+.icon-uniF2AC:before { content: "\F2AC"; }
+.icon-uniF2AD:before { content: "\F2AD"; }
+.icon-uniF2AE:before { content: "\F2AE"; }
+.icon-uniF2B0:before { content: "\F2B0"; }
+.icon-uniF2B1:before { content: "\F2B1"; }
+.icon-uniF2B2:before { content: "\F2B2"; }
+.icon-uniF2B3:before { content: "\F2B3"; }
+.icon-uniF2B4:before { content: "\F2B4"; }
+.icon-uniF2B5:before { content: "\F2B5"; }
+.icon-uniF2B6:before { content: "\F2B6"; }
+.icon-uniF2B7:before { content: "\F2B7"; }
+.icon-uniF2B8:before { content: "\F2B8"; }
+.icon-uniF2B9:before { content: "\F2B9"; }
+.icon-uniF2BA:before { content: "\F2BA"; }
+.icon-uniF2BB:before { content: "\F2BB"; }
+.icon-uniF2BC:before { content: "\F2BC"; }
+.icon-uniF2BD:before { content: "\F2BD"; }
+.icon-uniF2BE:before { content: "\F2BE"; }
+.icon-uniF2C0:before { content: "\F2C0"; }
+.icon-uniF2C1:before { content: "\F2C1"; }
+.icon-uniF2C2:before { content: "\F2C2"; }
+.icon-uniF2C3:before { content: "\F2C3"; }
+.icon-uniF2C4:before { content: "\F2C4"; }
+.icon-uniF2C5:before { content: "\F2C5"; }
+.icon-uniF2C6:before { content: "\F2C6"; }
+.icon-uniF2C7:before { content: "\F2C7"; }
+.icon-uniF2C8:before { content: "\F2C8"; }
+.icon-uniF2C9:before { content: "\F2C9"; }
+.icon-uniF2CA:before { content: "\F2CA"; }
+.icon-uniF2CB:before { content: "\F2CB"; }
+.icon-uniF2CC:before { content: "\F2CC"; }
+.icon-uniF2CD:before { content: "\F2CD"; }
+.icon-uniF2CE:before { content: "\F2CE"; }
+.icon-uniF2D0:before { content: "\F2D0"; }
+.icon-uniF2D1:before { content: "\F2D1"; }
+.icon-uniF2D2:before { content: "\F2D2"; }
+.icon-uniF2D3:before { content: "\F2D3"; }
+.icon-uniF2D4:before { content: "\F2D4"; }
+.icon-uniF2D5:before { content: "\F2D5"; }
+.icon-uniF2D6:before { content: "\F2D6"; }
+.icon-uniF2D7:before { content: "\F2D7"; }
+.icon-uniF2D8:before { content: "\F2D8"; }
+.icon-uniF2D9:before { content: "\F2D9"; }
+.icon-uniF2DA:before { content: "\F2DA"; }
+.icon-uniF2DB:before { content: "\F2DB"; }
+.icon-uniF2DC:before { content: "\F2DC"; }
+.icon-uniF2DD:before { content: "\F2DD"; }
+.icon-uniF2DE:before { content: "\F2DE"; }
+.icon-uniF2E0:before { content: "\F2E0"; }
+.icon-uniF2E1:before { content: "\F2E1"; }
+.icon-uniF2E2:before { content: "\F2E2"; }
+.icon-uniF2E3:before { content: "\F2E3"; }
+.icon-uniF2E4:before { content: "\F2E4"; }
+.icon-uniF2E5:before { content: "\F2E5"; }
+.icon-uniF2E6:before { content: "\F2E6"; }
+.icon-uniF2E7:before { content: "\F2E7"; }
+.icon-_698:before { content: "\F2E8"; }
+.icon-uniF2E9:before { content: "\F2E9"; }
+.icon-uniF2EA:before { content: "\F2EA"; }
+.icon-uniF2EB:before { content: "\F2EB"; }
+.icon-uniF2EC:before { content: "\F2EC"; }
+.icon-uniF2ED:before { content: "\F2ED"; }
+.icon-uniF2EE:before { content: "\F2EE"; }
+.icon-lessequal:before { content: "\F500"; }
+</style>
+<table width='100%' class="font-demo-table" border="1">
+	<thead>
+		<tr>
+			<th>Class</th>
+			<th>Unicode</th>
+			<th>Icon</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td>.icon-.notdef</td><td>\-1</td><td><i class="font-demo-icon icon-.notdef"></i></td></tr>
+		<tr><td>.icon-.null</td><td>\-1</td><td><i class="font-demo-icon icon-.null"></i></td></tr>
+		<tr><td>.icon-nonmarkingreturn</td><td>\-1</td><td><i class="font-demo-icon icon-nonmarkingreturn"></i></td></tr>
+		<tr><td>.icon-space</td><td>\20</td><td><i class="font-demo-icon icon-space"></i></td></tr>
+		<tr><td>.icon-dieresis</td><td>\A8</td><td><i class="font-demo-icon icon-dieresis"></i></td></tr>
+		<tr><td>.icon-copyright</td><td>\A9</td><td><i class="font-demo-icon icon-copyright"></i></td></tr>
+		<tr><td>.icon-registered</td><td>\AE</td><td><i class="font-demo-icon icon-registered"></i></td></tr>
+		<tr><td>.icon-acute</td><td>\B4</td><td><i class="font-demo-icon icon-acute"></i></td></tr>
+		<tr><td>.icon-AE</td><td>\C6</td><td><i class="font-demo-icon icon-AE"></i></td></tr>
+		<tr><td>.icon-Oslash</td><td>\D8</td><td><i class="font-demo-icon icon-Oslash"></i></td></tr>
+		<tr><td>.icon-trademark</td><td>\2122</td><td><i class="font-demo-icon icon-trademark"></i></td></tr>
+		<tr><td>.icon-infinity</td><td>\221E</td><td><i class="font-demo-icon icon-infinity"></i></td></tr>
+		<tr><td>.icon-notequal</td><td>\2260</td><td><i class="font-demo-icon icon-notequal"></i></td></tr>
+		<tr><td>.icon-glass</td><td>\F000</td><td><i class="font-demo-icon icon-glass"></i></td></tr>
+		<tr><td>.icon-music</td><td>\F001</td><td><i class="font-demo-icon icon-music"></i></td></tr>
+		<tr><td>.icon-search</td><td>\F002</td><td><i class="font-demo-icon icon-search"></i></td></tr>
+		<tr><td>.icon-envelope</td><td>\F003</td><td><i class="font-demo-icon icon-envelope"></i></td></tr>
+		<tr><td>.icon-heart</td><td>\F004</td><td><i class="font-demo-icon icon-heart"></i></td></tr>
+		<tr><td>.icon-star</td><td>\F005</td><td><i class="font-demo-icon icon-star"></i></td></tr>
+		<tr><td>.icon-star_empty</td><td>\F006</td><td><i class="font-demo-icon icon-star_empty"></i></td></tr>
+		<tr><td>.icon-user</td><td>\F007</td><td><i class="font-demo-icon icon-user"></i></td></tr>
+		<tr><td>.icon-film</td><td>\F008</td><td><i class="font-demo-icon icon-film"></i></td></tr>
+		<tr><td>.icon-th_large</td><td>\F009</td><td><i class="font-demo-icon icon-th_large"></i></td></tr>
+		<tr><td>.icon-th</td><td>\F00A</td><td><i class="font-demo-icon icon-th"></i></td></tr>
+		<tr><td>.icon-th_list</td><td>\F00B</td><td><i class="font-demo-icon icon-th_list"></i></td></tr>
+		<tr><td>.icon-ok</td><td>\F00C</td><td><i class="font-demo-icon icon-ok"></i></td></tr>
+		<tr><td>.icon-remove</td><td>\F00D</td><td><i class="font-demo-icon icon-remove"></i></td></tr>
+		<tr><td>.icon-zoom_in</td><td>\F00E</td><td><i class="font-demo-icon icon-zoom_in"></i></td></tr>
+		<tr><td>.icon-zoom_out</td><td>\F010</td><td><i class="font-demo-icon icon-zoom_out"></i></td></tr>
+		<tr><td>.icon-off</td><td>\F011</td><td><i class="font-demo-icon icon-off"></i></td></tr>
+		<tr><td>.icon-signal</td><td>\F012</td><td><i class="font-demo-icon icon-signal"></i></td></tr>
+		<tr><td>.icon-cog</td><td>\F013</td><td><i class="font-demo-icon icon-cog"></i></td></tr>
+		<tr><td>.icon-trash</td><td>\F014</td><td><i class="font-demo-icon icon-trash"></i></td></tr>
+		<tr><td>.icon-home</td><td>\F015</td><td><i class="font-demo-icon icon-home"></i></td></tr>
+		<tr><td>.icon-file_alt</td><td>\F016</td><td><i class="font-demo-icon icon-file_alt"></i></td></tr>
+		<tr><td>.icon-time</td><td>\F017</td><td><i class="font-demo-icon icon-time"></i></td></tr>
+		<tr><td>.icon-road</td><td>\F018</td><td><i class="font-demo-icon icon-road"></i></td></tr>
+		<tr><td>.icon-download_alt</td><td>\F019</td><td><i class="font-demo-icon icon-download_alt"></i></td></tr>
+		<tr><td>.icon-download</td><td>\F01A</td><td><i class="font-demo-icon icon-download"></i></td></tr>
+		<tr><td>.icon-upload</td><td>\F01B</td><td><i class="font-demo-icon icon-upload"></i></td></tr>
+		<tr><td>.icon-inbox</td><td>\F01C</td><td><i class="font-demo-icon icon-inbox"></i></td></tr>
+		<tr><td>.icon-play_circle</td><td>\F01D</td><td><i class="font-demo-icon icon-play_circle"></i></td></tr>
+		<tr><td>.icon-repeat</td><td>\F01E</td><td><i class="font-demo-icon icon-repeat"></i></td></tr>
+		<tr><td>.icon-refresh</td><td>\F021</td><td><i class="font-demo-icon icon-refresh"></i></td></tr>
+		<tr><td>.icon-list_alt</td><td>\F022</td><td><i class="font-demo-icon icon-list_alt"></i></td></tr>
+		<tr><td>.icon-lock</td><td>\F023</td><td><i class="font-demo-icon icon-lock"></i></td></tr>
+		<tr><td>.icon-flag</td><td>\F024</td><td><i class="font-demo-icon icon-flag"></i></td></tr>
+		<tr><td>.icon-headphones</td><td>\F025</td><td><i class="font-demo-icon icon-headphones"></i></td></tr>
+		<tr><td>.icon-volume_off</td><td>\F026</td><td><i class="font-demo-icon icon-volume_off"></i></td></tr>
+		<tr><td>.icon-volume_down</td><td>\F027</td><td><i class="font-demo-icon icon-volume_down"></i></td></tr>
+		<tr><td>.icon-volume_up</td><td>\F028</td><td><i class="font-demo-icon icon-volume_up"></i></td></tr>
+		<tr><td>.icon-qrcode</td><td>\F029</td><td><i class="font-demo-icon icon-qrcode"></i></td></tr>
+		<tr><td>.icon-barcode</td><td>\F02A</td><td><i class="font-demo-icon icon-barcode"></i></td></tr>
+		<tr><td>.icon-tag</td><td>\F02B</td><td><i class="font-demo-icon icon-tag"></i></td></tr>
+		<tr><td>.icon-tags</td><td>\F02C</td><td><i class="font-demo-icon icon-tags"></i></td></tr>
+		<tr><td>.icon-book</td><td>\F02D</td><td><i class="font-demo-icon icon-book"></i></td></tr>
+		<tr><td>.icon-bookmark</td><td>\F02E</td><td><i class="font-demo-icon icon-bookmark"></i></td></tr>
+		<tr><td>.icon-print</td><td>\F02F</td><td><i class="font-demo-icon icon-print"></i></td></tr>
+		<tr><td>.icon-camera</td><td>\F030</td><td><i class="font-demo-icon icon-camera"></i></td></tr>
+		<tr><td>.icon-font</td><td>\F031</td><td><i class="font-demo-icon icon-font"></i></td></tr>
+		<tr><td>.icon-bold</td><td>\F032</td><td><i class="font-demo-icon icon-bold"></i></td></tr>
+		<tr><td>.icon-italic</td><td>\F033</td><td><i class="font-demo-icon icon-italic"></i></td></tr>
+		<tr><td>.icon-text_height</td><td>\F034</td><td><i class="font-demo-icon icon-text_height"></i></td></tr>
+		<tr><td>.icon-text_width</td><td>\F035</td><td><i class="font-demo-icon icon-text_width"></i></td></tr>
+		<tr><td>.icon-align_left</td><td>\F036</td><td><i class="font-demo-icon icon-align_left"></i></td></tr>
+		<tr><td>.icon-align_center</td><td>\F037</td><td><i class="font-demo-icon icon-align_center"></i></td></tr>
+		<tr><td>.icon-align_right</td><td>\F038</td><td><i class="font-demo-icon icon-align_right"></i></td></tr>
+		<tr><td>.icon-align_justify</td><td>\F039</td><td><i class="font-demo-icon icon-align_justify"></i></td></tr>
+		<tr><td>.icon-list</td><td>\F03A</td><td><i class="font-demo-icon icon-list"></i></td></tr>
+		<tr><td>.icon-indent_left</td><td>\F03B</td><td><i class="font-demo-icon icon-indent_left"></i></td></tr>
+		<tr><td>.icon-indent_right</td><td>\F03C</td><td><i class="font-demo-icon icon-indent_right"></i></td></tr>
+		<tr><td>.icon-facetime_video</td><td>\F03D</td><td><i class="font-demo-icon icon-facetime_video"></i></td></tr>
+		<tr><td>.icon-picture</td><td>\F03E</td><td><i class="font-demo-icon icon-picture"></i></td></tr>
+		<tr><td>.icon-pencil</td><td>\F040</td><td><i class="font-demo-icon icon-pencil"></i></td></tr>
+		<tr><td>.icon-map_marker</td><td>\F041</td><td><i class="font-demo-icon icon-map_marker"></i></td></tr>
+		<tr><td>.icon-adjust</td><td>\F042</td><td><i class="font-demo-icon icon-adjust"></i></td></tr>
+		<tr><td>.icon-tint</td><td>\F043</td><td><i class="font-demo-icon icon-tint"></i></td></tr>
+		<tr><td>.icon-edit</td><td>\F044</td><td><i class="font-demo-icon icon-edit"></i></td></tr>
+		<tr><td>.icon-share</td><td>\F045</td><td><i class="font-demo-icon icon-share"></i></td></tr>
+		<tr><td>.icon-check</td><td>\F046</td><td><i class="font-demo-icon icon-check"></i></td></tr>
+		<tr><td>.icon-move</td><td>\F047</td><td><i class="font-demo-icon icon-move"></i></td></tr>
+		<tr><td>.icon-step_backward</td><td>\F048</td><td><i class="font-demo-icon icon-step_backward"></i></td></tr>
+		<tr><td>.icon-fast_backward</td><td>\F049</td><td><i class="font-demo-icon icon-fast_backward"></i></td></tr>
+		<tr><td>.icon-backward</td><td>\F04A</td><td><i class="font-demo-icon icon-backward"></i></td></tr>
+		<tr><td>.icon-play</td><td>\F04B</td><td><i class="font-demo-icon icon-play"></i></td></tr>
+		<tr><td>.icon-pause</td><td>\F04C</td><td><i class="font-demo-icon icon-pause"></i></td></tr>
+		<tr><td>.icon-stop</td><td>\F04D</td><td><i class="font-demo-icon icon-stop"></i></td></tr>
+		<tr><td>.icon-forward</td><td>\F04E</td><td><i class="font-demo-icon icon-forward"></i></td></tr>
+		<tr><td>.icon-fast_forward</td><td>\F050</td><td><i class="font-demo-icon icon-fast_forward"></i></td></tr>
+		<tr><td>.icon-step_forward</td><td>\F051</td><td><i class="font-demo-icon icon-step_forward"></i></td></tr>
+		<tr><td>.icon-eject</td><td>\F052</td><td><i class="font-demo-icon icon-eject"></i></td></tr>
+		<tr><td>.icon-chevron_left</td><td>\F053</td><td><i class="font-demo-icon icon-chevron_left"></i></td></tr>
+		<tr><td>.icon-chevron_right</td><td>\F054</td><td><i class="font-demo-icon icon-chevron_right"></i></td></tr>
+		<tr><td>.icon-plus_sign</td><td>\F055</td><td><i class="font-demo-icon icon-plus_sign"></i></td></tr>
+		<tr><td>.icon-minus_sign</td><td>\F056</td><td><i class="font-demo-icon icon-minus_sign"></i></td></tr>
+		<tr><td>.icon-remove_sign</td><td>\F057</td><td><i class="font-demo-icon icon-remove_sign"></i></td></tr>
+		<tr><td>.icon-ok_sign</td><td>\F058</td><td><i class="font-demo-icon icon-ok_sign"></i></td></tr>
+		<tr><td>.icon-question_sign</td><td>\F059</td><td><i class="font-demo-icon icon-question_sign"></i></td></tr>
+		<tr><td>.icon-info_sign</td><td>\F05A</td><td><i class="font-demo-icon icon-info_sign"></i></td></tr>
+		<tr><td>.icon-screenshot</td><td>\F05B</td><td><i class="font-demo-icon icon-screenshot"></i></td></tr>
+		<tr><td>.icon-remove_circle</td><td>\F05C</td><td><i class="font-demo-icon icon-remove_circle"></i></td></tr>
+		<tr><td>.icon-ok_circle</td><td>\F05D</td><td><i class="font-demo-icon icon-ok_circle"></i></td></tr>
+		<tr><td>.icon-ban_circle</td><td>\F05E</td><td><i class="font-demo-icon icon-ban_circle"></i></td></tr>
+		<tr><td>.icon-arrow_left</td><td>\F060</td><td><i class="font-demo-icon icon-arrow_left"></i></td></tr>
+		<tr><td>.icon-arrow_right</td><td>\F061</td><td><i class="font-demo-icon icon-arrow_right"></i></td></tr>
+		<tr><td>.icon-arrow_up</td><td>\F062</td><td><i class="font-demo-icon icon-arrow_up"></i></td></tr>
+		<tr><td>.icon-arrow_down</td><td>\F063</td><td><i class="font-demo-icon icon-arrow_down"></i></td></tr>
+		<tr><td>.icon-share_alt</td><td>\F064</td><td><i class="font-demo-icon icon-share_alt"></i></td></tr>
+		<tr><td>.icon-resize_full</td><td>\F065</td><td><i class="font-demo-icon icon-resize_full"></i></td></tr>
+		<tr><td>.icon-resize_small</td><td>\F066</td><td><i class="font-demo-icon icon-resize_small"></i></td></tr>
+		<tr><td>.icon-plus</td><td>\F067</td><td><i class="font-demo-icon icon-plus"></i></td></tr>
+		<tr><td>.icon-minus</td><td>\F068</td><td><i class="font-demo-icon icon-minus"></i></td></tr>
+		<tr><td>.icon-asterisk</td><td>\F069</td><td><i class="font-demo-icon icon-asterisk"></i></td></tr>
+		<tr><td>.icon-exclamation_sign</td><td>\F06A</td><td><i class="font-demo-icon icon-exclamation_sign"></i></td></tr>
+		<tr><td>.icon-gift</td><td>\F06B</td><td><i class="font-demo-icon icon-gift"></i></td></tr>
+		<tr><td>.icon-leaf</td><td>\F06C</td><td><i class="font-demo-icon icon-leaf"></i></td></tr>
+		<tr><td>.icon-fire</td><td>\F06D</td><td><i class="font-demo-icon icon-fire"></i></td></tr>
+		<tr><td>.icon-eye_open</td><td>\F06E</td><td><i class="font-demo-icon icon-eye_open"></i></td></tr>
+		<tr><td>.icon-eye_close</td><td>\F070</td><td><i class="font-demo-icon icon-eye_close"></i></td></tr>
+		<tr><td>.icon-warning_sign</td><td>\F071</td><td><i class="font-demo-icon icon-warning_sign"></i></td></tr>
+		<tr><td>.icon-plane</td><td>\F072</td><td><i class="font-demo-icon icon-plane"></i></td></tr>
+		<tr><td>.icon-calendar</td><td>\F073</td><td><i class="font-demo-icon icon-calendar"></i></td></tr>
+		<tr><td>.icon-random</td><td>\F074</td><td><i class="font-demo-icon icon-random"></i></td></tr>
+		<tr><td>.icon-comment</td><td>\F075</td><td><i class="font-demo-icon icon-comment"></i></td></tr>
+		<tr><td>.icon-magnet</td><td>\F076</td><td><i class="font-demo-icon icon-magnet"></i></td></tr>
+		<tr><td>.icon-chevron_up</td><td>\F077</td><td><i class="font-demo-icon icon-chevron_up"></i></td></tr>
+		<tr><td>.icon-chevron_down</td><td>\F078</td><td><i class="font-demo-icon icon-chevron_down"></i></td></tr>
+		<tr><td>.icon-retweet</td><td>\F079</td><td><i class="font-demo-icon icon-retweet"></i></td></tr>
+		<tr><td>.icon-shopping_cart</td><td>\F07A</td><td><i class="font-demo-icon icon-shopping_cart"></i></td></tr>
+		<tr><td>.icon-folder_close</td><td>\F07B</td><td><i class="font-demo-icon icon-folder_close"></i></td></tr>
+		<tr><td>.icon-folder_open</td><td>\F07C</td><td><i class="font-demo-icon icon-folder_open"></i></td></tr>
+		<tr><td>.icon-resize_vertical</td><td>\F07D</td><td><i class="font-demo-icon icon-resize_vertical"></i></td></tr>
+		<tr><td>.icon-resize_horizontal</td><td>\F07E</td><td><i class="font-demo-icon icon-resize_horizontal"></i></td></tr>
+		<tr><td>.icon-bar_chart</td><td>\F080</td><td><i class="font-demo-icon icon-bar_chart"></i></td></tr>
+		<tr><td>.icon-twitter_sign</td><td>\F081</td><td><i class="font-demo-icon icon-twitter_sign"></i></td></tr>
+		<tr><td>.icon-facebook_sign</td><td>\F082</td><td><i class="font-demo-icon icon-facebook_sign"></i></td></tr>
+		<tr><td>.icon-camera_retro</td><td>\F083</td><td><i class="font-demo-icon icon-camera_retro"></i></td></tr>
+		<tr><td>.icon-key</td><td>\F084</td><td><i class="font-demo-icon icon-key"></i></td></tr>
+		<tr><td>.icon-cogs</td><td>\F085</td><td><i class="font-demo-icon icon-cogs"></i></td></tr>
+		<tr><td>.icon-comments</td><td>\F086</td><td><i class="font-demo-icon icon-comments"></i></td></tr>
+		<tr><td>.icon-thumbs_up_alt</td><td>\F087</td><td><i class="font-demo-icon icon-thumbs_up_alt"></i></td></tr>
+		<tr><td>.icon-thumbs_down_alt</td><td>\F088</td><td><i class="font-demo-icon icon-thumbs_down_alt"></i></td></tr>
+		<tr><td>.icon-star_half</td><td>\F089</td><td><i class="font-demo-icon icon-star_half"></i></td></tr>
+		<tr><td>.icon-heart_empty</td><td>\F08A</td><td><i class="font-demo-icon icon-heart_empty"></i></td></tr>
+		<tr><td>.icon-signout</td><td>\F08B</td><td><i class="font-demo-icon icon-signout"></i></td></tr>
+		<tr><td>.icon-linkedin_sign</td><td>\F08C</td><td><i class="font-demo-icon icon-linkedin_sign"></i></td></tr>
+		<tr><td>.icon-pushpin</td><td>\F08D</td><td><i class="font-demo-icon icon-pushpin"></i></td></tr>
+		<tr><td>.icon-external_link</td><td>\F08E</td><td><i class="font-demo-icon icon-external_link"></i></td></tr>
+		<tr><td>.icon-signin</td><td>\F090</td><td><i class="font-demo-icon icon-signin"></i></td></tr>
+		<tr><td>.icon-trophy</td><td>\F091</td><td><i class="font-demo-icon icon-trophy"></i></td></tr>
+		<tr><td>.icon-github_sign</td><td>\F092</td><td><i class="font-demo-icon icon-github_sign"></i></td></tr>
+		<tr><td>.icon-upload_alt</td><td>\F093</td><td><i class="font-demo-icon icon-upload_alt"></i></td></tr>
+		<tr><td>.icon-lemon</td><td>\F094</td><td><i class="font-demo-icon icon-lemon"></i></td></tr>
+		<tr><td>.icon-phone</td><td>\F095</td><td><i class="font-demo-icon icon-phone"></i></td></tr>
+		<tr><td>.icon-check_empty</td><td>\F096</td><td><i class="font-demo-icon icon-check_empty"></i></td></tr>
+		<tr><td>.icon-bookmark_empty</td><td>\F097</td><td><i class="font-demo-icon icon-bookmark_empty"></i></td></tr>
+		<tr><td>.icon-phone_sign</td><td>\F098</td><td><i class="font-demo-icon icon-phone_sign"></i></td></tr>
+		<tr><td>.icon-twitter</td><td>\F099</td><td><i class="font-demo-icon icon-twitter"></i></td></tr>
+		<tr><td>.icon-facebook</td><td>\F09A</td><td><i class="font-demo-icon icon-facebook"></i></td></tr>
+		<tr><td>.icon-github</td><td>\F09B</td><td><i class="font-demo-icon icon-github"></i></td></tr>
+		<tr><td>.icon-unlock</td><td>\F09C</td><td><i class="font-demo-icon icon-unlock"></i></td></tr>
+		<tr><td>.icon-credit_card</td><td>\F09D</td><td><i class="font-demo-icon icon-credit_card"></i></td></tr>
+		<tr><td>.icon-rss</td><td>\F09E</td><td><i class="font-demo-icon icon-rss"></i></td></tr>
+		<tr><td>.icon-hdd</td><td>\F0A0</td><td><i class="font-demo-icon icon-hdd"></i></td></tr>
+		<tr><td>.icon-bullhorn</td><td>\F0A1</td><td><i class="font-demo-icon icon-bullhorn"></i></td></tr>
+		<tr><td>.icon-bell</td><td>\F0A2</td><td><i class="font-demo-icon icon-bell"></i></td></tr>
+		<tr><td>.icon-certificate</td><td>\F0A3</td><td><i class="font-demo-icon icon-certificate"></i></td></tr>
+		<tr><td>.icon-hand_right</td><td>\F0A4</td><td><i class="font-demo-icon icon-hand_right"></i></td></tr>
+		<tr><td>.icon-hand_left</td><td>\F0A5</td><td><i class="font-demo-icon icon-hand_left"></i></td></tr>
+		<tr><td>.icon-hand_up</td><td>\F0A6</td><td><i class="font-demo-icon icon-hand_up"></i></td></tr>
+		<tr><td>.icon-hand_down</td><td>\F0A7</td><td><i class="font-demo-icon icon-hand_down"></i></td></tr>
+		<tr><td>.icon-circle_arrow_left</td><td>\F0A8</td><td><i class="font-demo-icon icon-circle_arrow_left"></i></td></tr>
+		<tr><td>.icon-circle_arrow_right</td><td>\F0A9</td><td><i class="font-demo-icon icon-circle_arrow_right"></i></td></tr>
+		<tr><td>.icon-circle_arrow_up</td><td>\F0AA</td><td><i class="font-demo-icon icon-circle_arrow_up"></i></td></tr>
+		<tr><td>.icon-circle_arrow_down</td><td>\F0AB</td><td><i class="font-demo-icon icon-circle_arrow_down"></i></td></tr>
+		<tr><td>.icon-globe</td><td>\F0AC</td><td><i class="font-demo-icon icon-globe"></i></td></tr>
+		<tr><td>.icon-wrench</td><td>\F0AD</td><td><i class="font-demo-icon icon-wrench"></i></td></tr>
+		<tr><td>.icon-tasks</td><td>\F0AE</td><td><i class="font-demo-icon icon-tasks"></i></td></tr>
+		<tr><td>.icon-filter</td><td>\F0B0</td><td><i class="font-demo-icon icon-filter"></i></td></tr>
+		<tr><td>.icon-briefcase</td><td>\F0B1</td><td><i class="font-demo-icon icon-briefcase"></i></td></tr>
+		<tr><td>.icon-fullscreen</td><td>\F0B2</td><td><i class="font-demo-icon icon-fullscreen"></i></td></tr>
+		<tr><td>.icon-group</td><td>\F0C0</td><td><i class="font-demo-icon icon-group"></i></td></tr>
+		<tr><td>.icon-link</td><td>\F0C1</td><td><i class="font-demo-icon icon-link"></i></td></tr>
+		<tr><td>.icon-cloud</td><td>\F0C2</td><td><i class="font-demo-icon icon-cloud"></i></td></tr>
+		<tr><td>.icon-beaker</td><td>\F0C3</td><td><i class="font-demo-icon icon-beaker"></i></td></tr>
+		<tr><td>.icon-cut</td><td>\F0C4</td><td><i class="font-demo-icon icon-cut"></i></td></tr>
+		<tr><td>.icon-copy</td><td>\F0C5</td><td><i class="font-demo-icon icon-copy"></i></td></tr>
+		<tr><td>.icon-paper_clip</td><td>\F0C6</td><td><i class="font-demo-icon icon-paper_clip"></i></td></tr>
+		<tr><td>.icon-save</td><td>\F0C7</td><td><i class="font-demo-icon icon-save"></i></td></tr>
+		<tr><td>.icon-sign_blank</td><td>\F0C8</td><td><i class="font-demo-icon icon-sign_blank"></i></td></tr>
+		<tr><td>.icon-reorder</td><td>\F0C9</td><td><i class="font-demo-icon icon-reorder"></i></td></tr>
+		<tr><td>.icon-ul</td><td>\F0CA</td><td><i class="font-demo-icon icon-ul"></i></td></tr>
+		<tr><td>.icon-ol</td><td>\F0CB</td><td><i class="font-demo-icon icon-ol"></i></td></tr>
+		<tr><td>.icon-strikethrough</td><td>\F0CC</td><td><i class="font-demo-icon icon-strikethrough"></i></td></tr>
+		<tr><td>.icon-underline</td><td>\F0CD</td><td><i class="font-demo-icon icon-underline"></i></td></tr>
+		<tr><td>.icon-table</td><td>\F0CE</td><td><i class="font-demo-icon icon-table"></i></td></tr>
+		<tr><td>.icon-magic</td><td>\F0D0</td><td><i class="font-demo-icon icon-magic"></i></td></tr>
+		<tr><td>.icon-truck</td><td>\F0D1</td><td><i class="font-demo-icon icon-truck"></i></td></tr>
+		<tr><td>.icon-pinterest</td><td>\F0D2</td><td><i class="font-demo-icon icon-pinterest"></i></td></tr>
+		<tr><td>.icon-pinterest_sign</td><td>\F0D3</td><td><i class="font-demo-icon icon-pinterest_sign"></i></td></tr>
+		<tr><td>.icon-google_plus_sign</td><td>\F0D4</td><td><i class="font-demo-icon icon-google_plus_sign"></i></td></tr>
+		<tr><td>.icon-google_plus</td><td>\F0D5</td><td><i class="font-demo-icon icon-google_plus"></i></td></tr>
+		<tr><td>.icon-money</td><td>\F0D6</td><td><i class="font-demo-icon icon-money"></i></td></tr>
+		<tr><td>.icon-caret_down</td><td>\F0D7</td><td><i class="font-demo-icon icon-caret_down"></i></td></tr>
+		<tr><td>.icon-caret_up</td><td>\F0D8</td><td><i class="font-demo-icon icon-caret_up"></i></td></tr>
+		<tr><td>.icon-caret_left</td><td>\F0D9</td><td><i class="font-demo-icon icon-caret_left"></i></td></tr>
+		<tr><td>.icon-caret_right</td><td>\F0DA</td><td><i class="font-demo-icon icon-caret_right"></i></td></tr>
+		<tr><td>.icon-columns</td><td>\F0DB</td><td><i class="font-demo-icon icon-columns"></i></td></tr>
+		<tr><td>.icon-sort</td><td>\F0DC</td><td><i class="font-demo-icon icon-sort"></i></td></tr>
+		<tr><td>.icon-sort_down</td><td>\F0DD</td><td><i class="font-demo-icon icon-sort_down"></i></td></tr>
+		<tr><td>.icon-sort_up</td><td>\F0DE</td><td><i class="font-demo-icon icon-sort_up"></i></td></tr>
+		<tr><td>.icon-envelope_alt</td><td>\F0E0</td><td><i class="font-demo-icon icon-envelope_alt"></i></td></tr>
+		<tr><td>.icon-linkedin</td><td>\F0E1</td><td><i class="font-demo-icon icon-linkedin"></i></td></tr>
+		<tr><td>.icon-undo</td><td>\F0E2</td><td><i class="font-demo-icon icon-undo"></i></td></tr>
+		<tr><td>.icon-legal</td><td>\F0E3</td><td><i class="font-demo-icon icon-legal"></i></td></tr>
+		<tr><td>.icon-dashboard</td><td>\F0E4</td><td><i class="font-demo-icon icon-dashboard"></i></td></tr>
+		<tr><td>.icon-comment_alt</td><td>\F0E5</td><td><i class="font-demo-icon icon-comment_alt"></i></td></tr>
+		<tr><td>.icon-comments_alt</td><td>\F0E6</td><td><i class="font-demo-icon icon-comments_alt"></i></td></tr>
+		<tr><td>.icon-bolt</td><td>\F0E7</td><td><i class="font-demo-icon icon-bolt"></i></td></tr>
+		<tr><td>.icon-sitemap</td><td>\F0E8</td><td><i class="font-demo-icon icon-sitemap"></i></td></tr>
+		<tr><td>.icon-umbrella</td><td>\F0E9</td><td><i class="font-demo-icon icon-umbrella"></i></td></tr>
+		<tr><td>.icon-paste</td><td>\F0EA</td><td><i class="font-demo-icon icon-paste"></i></td></tr>
+		<tr><td>.icon-light_bulb</td><td>\F0EB</td><td><i class="font-demo-icon icon-light_bulb"></i></td></tr>
+		<tr><td>.icon-exchange</td><td>\F0EC</td><td><i class="font-demo-icon icon-exchange"></i></td></tr>
+		<tr><td>.icon-cloud_download</td><td>\F0ED</td><td><i class="font-demo-icon icon-cloud_download"></i></td></tr>
+		<tr><td>.icon-cloud_upload</td><td>\F0EE</td><td><i class="font-demo-icon icon-cloud_upload"></i></td></tr>
+		<tr><td>.icon-user_md</td><td>\F0F0</td><td><i class="font-demo-icon icon-user_md"></i></td></tr>
+		<tr><td>.icon-stethoscope</td><td>\F0F1</td><td><i class="font-demo-icon icon-stethoscope"></i></td></tr>
+		<tr><td>.icon-suitcase</td><td>\F0F2</td><td><i class="font-demo-icon icon-suitcase"></i></td></tr>
+		<tr><td>.icon-bell_alt</td><td>\F0F3</td><td><i class="font-demo-icon icon-bell_alt"></i></td></tr>
+		<tr><td>.icon-coffee</td><td>\F0F4</td><td><i class="font-demo-icon icon-coffee"></i></td></tr>
+		<tr><td>.icon-food</td><td>\F0F5</td><td><i class="font-demo-icon icon-food"></i></td></tr>
+		<tr><td>.icon-file_text_alt</td><td>\F0F6</td><td><i class="font-demo-icon icon-file_text_alt"></i></td></tr>
+		<tr><td>.icon-building</td><td>\F0F7</td><td><i class="font-demo-icon icon-building"></i></td></tr>
+		<tr><td>.icon-hospital</td><td>\F0F8</td><td><i class="font-demo-icon icon-hospital"></i></td></tr>
+		<tr><td>.icon-ambulance</td><td>\F0F9</td><td><i class="font-demo-icon icon-ambulance"></i></td></tr>
+		<tr><td>.icon-medkit</td><td>\F0FA</td><td><i class="font-demo-icon icon-medkit"></i></td></tr>
+		<tr><td>.icon-fighter_jet</td><td>\F0FB</td><td><i class="font-demo-icon icon-fighter_jet"></i></td></tr>
+		<tr><td>.icon-beer</td><td>\F0FC</td><td><i class="font-demo-icon icon-beer"></i></td></tr>
+		<tr><td>.icon-h_sign</td><td>\F0FD</td><td><i class="font-demo-icon icon-h_sign"></i></td></tr>
+		<tr><td>.icon-f0fe</td><td>\F0FE</td><td><i class="font-demo-icon icon-f0fe"></i></td></tr>
+		<tr><td>.icon-double_angle_left</td><td>\F100</td><td><i class="font-demo-icon icon-double_angle_left"></i></td></tr>
+		<tr><td>.icon-double_angle_right</td><td>\F101</td><td><i class="font-demo-icon icon-double_angle_right"></i></td></tr>
+		<tr><td>.icon-double_angle_up</td><td>\F102</td><td><i class="font-demo-icon icon-double_angle_up"></i></td></tr>
+		<tr><td>.icon-double_angle_down</td><td>\F103</td><td><i class="font-demo-icon icon-double_angle_down"></i></td></tr>
+		<tr><td>.icon-angle_left</td><td>\F104</td><td><i class="font-demo-icon icon-angle_left"></i></td></tr>
+		<tr><td>.icon-angle_right</td><td>\F105</td><td><i class="font-demo-icon icon-angle_right"></i></td></tr>
+		<tr><td>.icon-angle_up</td><td>\F106</td><td><i class="font-demo-icon icon-angle_up"></i></td></tr>
+		<tr><td>.icon-angle_down</td><td>\F107</td><td><i class="font-demo-icon icon-angle_down"></i></td></tr>
+		<tr><td>.icon-desktop</td><td>\F108</td><td><i class="font-demo-icon icon-desktop"></i></td></tr>
+		<tr><td>.icon-laptop</td><td>\F109</td><td><i class="font-demo-icon icon-laptop"></i></td></tr>
+		<tr><td>.icon-tablet</td><td>\F10A</td><td><i class="font-demo-icon icon-tablet"></i></td></tr>
+		<tr><td>.icon-mobile_phone</td><td>\F10B</td><td><i class="font-demo-icon icon-mobile_phone"></i></td></tr>
+		<tr><td>.icon-circle_blank</td><td>\F10C</td><td><i class="font-demo-icon icon-circle_blank"></i></td></tr>
+		<tr><td>.icon-quote_left</td><td>\F10D</td><td><i class="font-demo-icon icon-quote_left"></i></td></tr>
+		<tr><td>.icon-quote_right</td><td>\F10E</td><td><i class="font-demo-icon icon-quote_right"></i></td></tr>
+		<tr><td>.icon-spinner</td><td>\F110</td><td><i class="font-demo-icon icon-spinner"></i></td></tr>
+		<tr><td>.icon-circle</td><td>\F111</td><td><i class="font-demo-icon icon-circle"></i></td></tr>
+		<tr><td>.icon-reply</td><td>\F112</td><td><i class="font-demo-icon icon-reply"></i></td></tr>
+		<tr><td>.icon-github_alt</td><td>\F113</td><td><i class="font-demo-icon icon-github_alt"></i></td></tr>
+		<tr><td>.icon-folder_close_alt</td><td>\F114</td><td><i class="font-demo-icon icon-folder_close_alt"></i></td></tr>
+		<tr><td>.icon-folder_open_alt</td><td>\F115</td><td><i class="font-demo-icon icon-folder_open_alt"></i></td></tr>
+		<tr><td>.icon-expand_alt</td><td>\F116</td><td><i class="font-demo-icon icon-expand_alt"></i></td></tr>
+		<tr><td>.icon-collapse_alt</td><td>\F117</td><td><i class="font-demo-icon icon-collapse_alt"></i></td></tr>
+		<tr><td>.icon-smile</td><td>\F118</td><td><i class="font-demo-icon icon-smile"></i></td></tr>
+		<tr><td>.icon-frown</td><td>\F119</td><td><i class="font-demo-icon icon-frown"></i></td></tr>
+		<tr><td>.icon-meh</td><td>\F11A</td><td><i class="font-demo-icon icon-meh"></i></td></tr>
+		<tr><td>.icon-gamepad</td><td>\F11B</td><td><i class="font-demo-icon icon-gamepad"></i></td></tr>
+		<tr><td>.icon-keyboard</td><td>\F11C</td><td><i class="font-demo-icon icon-keyboard"></i></td></tr>
+		<tr><td>.icon-flag_alt</td><td>\F11D</td><td><i class="font-demo-icon icon-flag_alt"></i></td></tr>
+		<tr><td>.icon-flag_checkered</td><td>\F11E</td><td><i class="font-demo-icon icon-flag_checkered"></i></td></tr>
+		<tr><td>.icon-terminal</td><td>\F120</td><td><i class="font-demo-icon icon-terminal"></i></td></tr>
+		<tr><td>.icon-code</td><td>\F121</td><td><i class="font-demo-icon icon-code"></i></td></tr>
+		<tr><td>.icon-reply_all</td><td>\F122</td><td><i class="font-demo-icon icon-reply_all"></i></td></tr>
+		<tr><td>.icon-star_half_empty</td><td>\F123</td><td><i class="font-demo-icon icon-star_half_empty"></i></td></tr>
+		<tr><td>.icon-location_arrow</td><td>\F124</td><td><i class="font-demo-icon icon-location_arrow"></i></td></tr>
+		<tr><td>.icon-crop</td><td>\F125</td><td><i class="font-demo-icon icon-crop"></i></td></tr>
+		<tr><td>.icon-code_fork</td><td>\F126</td><td><i class="font-demo-icon icon-code_fork"></i></td></tr>
+		<tr><td>.icon-unlink</td><td>\F127</td><td><i class="font-demo-icon icon-unlink"></i></td></tr>
+		<tr><td>.icon-question</td><td>\F128</td><td><i class="font-demo-icon icon-question"></i></td></tr>
+		<tr><td>.icon-_279</td><td>\F129</td><td><i class="font-demo-icon icon-_279"></i></td></tr>
+		<tr><td>.icon-exclamation</td><td>\F12A</td><td><i class="font-demo-icon icon-exclamation"></i></td></tr>
+		<tr><td>.icon-superscript</td><td>\F12B</td><td><i class="font-demo-icon icon-superscript"></i></td></tr>
+		<tr><td>.icon-subscript</td><td>\F12C</td><td><i class="font-demo-icon icon-subscript"></i></td></tr>
+		<tr><td>.icon-_283</td><td>\F12D</td><td><i class="font-demo-icon icon-_283"></i></td></tr>
+		<tr><td>.icon-puzzle_piece</td><td>\F12E</td><td><i class="font-demo-icon icon-puzzle_piece"></i></td></tr>
+		<tr><td>.icon-microphone</td><td>\F130</td><td><i class="font-demo-icon icon-microphone"></i></td></tr>
+		<tr><td>.icon-microphone_off</td><td>\F131</td><td><i class="font-demo-icon icon-microphone_off"></i></td></tr>
+		<tr><td>.icon-shield</td><td>\F132</td><td><i class="font-demo-icon icon-shield"></i></td></tr>
+		<tr><td>.icon-calendar_empty</td><td>\F133</td><td><i class="font-demo-icon icon-calendar_empty"></i></td></tr>
+		<tr><td>.icon-fire_extinguisher</td><td>\F134</td><td><i class="font-demo-icon icon-fire_extinguisher"></i></td></tr>
+		<tr><td>.icon-rocket</td><td>\F135</td><td><i class="font-demo-icon icon-rocket"></i></td></tr>
+		<tr><td>.icon-maxcdn</td><td>\F136</td><td><i class="font-demo-icon icon-maxcdn"></i></td></tr>
+		<tr><td>.icon-chevron_sign_left</td><td>\F137</td><td><i class="font-demo-icon icon-chevron_sign_left"></i></td></tr>
+		<tr><td>.icon-chevron_sign_right</td><td>\F138</td><td><i class="font-demo-icon icon-chevron_sign_right"></i></td></tr>
+		<tr><td>.icon-chevron_sign_up</td><td>\F139</td><td><i class="font-demo-icon icon-chevron_sign_up"></i></td></tr>
+		<tr><td>.icon-chevron_sign_down</td><td>\F13A</td><td><i class="font-demo-icon icon-chevron_sign_down"></i></td></tr>
+		<tr><td>.icon-html5</td><td>\F13B</td><td><i class="font-demo-icon icon-html5"></i></td></tr>
+		<tr><td>.icon-css3</td><td>\F13C</td><td><i class="font-demo-icon icon-css3"></i></td></tr>
+		<tr><td>.icon-anchor</td><td>\F13D</td><td><i class="font-demo-icon icon-anchor"></i></td></tr>
+		<tr><td>.icon-unlock_alt</td><td>\F13E</td><td><i class="font-demo-icon icon-unlock_alt"></i></td></tr>
+		<tr><td>.icon-bullseye</td><td>\F140</td><td><i class="font-demo-icon icon-bullseye"></i></td></tr>
+		<tr><td>.icon-ellipsis_horizontal</td><td>\F141</td><td><i class="font-demo-icon icon-ellipsis_horizontal"></i></td></tr>
+		<tr><td>.icon-ellipsis_vertical</td><td>\F142</td><td><i class="font-demo-icon icon-ellipsis_vertical"></i></td></tr>
+		<tr><td>.icon-_303</td><td>\F143</td><td><i class="font-demo-icon icon-_303"></i></td></tr>
+		<tr><td>.icon-play_sign</td><td>\F144</td><td><i class="font-demo-icon icon-play_sign"></i></td></tr>
+		<tr><td>.icon-ticket</td><td>\F145</td><td><i class="font-demo-icon icon-ticket"></i></td></tr>
+		<tr><td>.icon-minus_sign_alt</td><td>\F146</td><td><i class="font-demo-icon icon-minus_sign_alt"></i></td></tr>
+		<tr><td>.icon-check_minus</td><td>\F147</td><td><i class="font-demo-icon icon-check_minus"></i></td></tr>
+		<tr><td>.icon-level_up</td><td>\F148</td><td><i class="font-demo-icon icon-level_up"></i></td></tr>
+		<tr><td>.icon-level_down</td><td>\F149</td><td><i class="font-demo-icon icon-level_down"></i></td></tr>
+		<tr><td>.icon-check_sign</td><td>\F14A</td><td><i class="font-demo-icon icon-check_sign"></i></td></tr>
+		<tr><td>.icon-edit_sign</td><td>\F14B</td><td><i class="font-demo-icon icon-edit_sign"></i></td></tr>
+		<tr><td>.icon-_312</td><td>\F14C</td><td><i class="font-demo-icon icon-_312"></i></td></tr>
+		<tr><td>.icon-share_sign</td><td>\F14D</td><td><i class="font-demo-icon icon-share_sign"></i></td></tr>
+		<tr><td>.icon-compass</td><td>\F14E</td><td><i class="font-demo-icon icon-compass"></i></td></tr>
+		<tr><td>.icon-collapse</td><td>\F150</td><td><i class="font-demo-icon icon-collapse"></i></td></tr>
+		<tr><td>.icon-collapse_top</td><td>\F151</td><td><i class="font-demo-icon icon-collapse_top"></i></td></tr>
+		<tr><td>.icon-_317</td><td>\F152</td><td><i class="font-demo-icon icon-_317"></i></td></tr>
+		<tr><td>.icon-eur</td><td>\F153</td><td><i class="font-demo-icon icon-eur"></i></td></tr>
+		<tr><td>.icon-gbp</td><td>\F154</td><td><i class="font-demo-icon icon-gbp"></i></td></tr>
+		<tr><td>.icon-usd</td><td>\F155</td><td><i class="font-demo-icon icon-usd"></i></td></tr>
+		<tr><td>.icon-inr</td><td>\F156</td><td><i class="font-demo-icon icon-inr"></i></td></tr>
+		<tr><td>.icon-jpy</td><td>\F157</td><td><i class="font-demo-icon icon-jpy"></i></td></tr>
+		<tr><td>.icon-rub</td><td>\F158</td><td><i class="font-demo-icon icon-rub"></i></td></tr>
+		<tr><td>.icon-krw</td><td>\F159</td><td><i class="font-demo-icon icon-krw"></i></td></tr>
+		<tr><td>.icon-btc</td><td>\F15A</td><td><i class="font-demo-icon icon-btc"></i></td></tr>
+		<tr><td>.icon-file</td><td>\F15B</td><td><i class="font-demo-icon icon-file"></i></td></tr>
+		<tr><td>.icon-file_text</td><td>\F15C</td><td><i class="font-demo-icon icon-file_text"></i></td></tr>
+		<tr><td>.icon-sort_by_alphabet</td><td>\F15D</td><td><i class="font-demo-icon icon-sort_by_alphabet"></i></td></tr>
+		<tr><td>.icon-_329</td><td>\F15E</td><td><i class="font-demo-icon icon-_329"></i></td></tr>
+		<tr><td>.icon-sort_by_attributes</td><td>\F160</td><td><i class="font-demo-icon icon-sort_by_attributes"></i></td></tr>
+		<tr><td>.icon-sort_by_attributes_alt</td><td>\F161</td><td><i class="font-demo-icon icon-sort_by_attributes_alt"></i></td></tr>
+		<tr><td>.icon-sort_by_order</td><td>\F162</td><td><i class="font-demo-icon icon-sort_by_order"></i></td></tr>
+		<tr><td>.icon-sort_by_order_alt</td><td>\F163</td><td><i class="font-demo-icon icon-sort_by_order_alt"></i></td></tr>
+		<tr><td>.icon-_334</td><td>\F164</td><td><i class="font-demo-icon icon-_334"></i></td></tr>
+		<tr><td>.icon-_335</td><td>\F165</td><td><i class="font-demo-icon icon-_335"></i></td></tr>
+		<tr><td>.icon-youtube_sign</td><td>\F166</td><td><i class="font-demo-icon icon-youtube_sign"></i></td></tr>
+		<tr><td>.icon-youtube</td><td>\F167</td><td><i class="font-demo-icon icon-youtube"></i></td></tr>
+		<tr><td>.icon-xing</td><td>\F168</td><td><i class="font-demo-icon icon-xing"></i></td></tr>
+		<tr><td>.icon-xing_sign</td><td>\F169</td><td><i class="font-demo-icon icon-xing_sign"></i></td></tr>
+		<tr><td>.icon-youtube_play</td><td>\F16A</td><td><i class="font-demo-icon icon-youtube_play"></i></td></tr>
+		<tr><td>.icon-dropbox</td><td>\F16B</td><td><i class="font-demo-icon icon-dropbox"></i></td></tr>
+		<tr><td>.icon-stackexchange</td><td>\F16C</td><td><i class="font-demo-icon icon-stackexchange"></i></td></tr>
+		<tr><td>.icon-instagram</td><td>\F16D</td><td><i class="font-demo-icon icon-instagram"></i></td></tr>
+		<tr><td>.icon-flickr</td><td>\F16E</td><td><i class="font-demo-icon icon-flickr"></i></td></tr>
+		<tr><td>.icon-adn</td><td>\F170</td><td><i class="font-demo-icon icon-adn"></i></td></tr>
+		<tr><td>.icon-f171</td><td>\F171</td><td><i class="font-demo-icon icon-f171"></i></td></tr>
+		<tr><td>.icon-bitbucket_sign</td><td>\F172</td><td><i class="font-demo-icon icon-bitbucket_sign"></i></td></tr>
+		<tr><td>.icon-tumblr</td><td>\F173</td><td><i class="font-demo-icon icon-tumblr"></i></td></tr>
+		<tr><td>.icon-tumblr_sign</td><td>\F174</td><td><i class="font-demo-icon icon-tumblr_sign"></i></td></tr>
+		<tr><td>.icon-long_arrow_down</td><td>\F175</td><td><i class="font-demo-icon icon-long_arrow_down"></i></td></tr>
+		<tr><td>.icon-long_arrow_up</td><td>\F176</td><td><i class="font-demo-icon icon-long_arrow_up"></i></td></tr>
+		<tr><td>.icon-long_arrow_left</td><td>\F177</td><td><i class="font-demo-icon icon-long_arrow_left"></i></td></tr>
+		<tr><td>.icon-long_arrow_right</td><td>\F178</td><td><i class="font-demo-icon icon-long_arrow_right"></i></td></tr>
+		<tr><td>.icon-apple</td><td>\F179</td><td><i class="font-demo-icon icon-apple"></i></td></tr>
+		<tr><td>.icon-windows</td><td>\F17A</td><td><i class="font-demo-icon icon-windows"></i></td></tr>
+		<tr><td>.icon-android</td><td>\F17B</td><td><i class="font-demo-icon icon-android"></i></td></tr>
+		<tr><td>.icon-linux</td><td>\F17C</td><td><i class="font-demo-icon icon-linux"></i></td></tr>
+		<tr><td>.icon-dribble</td><td>\F17D</td><td><i class="font-demo-icon icon-dribble"></i></td></tr>
+		<tr><td>.icon-skype</td><td>\F17E</td><td><i class="font-demo-icon icon-skype"></i></td></tr>
+		<tr><td>.icon-foursquare</td><td>\F180</td><td><i class="font-demo-icon icon-foursquare"></i></td></tr>
+		<tr><td>.icon-trello</td><td>\F181</td><td><i class="font-demo-icon icon-trello"></i></td></tr>
+		<tr><td>.icon-female</td><td>\F182</td><td><i class="font-demo-icon icon-female"></i></td></tr>
+		<tr><td>.icon-male</td><td>\F183</td><td><i class="font-demo-icon icon-male"></i></td></tr>
+		<tr><td>.icon-gittip</td><td>\F184</td><td><i class="font-demo-icon icon-gittip"></i></td></tr>
+		<tr><td>.icon-sun</td><td>\F185</td><td><i class="font-demo-icon icon-sun"></i></td></tr>
+		<tr><td>.icon-_366</td><td>\F186</td><td><i class="font-demo-icon icon-_366"></i></td></tr>
+		<tr><td>.icon-archive</td><td>\F187</td><td><i class="font-demo-icon icon-archive"></i></td></tr>
+		<tr><td>.icon-bug</td><td>\F188</td><td><i class="font-demo-icon icon-bug"></i></td></tr>
+		<tr><td>.icon-vk</td><td>\F189</td><td><i class="font-demo-icon icon-vk"></i></td></tr>
+		<tr><td>.icon-weibo</td><td>\F18A</td><td><i class="font-demo-icon icon-weibo"></i></td></tr>
+		<tr><td>.icon-renren</td><td>\F18B</td><td><i class="font-demo-icon icon-renren"></i></td></tr>
+		<tr><td>.icon-_372</td><td>\F18C</td><td><i class="font-demo-icon icon-_372"></i></td></tr>
+		<tr><td>.icon-stack_exchange</td><td>\F18D</td><td><i class="font-demo-icon icon-stack_exchange"></i></td></tr>
+		<tr><td>.icon-_374</td><td>\F18E</td><td><i class="font-demo-icon icon-_374"></i></td></tr>
+		<tr><td>.icon-arrow_circle_alt_left</td><td>\F190</td><td><i class="font-demo-icon icon-arrow_circle_alt_left"></i></td></tr>
+		<tr><td>.icon-_376</td><td>\F191</td><td><i class="font-demo-icon icon-_376"></i></td></tr>
+		<tr><td>.icon-dot_circle_alt</td><td>\F192</td><td><i class="font-demo-icon icon-dot_circle_alt"></i></td></tr>
+		<tr><td>.icon-_378</td><td>\F193</td><td><i class="font-demo-icon icon-_378"></i></td></tr>
+		<tr><td>.icon-vimeo_square</td><td>\F194</td><td><i class="font-demo-icon icon-vimeo_square"></i></td></tr>
+		<tr><td>.icon-_380</td><td>\F195</td><td><i class="font-demo-icon icon-_380"></i></td></tr>
+		<tr><td>.icon-plus_square_o</td><td>\F196</td><td><i class="font-demo-icon icon-plus_square_o"></i></td></tr>
+		<tr><td>.icon-_382</td><td>\F197</td><td><i class="font-demo-icon icon-_382"></i></td></tr>
+		<tr><td>.icon-_383</td><td>\F198</td><td><i class="font-demo-icon icon-_383"></i></td></tr>
+		<tr><td>.icon-_384</td><td>\F199</td><td><i class="font-demo-icon icon-_384"></i></td></tr>
+		<tr><td>.icon-_385</td><td>\F19A</td><td><i class="font-demo-icon icon-_385"></i></td></tr>
+		<tr><td>.icon-_386</td><td>\F19B</td><td><i class="font-demo-icon icon-_386"></i></td></tr>
+		<tr><td>.icon-_387</td><td>\F19C</td><td><i class="font-demo-icon icon-_387"></i></td></tr>
+		<tr><td>.icon-_388</td><td>\F19D</td><td><i class="font-demo-icon icon-_388"></i></td></tr>
+		<tr><td>.icon-_389</td><td>\F19E</td><td><i class="font-demo-icon icon-_389"></i></td></tr>
+		<tr><td>.icon-uniF1A0</td><td>\F1A0</td><td><i class="font-demo-icon icon-uniF1A0"></i></td></tr>
+		<tr><td>.icon-f1a1</td><td>\F1A1</td><td><i class="font-demo-icon icon-f1a1"></i></td></tr>
+		<tr><td>.icon-_392</td><td>\F1A2</td><td><i class="font-demo-icon icon-_392"></i></td></tr>
+		<tr><td>.icon-_393</td><td>\F1A3</td><td><i class="font-demo-icon icon-_393"></i></td></tr>
+		<tr><td>.icon-f1a4</td><td>\F1A4</td><td><i class="font-demo-icon icon-f1a4"></i></td></tr>
+		<tr><td>.icon-_395</td><td>\F1A5</td><td><i class="font-demo-icon icon-_395"></i></td></tr>
+		<tr><td>.icon-_396</td><td>\F1A6</td><td><i class="font-demo-icon icon-_396"></i></td></tr>
+		<tr><td>.icon-_397</td><td>\F1A7</td><td><i class="font-demo-icon icon-_397"></i></td></tr>
+		<tr><td>.icon-_398</td><td>\F1A8</td><td><i class="font-demo-icon icon-_398"></i></td></tr>
+		<tr><td>.icon-_399</td><td>\F1A9</td><td><i class="font-demo-icon icon-_399"></i></td></tr>
+		<tr><td>.icon-_400</td><td>\F1AA</td><td><i class="font-demo-icon icon-_400"></i></td></tr>
+		<tr><td>.icon-f1ab</td><td>\F1AB</td><td><i class="font-demo-icon icon-f1ab"></i></td></tr>
+		<tr><td>.icon-_402</td><td>\F1AC</td><td><i class="font-demo-icon icon-_402"></i></td></tr>
+		<tr><td>.icon-_403</td><td>\F1AD</td><td><i class="font-demo-icon icon-_403"></i></td></tr>
+		<tr><td>.icon-_404</td><td>\F1AE</td><td><i class="font-demo-icon icon-_404"></i></td></tr>
+		<tr><td>.icon-uniF1B1</td><td>\F1B0</td><td><i class="font-demo-icon icon-uniF1B1"></i></td></tr>
+		<tr><td>.icon-_406</td><td>\F1B1</td><td><i class="font-demo-icon icon-_406"></i></td></tr>
+		<tr><td>.icon-_407</td><td>\F1B2</td><td><i class="font-demo-icon icon-_407"></i></td></tr>
+		<tr><td>.icon-_408</td><td>\F1B3</td><td><i class="font-demo-icon icon-_408"></i></td></tr>
+		<tr><td>.icon-_409</td><td>\F1B4</td><td><i class="font-demo-icon icon-_409"></i></td></tr>
+		<tr><td>.icon-_410</td><td>\F1B5</td><td><i class="font-demo-icon icon-_410"></i></td></tr>
+		<tr><td>.icon-_411</td><td>\F1B6</td><td><i class="font-demo-icon icon-_411"></i></td></tr>
+		<tr><td>.icon-_412</td><td>\F1B7</td><td><i class="font-demo-icon icon-_412"></i></td></tr>
+		<tr><td>.icon-_413</td><td>\F1B8</td><td><i class="font-demo-icon icon-_413"></i></td></tr>
+		<tr><td>.icon-_414</td><td>\F1B9</td><td><i class="font-demo-icon icon-_414"></i></td></tr>
+		<tr><td>.icon-_415</td><td>\F1BA</td><td><i class="font-demo-icon icon-_415"></i></td></tr>
+		<tr><td>.icon-_416</td><td>\F1BB</td><td><i class="font-demo-icon icon-_416"></i></td></tr>
+		<tr><td>.icon-_417</td><td>\F1BC</td><td><i class="font-demo-icon icon-_417"></i></td></tr>
+		<tr><td>.icon-_418</td><td>\F1BD</td><td><i class="font-demo-icon icon-_418"></i></td></tr>
+		<tr><td>.icon-_419</td><td>\F1BE</td><td><i class="font-demo-icon icon-_419"></i></td></tr>
+		<tr><td>.icon-uniF1C0</td><td>\F1C0</td><td><i class="font-demo-icon icon-uniF1C0"></i></td></tr>
+		<tr><td>.icon-uniF1C1</td><td>\F1C1</td><td><i class="font-demo-icon icon-uniF1C1"></i></td></tr>
+		<tr><td>.icon-_422</td><td>\F1C2</td><td><i class="font-demo-icon icon-_422"></i></td></tr>
+		<tr><td>.icon-_423</td><td>\F1C3</td><td><i class="font-demo-icon icon-_423"></i></td></tr>
+		<tr><td>.icon-_424</td><td>\F1C4</td><td><i class="font-demo-icon icon-_424"></i></td></tr>
+		<tr><td>.icon-_425</td><td>\F1C5</td><td><i class="font-demo-icon icon-_425"></i></td></tr>
+		<tr><td>.icon-_426</td><td>\F1C6</td><td><i class="font-demo-icon icon-_426"></i></td></tr>
+		<tr><td>.icon-_427</td><td>\F1C7</td><td><i class="font-demo-icon icon-_427"></i></td></tr>
+		<tr><td>.icon-_428</td><td>\F1C8</td><td><i class="font-demo-icon icon-_428"></i></td></tr>
+		<tr><td>.icon-_429</td><td>\F1C9</td><td><i class="font-demo-icon icon-_429"></i></td></tr>
+		<tr><td>.icon-_430</td><td>\F1CA</td><td><i class="font-demo-icon icon-_430"></i></td></tr>
+		<tr><td>.icon-_431</td><td>\F1CB</td><td><i class="font-demo-icon icon-_431"></i></td></tr>
+		<tr><td>.icon-_432</td><td>\F1CC</td><td><i class="font-demo-icon icon-_432"></i></td></tr>
+		<tr><td>.icon-_433</td><td>\F1CD</td><td><i class="font-demo-icon icon-_433"></i></td></tr>
+		<tr><td>.icon-_434</td><td>\F1CE</td><td><i class="font-demo-icon icon-_434"></i></td></tr>
+		<tr><td>.icon-uniF1D0</td><td>\F1D0</td><td><i class="font-demo-icon icon-uniF1D0"></i></td></tr>
+		<tr><td>.icon-uniF1D1</td><td>\F1D1</td><td><i class="font-demo-icon icon-uniF1D1"></i></td></tr>
+		<tr><td>.icon-uniF1D2</td><td>\F1D2</td><td><i class="font-demo-icon icon-uniF1D2"></i></td></tr>
+		<tr><td>.icon-_438</td><td>\F1D3</td><td><i class="font-demo-icon icon-_438"></i></td></tr>
+		<tr><td>.icon-_439</td><td>\F1D4</td><td><i class="font-demo-icon icon-_439"></i></td></tr>
+		<tr><td>.icon-uniF1D5</td><td>\F1D5</td><td><i class="font-demo-icon icon-uniF1D5"></i></td></tr>
+		<tr><td>.icon-uniF1D6</td><td>\F1D6</td><td><i class="font-demo-icon icon-uniF1D6"></i></td></tr>
+		<tr><td>.icon-uniF1D7</td><td>\F1D7</td><td><i class="font-demo-icon icon-uniF1D7"></i></td></tr>
+		<tr><td>.icon-_443</td><td>\F1D8</td><td><i class="font-demo-icon icon-_443"></i></td></tr>
+		<tr><td>.icon-_444</td><td>\F1D9</td><td><i class="font-demo-icon icon-_444"></i></td></tr>
+		<tr><td>.icon-_445</td><td>\F1DA</td><td><i class="font-demo-icon icon-_445"></i></td></tr>
+		<tr><td>.icon-_446</td><td>\F1DB</td><td><i class="font-demo-icon icon-_446"></i></td></tr>
+		<tr><td>.icon-_447</td><td>\F1DC</td><td><i class="font-demo-icon icon-_447"></i></td></tr>
+		<tr><td>.icon-_448</td><td>\F1DD</td><td><i class="font-demo-icon icon-_448"></i></td></tr>
+		<tr><td>.icon-_449</td><td>\F1DE</td><td><i class="font-demo-icon icon-_449"></i></td></tr>
+		<tr><td>.icon-uniF1E0</td><td>\F1E0</td><td><i class="font-demo-icon icon-uniF1E0"></i></td></tr>
+		<tr><td>.icon-_451</td><td>\F1E1</td><td><i class="font-demo-icon icon-_451"></i></td></tr>
+		<tr><td>.icon-_452</td><td>\F1E2</td><td><i class="font-demo-icon icon-_452"></i></td></tr>
+		<tr><td>.icon-_453</td><td>\F1E3</td><td><i class="font-demo-icon icon-_453"></i></td></tr>
+		<tr><td>.icon-_454</td><td>\F1E4</td><td><i class="font-demo-icon icon-_454"></i></td></tr>
+		<tr><td>.icon-_455</td><td>\F1E5</td><td><i class="font-demo-icon icon-_455"></i></td></tr>
+		<tr><td>.icon-_456</td><td>\F1E6</td><td><i class="font-demo-icon icon-_456"></i></td></tr>
+		<tr><td>.icon-_457</td><td>\F1E7</td><td><i class="font-demo-icon icon-_457"></i></td></tr>
+		<tr><td>.icon-_458</td><td>\F1E8</td><td><i class="font-demo-icon icon-_458"></i></td></tr>
+		<tr><td>.icon-_459</td><td>\F1E9</td><td><i class="font-demo-icon icon-_459"></i></td></tr>
+		<tr><td>.icon-_460</td><td>\F1EA</td><td><i class="font-demo-icon icon-_460"></i></td></tr>
+		<tr><td>.icon-_461</td><td>\F1EB</td><td><i class="font-demo-icon icon-_461"></i></td></tr>
+		<tr><td>.icon-_462</td><td>\F1EC</td><td><i class="font-demo-icon icon-_462"></i></td></tr>
+		<tr><td>.icon-_463</td><td>\F1ED</td><td><i class="font-demo-icon icon-_463"></i></td></tr>
+		<tr><td>.icon-_464</td><td>\F1EE</td><td><i class="font-demo-icon icon-_464"></i></td></tr>
+		<tr><td>.icon-uniF1F0</td><td>\F1F0</td><td><i class="font-demo-icon icon-uniF1F0"></i></td></tr>
+		<tr><td>.icon-_466</td><td>\F1F1</td><td><i class="font-demo-icon icon-_466"></i></td></tr>
+		<tr><td>.icon-_467</td><td>\F1F2</td><td><i class="font-demo-icon icon-_467"></i></td></tr>
+		<tr><td>.icon-f1f3</td><td>\F1F3</td><td><i class="font-demo-icon icon-f1f3"></i></td></tr>
+		<tr><td>.icon-_469</td><td>\F1F4</td><td><i class="font-demo-icon icon-_469"></i></td></tr>
+		<tr><td>.icon-_470</td><td>\F1F5</td><td><i class="font-demo-icon icon-_470"></i></td></tr>
+		<tr><td>.icon-_471</td><td>\F1F6</td><td><i class="font-demo-icon icon-_471"></i></td></tr>
+		<tr><td>.icon-_472</td><td>\F1F7</td><td><i class="font-demo-icon icon-_472"></i></td></tr>
+		<tr><td>.icon-_473</td><td>\F1F8</td><td><i class="font-demo-icon icon-_473"></i></td></tr>
+		<tr><td>.icon-_474</td><td>\F1F9</td><td><i class="font-demo-icon icon-_474"></i></td></tr>
+		<tr><td>.icon-_475</td><td>\F1FA</td><td><i class="font-demo-icon icon-_475"></i></td></tr>
+		<tr><td>.icon-_476</td><td>\F1FB</td><td><i class="font-demo-icon icon-_476"></i></td></tr>
+		<tr><td>.icon-f1fc</td><td>\F1FC</td><td><i class="font-demo-icon icon-f1fc"></i></td></tr>
+		<tr><td>.icon-_478</td><td>\F1FD</td><td><i class="font-demo-icon icon-_478"></i></td></tr>
+		<tr><td>.icon-_479</td><td>\F1FE</td><td><i class="font-demo-icon icon-_479"></i></td></tr>
+		<tr><td>.icon-_480</td><td>\F200</td><td><i class="font-demo-icon icon-_480"></i></td></tr>
+		<tr><td>.icon-_481</td><td>\F201</td><td><i class="font-demo-icon icon-_481"></i></td></tr>
+		<tr><td>.icon-_482</td><td>\F202</td><td><i class="font-demo-icon icon-_482"></i></td></tr>
+		<tr><td>.icon-_483</td><td>\F203</td><td><i class="font-demo-icon icon-_483"></i></td></tr>
+		<tr><td>.icon-_484</td><td>\F204</td><td><i class="font-demo-icon icon-_484"></i></td></tr>
+		<tr><td>.icon-_485</td><td>\F205</td><td><i class="font-demo-icon icon-_485"></i></td></tr>
+		<tr><td>.icon-_486</td><td>\F206</td><td><i class="font-demo-icon icon-_486"></i></td></tr>
+		<tr><td>.icon-_487</td><td>\F207</td><td><i class="font-demo-icon icon-_487"></i></td></tr>
+		<tr><td>.icon-_488</td><td>\F208</td><td><i class="font-demo-icon icon-_488"></i></td></tr>
+		<tr><td>.icon-_489</td><td>\F209</td><td><i class="font-demo-icon icon-_489"></i></td></tr>
+		<tr><td>.icon-_490</td><td>\F20A</td><td><i class="font-demo-icon icon-_490"></i></td></tr>
+		<tr><td>.icon-_491</td><td>\F20B</td><td><i class="font-demo-icon icon-_491"></i></td></tr>
+		<tr><td>.icon-_492</td><td>\F20C</td><td><i class="font-demo-icon icon-_492"></i></td></tr>
+		<tr><td>.icon-_493</td><td>\F20D</td><td><i class="font-demo-icon icon-_493"></i></td></tr>
+		<tr><td>.icon-_494</td><td>\F20E</td><td><i class="font-demo-icon icon-_494"></i></td></tr>
+		<tr><td>.icon-f210</td><td>\F210</td><td><i class="font-demo-icon icon-f210"></i></td></tr>
+		<tr><td>.icon-_496</td><td>\F211</td><td><i class="font-demo-icon icon-_496"></i></td></tr>
+		<tr><td>.icon-f212</td><td>\F212</td><td><i class="font-demo-icon icon-f212"></i></td></tr>
+		<tr><td>.icon-_498</td><td>\F213</td><td><i class="font-demo-icon icon-_498"></i></td></tr>
+		<tr><td>.icon-_499</td><td>\F214</td><td><i class="font-demo-icon icon-_499"></i></td></tr>
+		<tr><td>.icon-_500</td><td>\F215</td><td><i class="font-demo-icon icon-_500"></i></td></tr>
+		<tr><td>.icon-_501</td><td>\F216</td><td><i class="font-demo-icon icon-_501"></i></td></tr>
+		<tr><td>.icon-_502</td><td>\F217</td><td><i class="font-demo-icon icon-_502"></i></td></tr>
+		<tr><td>.icon-_503</td><td>\F218</td><td><i class="font-demo-icon icon-_503"></i></td></tr>
+		<tr><td>.icon-_504</td><td>\F219</td><td><i class="font-demo-icon icon-_504"></i></td></tr>
+		<tr><td>.icon-_505</td><td>\F21A</td><td><i class="font-demo-icon icon-_505"></i></td></tr>
+		<tr><td>.icon-_506</td><td>\F21B</td><td><i class="font-demo-icon icon-_506"></i></td></tr>
+		<tr><td>.icon-_507</td><td>\F21C</td><td><i class="font-demo-icon icon-_507"></i></td></tr>
+		<tr><td>.icon-_508</td><td>\F21D</td><td><i class="font-demo-icon icon-_508"></i></td></tr>
+		<tr><td>.icon-_509</td><td>\F21E</td><td><i class="font-demo-icon icon-_509"></i></td></tr>
+		<tr><td>.icon-venus</td><td>\F221</td><td><i class="font-demo-icon icon-venus"></i></td></tr>
+		<tr><td>.icon-_511</td><td>\F222</td><td><i class="font-demo-icon icon-_511"></i></td></tr>
+		<tr><td>.icon-_512</td><td>\F223</td><td><i class="font-demo-icon icon-_512"></i></td></tr>
+		<tr><td>.icon-_513</td><td>\F224</td><td><i class="font-demo-icon icon-_513"></i></td></tr>
+		<tr><td>.icon-_514</td><td>\F225</td><td><i class="font-demo-icon icon-_514"></i></td></tr>
+		<tr><td>.icon-_515</td><td>\F226</td><td><i class="font-demo-icon icon-_515"></i></td></tr>
+		<tr><td>.icon-_516</td><td>\F227</td><td><i class="font-demo-icon icon-_516"></i></td></tr>
+		<tr><td>.icon-_517</td><td>\F228</td><td><i class="font-demo-icon icon-_517"></i></td></tr>
+		<tr><td>.icon-_518</td><td>\F229</td><td><i class="font-demo-icon icon-_518"></i></td></tr>
+		<tr><td>.icon-_519</td><td>\F22A</td><td><i class="font-demo-icon icon-_519"></i></td></tr>
+		<tr><td>.icon-_520</td><td>\F22B</td><td><i class="font-demo-icon icon-_520"></i></td></tr>
+		<tr><td>.icon-_521</td><td>\F22C</td><td><i class="font-demo-icon icon-_521"></i></td></tr>
+		<tr><td>.icon-_522</td><td>\F22D</td><td><i class="font-demo-icon icon-_522"></i></td></tr>
+		<tr><td>.icon-_523</td><td>\F22E</td><td><i class="font-demo-icon icon-_523"></i></td></tr>
+		<tr><td>.icon-_524</td><td>\F22F</td><td><i class="font-demo-icon icon-_524"></i></td></tr>
+		<tr><td>.icon-_525</td><td>\F230</td><td><i class="font-demo-icon icon-_525"></i></td></tr>
+		<tr><td>.icon-_526</td><td>\F231</td><td><i class="font-demo-icon icon-_526"></i></td></tr>
+		<tr><td>.icon-_527</td><td>\F232</td><td><i class="font-demo-icon icon-_527"></i></td></tr>
+		<tr><td>.icon-_528</td><td>\F233</td><td><i class="font-demo-icon icon-_528"></i></td></tr>
+		<tr><td>.icon-_529</td><td>\F234</td><td><i class="font-demo-icon icon-_529"></i></td></tr>
+		<tr><td>.icon-_530</td><td>\F235</td><td><i class="font-demo-icon icon-_530"></i></td></tr>
+		<tr><td>.icon-_531</td><td>\F236</td><td><i class="font-demo-icon icon-_531"></i></td></tr>
+		<tr><td>.icon-_532</td><td>\F237</td><td><i class="font-demo-icon icon-_532"></i></td></tr>
+		<tr><td>.icon-_533</td><td>\F238</td><td><i class="font-demo-icon icon-_533"></i></td></tr>
+		<tr><td>.icon-_534</td><td>\F239</td><td><i class="font-demo-icon icon-_534"></i></td></tr>
+		<tr><td>.icon-_535</td><td>\F23A</td><td><i class="font-demo-icon icon-_535"></i></td></tr>
+		<tr><td>.icon-_536</td><td>\F23B</td><td><i class="font-demo-icon icon-_536"></i></td></tr>
+		<tr><td>.icon-_537</td><td>\F23C</td><td><i class="font-demo-icon icon-_537"></i></td></tr>
+		<tr><td>.icon-_538</td><td>\F23D</td><td><i class="font-demo-icon icon-_538"></i></td></tr>
+		<tr><td>.icon-_539</td><td>\F23E</td><td><i class="font-demo-icon icon-_539"></i></td></tr>
+		<tr><td>.icon-_540</td><td>\F240</td><td><i class="font-demo-icon icon-_540"></i></td></tr>
+		<tr><td>.icon-_541</td><td>\F241</td><td><i class="font-demo-icon icon-_541"></i></td></tr>
+		<tr><td>.icon-_542</td><td>\F242</td><td><i class="font-demo-icon icon-_542"></i></td></tr>
+		<tr><td>.icon-_543</td><td>\F243</td><td><i class="font-demo-icon icon-_543"></i></td></tr>
+		<tr><td>.icon-_544</td><td>\F244</td><td><i class="font-demo-icon icon-_544"></i></td></tr>
+		<tr><td>.icon-_545</td><td>\F245</td><td><i class="font-demo-icon icon-_545"></i></td></tr>
+		<tr><td>.icon-_546</td><td>\F246</td><td><i class="font-demo-icon icon-_546"></i></td></tr>
+		<tr><td>.icon-_547</td><td>\F247</td><td><i class="font-demo-icon icon-_547"></i></td></tr>
+		<tr><td>.icon-_548</td><td>\F248</td><td><i class="font-demo-icon icon-_548"></i></td></tr>
+		<tr><td>.icon-_549</td><td>\F249</td><td><i class="font-demo-icon icon-_549"></i></td></tr>
+		<tr><td>.icon-_550</td><td>\F24A</td><td><i class="font-demo-icon icon-_550"></i></td></tr>
+		<tr><td>.icon-_551</td><td>\F24B</td><td><i class="font-demo-icon icon-_551"></i></td></tr>
+		<tr><td>.icon-_552</td><td>\F24C</td><td><i class="font-demo-icon icon-_552"></i></td></tr>
+		<tr><td>.icon-_553</td><td>\F24D</td><td><i class="font-demo-icon icon-_553"></i></td></tr>
+		<tr><td>.icon-_554</td><td>\F24E</td><td><i class="font-demo-icon icon-_554"></i></td></tr>
+		<tr><td>.icon-_555</td><td>\F250</td><td><i class="font-demo-icon icon-_555"></i></td></tr>
+		<tr><td>.icon-_556</td><td>\F251</td><td><i class="font-demo-icon icon-_556"></i></td></tr>
+		<tr><td>.icon-_557</td><td>\F252</td><td><i class="font-demo-icon icon-_557"></i></td></tr>
+		<tr><td>.icon-_558</td><td>\F253</td><td><i class="font-demo-icon icon-_558"></i></td></tr>
+		<tr><td>.icon-_559</td><td>\F254</td><td><i class="font-demo-icon icon-_559"></i></td></tr>
+		<tr><td>.icon-_560</td><td>\F255</td><td><i class="font-demo-icon icon-_560"></i></td></tr>
+		<tr><td>.icon-_561</td><td>\F256</td><td><i class="font-demo-icon icon-_561"></i></td></tr>
+		<tr><td>.icon-_562</td><td>\F257</td><td><i class="font-demo-icon icon-_562"></i></td></tr>
+		<tr><td>.icon-_563</td><td>\F258</td><td><i class="font-demo-icon icon-_563"></i></td></tr>
+		<tr><td>.icon-_564</td><td>\F259</td><td><i class="font-demo-icon icon-_564"></i></td></tr>
+		<tr><td>.icon-_565</td><td>\F25A</td><td><i class="font-demo-icon icon-_565"></i></td></tr>
+		<tr><td>.icon-_566</td><td>\F25B</td><td><i class="font-demo-icon icon-_566"></i></td></tr>
+		<tr><td>.icon-_567</td><td>\F25C</td><td><i class="font-demo-icon icon-_567"></i></td></tr>
+		<tr><td>.icon-_568</td><td>\F25D</td><td><i class="font-demo-icon icon-_568"></i></td></tr>
+		<tr><td>.icon-_569</td><td>\F25E</td><td><i class="font-demo-icon icon-_569"></i></td></tr>
+		<tr><td>.icon-f260</td><td>\F260</td><td><i class="font-demo-icon icon-f260"></i></td></tr>
+		<tr><td>.icon-f261</td><td>\F261</td><td><i class="font-demo-icon icon-f261"></i></td></tr>
+		<tr><td>.icon-_572</td><td>\F262</td><td><i class="font-demo-icon icon-_572"></i></td></tr>
+		<tr><td>.icon-f263</td><td>\F263</td><td><i class="font-demo-icon icon-f263"></i></td></tr>
+		<tr><td>.icon-_574</td><td>\F264</td><td><i class="font-demo-icon icon-_574"></i></td></tr>
+		<tr><td>.icon-_575</td><td>\F265</td><td><i class="font-demo-icon icon-_575"></i></td></tr>
+		<tr><td>.icon-_576</td><td>\F266</td><td><i class="font-demo-icon icon-_576"></i></td></tr>
+		<tr><td>.icon-_577</td><td>\F267</td><td><i class="font-demo-icon icon-_577"></i></td></tr>
+		<tr><td>.icon-_578</td><td>\F268</td><td><i class="font-demo-icon icon-_578"></i></td></tr>
+		<tr><td>.icon-_579</td><td>\F269</td><td><i class="font-demo-icon icon-_579"></i></td></tr>
+		<tr><td>.icon-_580</td><td>\F26A</td><td><i class="font-demo-icon icon-_580"></i></td></tr>
+		<tr><td>.icon-_581</td><td>\F26B</td><td><i class="font-demo-icon icon-_581"></i></td></tr>
+		<tr><td>.icon-_582</td><td>\F26C</td><td><i class="font-demo-icon icon-_582"></i></td></tr>
+		<tr><td>.icon-_583</td><td>\F26D</td><td><i class="font-demo-icon icon-_583"></i></td></tr>
+		<tr><td>.icon-_584</td><td>\F26E</td><td><i class="font-demo-icon icon-_584"></i></td></tr>
+		<tr><td>.icon-_585</td><td>\F270</td><td><i class="font-demo-icon icon-_585"></i></td></tr>
+		<tr><td>.icon-_586</td><td>\F271</td><td><i class="font-demo-icon icon-_586"></i></td></tr>
+		<tr><td>.icon-_587</td><td>\F272</td><td><i class="font-demo-icon icon-_587"></i></td></tr>
+		<tr><td>.icon-_588</td><td>\F273</td><td><i class="font-demo-icon icon-_588"></i></td></tr>
+		<tr><td>.icon-_589</td><td>\F274</td><td><i class="font-demo-icon icon-_589"></i></td></tr>
+		<tr><td>.icon-_590</td><td>\F275</td><td><i class="font-demo-icon icon-_590"></i></td></tr>
+		<tr><td>.icon-_591</td><td>\F276</td><td><i class="font-demo-icon icon-_591"></i></td></tr>
+		<tr><td>.icon-_592</td><td>\F277</td><td><i class="font-demo-icon icon-_592"></i></td></tr>
+		<tr><td>.icon-_593</td><td>\F278</td><td><i class="font-demo-icon icon-_593"></i></td></tr>
+		<tr><td>.icon-_594</td><td>\F279</td><td><i class="font-demo-icon icon-_594"></i></td></tr>
+		<tr><td>.icon-_595</td><td>\F27A</td><td><i class="font-demo-icon icon-_595"></i></td></tr>
+		<tr><td>.icon-_596</td><td>\F27B</td><td><i class="font-demo-icon icon-_596"></i></td></tr>
+		<tr><td>.icon-_597</td><td>\F27C</td><td><i class="font-demo-icon icon-_597"></i></td></tr>
+		<tr><td>.icon-_598</td><td>\F27D</td><td><i class="font-demo-icon icon-_598"></i></td></tr>
+		<tr><td>.icon-f27e</td><td>\F27E</td><td><i class="font-demo-icon icon-f27e"></i></td></tr>
+		<tr><td>.icon-uniF280</td><td>\F280</td><td><i class="font-demo-icon icon-uniF280"></i></td></tr>
+		<tr><td>.icon-uniF281</td><td>\F281</td><td><i class="font-demo-icon icon-uniF281"></i></td></tr>
+		<tr><td>.icon-_602</td><td>\F282</td><td><i class="font-demo-icon icon-_602"></i></td></tr>
+		<tr><td>.icon-_603</td><td>\F283</td><td><i class="font-demo-icon icon-_603"></i></td></tr>
+		<tr><td>.icon-_604</td><td>\F284</td><td><i class="font-demo-icon icon-_604"></i></td></tr>
+		<tr><td>.icon-uniF285</td><td>\F285</td><td><i class="font-demo-icon icon-uniF285"></i></td></tr>
+		<tr><td>.icon-uniF286</td><td>\F286</td><td><i class="font-demo-icon icon-uniF286"></i></td></tr>
+		<tr><td>.icon-_607</td><td>\F287</td><td><i class="font-demo-icon icon-_607"></i></td></tr>
+		<tr><td>.icon-_608</td><td>\F288</td><td><i class="font-demo-icon icon-_608"></i></td></tr>
+		<tr><td>.icon-_609</td><td>\F289</td><td><i class="font-demo-icon icon-_609"></i></td></tr>
+		<tr><td>.icon-_610</td><td>\F28A</td><td><i class="font-demo-icon icon-_610"></i></td></tr>
+		<tr><td>.icon-_611</td><td>\F28B</td><td><i class="font-demo-icon icon-_611"></i></td></tr>
+		<tr><td>.icon-_612</td><td>\F28C</td><td><i class="font-demo-icon icon-_612"></i></td></tr>
+		<tr><td>.icon-_613</td><td>\F28D</td><td><i class="font-demo-icon icon-_613"></i></td></tr>
+		<tr><td>.icon-_614</td><td>\F28E</td><td><i class="font-demo-icon icon-_614"></i></td></tr>
+		<tr><td>.icon-_615</td><td>\F290</td><td><i class="font-demo-icon icon-_615"></i></td></tr>
+		<tr><td>.icon-_616</td><td>\F291</td><td><i class="font-demo-icon icon-_616"></i></td></tr>
+		<tr><td>.icon-_617</td><td>\F292</td><td><i class="font-demo-icon icon-_617"></i></td></tr>
+		<tr><td>.icon-_618</td><td>\F293</td><td><i class="font-demo-icon icon-_618"></i></td></tr>
+		<tr><td>.icon-_619</td><td>\F294</td><td><i class="font-demo-icon icon-_619"></i></td></tr>
+		<tr><td>.icon-_620</td><td>\F295</td><td><i class="font-demo-icon icon-_620"></i></td></tr>
+		<tr><td>.icon-_621</td><td>\F296</td><td><i class="font-demo-icon icon-_621"></i></td></tr>
+		<tr><td>.icon-_622</td><td>\F297</td><td><i class="font-demo-icon icon-_622"></i></td></tr>
+		<tr><td>.icon-_623</td><td>\F298</td><td><i class="font-demo-icon icon-_623"></i></td></tr>
+		<tr><td>.icon-_624</td><td>\F299</td><td><i class="font-demo-icon icon-_624"></i></td></tr>
+		<tr><td>.icon-_625</td><td>\F29A</td><td><i class="font-demo-icon icon-_625"></i></td></tr>
+		<tr><td>.icon-_626</td><td>\F29B</td><td><i class="font-demo-icon icon-_626"></i></td></tr>
+		<tr><td>.icon-_627</td><td>\F29C</td><td><i class="font-demo-icon icon-_627"></i></td></tr>
+		<tr><td>.icon-_628</td><td>\F29D</td><td><i class="font-demo-icon icon-_628"></i></td></tr>
+		<tr><td>.icon-_629</td><td>\F29E</td><td><i class="font-demo-icon icon-_629"></i></td></tr>
+		<tr><td>.icon-uniF2A0</td><td>\F2A0</td><td><i class="font-demo-icon icon-uniF2A0"></i></td></tr>
+		<tr><td>.icon-uniF2A1</td><td>\F2A1</td><td><i class="font-demo-icon icon-uniF2A1"></i></td></tr>
+		<tr><td>.icon-uniF2A2</td><td>\F2A2</td><td><i class="font-demo-icon icon-uniF2A2"></i></td></tr>
+		<tr><td>.icon-uniF2A3</td><td>\F2A3</td><td><i class="font-demo-icon icon-uniF2A3"></i></td></tr>
+		<tr><td>.icon-uniF2A4</td><td>\F2A4</td><td><i class="font-demo-icon icon-uniF2A4"></i></td></tr>
+		<tr><td>.icon-uniF2A5</td><td>\F2A5</td><td><i class="font-demo-icon icon-uniF2A5"></i></td></tr>
+		<tr><td>.icon-uniF2A6</td><td>\F2A6</td><td><i class="font-demo-icon icon-uniF2A6"></i></td></tr>
+		<tr><td>.icon-uniF2A7</td><td>\F2A7</td><td><i class="font-demo-icon icon-uniF2A7"></i></td></tr>
+		<tr><td>.icon-uniF2A8</td><td>\F2A8</td><td><i class="font-demo-icon icon-uniF2A8"></i></td></tr>
+		<tr><td>.icon-uniF2A9</td><td>\F2A9</td><td><i class="font-demo-icon icon-uniF2A9"></i></td></tr>
+		<tr><td>.icon-uniF2AA</td><td>\F2AA</td><td><i class="font-demo-icon icon-uniF2AA"></i></td></tr>
+		<tr><td>.icon-uniF2AB</td><td>\F2AB</td><td><i class="font-demo-icon icon-uniF2AB"></i></td></tr>
+		<tr><td>.icon-uniF2AC</td><td>\F2AC</td><td><i class="font-demo-icon icon-uniF2AC"></i></td></tr>
+		<tr><td>.icon-uniF2AD</td><td>\F2AD</td><td><i class="font-demo-icon icon-uniF2AD"></i></td></tr>
+		<tr><td>.icon-uniF2AE</td><td>\F2AE</td><td><i class="font-demo-icon icon-uniF2AE"></i></td></tr>
+		<tr><td>.icon-uniF2B0</td><td>\F2B0</td><td><i class="font-demo-icon icon-uniF2B0"></i></td></tr>
+		<tr><td>.icon-uniF2B1</td><td>\F2B1</td><td><i class="font-demo-icon icon-uniF2B1"></i></td></tr>
+		<tr><td>.icon-uniF2B2</td><td>\F2B2</td><td><i class="font-demo-icon icon-uniF2B2"></i></td></tr>
+		<tr><td>.icon-uniF2B3</td><td>\F2B3</td><td><i class="font-demo-icon icon-uniF2B3"></i></td></tr>
+		<tr><td>.icon-uniF2B4</td><td>\F2B4</td><td><i class="font-demo-icon icon-uniF2B4"></i></td></tr>
+		<tr><td>.icon-uniF2B5</td><td>\F2B5</td><td><i class="font-demo-icon icon-uniF2B5"></i></td></tr>
+		<tr><td>.icon-uniF2B6</td><td>\F2B6</td><td><i class="font-demo-icon icon-uniF2B6"></i></td></tr>
+		<tr><td>.icon-uniF2B7</td><td>\F2B7</td><td><i class="font-demo-icon icon-uniF2B7"></i></td></tr>
+		<tr><td>.icon-uniF2B8</td><td>\F2B8</td><td><i class="font-demo-icon icon-uniF2B8"></i></td></tr>
+		<tr><td>.icon-uniF2B9</td><td>\F2B9</td><td><i class="font-demo-icon icon-uniF2B9"></i></td></tr>
+		<tr><td>.icon-uniF2BA</td><td>\F2BA</td><td><i class="font-demo-icon icon-uniF2BA"></i></td></tr>
+		<tr><td>.icon-uniF2BB</td><td>\F2BB</td><td><i class="font-demo-icon icon-uniF2BB"></i></td></tr>
+		<tr><td>.icon-uniF2BC</td><td>\F2BC</td><td><i class="font-demo-icon icon-uniF2BC"></i></td></tr>
+		<tr><td>.icon-uniF2BD</td><td>\F2BD</td><td><i class="font-demo-icon icon-uniF2BD"></i></td></tr>
+		<tr><td>.icon-uniF2BE</td><td>\F2BE</td><td><i class="font-demo-icon icon-uniF2BE"></i></td></tr>
+		<tr><td>.icon-uniF2C0</td><td>\F2C0</td><td><i class="font-demo-icon icon-uniF2C0"></i></td></tr>
+		<tr><td>.icon-uniF2C1</td><td>\F2C1</td><td><i class="font-demo-icon icon-uniF2C1"></i></td></tr>
+		<tr><td>.icon-uniF2C2</td><td>\F2C2</td><td><i class="font-demo-icon icon-uniF2C2"></i></td></tr>
+		<tr><td>.icon-uniF2C3</td><td>\F2C3</td><td><i class="font-demo-icon icon-uniF2C3"></i></td></tr>
+		<tr><td>.icon-uniF2C4</td><td>\F2C4</td><td><i class="font-demo-icon icon-uniF2C4"></i></td></tr>
+		<tr><td>.icon-uniF2C5</td><td>\F2C5</td><td><i class="font-demo-icon icon-uniF2C5"></i></td></tr>
+		<tr><td>.icon-uniF2C6</td><td>\F2C6</td><td><i class="font-demo-icon icon-uniF2C6"></i></td></tr>
+		<tr><td>.icon-uniF2C7</td><td>\F2C7</td><td><i class="font-demo-icon icon-uniF2C7"></i></td></tr>
+		<tr><td>.icon-uniF2C8</td><td>\F2C8</td><td><i class="font-demo-icon icon-uniF2C8"></i></td></tr>
+		<tr><td>.icon-uniF2C9</td><td>\F2C9</td><td><i class="font-demo-icon icon-uniF2C9"></i></td></tr>
+		<tr><td>.icon-uniF2CA</td><td>\F2CA</td><td><i class="font-demo-icon icon-uniF2CA"></i></td></tr>
+		<tr><td>.icon-uniF2CB</td><td>\F2CB</td><td><i class="font-demo-icon icon-uniF2CB"></i></td></tr>
+		<tr><td>.icon-uniF2CC</td><td>\F2CC</td><td><i class="font-demo-icon icon-uniF2CC"></i></td></tr>
+		<tr><td>.icon-uniF2CD</td><td>\F2CD</td><td><i class="font-demo-icon icon-uniF2CD"></i></td></tr>
+		<tr><td>.icon-uniF2CE</td><td>\F2CE</td><td><i class="font-demo-icon icon-uniF2CE"></i></td></tr>
+		<tr><td>.icon-uniF2D0</td><td>\F2D0</td><td><i class="font-demo-icon icon-uniF2D0"></i></td></tr>
+		<tr><td>.icon-uniF2D1</td><td>\F2D1</td><td><i class="font-demo-icon icon-uniF2D1"></i></td></tr>
+		<tr><td>.icon-uniF2D2</td><td>\F2D2</td><td><i class="font-demo-icon icon-uniF2D2"></i></td></tr>
+		<tr><td>.icon-uniF2D3</td><td>\F2D3</td><td><i class="font-demo-icon icon-uniF2D3"></i></td></tr>
+		<tr><td>.icon-uniF2D4</td><td>\F2D4</td><td><i class="font-demo-icon icon-uniF2D4"></i></td></tr>
+		<tr><td>.icon-uniF2D5</td><td>\F2D5</td><td><i class="font-demo-icon icon-uniF2D5"></i></td></tr>
+		<tr><td>.icon-uniF2D6</td><td>\F2D6</td><td><i class="font-demo-icon icon-uniF2D6"></i></td></tr>
+		<tr><td>.icon-uniF2D7</td><td>\F2D7</td><td><i class="font-demo-icon icon-uniF2D7"></i></td></tr>
+		<tr><td>.icon-uniF2D8</td><td>\F2D8</td><td><i class="font-demo-icon icon-uniF2D8"></i></td></tr>
+		<tr><td>.icon-uniF2D9</td><td>\F2D9</td><td><i class="font-demo-icon icon-uniF2D9"></i></td></tr>
+		<tr><td>.icon-uniF2DA</td><td>\F2DA</td><td><i class="font-demo-icon icon-uniF2DA"></i></td></tr>
+		<tr><td>.icon-uniF2DB</td><td>\F2DB</td><td><i class="font-demo-icon icon-uniF2DB"></i></td></tr>
+		<tr><td>.icon-uniF2DC</td><td>\F2DC</td><td><i class="font-demo-icon icon-uniF2DC"></i></td></tr>
+		<tr><td>.icon-uniF2DD</td><td>\F2DD</td><td><i class="font-demo-icon icon-uniF2DD"></i></td></tr>
+		<tr><td>.icon-uniF2DE</td><td>\F2DE</td><td><i class="font-demo-icon icon-uniF2DE"></i></td></tr>
+		<tr><td>.icon-uniF2E0</td><td>\F2E0</td><td><i class="font-demo-icon icon-uniF2E0"></i></td></tr>
+		<tr><td>.icon-uniF2E1</td><td>\F2E1</td><td><i class="font-demo-icon icon-uniF2E1"></i></td></tr>
+		<tr><td>.icon-uniF2E2</td><td>\F2E2</td><td><i class="font-demo-icon icon-uniF2E2"></i></td></tr>
+		<tr><td>.icon-uniF2E3</td><td>\F2E3</td><td><i class="font-demo-icon icon-uniF2E3"></i></td></tr>
+		<tr><td>.icon-uniF2E4</td><td>\F2E4</td><td><i class="font-demo-icon icon-uniF2E4"></i></td></tr>
+		<tr><td>.icon-uniF2E5</td><td>\F2E5</td><td><i class="font-demo-icon icon-uniF2E5"></i></td></tr>
+		<tr><td>.icon-uniF2E6</td><td>\F2E6</td><td><i class="font-demo-icon icon-uniF2E6"></i></td></tr>
+		<tr><td>.icon-uniF2E7</td><td>\F2E7</td><td><i class="font-demo-icon icon-uniF2E7"></i></td></tr>
+		<tr><td>.icon-_698</td><td>\F2E8</td><td><i class="font-demo-icon icon-_698"></i></td></tr>
+		<tr><td>.icon-uniF2E9</td><td>\F2E9</td><td><i class="font-demo-icon icon-uniF2E9"></i></td></tr>
+		<tr><td>.icon-uniF2EA</td><td>\F2EA</td><td><i class="font-demo-icon icon-uniF2EA"></i></td></tr>
+		<tr><td>.icon-uniF2EB</td><td>\F2EB</td><td><i class="font-demo-icon icon-uniF2EB"></i></td></tr>
+		<tr><td>.icon-uniF2EC</td><td>\F2EC</td><td><i class="font-demo-icon icon-uniF2EC"></i></td></tr>
+		<tr><td>.icon-uniF2ED</td><td>\F2ED</td><td><i class="font-demo-icon icon-uniF2ED"></i></td></tr>
+		<tr><td>.icon-uniF2EE</td><td>\F2EE</td><td><i class="font-demo-icon icon-uniF2EE"></i></td></tr>
+		<tr><td>.icon-lessequal</td><td>\F500</td><td><i class="font-demo-icon icon-lessequal"></i></td></tr>
+	</tbody>
+</table>

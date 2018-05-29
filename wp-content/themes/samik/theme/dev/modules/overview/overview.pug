@@ -1,0 +1,12 @@
+mixin overview(data)
+    .overview
+        .overview_image(style=data.image && "background-image: url(" + data.image + ")")
+        .overview-details
+            small.overview_date 10.01.2018
+            .overview_title(class=data.heading_class ? data.heading_class : 'h4')= data.title
+            .overview_intro
+                p !{data.intro}
+            a.overview_btn.btn-primary.-hollow(href="#" )
+                span= data.btn_text
+
+

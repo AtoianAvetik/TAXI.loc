@@ -1,0 +1,42 @@
+.overview{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    overflow: hidden;
+
+    &_image{
+        @include bg;
+        min-height: 220px;
+    }
+
+    &_title{
+        margin-top: 5px;
+    }
+
+    &_date{
+        align-self: flex-end;
+        font-style: italic;
+    }
+
+    &_intro{
+        margin-bottom: 15px;
+        flex: 1 1 auto;
+    }
+
+    &_btn{
+        margin: 0 5px;
+        align-self: flex-start;
+    }
+}
+
+.overview-details{
+    padding: 25px 20px;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    background-color: $light;
+}

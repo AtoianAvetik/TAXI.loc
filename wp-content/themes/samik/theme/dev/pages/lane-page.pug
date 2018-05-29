@@ -1,0 +1,62 @@
+include ../templates/head
+body
+    .wrapper
+        +header
+        main.content
+            +lane({
+                type: 'light',
+                direction: 'right',
+                title: 'Light lane block',
+                heading_class: 'h2',
+                image: 'img/tmp/photo-1.jpg',
+                image_type: 'bg',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                btn_text: 'Read more',
+                btn_class: 'btn-dark'
+
+            })
+            +lane({
+                type: 'dark',
+                direction: 'left',
+                title: 'Dark lane block',
+                heading_class: 'h2',
+                image: 'img/tmp/photo-2.jpg',
+                image_type: 'bg',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                btn_text: 'Read more',
+                btn_class: 'btn-light'
+            })
+            +lane({
+                type: 'light',
+                direction: 'right',
+                image: 'img/tmp/mac.png',
+                image_type: 'img',
+                title: 'Image light promo block',
+                heading_class: 'h2',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                btn_text: 'Read more',
+                btn_class: 'btn-dark'
+            })
+            +lane({
+                type: 'dark',
+                direction: 'left',
+                image: 'img/tmp/mac.png',
+                image_type: 'img',
+                title: 'Image dark lane block',
+                heading_class: 'h2',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
+                btn_text: 'Read more',
+                btn_class: 'btn-light'
+            })
+        +footer
+include ../templates/scripts
+
+
+
+
+
+
+
+
+
+

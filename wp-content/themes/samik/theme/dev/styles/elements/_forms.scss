@@ -1,0 +1,54 @@
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &_left {
+        flex: 0 0 125px;
+
+        &.-s {
+            flex-basis: 70px;
+        }
+
+        &.-l {
+            flex-basis: 145px;
+        }
+
+        label {
+            margin-bottom: 0;
+        }
+    }
+
+    &_right {
+        flex: 1 1 auto;
+    }
+
+    @include media(xs) {
+        display: flex;
+        flex-flow: row wrap;
+
+        .form-group_left {
+            flex-basis: 100%;
+        }
+
+        label {
+            margin-bottom: 7px;
+        }
+    }
+
+    &_small {
+        @include media(sm) {
+            display: flex;
+            flex-flow: row wrap;
+
+            .form-group_left {
+                flex-basis: 100%;
+            }
+
+            label {
+                margin-bottom: 7px;
+            }
+        }
+    }
+}

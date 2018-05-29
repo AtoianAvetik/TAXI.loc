@@ -1,0 +1,10 @@
+.footer-menu-list {
+    li {
+        margin-bottom: 10px;
+
+        a {
+            @include underline-hover();
+            padding-bottom: 1px;
+        }
+    }
+}

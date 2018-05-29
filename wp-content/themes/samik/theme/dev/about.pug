@@ -1,0 +1,40 @@
+html
+    include ./templates/head
+    body
+        +top-banner-bar
+        .wrapper
+            +header({active: 'about'})
+            main.content
+                .container
+                    .row.-between
+                        .col-7
+                            .heading.h4.m-gap Несколько слов о <strong>Нас</strong>
+                            .text-content
+                                img(src='img/tmp/taxist.jpg')
+                                blockquote Наши цены на трансфер по Крыму из аэропорта Симферополя обрадуют Вас. TAXI такси Симферополь - Аэропорт осуществляет перевозки по Крыму.
+                                    | Наше недорогое такси будет отличным решением в Вашей поездке из/в аэропорт Симферополь из/в любые города Крыма, такие как Симферополь, Ялта, Севастополь, Евпатория, Алушта, Форос, Феодосия, Судак, Керчь и многих др. городов Крыма. А окончательную стоимость уточняйте у диспетчера.
+                        .col-4
+                            .heading.h4.m-gap Почему <strong>Мы</strong>
+                            .card.-form
+                                .card_content.card_pd.text-content
+                                    ul
+                                        li Фиксированная цена!
+                                        li Только иномарки
+                                        li Авто с кондиционером
+                                        li Подача точно вовремя
+                                        li Отслеживаем авиарейсы
+                                        li Время подачи от 10мин.
+                                        li Детское кресло
+            +footer
+            +feedback
+    include ./templates/scripts
+
+
+
+
+
+
+
+
+
+

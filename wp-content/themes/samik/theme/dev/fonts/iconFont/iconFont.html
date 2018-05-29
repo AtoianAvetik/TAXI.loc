@@ -1,0 +1,125 @@
+<style>
+@font-face {
+	font-family: 'iconFont';
+	src: url('iconFont.eot?1524920654');
+	src: url('iconFont.eot?1524920654#iefix') format('embedded-opentype'),
+		 url('iconFont.svg?1524920654#iconFont') format('svg'),
+		 url('iconFont.woff?1524920654') format('woff'),
+		 url('iconFont.woff?1524920654') format('woff2'),
+		 url('iconFont.ttf?1524920654') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.font-demo-table {
+	border: 2px solid #cccccc;
+	border-radius: 4px;
+	border-collapse: collapse;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.font-demo-table thead {
+	border-bottom: 2px solid #cccccc;
+}
+.font-demo-table tr {
+	border-bottom: 1px solid #cecece;
+}
+.font-demo-table tr:last-child {
+	border: none;
+}
+.font-demo-table td, .font-demo-table th {
+	width: 50%;
+	padding: 10px;
+	text-align: center;
+	font-size: 24px;
+	border-right: 1px solid #cecece;
+}
+.font-demo-table td:last-child, .font-demo-table th:last-child {
+	border: none;
+}
+.font-demo-icon:before {
+	display: inline;
+	font-size: 50px;
+	font-family: iconFont;
+	font-style: normal;
+}
+
+[data-icon]:before {
+	font-family: "iconFont" !important;
+	content: attr(data-icon);
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: "iconFont" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*----icon classes-----*/
+
+.icon-phone-call:before { content: "\E000"; }
+.icon-arrow-down:before { content: "\E001"; }
+.icon-email:before { content: "\E002"; }
+.icon-check:before { content: "\E003"; }
+.icon-baggage:before { content: "\E004"; }
+.icon-wifi:before { content: "\E005"; }
+.icon-waiting:before { content: "\E006"; }
+.icon-price:before { content: "\E007"; }
+.icon-conditioner:before { content: "\E008"; }
+.icon-percentage:before { content: "\E009"; }
+.icon-sedan:before { content: "\E00A"; }
+.icon-universal:before { content: "\E00B"; }
+.icon-micro:before { content: "\E00C"; }
+.icon-star:before { content: "\E00D"; }
+.icon-crown:before { content: "\E00E"; }
+.icon-user-with-plate:before { content: "\E00F"; }
+.icon-paw:before { content: "\E010"; }
+.icon-snowflake:before { content: "\E011"; }
+.icon-no-smoking:before { content: "\E012"; }
+.icon-silence:before { content: "\E013"; }
+</style>
+<table width='100%' class="font-demo-table" border="1">
+	<thead>
+		<tr>
+			<th>Class</th>
+			<th>Unicode</th>
+			<th>Icon</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td>.icon-phone-call</td><td>\E000</td><td><i class="font-demo-icon icon-phone-call"></i></td></tr>
+		<tr><td>.icon-arrow-down</td><td>\E001</td><td><i class="font-demo-icon icon-arrow-down"></i></td></tr>
+		<tr><td>.icon-email</td><td>\E002</td><td><i class="font-demo-icon icon-email"></i></td></tr>
+		<tr><td>.icon-check</td><td>\E003</td><td><i class="font-demo-icon icon-check"></i></td></tr>
+		<tr><td>.icon-baggage</td><td>\E004</td><td><i class="font-demo-icon icon-baggage"></i></td></tr>
+		<tr><td>.icon-wifi</td><td>\E005</td><td><i class="font-demo-icon icon-wifi"></i></td></tr>
+		<tr><td>.icon-waiting</td><td>\E006</td><td><i class="font-demo-icon icon-waiting"></i></td></tr>
+		<tr><td>.icon-price</td><td>\E007</td><td><i class="font-demo-icon icon-price"></i></td></tr>
+		<tr><td>.icon-conditioner</td><td>\E008</td><td><i class="font-demo-icon icon-conditioner"></i></td></tr>
+		<tr><td>.icon-percentage</td><td>\E009</td><td><i class="font-demo-icon icon-percentage"></i></td></tr>
+		<tr><td>.icon-sedan</td><td>\E00A</td><td><i class="font-demo-icon icon-sedan"></i></td></tr>
+		<tr><td>.icon-universal</td><td>\E00B</td><td><i class="font-demo-icon icon-universal"></i></td></tr>
+		<tr><td>.icon-micro</td><td>\E00C</td><td><i class="font-demo-icon icon-micro"></i></td></tr>
+		<tr><td>.icon-star</td><td>\E00D</td><td><i class="font-demo-icon icon-star"></i></td></tr>
+		<tr><td>.icon-crown</td><td>\E00E</td><td><i class="font-demo-icon icon-crown"></i></td></tr>
+		<tr><td>.icon-user-with-plate</td><td>\E00F</td><td><i class="font-demo-icon icon-user-with-plate"></i></td></tr>
+		<tr><td>.icon-paw</td><td>\E010</td><td><i class="font-demo-icon icon-paw"></i></td></tr>
+		<tr><td>.icon-snowflake</td><td>\E011</td><td><i class="font-demo-icon icon-snowflake"></i></td></tr>
+		<tr><td>.icon-no-smoking</td><td>\E012</td><td><i class="font-demo-icon icon-no-smoking"></i></td></tr>
+		<tr><td>.icon-silence</td><td>\E013</td><td><i class="font-demo-icon icon-silence"></i></td></tr>
+	</tbody>
+</table>

@@ -1,0 +1,5 @@
+mixin sub-menu(data)
+    ul.sub-menu(data-js="subMenu")
+        each item in data
+            li.sub-menu-item
+                a.sub-menu-item_link(href=item.link class=item.active && '-active') #{item.title}

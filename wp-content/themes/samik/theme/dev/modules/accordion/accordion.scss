@@ -1,0 +1,60 @@
+.accordion{
+    border-top: 1px solid $gray-light;
+    font-size: $base-font-size;
+    backface-visibility: hidden;
+    background: $light;
+
+    &_item{
+        border: 1px solid $gray-light;
+        border-top: none;
+    }
+
+    &_link{
+        width: 100%;
+        display: inline-block;
+        font-weight: 600;
+        position: relative;
+        padding: 15px 40px 15px 20px;
+
+        &:after, &:before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 10px;
+            background: $primary-color;
+            top: 50%;
+            margin-top: -1px;
+            transition: transform .3s linear;
+        }
+
+        &:after{
+            transform: rotate(45deg);
+            right: 26px;
+        }
+
+        &:before{
+            transform: rotate(-45deg);
+            right: 20px;
+        }
+
+        .accordion_item.-active &{
+            &:after{
+                transform: rotate(-45deg);
+            }
+
+            &:before{
+                transform: rotate(45deg);
+            }
+        }
+
+    }
+
+    &_content{
+        padding: 10px 20px;
+        display: none;
+
+        .accordion_item.-active &{
+            //display: block;
+        }
+    }
+}

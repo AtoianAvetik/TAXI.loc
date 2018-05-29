@@ -1,0 +1,9 @@
+mixin tabs(data)
+    div(data-module="tabs")
+        ul.tabs
+            each item in data
+                li.tab(class=item.active ? '-active' : '')
+                    a.tab_link(href="#" + item.id data-js="trigger") #{item.link}
+        div.tabs-content
+            each item in data
+                .tab-pane(id=item.id class=item.active ? '-active' : '') !{item.content}

@@ -1,0 +1,14 @@
+.map{
+    width: 100%;
+    //@include aspect-ratio(16,7);
+    height: 450px;
+    position: relative;
+
+    &:before {
+        max-height: 500px;
+    }
+
+    &_inner{
+        @include overlay;
+    }
+}
