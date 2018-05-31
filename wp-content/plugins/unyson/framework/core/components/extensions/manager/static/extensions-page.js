@@ -1,5 +1,5 @@
 jQuery(function ($) {
-	fw.qtip( $('.fw-extensions-list .fw-extensions-list-item .fw-extension-tip') );
+	fw.qtip( $('.fw-extensions-list .fw-extensions-list-item .fw-extensions-tip') );
 });
 
 /**
@@ -8,13 +8,13 @@ jQuery(function ($) {
 jQuery(function($){
 	var inst = {
 		isBusy: false,
-		eventNamespace: '.fw-extension',
+		eventNamespace: '.fw-extensions',
 		$wrapper: $('.wrap'),
 		listenSubmit: function() {
-			this.$wrapper.on('submit'+ this.eventNamespace, 'form.fw-extension-ajax-form', this.onSubmit);
+			this.$wrapper.on('submit'+ this.eventNamespace, 'form.fw-extensions-ajax-form', this.onSubmit);
 		},
 		stopListeningSubmit: function() {
-			this.$wrapper.off('submit'+ this.eventNamespace, 'form.fw-extension-ajax-form');
+			this.$wrapper.off('submit'+ this.eventNamespace, 'form.fw-extensions-ajax-form');
 		},
 		onSubmit: function(e) {
 			e.preventDefault();
@@ -51,8 +51,8 @@ jQuery(function($){
 						url: ajaxurl,
 						type: 'POST',
 						data: {
-							action: 'fw_extensions_'+ $form.attr('data-extension-action'),
-							extension: $form.attr('data-extension-name')
+							action: 'fw_extensions_'+ $form.attr('data-extensions-action'),
+							extension: $form.attr('data-extensions-name')
 						},
 						dataType: 'json'
 					}).done(function(r) {
@@ -62,13 +62,13 @@ jQuery(function($){
 							var error = r.data ? r.data.pop().message : 'Error';
 
 							fw.soleModal.show(
-								'fw-extension-install-error',
+								'fw-extensions-install-error',
 								'<p class="fw-text-danger">'+ error +'</p>'
 							);
 						}
 					}).fail(function(jqXHR, textStatus, errorThrown){
 						fw.soleModal.show(
-							'fw-extension-install-error',
+							'fw-extensions-install-error',
 							'<p class="fw-text-danger">'+ String(errorThrown) +'</p>'
 						);
 						inst.isBusy = false;

@@ -109,7 +109,9 @@ class FW_Option_Type_Multi_Upload extends FW_Option_Type
 		// attributes for the hidden input
 		$input_attr = array();
 		$input_attr['name']  = $option['attr']['name'];
+
 		$input_attr['value'] = $this->get_processed_value($data['value']);
+
 		unset($option['attr']['name'], $option['attr']['value']);
 
 		// attributes for the option wrapper
@@ -151,9 +153,11 @@ class FW_Option_Type_Multi_Upload extends FW_Option_Type
 		}
 
 		$ids = array();
+
 		foreach ($value as $attachment) {
 			$ids[] = $attachment['attachment_id'];
 		}
+
 		return json_encode($ids);
 	}
 
@@ -229,24 +233,54 @@ class FW_Option_Type_Multi_Upload extends FW_Option_Type
 
 	private function get_attachments_info($attachment_ids, $option)
 	{
-		if (!(
-			is_string($attachment_ids)
-			&&
-			is_array($decoded_ids = json_decode($attachment_ids, true))
-		)) {
-			return $option['value'];
+		$decoded_ids = $attachment_ids;
+
+		if ( is_string( $attachment_ids ) ) {
+			$decoded_ids = json_decode( $attachment_ids, true );
+
+			if ( ! is_array( $decoded_ids ) ) {
+				return $option['value'];
+			}
 		}
 
 		$return_arr = array();
-		foreach ($decoded_ids as $id) {
-			$url = wp_get_attachment_url($id);
-			if ($url) {
-				$return_arr[] = array(
+
+		foreach ( $decoded_ids as $id ) {
+
+			if ( isset( $id['attachment_id'] ) ) {
+				$id = $id['attachment_id'];
+			}
+
+			$url = wp_get_attachment_url( $id );
+
+			if ( $url ) {
+
+				$data = array(
 					'attachment_id' => $id,
-					'url'           => preg_replace('/^https?:\/\//', '//', $url)
+					'url'           => preg_replace( '/^https?:\/\//', '//', $url )
 				);
+
+				if ( isset( $option['sizes'] ) && is_array( $option['sizes'] ) ) {
+
+					$sizes = array();
+					$info  = wp_prepare_attachment_for_js( $id );
+
+					foreach ( $option['sizes'] as $size ) {
+
+						if ( isset( $info['sizes'][ $size ] ) ) {
+							$sizes[ $size ] = $info['sizes'][ $size ];
+						}
+					}
+
+					if ( ! empty( $sizes ) ) {
+						$data['sizes'] = $sizes;
+					}
+				}
+
+				$return_arr[] = $data;
 			}
 		}
+
 		return $return_arr;
 	}
 }

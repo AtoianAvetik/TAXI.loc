@@ -1349,11 +1349,11 @@ define("moxie/core/utils/Mime", [
 			for (i = 0; i < items.length; i += 2) {
 				ext = items[i + 1].split(/ /);
 
-				// extension to mime lookup
+				// extensions to mime lookup
 				for (ii = 0; ii < ext.length; ii++) {
 					this.mimes[ext[ii]] = items[i];
 				}
-				// mime to extension lookup
+				// mime to extensions lookup
 				this.extensions[items[i]] = ext;
 			}
 		},
@@ -1378,7 +1378,7 @@ define("moxie/core/utils/Mime", [
 						mimes.push(type);
 					}
 
-					// future browsers should filter by extension, finally
+					// future browsers should filter by extensions, finally
 					if (addMissingExtensions && /^\w+$/.test(ext[ii])) {
 						mimes.push('.' + ext[ii]);
 					} else if (!type) {
@@ -2172,7 +2172,7 @@ define('moxie/runtime/Runtime', [
 			// Runtime can: 
 			// provide access to raw binary data of the file
 			access_binary: false,
-			// provide access to raw binary data of the image (image extension is optional) 
+			// provide access to raw binary data of the image (image extensions is optional) 
 			access_image_binary: false,
 			// display binary data as thumbs for example
 			display_media: false,
@@ -2231,7 +2231,7 @@ define('moxie/runtime/Runtime', [
 			Env.log("\tdefault mode: %s", defaultMode);	
 		}
 		
-		// small extension factory here (is meant to be extended with actual extensions constructors)
+		// small extensions factory here (is meant to be extended with actual extensions constructors)
 		_shim = (function() {
 			var objpool = {};
 			return {
@@ -2864,11 +2864,11 @@ define('moxie/runtime/RuntimeClient', [
 
 
 			/**
-			Handy shortcut to safely invoke runtime extension methods.
+			Handy shortcut to safely invoke runtime extensions methods.
 			
 			@private
 			@method exec
-			@return {Mixed} Whatever runtime extension method returns
+			@return {Mixed} Whatever runtime extensions method returns
 			*/
 			exec: function() {
 				if (runtime) {
@@ -3615,7 +3615,7 @@ define('moxie/file/File', [
 			name = Basic.guid((prefix !== '' ? prefix : 'file') + '_');
 			
 			if (Mime.extensions[this.type]) {
-				name += '.' + Mime.extensions[this.type][0]; // append proper extension if possible
+				name += '.' + Mime.extensions[this.type][0]; // append proper extensions if possible
 			}
 		}
 		
@@ -5746,7 +5746,7 @@ define("moxie/image/Image", [
 					xhr.open('post', 'upload.php');
 					xhr.send(formData);
 				};
-				img.load("http://www.moxiecode.com/images/mox-logo.jpg"); // notice file extension (.jpg)
+				img.load("http://www.moxiecode.com/images/mox-logo.jpg"); // notice file extensions (.jpg)
 			
 
 			@method load

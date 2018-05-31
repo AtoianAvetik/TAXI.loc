@@ -203,7 +203,7 @@ $tabs = fw()->backend->render_options(
 					<img src="{{ url }}" style="max-width: 100%" alt="">
 
 					<a
-						title="<?php echo __('Add to Favorites', 'fw') ?>"
+						title="<?php esc_html_e( 'Delete item', 'fw' ); ?>"
 						class="fw-icon-v2-favorite dashicons dashicons-no">
 					</a>
 				</div>
@@ -236,7 +236,7 @@ $tabs = fw()->backend->render_options(
 		<ul class="fw-icon-v2-library-pack">
 
 		<# _.each(data.icons, function (icon) { #>
-			<# var iconClass = data.css_class_prefix ? data.css_class_prefix + ' ' + icon : icon; #>
+			<# var iconClass = (data.css_class_prefix && data.apply_root_class) ? data.css_class_prefix + ' ' + icon : icon; #>
 			<# var selectedClass = data.current_state['icon-class'] === iconClass ? 'selected' : ''; #>
 			<# var favoriteClass = _.contains(data.favorites, iconClass) ? 'fw-icon-v2-favorite' : '' #>
 

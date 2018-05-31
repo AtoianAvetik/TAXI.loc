@@ -8039,7 +8039,7 @@ function getExtension(url) {
 function normalizeExtension(extension) {
 
 	if (typeof extension !== 'string') {
-		throw new Error('`extension` argument must be a string');
+		throw new Error('`extensions` argument must be a string');
 	}
 
 	switch (extension) {

@@ -153,7 +153,7 @@ var twemoji = (function (
        *
        *            callback   Function  the callback to invoke per each found emoji.
        *            base       string    the base url, by default twemoji.base
-       *            ext        string    the image extension, by default twemoji.ext
+       *            ext        string    the image extensions, by default twemoji.ext
        *            size       string    the assets size, by default twemoji.size
        *
        * @example
@@ -334,7 +334,7 @@ var twemoji = (function (
     *
     *            .callback   Function  the callback to invoke per each found emoji.
     *            .base       string    the base url, by default twemoji.base
-    *            .ext        string    the image extension, by default twemoji.ext
+    *            .ext        string    the image extensions, by default twemoji.ext
     *            .size       string    the assets size, by default twemoji.size
     *
    * @return  Element same generic node with emoji in place, if any.
@@ -421,7 +421,7 @@ var twemoji = (function (
    *
    *            .callback   Function  the callback to invoke per each found emoji.
    *            .base       string    the base url, by default twemoji.base
-   *            .ext        string    the image extension, by default twemoji.ext
+   *            .ext        string    the image extensions, by default twemoji.ext
    *            .size       string    the assets size, by default twemoji.size
    *
    * @return  the string with <img tags> replacing all found and parsed emoji

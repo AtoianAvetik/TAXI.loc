@@ -58,7 +58,7 @@ Included on pages where backend options are rendered
 
 .fw-options-tabs-wrapper > .fw-options-tabs-list {
 	border-bottom: 1px solid #CCC;
-	padding: 0 10px;
+	/*padding: 0 10px;*/
 }
 
 .fw-options-tabs-wrapper > .fw-options-tabs-list ul,

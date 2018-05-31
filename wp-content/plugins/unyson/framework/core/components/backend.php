@@ -181,6 +181,7 @@ final class _FW_Component_Backend {
 				 */
 				11
 			);
+			add_action( 'admin_menu', array( $this, '_action_admin_menu' ) );
 
 			// render and submit options from javascript
 			{
@@ -192,9 +193,37 @@ final class _FW_Component_Backend {
 
 		add_action('save_post', array($this, '_action_save_post'), 7, 3);
 		add_action('wp_restore_post_revision', array($this, '_action_restore_post_revision'), 10, 2);
-		add_action('_wp_put_post_revision', array($this, '_action__wp_put_post_revision'));
 
 		add_action('customize_register', array($this, '_action_customize_register'), 7);
+	}
+
+	public function _action_admin_menu() {
+
+		$parent_slug = 'index.php';
+		$menu_title  = esc_html__( 'New', 'fw' );
+
+		if ( isset( $GLOBALS['admin_page_hooks'] ) ) {
+			$parent_slug = 'fw-extensions';
+			$menu_title  = esc_html__( 'New', 'fw' );
+		}
+
+		add_submenu_page(
+			$parent_slug,
+			esc_html__( 'New', 'fw' ),
+			$menu_title,
+			'manage_options',
+			'fw-new',
+			array( $this, 'render_about_page' )
+		);
+	}
+
+	public function render_about_page() {
+
+		$file = WP_PLUGIN_DIR . '/unyson/framework/views/about.php';
+
+		if ( file_exists( $file ) ) {
+			include $file;
+		}
 	}
 
 	private function add_filters() {
@@ -792,6 +821,7 @@ final class _FW_Component_Backend {
 	 * @param bool $update
 	 */
 	public function _action_save_post( $post_id, $post, $update ) {
+
 		if (
 			isset($_POST['post_ID'])
 			&&
@@ -832,6 +862,7 @@ final class _FW_Component_Backend {
 			 */
 			do_action( 'fw_save_post_options', $post_id, $post, $old_values );
 		} elseif ($original_post_id = wp_is_post_autosave( $post_id )) {
+
 			do {
 				$parent = get_post($post->post_parent);
 
@@ -839,11 +870,9 @@ final class _FW_Component_Backend {
 					break;
 				}
 
-				if (
-					isset($_POST['post_ID'])
-					&&
-					intval($_POST['post_ID']) === intval($parent->ID)
-				) {} else {
+				if ( isset($_POST['post_ID']) && intval($_POST['post_ID']) === intval($parent->ID) ) {
+
+				} else {
 					break;
 				}
 
@@ -889,25 +918,6 @@ final class _FW_Component_Backend {
 			$post_id,
 			null,
 			(array)fw_get_db_post_option($revision_id, null, array())
-		);
-	}
-
-	/**
-	 * @param $revision_id
-	 */
-	public function _action__wp_put_post_revision($revision_id)
-	{
-		/**
-		 * Copy options meta from post to revision
-		 */
-		fw_set_db_post_option(
-			$revision_id,
-			null,
-			(array)fw_get_db_post_option(
-				wp_is_post_revision($revision_id),
-				null,
-				array()
-			)
 		);
 	}
 
@@ -1153,7 +1163,17 @@ final class _FW_Component_Backend {
 				$values = array();
 			}
 
-			$values = array_intersect_key($values, fw_extract_only_options($options));
+			$filtered_values = apply_filters(
+				'fw:ajax_options_render:values',
+				null,
+				$options,
+				$values
+			);
+
+			$values = $filtered_values ? $filtered_values : array_intersect_key(
+				$values,
+				fw_extract_only_options( $options )
+			);
 		}
 
 		// data
@@ -1381,7 +1401,19 @@ final class _FW_Component_Backend {
 					foreach ( $collected_type_options as $id => &$_option ) {
 						$data = $options_data; // do not change directly to not affect next loops
 
-						$data['value'] = isset( $values[ $id ] ) ? $values[ $id ] : null;
+						$maybe_future_value = apply_filters(
+							'fw:render_options:option_value',
+							null,
+							$values,
+							$_option,
+							$id
+						);
+
+						if (! $maybe_future_value) {
+							$maybe_future_value = isset( $values[ $id ] ) ? $values[ $id ] : null;
+						}
+
+						$data['value'] = $maybe_future_value;
 
 						$html .= $this->render_option(
 							$id,

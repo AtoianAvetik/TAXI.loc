@@ -213,7 +213,7 @@ var plupload = {
 	FILE_SIZE_ERROR : -600,
 
 	/**
-	 * File extension error. If the user selects a file that isn't valid according to the filters setting.
+	 * File extensions error. If the user selects a file that isn't valid according to the filters setting.
 	 *
 	 * @property FILE_EXTENSION_ERROR
 	 * @static
@@ -669,7 +669,7 @@ plupload.addFileFilter('mime_types', function(filters, file, cb) {
 	if (filters.length && !filters.regexp.test(file.name)) {
 		this.trigger('Error', {
 			code : plupload.FILE_EXTENSION_ERROR,
-			message : plupload.translate('File extension error.'),
+			message : plupload.translate('File extensions error.'),
 			file : file
 		});
 		cb(false);

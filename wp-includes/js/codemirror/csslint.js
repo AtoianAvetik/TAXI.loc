@@ -2768,7 +2768,7 @@ Parser.prototype = function() {
 
             _ie_function: function() {
 
-                /* (My own extension)
+                /* (My own extensions)
                  * ie_function
                  *   : IE_FUNCTION S* IDENT '=' term [S* ','? IDENT '=' term]+ ')' S*
                  *   ;
