@@ -18,42 +18,37 @@ $cfg['grid.columns'] = array(
 	'1_6' => array(
 		'title'          => '1/6',
 		'backend_class'  => 'fw-col-sm-2',
-		'frontend_class' => 'col-4 col-md-8 col-xs-24',
-	),
-	'1_5' => array(
-		'title'          => '1/5',
-		'backend_class'  => 'fw-col-sm-15',
-		'frontend_class' => 'col-5 col-md-12 col-xs-24',
+		'frontend_class' => 'col-2 col-md-6 col-xs-12',
 	),
 	'1_4' => array(
 		'title'          => '1/4',
 		'backend_class'  => 'fw-col-sm-3',
-		'frontend_class' => 'col-6 col-md-12 col-xs-24',
+		'frontend_class' => 'col-3 col-md-6 col-xs-12',
 	),
 	'1_3' => array(
 		'title'          => '1/3',
 		'backend_class'  => 'fw-col-sm-4',
-		'frontend_class' => 'col-8 col-md-24',
+		'frontend_class' => 'col-4 col-md-6 col-xs-12',
 	),
 	'1_2' => array(
 		'title'          => '1/2',
 		'backend_class'  => 'fw-col-sm-6',
-		'frontend_class' => 'col-12 col-md-24',
+		'frontend_class' => 'col-6 col-md-12',
 	),
 	'2_3' => array(
 		'title'          => '2/3',
 		'backend_class'  => 'fw-col-sm-8',
-		'frontend_class' => 'col-16 col-md-24',
+		'frontend_class' => 'col-8 col-md-12',
 	),
 	'3_4' => array(
 		'title'          => '3/4',
 		'backend_class'  => 'fw-col-sm-9',
-		'frontend_class' => 'col-18 col-md-24',
+		'frontend_class' => 'col-9 col-md-12',
 	),
 	'1_1' => array(
 		'title'          => '1/1',
 		'backend_class'  => 'fw-col-sm-12',
-		'frontend_class' => 'col-24',
+		'frontend_class' => 'col-12',
 	),
 );
 

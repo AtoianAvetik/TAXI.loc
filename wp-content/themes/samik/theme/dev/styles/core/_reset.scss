@@ -56,6 +56,10 @@ a:focus{
     outline: none;
 }
 
+a:visited{
+    color: inherit;
+}
+
 strong, b{
     font-weight: bold;
 }

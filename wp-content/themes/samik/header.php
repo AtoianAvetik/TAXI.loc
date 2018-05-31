@@ -14,43 +14,91 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'samik' ); ?></a>
+<div id="page" class="wrapper">
+	<header class="header" data-module="header">
+        <div class="navbar-wrap">
+            <div class="navbar navbar_full-width" data-js="navbar">
+                <div class="container">
+                    <div class="row -around no-gutters navbar-inner">
+                        <div class="navbar_block navbar_panel">
+                            <div class="logo logo-container"><a class="logo_link" href="/"><img src="img/logo/logo.png" alt=""></a>
+                                <div class="logo-text"><span class="logo-label">24/7</span><span class="logo-sub-label">сервис вызова авто</span></div>
+                            </div>
+                            <button class="menu-btn btn-pure"><span class="hamburger"><span class="hamburger_box"><span class="hamburger_inner"></span></span></span>
+                            </button>
+                        </div>
+                        <div class="navbar_block navbar_contact-box-wrap">
+                            <div class="contact-box"><i class="icon thin-icon-phone-call"></i>
+                                <dl>
+                                    <dt>Позвоните Нам:</dt>
+                                    <dd></dd><a href="callto:#">+7(978) xxx xx xx</a>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="navbar_block navbar_nav-wrap">
+                            <nav class="navbar-nav menu" data-module="menu">
+                                <ul class="menu-list">
+                                    <?php
+                                        $pageId = get_the_ID();
+                                        $items = wp_get_nav_menu_items( 'menu-1' );
+                                        foreach($items as $menuItem){
+                                    ?>
+                                    <li class="menu-item">
+                                        <a class="menu-item_link<?php if($pageId == $menuItem->object_id){?> -active<?php } ?>" href="<?php echo $menuItem->url; ?>">
+                                        <?php echo $menuItem->title; ?>
+                                        </a>
+                                    </li>
+                                    <?php } ?>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar_is-sticky navbar_full-width" data-js="navbarSticky">
+                <div class="container">
+                    <div class="row -around no-gutters navbar-inner">
+                        <div class="navbar_block navbar_panel">
+                            <div class="logo logo-container"><a class="logo_link" href="/"><img src="img/logo/logo.png" alt=""></a>
+                                <div class="logo-text"><span class="logo-label">24/7</span><span class="logo-sub-label">сервис вызова авто</span></div>
+                            </div>
+                        </div>
+                        <div class="navbar_block navbar_contact-box-wrap">
+                            <div class="contact-box"><i class="icon icon-phone-call"></i>
+                                <dl>
+                                    <dt>Позвоните Нам:</dt>
+                                    <dd></dd><a href="callto:#">+7(978) xxx xx xx</a>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="navbar_block navbar_nav-wrap">
+                            <nav class="navbar-nav menu">
+                                <ul class="menu-list">
+                                    <?php
+                                        $pageId = get_the_ID();
+                                        $items = wp_get_nav_menu_items( 'menu-1' );
+                                        foreach($items as $menuItem){
+                                    ?>
+                                    <li class="menu-item">
+                                        <a class="menu-item_link<?php if($pageId == $menuItem->object_id){?> -active<?php } ?>" href="<?php echo $menuItem->url; ?>">
+                                        <?php echo $menuItem->title; ?>
+                                        </a>
+                                    </li>
+                                    <?php } ?>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="content">
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'samik' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
