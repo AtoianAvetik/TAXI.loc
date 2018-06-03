@@ -3,12 +3,14 @@
 }
 
 $options = array(
-    'Header text' => array(
-         'type'  => 'text',
-         'value' => 'default value',
-         'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-         'label' => __('Header text', '{domain}'),
-         'desc'  => __('Description', '{domain}'),
-         'help'  => __('Help tip', '{domain}'),
-     )
+    'logo' => array(
+        'type' => 'upload',
+        'label' => __('Логотип', '{domain}'),
+        'desc'  => __('Выберите изображение для логотипа', '{domain}'),
+    ),
+    'footer_logo' => array(
+        'type' => 'upload',
+        'label' => __('Нижний логотип', '{domain}'),
+        'desc'  => __('Выберите изображение для нижнего логотипа', '{domain}'),
+    )
 );

@@ -17,7 +17,7 @@
         <div class="container footer_main">
             <div class="row -middle -center">
                 <div class="footer_block col col-md-6 col-xs-12">
-                    <div class="logo logo-container"><a class="logo_link" href="/"><img src="img/logo/logo-white.png" alt=""></a>
+                    <div class="logo logo-container"><a class="logo_link" href="/"><img src="<?php echo fw_get_db_settings_option('footer_logo')['url']; ?>" alt=""></a>
                         <div class="logo-text"><span class="logo-label">24/7</span><span class="logo-sub-label">сервис вызова авто</span></div>
                     </div>
                 </div>
