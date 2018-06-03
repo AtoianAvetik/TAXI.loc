@@ -117,6 +117,8 @@ add_action( 'widgets_init', 'samik_widgets_init' );
  * Enqueue scripts and styles.
  */
 function samik_scripts() {
+    fw()->backend->option_type('icon-v2')->packs_loader->enqueue_frontend_css();
+
 	wp_enqueue_style( 'samik-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'samik-theme-style', get_template_directory_uri() . '/theme/build/css/styles.css' );

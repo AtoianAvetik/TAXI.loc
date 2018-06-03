@@ -30,3 +30,25 @@ function samik_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'samik_pingback_header' );
+
+
+
+
+/**
+ * Add custom icon fonts.
+ */
+add_filter(
+    'fw:option_type:icon-v2:packs',
+    '_add_more_packs'
+);
+
+function _add_more_packs($default_packs) {
+    return array(
+        'iconFont' => array(
+            'name' => 'iconFont',
+            'css_class_prefix' => 'icon',
+            'css_file' => get_template_directory() . '/theme/build/fonts/iconFont/iconFont.css',
+            'css_file_uri' => get_template_directory_uri() . '/theme/build/fonts/iconFont/iconFont.css'
+        )
+    );
+}
