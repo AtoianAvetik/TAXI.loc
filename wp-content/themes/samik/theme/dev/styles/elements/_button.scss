@@ -23,6 +23,7 @@ $button: (
     &:hover{
         background: $bg-hover;
         text-decoration: none;
+        border-color: $bg-hover;
     }
 
 

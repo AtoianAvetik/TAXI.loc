@@ -137,6 +137,8 @@ function samik_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'samik_scripts' );
 
+add_filter('fw:ext:forms:builder:load-item:form-header-title', '__return_false');
+
 /**
  * Implement the Custom Header feature.
  */
