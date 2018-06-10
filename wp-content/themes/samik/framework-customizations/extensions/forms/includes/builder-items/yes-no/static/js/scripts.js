@@ -1,32 +1,33 @@
-fwEvents.one('fw-builder:'+ 'form-builder' +':register-items', function(builder){
+fwEvents.on('fw-builder:'+ 'form-builder' +':register-items', function(builder){
     var currentItemType = 'yes-no';
+
     var localized = window['fw_form_builder_item_type_yes_no'];
 
     var ItemView = builder.classes.ItemView.extend({
         template: _.template(
-            '<div class="fw-form-builder-item-style-default fw-form-builder-item-type-'+ currentItemType +'">'+
-            '<div class="fw-form-item-controls fw-row">'+
-            '<div class="fw-form-item-controls-left fw-col-xs-8">'+
-            '<div class="fw-form-item-width"></div>'+
-            '</div>'+
-            '<div class="fw-form-item-controls-right fw-col-xs-4 fw-text-right">'+
-            '<div class="fw-form-item-control-buttons">'+
-            '<a class="fw-form-item-control-required dashicons<% if (required) { %> required<% } %>" data-hover-tip="<%- toggle_required %>" href="#" onclick="return false;" >*</a>'+
-            '<a class="fw-form-item-control-edit dashicons dashicons-edit" data-hover-tip="<%- edit %>" href="#" onclick="return false;" ></a>'+
-            '<a class="fw-form-item-control-remove dashicons dashicons-no-alt" data-hover-tip="<%- remove %>" href="#" onclick="return false;" ></a>'+
-            '</div>'+
-            '</div>'+
-            '</div>'+
-            '<div class="fw-form-item-preview">'+
-            '<div class="fw-form-item-preview-label">'+
-            '<div class="fw-form-item-preview-label-wrapper"><label data-hover-tip="<%- edit_label %>"><%- label %></label> <span <% if (required) { %>class="required"<% } %>>*</span></div>'+
-            '<div class="fw-form-item-preview-label-edit"><!-- --></div>'+
-            '</div>'+
-            '<div class="fw-form-item-preview-input">'+
-            '<label><input type="radio" disabled <% if (default_value === \'yes\') { %>checked<% } %>> <%- yes %></label><br/>'+
-            '<label><input type="radio" disabled <% if (default_value === \'no\') { %>checked<% } %>> <%- no %></label>'+
-            '</div>'+
-            '</div>'+
+            '<div class="fw-form-builder-item-style-default fw-form-builder-item-type-' + currentItemType + '">' +
+                '<div class="fw-form-item-controls fw-row">' +
+                    '<div class="fw-form-item-controls-left fw-col-xs-8">' +
+                        '<div class="fw-form-item-width"></div>' +
+                    '</div>' +
+                    '<div class="fw-form-item-controls-right fw-col-xs-4 fw-text-right">' +
+                        '<div class="fw-form-item-control-buttons">' +
+                            '<a class="fw-form-item-control-required dashicons<% if (required) { %> required<% } %>" data-hover-tip="<%- toggle_required %>" href="#" onclick="return false;" >*</a>' +
+                            '<a class="fw-form-item-control-edit dashicons dashicons-edit" data-hover-tip="<%- edit %>" href="#" onclick="return false;" ></a>' +
+                            '<a class="fw-form-item-control-remove dashicons dashicons-no-alt" data-hover-tip="<%- remove %>" href="#" onclick="return false;" ></a>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="fw-form-item-preview">' +
+                    '<div class="fw-form-item-preview-label">' +
+                        '<div class="fw-form-item-preview-label-wrapper"><label data-hover-tip="<%- edit_label %>"><%- label %></label> <span <% if (required) { %>class="required"<% } %>>*</span></div>' +
+                        '<div class="fw-form-item-preview-label-edit"><!-- --></div>' +
+                    '</div>' +
+                    '<div class="fw-form-item-preview-input">' +
+                        '<label><input type="radio" disabled <% if (default_value === \'yes\') { %>checked<% } %>> <%- yes %></label><br/>' +
+                        '<label><input type="radio" disabled <% if (default_value === \'no\') { %>checked<% } %>> <%- no %></label>' +
+                    '</div>' +
+                '</div>' +
             '</div>'
         ),
         events: {
@@ -46,7 +47,7 @@ fwEvents.one('fw-builder:'+ 'form-builder' +':register-items', function(builder)
                     title: localized.l10n.item_title,
                     options: this.model.modalOptions,
                     values: this.model.get('options'),
-                    size: 'small'
+                    size: 'small' // OPTIONS POPUP SIZE
                 });
 
                 this.listenTo(this.modal, 'change:values', function(modal, values) {
@@ -73,7 +74,7 @@ fwEvents.one('fw-builder:'+ 'form-builder' +':register-items', function(builder)
         },
         render: function () {
             this.defaultRender({
-                label: fw.opg('label', this.model.get('options')),
+                label: fw.opg('label', this.model.get('options')) || localized.l10n.item_title,
                 required: fw.opg('required', this.model.get('options')),
                 default_value: fw.opg('default_value', this.model.get('options')),
                 toggle_required: localized.l10n.toggle_required,
@@ -158,6 +159,9 @@ fwEvents.one('fw-builder:'+ 'form-builder' +':register-items', function(builder)
         initialize: function() {
             this.defaultInitialize();
 
+            /**
+             * get options from wp_localize_script() variable
+             */
             this.modalOptions = localized.options;
 
             this.view = new ItemView({

@@ -38,22 +38,20 @@ class FW_Option_Type_Form_Builder_Item_Yes_No extends FW_Option_Type_Form_Builde
         $uri = fw_get_template_customizations_directory_uri('/extensions/forms/includes/builder-items/yes-no/static');
 
         wp_enqueue_style(
-            'fw-form-builder-item-type-yes-no',
-            $uri .'/backend.css',
-            array(),
-            fw()->theme->manifest->get_version()
+            'fw-builder-' . $this->get_builder_type() . '-item-' . $this->get_type(),
+            $uri .'/css/styles.css'
         );
 
         wp_enqueue_script(
-            'fw-form-builder-item-type-yes-no',
-            $uri .'/backend.js',
+            'fw-builder-' . $this->get_builder_type() . '-item-' . $this->get_type(),
+            $uri .'/js/scripts.js',
             array('fw-events'),
-            fw()->theme->manifest->get_version(),
+            false,
             true
         );
 
         wp_localize_script(
-            'fw-form-builder-item-type-yes-no',
+            'fw-builder-' . $this->get_builder_type() . '-item-' . $this->get_type(),
             'fw_form_builder_item_type_yes_no',
             array(
                 'l10n' => array(
@@ -69,6 +67,7 @@ class FW_Option_Type_Form_Builder_Item_Yes_No extends FW_Option_Type_Form_Builde
                 'options'  => $this->get_options(),
                 'defaults' => array(
                     'type'    => $this->get_type(),
+                    'width'   => fw_ext( 'forms' )->get_config( 'items/width' ),
                     'options' => fw_get_options_values_from_input($this->get_options(), array())
                 )
             )
@@ -182,6 +181,7 @@ class FW_Option_Type_Form_Builder_Item_Yes_No extends FW_Option_Type_Form_Builde
                     )
                 )
             ),
+            $this->get_extra_options()
         );
     }
 }
