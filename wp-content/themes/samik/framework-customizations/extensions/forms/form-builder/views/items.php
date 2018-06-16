@@ -3,6 +3,6 @@
  * @var string $items_html
  */
 ?>
-<div class="wrap-forms">
+<div class="">
 	<?php echo $items_html ?>
 </div>
