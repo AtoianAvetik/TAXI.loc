@@ -352,8 +352,8 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
         $method->setAccessible(true);
         $item_types = $method->invoke(new FW_Option_Type_Form_Builder);
 
-        $row_class  = ($row_class  = fw_ext('builder')->get_config('grid.row.class')) ? 'card-row' : 'fw-row';
-        $html       = '<div class="'. esc_attr($row_class) .'">';
+        $row_class  = ($row_class  = fw_ext('builder')->get_config('grid.row.class')) ? 'card_row' : 'fw-row';
+        $html       = '<div class="'. esc_attr($row_class) .'"><div class="row">';
         $width      = 0;
         $counter    = 0;
 
@@ -370,19 +370,19 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
             $html .= $item_types[ $item['type'] ]->frontend_render( $item, $input_value );
 
             if ( $width >= 1 ) {
-                $html .= '</div><div class="'. esc_attr($row_class) .'">';
+                $html .= '</div></div><div class="'. esc_attr($row_class) .'"><div class="row">';
                 $width = 0;
             } elseif ( isset( $items[ $counter + 1 ] )
                 && ( $width + $this->calculate_width( $items[ $counter + 1 ]['width'] ) > 1 )
             ) {
-                $html .= '</div><div class="'. esc_attr($row_class) .'">';
+                $html .= '</div></div><div class="'. esc_attr($row_class) .'"><div class="row">';
                 $width = 0;
             }
 
             $counter ++;
         }
 
-        return $html . '</div>';
+        return $html . '</div></div>';
     }
 
     private function calculate_width( $width ) {
