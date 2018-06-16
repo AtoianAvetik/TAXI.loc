@@ -8,12 +8,14 @@ $options = $item['options'];
 $items = $item["_items"];
 ?>
 <div class="col-12">
-    <div class="card -form">
-        <div class="card_header -primary">
-            <div class="card_title"><?php echo $options['title']?></div>
+    <section <?php if ($options['accordion']): ?>class="accordion" data-module="accordion"<?php endif; ?>>
+        <div class="card -form <?php if ($options['accordion']): ?>accordion_item -active" data-js="item<?php endif; ?>">
+            <div class="card_header <?php echo $options['header-border-color']?> <?php if ($options['accordion']): ?>accordion_link" data-js="trigger<?php endif; ?>">
+                <div class="card_title"><?php echo $options['title']?></div>
+            </div>
+            <div class="card_content card_pd" <?php if ($options['accordion']): ?>data-js="content"<?php endif; ?>>
+                <?php echo $items_html; ?>
+            </div>
         </div>
-        <div class="card_content card_pd">
-            <?php echo $items_html; ?>
-        </div>
-    </div>
+    </section>
 </div>

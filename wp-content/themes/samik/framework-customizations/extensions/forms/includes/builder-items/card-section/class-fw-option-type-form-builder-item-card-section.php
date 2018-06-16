@@ -84,6 +84,42 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
 					)
 				)
 			),
+			array(
+				'g2' => array(
+					'type'    => 'group',
+					'options' => array(
+						array(
+							'accordion' => array(
+                                'type'  => 'checkbox',
+                                'value' => false, // checked/unchecked
+                                'label' => __('Accordion', 'fw'),
+                                'help'  => __('Accordion', 'fw'),
+                            )
+						),
+                        array(
+                            'header-border-color' => array(
+                                'type'  => 'select',
+                                'value' => '-default',
+                                'label' => __('Title border color', 'fw'),
+                                'help'  => __('Title border color', 'fw'),
+                                'choices' => array(
+                                    '-primary' => array(
+                                        'text' => __('Main', 'fw'),
+                                    ),
+                                    '-default' => array(
+                                        'text' => __('Default', 'fw'),
+                                    ),
+                                ),
+                                /**
+                                 * Allow save not existing choices
+                                 * Useful when you use the select to populate it dynamically from js
+                                 */
+                                'no-validate' => false,
+                            )
+                        )
+					)
+				)
+			),
 			$this->get_extra_options()
 		);
 	}
