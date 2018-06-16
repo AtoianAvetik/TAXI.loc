@@ -6,6 +6,7 @@
 
 .fw-option-type-form-builder .fw-form-builder-item-type-card-section .builder-items {
 	padding: 10px 0;
+	min-height: 83px;
 }
 
 .fw-option-type-form-builder .fw-form-builder-item-type-card-section .fw-form-item-controls .fw-form-item-control-buttons {

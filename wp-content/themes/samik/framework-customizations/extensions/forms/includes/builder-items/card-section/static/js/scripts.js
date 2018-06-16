@@ -8,11 +8,10 @@ fwEvents.on('fw-builder:'+ 'form-builder' +':register-items', function(builder){
 			'<div class="fw-form-builder-item-style-default fw-form-builder-item-type-'+ currentItemType +'">'+
 				'<div class="fw-form-item-controls fw-row">'+
 					'<div class="fw-form-item-controls-left fw-col-xs-7">'+
-            			'<div class="column-title"><%= label %></div>' +
+            			'<div class="column-title"><%= title %></div>' +
 					'</div>'+
 					'<div class="fw-form-item-controls-right fw-col-xs-5 fw-text-right">'+
 						'<div class="fw-form-item-control-buttons">'+
-							'<a class="fw-form-card-section-control-required dashicons<% if (required) { %> required<% } %>" data-hover-tip="<%- toggle_required %>" href="#" onclick="return false;" >*</a>'+
 							'<a class="fw-form-card-section-control-edit dashicons dashicons-admin-generic" data-hover-tip="<%- edit %>" href="#" onclick="return false;" ></a>'+
 							'<a class="fw-form-card-section-control-remove dashicons dashicons-no" data-hover-tip="<%- remove %>" href="#" onclick="return false;" ></a>'+
 						'</div>'+
@@ -24,8 +23,7 @@ fwEvents.on('fw-builder:'+ 'form-builder' +':register-items', function(builder){
 		events: {
 			'click': 'onWrapperClick',
 			'click .fw-form-card-section-control-edit': 'openEdit',
-			'click .fw-form-card-section-control-remove': 'removeItem',
-			'click .fw-form-card-section-control-required': 'toggleRequired'
+			'click .fw-form-card-section-control-remove': 'removeItem'
 		},
 		initialize: function() {
 			this.defaultInitialize();
@@ -53,14 +51,10 @@ fwEvents.on('fw-builder:'+ 'form-builder' +':register-items', function(builder){
 		},
 		render: function () {
 			this.defaultRender({
-				label: fw.opg('label', this.model.get('options')) || localized.l10n.item_title,
-				required: fw.opg('required', this.model.get('options')),
-				default_value: fw.opg('default_value', this.model.get('options')),
-				placeholder: fw.opg('placeholder', this.model.get('options')),
-				toggle_required: localized.l10n.toggle_required,
+				title: fw.opg('title', this.model.get('options')) || localized.l10n.item_title,
 				edit: localized.l10n.edit,
 				remove: localized.l10n.delete,
-				edit_label: localized.l10n.edit_label
+				edit_title: localized.l10n.edit_title
 			});
 		},
 		openEdit: function() {
@@ -70,16 +64,6 @@ fwEvents.on('fw-builder:'+ 'form-builder' +':register-items', function(builder){
 			this.remove();
 
 			this.model.collection.remove(this.model);
-		},
-		toggleRequired: function() {
-			var values = _.clone(
-				// clone to not modify by reference, else model.set() will not trigger the 'change' event
-				this.model.get('options')
-			);
-
-			values.required = !values.required;
-
-			this.model.set('options', values);
 		},
 		onWrapperClick: function(e) {
             e.stopPropagation();
