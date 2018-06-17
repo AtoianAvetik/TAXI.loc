@@ -462,27 +462,29 @@ html
                                                             input.form-icon-input(type="checkbox" id="silence" name="silence")
                                                             label.form-icon-label.icon-silence.tipso(for="silence" data-tipso-title="Тишина" data-tipso="Тишина в салоне.")
                                             .card_row
-                                                .form-group
-                                                    .form-group_left.-l
-                                                        label Обратно:
-                                                    .form-group_right
-                                                        .form-check
-                                                            input.form-check-input(type="checkbox" id="reverseTransfer" name="reverseTransfer")
-                                                            label.form-check-label(for="reverseTransfer") Обратный трансфер
-                                            .card_row.-hidden(data-show-checkbox="reverseTransfer")
                                                 .row
-                                                    .col-6.col-xs-12
-                                                        .form-group.form-group_small
-                                                            .form-group_left.-s
-                                                                label Дата:
+                                                    .col-12
+                                                        .form-group
+                                                            .form-group_left.-l
+                                                                label Обратно:
                                                             .form-group_right
-                                                                input(type="text" name="reverseTransferInfoDate" class="form-control -wide" id="reverseTransferInfoDate" data-toggle="datepicker" placeholder="ГГГГ/ММ/ДД")
-                                                    .col-6.col-xs-12
-                                                        .form-group.form-group_small
-                                                            .form-group_left.-s
-                                                                label Время:
-                                                            .form-group_right
-                                                                input(type="text" name="reverseTransferInfoTime" class="form-control -wide" id="reverseTransferInfoTime" data-toggle="wickedpicker")
+                                                                .form-check
+                                                                    input.form-check-input(type="checkbox" id="reverseTransfer" name="reverseTransfer")
+                                                                    label.form-check-label(for="reverseTransfer") Обратный трансфер
+                                                .-hidden(data-show-checkbox="reverseTransfer")
+                                                    .row
+                                                        .col-6.col-xs-12
+                                                            .form-group.form-group_small
+                                                                .form-group_left.-s
+                                                                    label Дата:
+                                                                .form-group_right
+                                                                    input(type="text" name="reverseTransferInfoDate" class="form-control -wide" id="reverseTransferInfoDate" data-toggle="datepicker" placeholder="ГГГГ/ММ/ДД")
+                                                        .col-6.col-xs-12
+                                                            .form-group.form-group_small
+                                                                .form-group_left.-s
+                                                                    label Время:
+                                                                .form-group_right
+                                                                    input(type="text" name="reverseTransferInfoTime" class="form-control -wide" id="reverseTransferInfoTime" data-toggle="wickedpicker")
 
                                 section
                                     .card.-form
