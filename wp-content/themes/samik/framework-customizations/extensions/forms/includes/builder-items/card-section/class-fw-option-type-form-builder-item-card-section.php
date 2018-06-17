@@ -18,9 +18,8 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
 		return array(
 			array(
 				'html' =>
-					'<div class="item-type-icon-title" data-hover-tip="' . __( 'Add Card Section', 'fw' ) . '">' .
-					'<div class="item-type-icon"><img src="' . esc_attr( $this->get_uri( '/static/images/icon.png' ) ) . '" /></div>' .
-					'<div class="item-type-title">' . __( 'Card Section', 'fw' ) . '</div>' .
+					'<div class="item-type-icon-title" data-hover-tip="' . __( 'Add an Section', 'fw' ) . '">' .
+					'<div class="item-type-title">' . __( 'Section', 'fw' ) . '</div>' .
 					'</div>'
 			)
 		);

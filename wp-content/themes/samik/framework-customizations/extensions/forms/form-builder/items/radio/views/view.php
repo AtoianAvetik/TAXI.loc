@@ -49,10 +49,10 @@ switch ($options['layout']) {
                         <?php endwhile; ?>
                         </div>
                     <?php else: ?>
-                        <?php foreach ($choices as $choice):
+                        <?php foreach ($choices as $key=>$choice):
                             $choice['id'] = 'rand-'. fw_unique_increment(); ?>
                             <div class="form-radio">
-                                <input class="form-radio-input" <?php echo fw_attr_to_html($choice) ?> />
+                                <input class="form-radio-input" <?php echo fw_attr_to_html($choice) ?> <?php if ($key === (intval($options['checked-variant'])) - 1) { ?>checked="checked"<?php } ?>/>
                                 <label class="form-radio-label" for="<?php echo esc_attr($choice['id']) ?>"><?php echo $choice['value'] ?></label>
                             </div>
                         <?php endforeach; ?>

@@ -22,8 +22,8 @@ class FW_Option_Type_Form_Builder_Item_Date_Picker extends FW_Option_Type_Form_B
         return array(
             array(
                 'html' =>
-                    '<div class="item-type-icon-title">'.
-                    '    <div class="item-type-icon"><span class="dashicons dashicons-editor-help"></span></div>'.
+                    '<div class="item-type-icon-title" data-hover-tip="' . __( 'Add an Date picker field', 'fw' ) . '">'.
+                    '    <div class="item-type-icon"><span class="dashicons dashicons-calendar-alt"></span></div>'.
                     '    <div class="item-type-title">'. __('Date', 'fw') .'</div>'.
                     '</div>',
             )
