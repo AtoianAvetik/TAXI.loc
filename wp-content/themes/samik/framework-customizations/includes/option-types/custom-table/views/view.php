@@ -30,8 +30,13 @@ unset(
 	); ?>
 
 	<?php $values_header = isset( $data['value']['header_options'] ) ? $data['value']['header_options'] : array() ?>
+	<?php $header_options_hide = isset( $data['value']['header_options_hide'] ); ?>
 
-	<?php echo fw()->backend->render_options( $option['header_options'], $values_header, $data_header ) ?>
+	<?php
+        if ( !$header_options_hide ) {
+            echo fw()->backend->render_options( $option['header_options'], $values_header, $data_header );
+        }
+    ?>
 
 	<div class="fw-table">
 		<br class="fw-cell-template"

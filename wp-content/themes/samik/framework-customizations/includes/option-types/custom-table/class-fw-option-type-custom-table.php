@@ -325,6 +325,7 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
                 'header_options' => array(
                     'table_purpose' => 'pricing',
                 ),
+                'header_options_hide' => false,
                 'cols'           => array(
                     array( 'name' => 'default-col' ),
                     array( 'name' => 'default-col' ),

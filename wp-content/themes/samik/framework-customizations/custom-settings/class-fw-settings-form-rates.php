@@ -19,6 +19,7 @@ class FW_Settings_Form_Rates extends FW_Settings_Form {
 
         $this->set_is_side_tabs(true);
         $this->set_is_ajax_submit(true);
+        $this->set_string( 'title', __('Rates', 'fw') );
     }
 
     /**
@@ -35,7 +36,8 @@ class FW_Settings_Form_Rates extends FW_Settings_Form {
             'manage_options',
             /** used in @see _action_admin_enqueue_scripts() */
             'rates',
-            array($this, 'render')
+            array($this, 'render'),
+            'dashicons-editor-table'
         );
     }
 
