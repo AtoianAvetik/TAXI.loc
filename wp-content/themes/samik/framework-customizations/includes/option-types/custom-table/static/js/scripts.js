@@ -23,14 +23,14 @@
                 worksheetRowsSelector = '.fw-table-row:not(.fw-table-col-options, .fw-template-row, .fw-table-cols-delete)',
                 $currentCell = false,
                 isAllowedTabMove = true,
-                colClassNames = $table.find('.fw-table-row:eq(0) .fw-table-cell:eq(1) .fw-table-builder-col-style').find('option').map(function () {
+                colClassNames = $table.find('.fw-table-row:eq(0) .fw-table-cell:eq(1) .fw-custom-table-builder-col-style').find('option').map(function () {
                     var text = $(this).text(),
                         obj = {};
                     obj.value = this.value;
                     obj.text = text;
                     return obj;
                 }).get(),
-                rowClassNames = $table.find('.fw-table-row:eq(1) .fw-table-cell:eq(0) .fw-table-builder-row-style').find('option').map(function () {
+                rowClassNames = $table.find('.fw-table-row:eq(1) .fw-table-cell:eq(0) .fw-custom-table-builder-row-style').find('option').map(function () {
                     var text = $(this).text(),
                         obj = {};
                     obj.value = this.value;
@@ -67,7 +67,7 @@
                         $table.show();
                     }
 
-                    $table.find('select.fw-table-builder-row-style').each(function(){
+                    $table.find('select.fw-custom-table-builder-row-style').each(function(){
                         var value = $(this).val();
                         $(this).html(rowHtml);
                         //todo: regex check
@@ -78,7 +78,7 @@
                         }
                     });
 
-                    $table.find('select.fw-table-builder-col-style').each(function(){
+                    $table.find('select.fw-custom-table-builder-col-style').each(function(){
                         var value = $(this).val();
                         $(this).html(colHtml);
                         //todo: regex check
@@ -296,8 +296,8 @@
                             }
                         }
 
-                        clone2.find('select.fw-table-builder-col-style').html(process.generateOptionsHtml(colList));
-                        process.changeTableColumnStyle.apply(clone2.find('select.fw-table-builder-col-style'));
+                        clone2.find('select.fw-custom-table-builder-col-style').html(process.generateOptionsHtml(colList));
+                        process.changeTableColumnStyle.apply(clone2.find('select.fw-custom-table-builder-col-style'));
 
                         process.reinitOptions(clone2);
                         process.reinitOptions($insertedWorksheetCell);
@@ -404,7 +404,7 @@
                 },
 
                 trigger: function (event, args) {
-                    $tableBuilder.trigger('fw:option-type:table-builder:' + event, args);
+                    $tableBuilder.trigger('fw:option-type:custom-table-builder:' + event, args);
                     return args;
                 },
 
@@ -421,21 +421,21 @@
 
                     $table.on('click', '.fw-table-col-delete-btn', process.removeTableColumn );
                     $table.on('click', '.fw-table-row-delete-btn', process.removeTableRow);
-                    /*$table.on('change', 'select.fw-table-builder-col-style', process.changeTableColumnStyle);
-                     $table.on('change', 'select.fw-table-builder-row-style', process.changeTableRowStyle);*/
+                    /*$table.on('change', 'select.fw-custom-table-builder-col-style', process.changeTableColumnStyle);
+                     $table.on('change', 'select.fw-custom-table-builder-row-style', process.changeTableRowStyle);*/
 
                     $table.on('change', function (e) {
-                        jQuery(this).find('select.fw-table-builder-col-style').each(function () {
+                        jQuery(this).find('select.fw-custom-table-builder-col-style').each(function () {
                             process.changeTableColumnStyle.apply(this);
                         });
 
-                        jQuery(this).find('select.fw-table-builder-row-style').each(function () {
+                        jQuery(this).find('select.fw-custom-table-builder-row-style').each(function () {
                             process.changeTableRowStyle.apply(this);
                         });
                     });
 
-                    $tableBuilder.on('fw:option-type:table-builder:column:added', function () {
-                        $table.find('select.fw-table-builder-row-style').each(function () {
+                    $tableBuilder.on('fw:option-type:custom-table-builder:column:added', function () {
+                        $table.find('select.fw-custom-table-builder-row-style').each(function () {
                             process.changeTableRowStyle.apply(this);
                         });
                     });
@@ -444,7 +444,7 @@
                     $table.on('keyup', process.onTabKeyUp);
                     $table.on('click', '.fw-table-add-column', process.addTableColumn);
                     $table.on('click', '.fw-table-add-row', process.addTableRow);
-                    $tableBuilder.on('fw:option-type:table-builder:column:added fw:option-type:table-builder:column:removed fw:option-type:table-builder:row:added fw:option-type:table-builder:row:removed fw:option-type:table-builder:row:styling:changed fw:option-type:table-builder:column:styling:changed', process.closeEditor);
+                    $tableBuilder.on('fw:option-type:custom-table-builder:column:added fw:option-type:custom-table-builder:column:removed fw:option-type:custom-table-builder:row:added fw:option-type:custom-table-builder:row:removed fw:option-type:custom-table-builder:row:styling:changed fw:option-type:custom-table-builder:column:styling:changed', process.closeEditor);
 
                     fwEvents.on('fw:option-type:popup:change', process.changePopupButtonTitle)
                 },
