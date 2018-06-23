@@ -171,3 +171,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/tgm/samik.php';
 
+
+/**
+ * Custom Settings.
+ */
+//include_once get_template_directory() . '/inc/wp-custom-seetings-page.php';
+include_once get_template_directory() . '/framework-customizations/hooks.php';

@@ -843,7 +843,7 @@ wp.mediaWidgets = ( function( $ ) {
 
 			modelProps = control.mapMediaToModelProps( mediaFrameProps );
 
-			// Clear the extensions prop so sources will be reset for video and audio media.
+			// Clear the extension prop so sources will be reset for video and audio media.
 			_.each( wp.media.view.settings.embedExts, function( ext ) {
 				if ( ext in control.model.schema && modelProps.url !== modelProps[ ext ] ) {
 					modelProps[ ext ] = '';

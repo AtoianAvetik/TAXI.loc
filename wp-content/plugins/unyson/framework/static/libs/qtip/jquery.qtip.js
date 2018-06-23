@@ -1744,7 +1744,7 @@ function init(elem, id, opts) {
 	return obj;
 }
 
-// jQuery $.fn extensions method
+// jQuery $.fn extension method
 QTIP = $.fn.qtip = function(options, notation, newValue)
 {
 	var command = ('' + options).toLowerCase(), // Parse command
