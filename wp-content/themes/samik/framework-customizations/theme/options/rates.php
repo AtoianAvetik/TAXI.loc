@@ -5,14 +5,18 @@
 $options = array(
     'tab1' => array(
         'type' => 'tab',
-        'title' => 'Tab #1',
+        'title' => 'Аэропорт',
         'options' => array(
+            'tab-label-1' => array(
+                'type' => 'text',
+                'value' => 'Аэропорт'
+            ),
             'rates-table-1' => array(
                 'type' => 'custom-table',
                 'desc' => false,
                 'label' => false,
+                'header_options_hide' => true,
                 'value' => array(
-                    'header_options_hide' => true,
                     'cols' => array(
                         0 => array('name' => 'default-col'),
                         1 => array('name' => 'default-col')
@@ -44,14 +48,18 @@ $options = array(
     ),
     'tab2' => array(
         'type' => 'tab',
-        'title' => 'Tab #2',
+        'title' => 'Ж/Д Вокзал',
         'options' => array(
+            'tab-label-2' => array(
+                'type' => 'text',
+                'value' => 'Ж/Д Вокзал'
+            ),
             'rates-table-2' => array(
                 'type' => 'custom-table',
                 'desc' => false,
                 'label' => false,
+                'header_options_hide' => true,
                 'value' => array(
-                    'header_options_hide' => true,
                     'cols' => array(
                         0 => array('name' => 'default-col'),
                         1 => array('name' => 'default-col')
