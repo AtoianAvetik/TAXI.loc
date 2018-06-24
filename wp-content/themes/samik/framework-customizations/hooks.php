@@ -18,6 +18,14 @@ function _action_theme_rates_fw_settings_form() {
 }
 add_action('fw_init', '_action_theme_rates_fw_settings_form');
 
+function _action_theme_order_form_fw_settings_form() {
+    if (class_exists('FW_Settings_Form')) {
+        require_once dirname(__FILE__) . '/custom-settings/class-fw-settings-form-order-form.php';
+        new FW_Settings_Form_Order_Form('order-form');
+    }
+}
+add_action('fw_init', '_action_theme_order_form_fw_settings_form');
+
 
 
 /** @internal */
