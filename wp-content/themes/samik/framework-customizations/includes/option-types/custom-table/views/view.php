@@ -30,10 +30,16 @@ unset(
 	); ?>
 
 	<?php $values_header = isset( $data['value']['header_options'] ) ? $data['value']['header_options'] : array() ?>
-	<?php $header_options_hide = isset( $data['value']['header_options_hide'] ); ?>
+	<?php $values_header_hide = isset( $data['value']['header_options_hide'] ) ? $data['value']['header_options_hide'] : false ?>
 
 	<?php
-        if ( !$header_options_hide ) {
+        if ( $values_header_hide ) { ?>
+            <div style="display: none">
+            <?php
+                echo fw()->backend->render_options( $option['header_options'], $values_header, $data_header );
+            ?>
+            </div>
+        <?php } else {
             echo fw()->backend->render_options( $option['header_options'], $values_header, $data_header );
         }
     ?>

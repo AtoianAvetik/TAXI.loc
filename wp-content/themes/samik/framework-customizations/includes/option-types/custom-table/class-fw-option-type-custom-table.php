@@ -221,8 +221,9 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
                             'tabular' => 'default-col desc-col'
                         ) ),
                     )
-                )
+                ),
             ),
+            'header_options_hide' => false,
             'row_options'     => array(
                 'name' => array(
                     'type'    => 'select',
