@@ -19,8 +19,6 @@ get_header(); ?>
 
         get_template_part( 'template-parts/content', 'home' );
 
-        echo do_shortcode( fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->render(get_option('order_form_fw_settings_form') ) );
-
     endwhile; // End of the loop.
     ?>
 
