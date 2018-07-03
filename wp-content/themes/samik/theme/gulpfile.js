@@ -124,19 +124,19 @@ gulp.task('style:build', function() {
 
 gulp.task('image:build', function() {
     gulp.src(path.dev.img.root)
-        .pipe(imageMin({
-            progressive: true,
-            use: [pngQuant()],
-            interlaced: true
-        }))
+        // .pipe(imageMin({
+        //     progressive: true,
+        //     use: [pngQuant()],
+        //     interlaced: true
+        // }))
         .pipe(gulp.dest(path.build.img));
 
     gulp.src(path.dev.img.modules)
-        .pipe(imageMin({
-            progressive: true,
-            use: [pngQuant()],
-            interlaced: true
-        }))
+        // .pipe(imageMin({
+        //     progressive: true,
+        //     use: [pngQuant()],
+        //     interlaced: true
+        // }))
         .pipe(flatten({subPath: [2]}))
         .pipe(gulp.dest(path.build.img))
 });
@@ -189,7 +189,7 @@ gulp.task('watch', function() {
         gulp.start('image:build');
     });
     watch([path.watch.fonts], function() {
-        gulp.start('fonts:build');
+        // gulp.start('fonts:build');
     });
 });
 
