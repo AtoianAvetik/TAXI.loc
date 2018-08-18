@@ -1,9 +1,16 @@
 mixin hero(data)
-    section.hero(class=data.type && '-'+data.type style="background-image: url(" + data.image + ")" )
-        if (data.type !== 'small')
-            .hero-container.container.-narrow
-                h1.hero_heading.h2= data.title
-                if (data.type === 'large')
-                    .hero_content.text-content !{data.content}
-                if (data.btn_text)
-                    a(href="#" class=data.btn_modifier ? data.btn_modifier : 'btn-light' data-anchor=data.btn_anchor).hero_btn= data.btn_text
+    section.hero(class=data.class style=!data.parallax && "background-image: url(" + data.image + ")" )
+        if (data.parallax)
+            +bg-parallax({
+                image: data.image,
+                class: '-absolute'
+            })
+        .hero-container.container.-narrow
+            span.hero_heading(class=data.heading_class ? data.heading_class : 'h3')= data.title
+            if (data.content)
+                .hero_content.text-content !{data.content}
+            if (data.btn_text)
+                .hero_btn-block
+                    a(href="#" class=data.btn_class).hero_btn= data.btn_text
+                    if (data.btn2_text)
+                        a(href="#" class=data.btn2_class).hero_btn= data.btn2_text

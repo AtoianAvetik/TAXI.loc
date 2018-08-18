@@ -5,9 +5,13 @@ html
         .wrapper
             +header({active: 'contacts'})
             main.content
+                +hero({
+                    class: '-small',
+                    image: 'img/tmp/hero.jpg',
+                    title: 'Контактная информация',
+                    heading_class: 'h1'
+                })
                 .container
-                    .content-heading.row.no-gutters.m-gap
-                        .heading.h3.primary-text <strong>Контактная</strong> информация
                     .row.-equal-height.m-gap
                         .col-6.col-lg-12
                             .card.-form

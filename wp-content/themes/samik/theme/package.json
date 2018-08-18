@@ -32,6 +32,7 @@
     "animate.css": "^3.6.1",
     "font-awesome": "4.7.0",
     "jquery": "3.*",
+    "jquery-parallax.js": "^1.5.0",
     "jquery-validation": "^1.16.0",
     "select2": "^4.0.5",
     "swiper": "^4.1.0",

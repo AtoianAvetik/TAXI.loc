@@ -1,0 +1,10 @@
+.bg-parallax {
+  width: 100%;
+
+  &.-absolute {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}

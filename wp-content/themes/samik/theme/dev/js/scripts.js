@@ -8,6 +8,7 @@ module.exports = {
         "node_modules/wickedpicker/dist/wickedpicker.min.js",
         "node_modules/@fengyuanchen/datepicker/dist/datepicker.min.js",
         "node_modules/tether/dist/js/tether.js",
+        "node_modules/jquery-parallax.js/parallax.min.js",
         "node_modules/tether-drop/dist/js/drop.js",
         "node_modules/tipso/src/tipso.min.js",
         "dev/js/plugins/masking-input.js",
@@ -59,6 +60,7 @@ module.exports = {
 		"dev/modules/sitemap/sitemap.js",
 		"dev/modules/feedback/feedback.js",
 		"dev/modules/table/table.js",
-		"dev/modules/form-controls/form-controls.js"
+		"dev/modules/form-controls/form-controls.js",
+		"dev/modules/bg-parallax/bg-parallax.js"
     ]
 };

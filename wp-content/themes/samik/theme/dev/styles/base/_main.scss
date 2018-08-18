@@ -62,13 +62,6 @@ body{
 .content{
     flex: 1 0 auto;
     overflow: hidden;
-    background-color: $gray-light;
-
-    &-heading {
-        .heading {
-            margin-bottom: 0;
-        }
-    }
 }
 
 .container{
@@ -83,10 +76,6 @@ body{
     
     &.-full{
         width: 100%;
-    }
-
-    &.-bg-white {
-        background-color: $light;
     }
 }
 

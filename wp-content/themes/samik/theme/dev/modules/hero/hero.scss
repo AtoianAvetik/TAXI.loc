@@ -1,44 +1,23 @@
 $hero: (
-    large: 500px,
-    medium: 300px,
-    small: 150px
+        large: 600px,
+        medium: 400px,
+        small: 300px
 );
 
 .hero{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     @include bg;
     position: relative;
     color: $light;
-    min-height: map-get($hero, 'medium');
-    padding: 30px 0;
 
     &:before{
         content: '';
         @include overlay();
-        background: rgba($dark, .4);
-    }
-
-    &.-large{
-        .hero-container{
-            min-height: map-get($hero, 'large');
-        }
-    }
-
-    &.-medium{
-        .hero-container{
-            min-height: map-get($hero, 'medium');
-        }
-    }
-
-    &.-small{
-        .hero-container{
-            min-height: map-get($hero, 'small');
-        }
+        background: rgba(#000, .5);
     }
 
     .hero-container{
-        min-height: map-get($hero, 'medium');
         z-index: 1;
         position: relative;
         text-align: center;
@@ -46,15 +25,45 @@ $hero: (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 30px 0;
+
+        > * {
+            max-width: 100%; //fix IE overflow bug
+        }
     }
 
-    .container{
-        z-index: 1;
-        position: relative;
-        text-align: center;
+    &.-large{
+        .hero-container{
+            box-sizing: border-box;
+            min-height: calc(100vh - 220px);
+
+            @include media(md) {
+                min-height: calc(100vh - 170px);
+            }
+        }
     }
-    
+
+    &.-medium{
+        .hero-container {
+            min-height: map-get($hero, 'medium');
+        }
+    }
+
+    &.-small{
+        .hero-container {
+            min-height: map-get($hero, 'small');
+        }
+    }
+
     &_content{
-        margin: 15px 0;
+        margin: 10px 0;
+    }
+
+    &_btn{
+        margin: 5px 5px 0;
+    }
+
+    &_btn-block{
+        margin: 10px 0 0;
     }
 }

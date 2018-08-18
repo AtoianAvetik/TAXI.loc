@@ -5,6 +5,12 @@ html
         .wrapper
             +header({active: 'services'})
             main.content
+                +hero({
+                    class: '-small',
+                    image: 'img/tmp/hero-2.jpg',
+                    title: 'Наши услуги',
+                    heading_class: 'h1'
+                })
                 .container.m-gap
                     section.row.-equal-height.card-list
                         .col-4.col-md-6.col-xs-12

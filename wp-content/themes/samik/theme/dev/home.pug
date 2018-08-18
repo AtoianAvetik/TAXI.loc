@@ -4,116 +4,15 @@ html
         .wrapper
             +header({active: 'home'})
             main.content
-                +slider([
-                    {
-                        module: 'hero',
-                        settings: {
-                            type: 'large',
-                            image: 'img/tmp/hero.jpg',
-                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
-                            title: 'Hero slide 1',
-                            heading_class: 'h2',
-                            btn_text: 'ЗАКАЗАТЬ ОНЛАЙН',
-                            btn_modifier: 'btn-primary -large',
-                            btn_anchor: '#onlineOrder'
-                        }
-                    },
-                    {
-                        module: 'hero',
-                        settings: {
-                            type: 'large',
-                            image: 'img/tmp/hero-1.jpg',
-                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
-                            title: 'Hero slide 2',
-                            heading_class: 'h2',
-                            btn_text: 'ЗАКАЗАТЬ ОНЛАЙН',
-                            btn_modifier: 'btn-primary -large',
-                            btn_anchor: '#onlineOrder'
-                        }
-                    },
-                    {
-                        module: 'hero',
-                        settings: {
-                            type: 'large',
-                            image: 'img/tmp/hero-2.jpg',
-                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
-                            title: 'Hero slide 3',
-                            heading_class: 'h2',
-                            btn_text: 'ЗАКАЗАТЬ ОНЛАЙН',
-                            btn_modifier: 'btn-primary -large',
-                            btn_anchor: '#onlineOrder'
-                        }
-                    }
-                ])
-                section
-                    .container.-full.-bg-white.p-gap
-                        .container
-                            .row.-around.-equal-height.card-list
-                                .col-4.col-md-6.col-sm-12
-                                    +card({
-                                        type: 'advantage',
-                                        title: 'Ожидание',
-                                        title_colored: 'Бесплатно',
-                                        heading_class: 'h3',
-                                        icon: 'icon-waiting',
-                                        content: 'Ожидание в аэропорту Симферополя <strong style="color: #246caa">БЕСПЛАТНО</strong>'
-                                    })
-                                .col-4.col-md-6.col-sm-12
-                                    +card({
-                                        type: 'advantage',
-                                        title: 'Провоз',
-                                        title_colored: 'Багажа',
-                                        heading_class: 'h3',
-                                        icon: 'icon-baggage',
-                                        content: 'Багаж <strong style="color: #246caa">БЕСПЛАТНО</strong>'
-                                    })
-                                .col-4.col-md-6.col-sm-12
-                                    +card({
-                                        type: 'advantage',
-                                        title: 'Бесплатный',
-                                        title_colored: 'WI-FI',
-                                        heading_class: 'h3',
-                                        icon: 'icon-wifi',
-                                        content: 'WI-FI в машине <strong style="color: #246caa">БЕСПЛАТНО</strong>'
-                                    })
-                                .col-4.col-md-6.col-sm-12
-                                    +card({
-                                        type: 'advantage',
-                                        title: 'Лучшие',
-                                        title_colored: 'Цены',
-                                        heading_class: 'h3',
-                                        icon: 'icon-price',
-                                        content: 'Цены фиксированные и никаких дополнительных затрат'
-                                    })
-                                .col-4.col-md-6.col-sm-12
-                                    +card({
-                                        type: 'advantage',
-                                        title: 'Поездка с',
-                                        title_colored: 'Комфортом',
-                                        heading_class: 'h3',
-                                        icon: 'icon-snowflake',
-                                        content: 'Комфорт бизнесс кдасса с кондиционером'
-                                    })
-                                .col-4.col-md-6.col-sm-12
-                                    +card({
-                                        type: 'advantage',
-                                        title: 'Економте',
-                                        title_colored: 'Сразу',
-                                        heading_class: 'h3',
-                                        icon: 'icon-percentage',
-                                        content: 'Забронируйте поездку в обе стороны и получите скидку от 100руб до 500руб!'
-                                    })
-                section
-                    +promo({
-                        type: 'blue -large-icon',
-                        title: 'ЗАКАЗАТЬ СЕЙЧАС!',
-                        heading_class: 'h2',
-                        content: '<p class="h2"><i class="thin-icon-phone-call"></i> +7(978) xxx xx xx</p>'
-                    })
-                section(id="onlineOrder")
-                    .container.p-gap
-                        .content-heading.row.-center.no-gutters
-                            .heading.h3.primary-text ЗАКАЗАТЬ ТАКСИ ОНЛАЙН
+                +hero({
+                    class: '-medium',
+                    image: 'img/tmp/hero.jpg',
+                    title: 'Заказать такси онлайн',
+                    heading_class: 'h1',
+                    parallax: true
+                })
+                section.-bg-airport(id="onlineOrder")
+                    .container
                         .row.-center.m-gap
                             .col-9.col-md-12
                                 section
@@ -525,7 +424,61 @@ html
                                                 .form-group
                                                     textarea.form-control.-textarea(rows="6")
                                 .row.-center
-                                    button.btn-primary.-large ЗАКАЗАТЬ
+                                    button.btn-primary ЗАКАЗАТЬ
+                section.-bg-primary.-bg-city.p-gap
+                    .container
+                        .container.mb-3
+                            .content-heading.text-center.text-white
+                                .h1 Почему мы
+                        .row.-around.-equal-height.card-list
+                            .col-4.col-md-6.col-sm-12
+                                +card({
+                                    type: 'advantage',
+                                    title: 'Ожидание Бесплатно',
+                                    heading_class: 'h3',
+                                    icon: 'icon-waiting',
+                                    content: 'Ожидание в аэропорту Симферополя БЕСПЛАТНО'
+                                })
+                            .col-4.col-md-6.col-sm-12
+                                +card({
+                                    type: 'advantage',
+                                    title: 'Провоз Багажа',
+                                    heading_class: 'h3',
+                                    icon: 'icon-baggage',
+                                    content: 'Багаж БЕСПЛАТНО'
+                                })
+                            .col-4.col-md-6.col-sm-12
+                                +card({
+                                    type: 'advantage',
+                                    title: 'Бесплатный WI-FI',
+                                    heading_class: 'h3',
+                                    icon: 'icon-wifi',
+                                    content: 'WI-FI в машине БЕСПЛАТНО'
+                                })
+                            .col-4.col-md-6.col-sm-12
+                                +card({
+                                    type: 'advantage',
+                                    title: 'Лучшие Цены',
+                                    heading_class: 'h3',
+                                    icon: 'icon-price',
+                                    content: 'Цены фиксированные и никаких дополнительных затрат'
+                                })
+                            .col-4.col-md-6.col-sm-12
+                                +card({
+                                    type: 'advantage',
+                                    title: 'Поездка с Комфортом',
+                                    heading_class: 'h3',
+                                    icon: 'icon-snowflake',
+                                    content: 'Комфорт бизнесс кдасса с кондиционером'
+                                })
+                            .col-4.col-md-6.col-sm-12
+                                +card({
+                                    type: 'advantage',
+                                    title: 'Економте Сразу',
+                                    heading_class: 'h3',
+                                    icon: 'icon-percentage',
+                                    content: 'Забронируйте поездку в обе стороны и получите скидку от 100руб до 500руб!'
+                                })
             +footer
             +feedback
     include ./templates/scripts

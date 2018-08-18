@@ -92,3 +92,35 @@
 .v-between{
     align-content: space-between;
 }
+
+/*--------------------------------------/
+ Background
+--------------------------------------*/
+
+.-bg-white {
+    background-color: $light;
+}
+
+.-bg-primary {
+    background-color: $primary-color;
+}
+
+.-bg-city {
+    background-image: url('../img/bg-image.png');
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+
+.-bg-airport {
+    background-image: url('../img/bg-image-3.png'), url('../img/bg-image-2.png');
+    background-position: bottom left, top right;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------------------/
+ Text colors
+--------------------------------------*/
+
+.text-white {
+    color: $light;
+}

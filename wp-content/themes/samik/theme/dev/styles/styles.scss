@@ -25,6 +25,7 @@
  Base
 --------------------------------------*/
 @import "base/fonts";
+@import "base/gap";
 //@import "../fonts/iconFont/iconFont.css"; // iconFont
 @import "base/icons/_icons";
 @import "base/typography";
@@ -89,3 +90,4 @@
 @import "../modules/feedback/feedback";
 @import "../modules/table/table";
 @import "../modules/form-controls/form-controls";
+@import "../modules/bg-parallax/bg-parallax";

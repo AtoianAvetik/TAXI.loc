@@ -5,6 +5,12 @@ html
         .wrapper
             +header({active: 'about'})
             main.content
+                +hero({
+                    class: '-small',
+                    image: 'img/tmp/hero-1.jpg',
+                    title: 'О Нас',
+                    heading_class: 'h1'
+                })
                 .container
                     .row.-between
                         .col-7

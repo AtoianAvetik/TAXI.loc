@@ -3,8 +3,9 @@
 --------------------------------------*/
 
 $button: (
-    height: 36px,
+    height: 50px,
     padding: 15px,
+    min-width: 150px,
     border-radius: 2px,
 );
 
@@ -88,6 +89,7 @@ $button: (
     line-height: map-get($button, 'height') - 2px;
     padding: 0 map-get($button, 'padding');
     border-radius: map-get($button, 'border-radius');
+    min-width: map-get($button, 'min-width');
     font-weight: 600;
     margin: 0;
     font-family: $text-family;
