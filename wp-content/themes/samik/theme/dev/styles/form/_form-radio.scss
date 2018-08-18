@@ -1,0 +1,23 @@
+/*--------------------------------------/
+ Settings
+--------------------------------------*/
+
+$form-radio: $radio;
+
+//---------------------------------------//
+//------------- FORM RADIO --------------//
+//---------------------------------------//
+
+.form-radio {
+    position: relative;
+    display: inline-block;
+    margin-top: .5rem;
+
+    &-label {
+        @include create-radio-label($form-radio);
+    }
+
+    &-input {
+        @include create-radio-input($form-radio);
+    }
+}

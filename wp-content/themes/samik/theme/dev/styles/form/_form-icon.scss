@@ -1,0 +1,51 @@
+/*--------------------------------------/
+ Settings
+--------------------------------------*/
+
+
+
+//---------------------------------------//
+//-------------- FORM ICON --------------//
+//---------------------------------------//
+
+.form-icon-list {
+    margin: -.5rem 0;
+}
+
+.form-icon {
+    position: relative;
+    display: inline-block;
+    margin-top: .5rem;
+
+    &-label {
+        position: relative;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        background-color: $gray;
+        font-size: 26px;
+        border-radius: 50%;
+
+        &:before {
+            color: $gray-dark;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        &:checked + label {
+            background-color: $primary-color;
+
+            &:before {
+                color: $light;
+            }
+        }
+    }
+}

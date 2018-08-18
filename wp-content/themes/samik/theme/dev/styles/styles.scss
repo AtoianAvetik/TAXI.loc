@@ -41,10 +41,16 @@
  Elements
 --------------------------------------*/
 @import "elements/button";
-@import "elements/forms";
-@import "elements/form-control";
+@import "elements/input";
+@import "elements/checkbox";
+@import "elements/radio-button";
+@import "elements/select";
 @import "elements/utilities";
 
+/*--------------------------------------/
+ Form
+--------------------------------------*/
+@import "form/form";
 
 /*--------------------------------------/
  Modules

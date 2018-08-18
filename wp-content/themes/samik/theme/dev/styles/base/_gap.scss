@@ -1,0 +1,125 @@
+/*--------------------------------------/
+ Margins & Paddings Gap
+--------------------------------------*/
+
+.p{
+    padding-top: $padding-gap;
+    padding-bottom: $padding-gap;
+
+    @include media(md){
+        padding-top: $padding-gap * 0.8 !important;
+        padding-bottom: $padding-gap * 0.8 !important;
+    }
+
+    @include media(sm){
+        padding-top: $padding-gap * 0.6 !important;
+        padding-bottom: $padding-gap * 0.6 !important;
+    }
+
+    @include media(xs){
+        padding-top: $padding-gap * 0.5 !important;
+        padding-bottom: $padding-gap * 0.5 !important;
+    }
+}
+
+.m{
+    margin-top: $margin-gap !important;
+    margin-bottom: $margin-gap !important;
+
+    @include media(md){
+        margin-top: $margin-gap * 0.8 !important;
+        margin-bottom: $margin-gap * 0.8 !important;
+    }
+
+    @include media(sm){
+        margin-top: $margin-gap * 0.6 !important;
+        margin-bottom: $margin-gap * 0.6 !important;
+    }
+
+    @include media(sm){
+        margin-top: $margin-gap * 0.5 !important;
+        margin-bottom: $margin-gap * 0.5 !important;
+    }
+}
+
+.mt{
+    margin-top: 0.5em !important;
+}
+
+.mb{
+    margin-bottom: 0.5em !important;
+}
+
+.ml{
+    margin-left: 0.5em !important;
+}
+
+.mr{
+    margin-right: 0.5em !important;
+}
+
+.pt{
+    padding-top: 0.5em !important;
+}
+
+.pb{
+    padding-bottom: 0.5em !important;
+}
+
+.pl{
+    padding-left: 0.5em !important;
+}
+
+.pr{
+    padding-right: 0.5em !important;
+}
+
+@mixin margin-padding-constructor($size, $value){
+    .mt-#{$size}{
+        margin-top: #{$value}em !important;
+    }
+
+    .mb-#{$size}{
+        margin-bottom: #{$value}em !important;
+    }
+
+    .ml-#{$size}{
+        margin-left: #{$value}em !important;
+    }
+
+    .mr-#{$size}{
+        margin-right: #{$value}em !important;
+    }
+
+    .pt-#{$size}{
+        padding-top: #{$value}em !important;
+    }
+
+    .pb-#{$size}{
+        padding-bottom: #{$value}em !important;
+    }
+
+    .pl-#{$size}{
+        padding-left: #{$value}em !important;
+    }
+
+    .pr-#{$size}{
+        padding-right: #{$value}em !important;
+    }
+}
+
+@for $i from 0 through 5{
+    @include margin-padding-constructor($i, $i);
+
+    @include media(md){
+        @if ($i > 2){
+            @include margin-padding-constructor($i, $i * 0.8);
+        }
+    }
+
+    @include media(xs){
+        @if ($i > 1){
+            @include margin-padding-constructor($i, $i * 0.6);
+        }
+    }
+}

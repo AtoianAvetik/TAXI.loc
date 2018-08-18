@@ -1,0 +1,23 @@
+/*--------------------------------------/
+ Settings
+--------------------------------------*/
+
+$form-check: $checkbox;
+
+//---------------------------------------//
+//------------- FORM CHECK --------------//
+//---------------------------------------//
+
+.form-check {
+    position: relative;
+    display: block;
+    margin-top: .5rem;
+
+    &-label {
+        @include create-checkbox-label($form-check);
+    }
+
+    &-input {
+        @include create-checkbox-input($form-check);
+    }
+}

@@ -1,0 +1,80 @@
+/*--------------------------------------/
+ Settings
+--------------------------------------*/
+
+$radio: (
+    bg-color: transparent,
+    width: 18px,
+    height: 18px,
+    border-color: $gray-dark,
+    border-height: 2px,
+    border-radius: 50%,
+    icon-size: 10px,
+    icon-color: $primary-color,
+    icon-ver-shift: 0, // shift from center in percents
+    icon-hor-shift: 0 // shift from center in percents
+);
+
+//---------------------------------------//
+//------------ RADIO BUTTON -------------//
+//---------------------------------------//
+
+@mixin create-radio-label($radio: $radio) {
+    position: relative;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+    display: inline-block;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: -.4em;
+        transform: translateY(50%);
+        left: 0;
+        width: map-get($radio, 'width');
+        height: map-get($radio, 'height');
+        background: map-get($radio, 'bg-color');
+        border: map-get($radio, 'border-height') solid map-get($radio, 'border-color');
+        border-radius: map-get($radio, 'border-radius');
+        display: inline-block;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: -.4em;
+        transform: translate(-50% + map-get($radio, 'icon-hor-shift'), 50% + map-get($radio, 'icon-ver-shift'));
+        left: map-get($radio, 'width') / 2;
+        width: map-get($radio, 'icon-size');
+        height: map-get($radio, 'icon-size');
+        border-radius: 50%;
+        opacity: 0;
+        transition: all .2s linear;
+        background: map-get($radio, 'icon-color');
+    }
+}
+@mixin create-radio-input($radio: $radio) {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + label:after {
+        opacity: 1;
+    }
+}
+
+/*--------------------------------------/
+ Default radio button
+--------------------------------------*/
+
+.radio-button {
+    label {
+        @include create-radio-label;
+    }
+
+    input {
+        @include create-radio-input;
+    }
+}

@@ -1,5 +1,5 @@
 .footer{
-    background: $dark;
+    background: $tertiary-color;
     color: $light;
 
     &_main {
@@ -15,7 +15,7 @@
     &_bottom {
         text-align: center;
         padding: 15px 10px;
-        background: darken($dark, 3%);
+        background: darken($tertiary-color, 3%);
 
         p {
             margin: 0;

@@ -4,7 +4,7 @@ body{
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    background: #f6f6f6;
+    background: $secondary-color;
     font-family: $text-family;
     font-size: $base-font-size;
     color: $base-color;
@@ -16,6 +16,38 @@ body{
         width: 100%;
         height: 100%;
         -webkit-overflow-scrolling: touch;
+    }
+
+    &.admin-bar {
+        .wrapper {
+            padding-top: $header-height + 32px;
+
+            @include media(782) {
+                padding-top: $header-height + 46px;
+            }
+        }
+
+        .header {
+            top: 32px;
+
+            @include media(782) {
+                top: 46px;
+            }
+        }
+
+        .menu {
+            @include media(md) {
+                top: $header-height + 32px;
+            }
+
+            @include media(782) {
+                top: $header-height + 46px;
+            }
+        }
+    }
+
+    #wpadminbar {
+        position: fixed !important;
     }
 }
 

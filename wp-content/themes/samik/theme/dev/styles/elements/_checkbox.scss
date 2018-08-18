@@ -1,0 +1,75 @@
+/*--------------------------------------/
+ Settings
+--------------------------------------*/
+
+$checkbox: (
+    bg-color: transparent,
+    width: 18px,
+    height: 18px,
+    border-color: $primary-color,
+    border-height: 2px,
+    border-radius: 2px,
+    icon-size: 17px,
+    icon-color: $primary-color,
+    icon-ver-shift: -25%, // shift from center in percents
+    icon-hor-shift: 10% // shift from center in percents
+);
+
+//---------------------------------------//
+//-------------- CHECKBOX ---------------//
+//---------------------------------------//
+
+@mixin create-checkbox-label($checkbox: $checkbox) {
+    position: relative;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: -.4em;
+        transform: translateY(50%);
+        left: 0;
+        width: map-get($checkbox, 'width');
+        height: map-get($checkbox, 'height');
+        background: map-get($checkbox, 'bg-color');
+        border: map-get($checkbox, 'border-height') solid map-get($checkbox, 'border-color');
+        border-radius: map-get($checkbox, 'border-radius');
+        transition: .2s;
+    }
+
+    &:after {
+        @include icon;
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: -.4em;
+        transform: translate(-50% + map-get($checkbox, 'icon-hor-shift'), 50% + map-get($checkbox, 'icon-ver-shift'));
+        left: map-get($checkbox, 'width') / 2;
+        font-size: map-get($checkbox, 'icon-size');
+        color: map-get($checkbox, 'icon-color');
+    }
+}
+@mixin create-checkbox-input($checkbox: $checkbox) {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + label:after {
+        content: $icon-check;
+    }
+}
+
+/*--------------------------------------/
+ Default checkbox
+--------------------------------------*/
+
+.checkbox {
+    label {
+        @include create-checkbox-label;
+    }
+
+    input {
+        @include create-checkbox-input;
+    }
+}

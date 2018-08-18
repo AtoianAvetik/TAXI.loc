@@ -14,9 +14,9 @@ $padding-gap: 50px;
 $light: #fff;
 $dark: #262A2C;
 $gray-light: #f0f0f0;
+$gray-lighter: #f6f6f6;
 $gray: #e1e1e1;
 $gray-dark: #7b7b7b;
-
 $red: #dc4848;
 $green: #24aa62;
 $blue: #246caa;
@@ -24,6 +24,11 @@ $orange: #ff8d46;
 
 $base-color: $dark;
 $primary-color: $blue;
+$secondary-color: $gray-lighter;
+$tertiary-color: $dark;
+
+$error-color: $red;
+$success-color: $green;
 
 /*--------------------------------------/
  Gradients
@@ -44,6 +49,9 @@ $button-font-size: 16px;
 --------------------------------------*/
 $Montserrat: 'Montserrat', sans-serif;
 
+$icon-thin-family: 'thinIconFont', sans-serif;
+$fa-family: 'FontAwesome', sans-serif;
+$icon-family: 'iconFont', sans-serif;
 $text-family: $Montserrat;
 $heading-family: $Montserrat;
 
@@ -75,4 +83,3 @@ $grid-gutter-widths: (
 --------------------------------------*/
 $image-path: '../img';
 $font-path: '../fonts';
-$fa-font-path: '../fonts/FontAwesome'

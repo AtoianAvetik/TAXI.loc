@@ -130,6 +130,44 @@ $button: (
             }
         }
     }
+
+    &.-only-icon {
+        width: 40px;
+        min-width: inherit;
+        height: 40px;
+        line-height: 1;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 40px;
+
+        i:before {
+            @include icon-thin;
+            content: $icon-thin-arrow-right;
+            color: $light;
+            font-size: $base-font-size;
+
+        }
+    }
+
+    .inner-wrap {
+        white-space: normal;
+        display: flex;
+        align-items: center;
+
+        span {
+            display: inline-block;
+            white-space: nowrap;
+            max-width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        i {
+            margin-top: 0;
+        }
+    }
 }
 
 .btn-pure{
@@ -150,7 +188,6 @@ $button: (
     }
 }
 
-
 .btn-link{
     @extend .btn-pure;
     @include underline();
@@ -159,26 +196,29 @@ $button: (
     line-height: 1;
 }
 
+/*--------------------------------------/
+ BUTTONS
+--------------------------------------*/
+
 .btn-default{
     @include create-button($light, $gray);
 }
+
+/*--------------------------------------/
+ Theme buttons
+--------------------------------------*/
 
 .btn-primary{
     @include create-button($light, $primary-color);
 }
 
-.btn-green{
-    @include create-button($light, $green);
+.btn-secondary{
+    @include create-button($dark, $secondary-color);
 }
 
-.btn-red{
-    @include create-button($light, $red);
+.btn-tertiary{
+    @include create-button($light, $tertiary-color);
 }
-
-.btn-blue{
-    @include create-button($light, $blue);
-}
-
 
 .btn-dark{
     @include create-button($light, $dark);
@@ -188,3 +228,14 @@ $button: (
     @include create-button($dark, $light);
 }
 
+/*--------------------------------------/
+ Action buttons
+--------------------------------------*/
+
+.btn-success{
+    @include create-button($light, $green);
+}
+
+.btn-error{
+    @include create-button($light, $red);
+}
