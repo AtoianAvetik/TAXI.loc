@@ -32,7 +32,7 @@
         }
 
         .card_image{
-            min-height: 300px;
+            min-height: 200px;
             margin: -20px -20px 20px;
             max-width: none;
 
@@ -42,8 +42,8 @@
             }
         }
 
-        .card_title{
-            margin-bottom: 10px;
+        .card_content{
+            margin-top: 10px;
         }
     }
 
@@ -105,9 +105,8 @@
 
     &_title {
         font-weight: bold;
-        margin-bottom: 15px;
         line-height: 1.2;
-        @include createSize(32px);
+        @include createSize(24px);
     }
 
     &_link {
@@ -136,6 +135,7 @@
     }
 
     &_content{
+        margin-top: 15px;
         margin-bottom: 0;
         display: flex;
         position: relative;

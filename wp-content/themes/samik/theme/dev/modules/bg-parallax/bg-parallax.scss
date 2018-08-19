@@ -6,22 +6,31 @@
   &.-absolute {
     position: absolute;
     height: 100%;
+    width: 100%;
     left: 0;
     top: 0;
     z-index: -100;
   }
 }
 
-.parallax {
-  backface-visibility: hidden;
-  position: relative;
+.js-parallax {
   overflow: hidden;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
 
-.parlx-children {
-  position: absolute;
+  &_img {
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+  }
+
+  &.-absolute {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -100;
+  }
 }

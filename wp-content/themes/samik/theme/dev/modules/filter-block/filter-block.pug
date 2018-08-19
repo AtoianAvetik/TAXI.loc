@@ -1,46 +1,30 @@
 mixin filter-block()
     .filter-block(data-module="filterBlock")
         .filter-block_panel.box
-            button(data-filter="all").btn-light.filter-btn.-active All
-            button(data-filter="1").btn-light.filter-btn Red
-            button(data-filter="2").btn-light.filter-btn Green
-            button(data-filter="3").btn-light.filter-btn Yellow
-            button(data-filter="4").btn-light.filter-btn paradiso
+            .filter-btn.-active(data-filter="all") Все
+            .filter-btn(data-filter="1") Эконом-класс
+            .filter-btn(data-filter="2") Комфорт-класс
+            .filter-btn(data-filter="3") Бизнес-класс
         .filter-block_content
-            ul.grid-4.filtr-container
+            ul.grid-3.filtr-container
                 li.cell.filtr-item(data-category="1")
                     +card({
                         type: 'frame',
-                        title: 'Frame card block',
-                        title_link: '/',
-                        bg_image: 'img/tmp/photo-2.jpg',
-                        btn_class: 'btn-primary -only-icon',
-                        btn_icon: ' '
+                        title: 'Hyundai Solaris',
+                        bg_image: 'img/Hyundai_Solaris.jpg',
+                        modal: 'modal-1'
                     })
                 li.cell.filtr-item(data-category="2")
                     +card({
                         type: 'frame',
-                        title: 'Frame card block',
-                        title_link: '/',
-                        bg_image: 'img/tmp/photo-2.jpg',
-                        btn_class: 'btn-primary -only-icon',
-                        btn_icon: ' '
+                        title: 'Shcoda Octavia',
+                        bg_image: 'img/octavia-top1.jpg',
+                        modal: 'modal-2'
                     })
                 li.cell.filtr-item(data-category="3")
                     +card({
                         type: 'frame',
-                        title: 'Frame card block',
-                        title_link: '/',
-                        bg_image: 'img/tmp/photo-2.jpg',
-                        btn_class: 'btn-primary -only-icon',
-                        btn_icon: ' '
-                    })
-                li.cell.filtr-item(data-category="4")
-                    +card({
-                        type: 'frame',
-                        title: 'Frame card block',
-                        title_link: '/',
-                        bg_image: 'img/tmp/photo-2.jpg',
-                        btn_class: 'btn-primary -only-icon',
-                        btn_icon: ' '
+                        title: 'Ford Mondeo',
+                        bg_image: 'img/ford_mondeo.jpg',
+                        modal: 'modal-3'
                     })

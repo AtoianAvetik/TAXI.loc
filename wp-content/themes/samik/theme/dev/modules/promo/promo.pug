@@ -4,5 +4,5 @@ mixin promo(data)
             span.promo_title.h2= data.title
             .promo_content.text-content !{data.content}
             if ( data.btn_text )
-                a(href="#" class=data.type === 'light' ? 'btn-dark' : 'btn-light').hero_btn= data.btn_text
+                a(href="#" class=data.type === 'light' ? 'btn-dark' : 'btn-light' data-anchor=data.btn_anchor).hero_btn= data.btn_text
 

@@ -2,6 +2,7 @@
     &_panel{
         padding-top: 10px;
         padding-bottom: 0;
+        display: flex;
 
         @include media(640){
             text-align: center;
@@ -9,6 +10,8 @@
     }
 
     &_content{
+        border-top: 1px solid $gray;
+        padding-top: 30px;
     }
 
     .cta-block, .filtr-item{
@@ -22,13 +25,31 @@
 }
 
 .filter-btn{
-    font-size: em(13);
-    color: $primary-color;
-    min-width: 122px;
-    margin-bottom: 10px;
+    flex: 1 1 auto;
+    margin: 0 0 -1px;
+    font-weight: 600;
+    text-align: center;
+    color: $gray-dark;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: 21px;
+    opacity: 0.7;
+    display: block;
+
+    &:hover{
+        opacity: 1;
+    }
+
+    &:first-child{
+        margin-left: 0;
+    }
 
     &.-active{
-        background: $primary-color;
-        color: $light;
+        color: $primary-color;
+        border: 1px solid $gray;
+        border-top: 2px solid $primary-color;
+        border-bottom: 1px solid $secondary-color;
+        opacity: 1;
     }
 }

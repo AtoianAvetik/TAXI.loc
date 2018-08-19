@@ -11,9 +11,9 @@ block content
                     heading_class: 'h1',
                     parallax: true
                 })
-                section.-bg-airport(id="onlineOrder")
+                section.-bg-airport.p-gap(id="onlineOrder")
                     .container
-                        .row.-center.m-gap
+                        .row.-center
                             .col-9.col-md-12
                                 section
                                     .form-card
@@ -501,16 +501,15 @@ block content
                                     image: 'img/checklist.png',
                                     content: 'Фиксированные тарифы от 13 руб./км'
                                 })
-                +lane({
+                +promo({
                     type: 'light',
-                    direction: 'left',
+                    image: 'img/tmp/promo-light.jpg',
                     title: 'Нужно быстро и надежно доехать?',
                     heading_class: 'h2',
-                    image: 'img/tmp/hero-2.jpg',
-                    image_type: 'bg',
                     btn_text: 'Заказать Сейчас',
                     btn_anchor: '#onlineOrder',
-                    btn_class: ''
+                    btn_class: 'btn-dark'
+
                 })
                 section.m-gap
                     .container

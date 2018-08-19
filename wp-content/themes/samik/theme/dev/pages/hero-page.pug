@@ -1,69 +1,150 @@
 extends ../templates/layout
 block content
-    body
-        .wrapper
-            +header
-            main.content
-                +hero({
-                    type: 'large',
-                    image: 'img/tmp/hero.jpg',
-                    heading_class: 'h2',
-                    title: 'Large hero block',
-                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
-                    btn_text: 'Read more'
-                })
-                br
-                +hero({
-                    type: 'medium',
-                    image: 'img/tmp/hero-1.jpg',
-                    heading_class: 'h3',
-                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>',
-                    title: 'Medium hero block'
-                })
-                br
-                +hero({
-                    type: 'small',
-                    image: 'img/tmp/hero-2.jpg',
-                    heading_class: 'h4',
-                    title: 'Small hero block'
-                })
-                br
-                +slider([
-                    {
-                        module: 'hero',
-                        settings: {
-                            type: 'large',
-                            image: 'img/tmp/hero.jpg',
-                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
-                            title: 'Hero slide 1',
-                            heading_class: 'h2',
-                            btn_text: 'Read more'
-                        }
-                    },
-                    {
-                        module: 'hero',
-                        settings: {
-                            type: 'large',
-                            image: 'img/tmp/hero-1.jpg',
-                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
-                            title: 'Hero slide 2',
-                            heading_class: 'h2',
-                            btn_text: 'Read more'
-                        }
-                    },
-                    {
-                        module: 'hero',
-                        settings: {
-                            type: 'large',
-                            image: 'img/tmp/hero-2.jpg',
-                            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi obcaecati reprehenderit vitae! Adipisci amet autem culpa, dolorem est, eum illo laudantium minima neque nisi, provident reiciendis repudiandae rerum ullam vitae?</p>',
-                            title: 'Hero slide 3',
-                            heading_class: 'h2',
-                            btn_text: 'Read more'
-                        }
+    .wrapper
+        +header
+        main.content
+            +slider([
+                {
+                    module: 'hero',
+                    settings: {
+                        class: '-large',
+                        image: 'img/tmp/hero-1.jpg',
+                        title: 'Hier komt een introductietitel',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                        heading_class: 'h3',
+                        btn_text: 'BUTTON',
+                        btn_class: 'btn-secondary',
                     }
-                ])
-            +footer
+                },
+                {
+                    module: 'hero',
+                    settings: {
+                        class: '-large',
+                        image: 'img/tmp/hero-2.jpg',
+                        title: 'Hier komt een introductietitel',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                        heading_class: 'h3',
+                        btn_text: 'BUTTON',
+                        btn_class: 'btn-secondary',
+                        btn2_text: 'BUTTON',
+                        btn2_class: 'btn-primary',
+                    }
+                },
+                {
+                    module: 'hero',
+                    settings: {
+                        class: '-large',
+                        image: 'img/tmp/hero-1.jpg',
+                        title: 'Hier komt een introductietitel',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                        heading_class: 'h3',
+                        btn_text: 'BUTTON',
+                        btn_class: 'btn-secondary',
+                    }
+                },
+                {
+                    module: 'hero',
+                    settings: {
+                        class: '-large',
+                        image: 'img/tmp/hero-2.jpg',
+                        title: 'Hier komt een introductietitel',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                        heading_class: 'h3',
+                        btn_text: 'BUTTON',
+                        btn_class: 'btn-secondary',
+                        btn2_text: 'BUTTON',
+                        btn2_class: 'btn-primary',
+                    }
+                }
+            ])
+            br
+            +hero({
+                class: '-large',
+                image: 'img/tmp/hero-1.jpg',
+                heading_class: 'h3',
+                title: 'Hier komt een introductietitel',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-secondary',
+                btn2_text: 'BUTTON',
+                btn2_class: 'btn-secondary'
+            })
+            br
+            +hero({
+                class: '-medium',
+                image: 'img/tmp/hero-1.jpg',
+                heading_class: 'h3',
+                title: 'Hier komt een introductietitel',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-secondary'
+            })
+            br
+            +hero({
+                class: '-medium',
+                image: 'img/tmp/hero-1.jpg',
+                heading_class: 'h3',
+                title: 'Hier komt een introductietitel',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-secondary',
+                btn2_text: 'BUTTON',
+                btn2_class: 'btn-secondary'
+            })
+            br
+            +hero({
+                class: '-small',
+                image: 'img/tmp/hero-2.jpg',
+                heading_class: 'h3',
+                title: 'Hier komt een introductietitel'
+            })
+            br
+            +hero({
+                class: '-small',
+                image: 'img/tmp/hero-2.jpg',
+                heading_class: 'h3',
+                title: 'Hero block with parallax',
+                parallax: true
+            })
+            br
+            +slider([
+                {
+                    module: 'hero',
+                    settings: {
+                        class: '-small',
+                        image: 'img/tmp/hero-2.jpg',
+                        title: 'Hier komt een introductietitel',
+                        heading_class: 'h3'
+                    }
+                },
+                {
+                    module: 'hero',
+                    settings: {
+                        class: '-small',
+                        image: 'img/tmp/hero-1.jpg',
+                        title: 'Hier komt een introductietitel',
+                        heading_class: 'h3'
+                    }
+                },
+                {
+                    module: 'hero',
+                    settings: {
+                        class: '-small',
+                        image: 'img/tmp/hero-2.jpg',
+                        title: 'Hier komt een introductietitel',
+                        heading_class: 'h3'
+                    }
+                },
+                {
+                    module: 'hero',
+                    settings: {
+                        class: '-small',
+                        image: 'img/tmp/hero-1.jpg',
+                        title: 'Hier komt een introductietitel',
+                        heading_class: 'h3'
+                    }
+                }
+            ])
+
+        +footer
 
 
 

@@ -2,7 +2,7 @@ mixin card(data)
     .card(class='-' + data.type style=data.bg_color && "background-color:" + data.bg_color)
         if (data.full_link)
             a.card_full-link(href=data.full_link data-lightbox=data.full_link)
-        a.card_image(href="/" style=data.bg_image && "background-image: url(" + data.bg_image + ")")
+        a.card_image(href="/" class=data.bg_image && '-bg' style=data.bg_image && "background-image: url(" + data.bg_image + ")" data-modal=data.modal)
             img(src=data.img alt="")
         if data.overlay
             .card_overlay
