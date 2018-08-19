@@ -1,0 +1,34 @@
+.filter-block{
+    &_panel{
+        padding-top: 10px;
+        padding-bottom: 0;
+
+        @include media(640){
+            text-align: center;
+        }
+    }
+
+    &_content{
+    }
+
+    .cta-block, .filtr-item{
+        min-height: 400px;
+        backface-visibility: visible;
+
+        @include media(640){
+            min-height: 340px;
+        }
+    }
+}
+
+.filter-btn{
+    font-size: em(13);
+    color: $primary-color;
+    min-width: 122px;
+    margin-bottom: 10px;
+
+    &.-active{
+        background: $primary-color;
+        color: $light;
+    }
+}

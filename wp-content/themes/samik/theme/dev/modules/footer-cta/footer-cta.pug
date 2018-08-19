@@ -1,0 +1,33 @@
+mixin footer-cta()
+    section.footer-cta.p-gap(style="background-color: #246caa;color:#ffffff;")
+        .container
+            .content-heading.text-white.mb-3
+                .h1 Footer cta
+            .row.-center
+                .col-4.col-md-6.col-sm-12
+                    +info-card({
+                        icon: 'icon-email',
+                        class: '-solid',
+                        title: 'E-mail ons',
+                        content: '<p>Heb je een vraag, opmerking of suggestie? Je kunt ons altijd een e-mail sturen, we nemen binnen twee werkdagen contact met je op.</p>',
+                        bottom: '<a class="info-card_link" href="mailto:info@the-others.eu">info@the-others.eu</a>'
+                    })
+                .col-4.col-md-6.col-sm-12
+                    +info-card({
+                        icon: 'icon-email',
+                        class: '-solid',
+                        title: 'Bel ons',
+                        content: '<p>Zijn we telefonisch niet bereikbaar? Vul het contactformulier in. Dan bellen wij je terug.</p>',
+                        bottom: '<a class="info-card_link" href="tel:+31 123 456 78">+31 123 456 78</a>'
+                    })
+                .col-4.col-md-6.col-sm-12
+                    +info-card({
+                        icon: 'icon-email',
+                        class: '-solid',
+                        title: 'Facebook',
+                        content: '<p>Je kunt ons op werkdagen tussen 08:30-17:30 ook telefonisch bereiken. Zijn we telefonisch niet bereikbaar? Vul het contactformulier in. Dan bellen wij je terug.</p>',
+                        bottom: '<a class="info-card_link" href="/">Facebookpagina</a>'
+                    })
+            .text-center
+                a.btn-light.-hollow
+                    span BUTTON

@@ -1,5 +1,5 @@
-html
-    include ./templates/head
+extends templates/layout
+block content
     body
         +top-banner-bar
         .wrapper
@@ -12,7 +12,6 @@ html
                     heading_class: 'h1'
                 })
                 .container.m-gap
-
+                    +filter-block
             +footer
             +feedback
-    include ./templates/scripts

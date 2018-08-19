@@ -1,11 +1,11 @@
-include ../templates/head
-body
-    .wrapper
-        +header
-        main.content
-            +wysiwyg
-        +footer
-include ../templates/scripts
+extends ../templates/layout
+block content
+    body
+        .wrapper
+            +header
+            main.content
+                +wysiwyg
+            +footer
 
 
 

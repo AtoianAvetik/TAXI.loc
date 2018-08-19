@@ -1,0 +1,107 @@
+.info-card-row {
+    margin-bottom: -20px;
+
+    .info-card.-solid {
+        margin-bottom: 20px;
+    }
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+        max-width: 100%; //fix IE overflow bug
+    }
+
+    &.-light-content {
+        color: $light;
+    }
+
+    &.-solid {
+        flex: 1;
+        position: relative;
+        justify-content: flex-end;
+        text-align: center;
+
+        .info-card_image{
+            height: 90px;
+            margin-bottom: 30px;
+        }
+
+        .info-card_icon{
+            font-size: 75px;
+            margin-bottom: 30px;
+        }
+
+        .info-card_title{
+            flex-direction: column;
+            text-transform: uppercase;
+        }
+
+        .info-card_bottom {}
+    }
+
+    &.-frame {
+        background: $gray-lighter;
+        border-radius: 4px;
+        padding: 25px;
+        color: $dark;
+        height: calc(100% - 1em);
+        margin-bottom: 1em;
+        justify-content: space-between;
+
+        .info-card_image{
+            margin-right: .7em;
+            margin-top: -0.2em;
+            max-width: 33px;
+        }
+
+        .info-card_title{
+            margin-bottom: 0;
+            align-items: flex-start;
+        }
+
+        .info-card_content{
+            margin: 25px 0;
+        }
+    }
+
+    &_image {
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_title {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        @include createSize(24px);
+
+        span {
+            max-width: 100%;
+        }
+    }
+
+    &_content {
+        margin-bottom: 10px;
+        flex: 1 1 auto;
+    }
+
+    &_bottom {
+        font-size: 18px;
+        font-weight: bold;
+
+        @include media(sm) {
+            font-size: 16px;
+        }
+    }
+
+    &_link {
+        padding-bottom: 3px;
+        @include underline-hover();
+    }
+}

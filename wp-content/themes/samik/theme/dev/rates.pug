@@ -1,5 +1,5 @@
-html
-    include ./templates/head
+extends templates/layout
+block content
     body
         +top-banner-bar
         .wrapper
@@ -25,4 +25,3 @@ html
                                 +table()
             +footer
             +feedback
-    include ./templates/scripts

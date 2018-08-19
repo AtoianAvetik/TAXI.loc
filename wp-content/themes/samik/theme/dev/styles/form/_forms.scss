@@ -59,3 +59,57 @@
         left: 2px;
     }
 }
+
+.form-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+    background: $light;
+    margin-bottom: 30px;
+
+    &.accordion_item {
+        border: none;
+    }
+
+    &_header {
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        border-left: 3px solid $gray;
+        padding: 0 32px;
+
+        &.-primary {
+            border-left: 3px solid $primary-color;
+        }
+
+        &.accordion_link {
+            padding: 0 32px;
+            cursor: pointer;
+        }
+    }
+
+    &_title {
+        position: relative;
+        color: $primary-color;
+        font-size: 18px;
+        line-height: 45px;
+        height: 45px;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    &_content{
+        position: relative;
+        border-top: 1px solid $gray-light;
+        margin-top: -1px;
+        margin-bottom: 0;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+
+    &_row {
+        margin: 5px 0;
+        padding: 0 32px;
+    }
+}

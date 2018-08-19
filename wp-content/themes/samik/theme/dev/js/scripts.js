@@ -12,6 +12,7 @@ module.exports = {
         "node_modules/tether-drop/dist/js/drop.js",
         "node_modules/tipso/src/tipso.min.js",
         "dev/js/plugins/masking-input.js",
+        "node_modules/filterizr/dist/jquery.filterizr.min.js",
 		"node_modules/select2/dist/js/select2.min.js"
     ],
     main: [
@@ -46,6 +47,7 @@ module.exports = {
 		"dev/modules/promo/promo.js",
 		"dev/modules/lane/lane.js",
 		"dev/modules/card/card.js",
+        "dev/modules/info-card/info-card.js",
 		"dev/modules/overview/overview.js",
 		"dev/modules/footer/footer.js",
 		"dev/modules/social-block/social-block.js",
@@ -61,6 +63,10 @@ module.exports = {
 		"dev/modules/feedback/feedback.js",
 		"dev/modules/table/table.js",
 		"dev/modules/form-controls/form-controls.js",
-		"dev/modules/bg-parallax/bg-parallax.js"
+        "dev/modules/tile/tile.js",
+        "dev/modules/footer-cta/footer-cta.js",
+		"dev/modules/bg-parallax/bg-parallax.js",
+		"dev/modules/callback/callback.js",
+		"dev/modules/filter-block/filter-block.js"
     ]
 };

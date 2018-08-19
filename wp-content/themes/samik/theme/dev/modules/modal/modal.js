@@ -1,5 +1,6 @@
 module('modal', function() {
     var $container = $(this),
+        $html = $('html'),
         $body = $('body'),
         $modalTrigger = $('*[data-modal]'),
         $modals = $container.find('*[data-js=modal]'),
@@ -29,7 +30,7 @@ module('modal', function() {
     });
 
     function getScrollTop() {
-        scrollTopPosition = $body.scrollTop();
+        scrollTopPosition = $html.scrollTop();
         $body.css({
             top: -scrollTopPosition
         });
@@ -38,7 +39,8 @@ module('modal', function() {
     function setScrollTop() {
         $body.css({
             top: ''
-        }).scrollTop(scrollTopPosition);
+        });
+        $html.scrollTop(scrollTopPosition);
     }
 
     function showModal(name) {

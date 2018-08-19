@@ -1,0 +1,73 @@
+extends ../templates/layout
+block content
+    .wrapper
+        +header
+        main.content
+            section.m-gap
+                .container
+                    .h2.content-heading.text-center.m-gap Title
+                    .row.tile-row
+                        .col-4.col-md-12
+                            +tile({
+                                type: 'frame',
+                                title: 'Frame tile block',
+                                img: 'img/tmp/icon.svg',
+                                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro.</p>',
+                                btn_class: 'btn-primary',
+                                btn_text: 'BUTTON'
+                            })
+                        .col-4.col-md-12
+                            +tile({
+                                type: 'frame',
+                                title: 'Frame tile block',
+                                img: 'img/tmp/icon.svg',
+                                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro.</p>',
+                                btn_class: 'btn-primary',
+                                btn_text: 'BUTTON'
+                            })
+                        .col-4.col-md-12
+                            +tile({
+                                type: 'frame',
+                                bg_color: '#d4efff',
+                                title: 'Frame tile block',
+                                img: 'img/tmp/icon.svg',
+                                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro.</p>',
+                                btn_class: 'btn-primary',
+                                btn_text: 'BUTTON'
+                            })
+            section.m-gap
+                .container
+                    .h2.content-heading.text-center.m-gap Title
+                    .row.tile-row
+                        .col-4.col-md-6.col-xs-12
+                            +tile({
+                                type: 'solid',
+                                bg_image: 'img/tmp/photo-8.jpg',
+                                btn_class: 'btn-go',
+                                btn_text: 'Ontwerp'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +tile({
+                                type: 'solid',
+                                bg_image: 'img/tmp/photo-9.jpg',
+                                btn_class: 'btn-go',
+                                btn_text: 'Ontwerp'
+                            })
+                        .col-4.col-md-6.col-xs-12
+                            +tile({
+                                type: 'solid',
+                                bg_image: 'img/tmp/photo-7.jpg',
+                                btn_class: 'btn-go',
+                                btn_text: 'Ontwerp'
+                            })
+        +footer
+
+
+
+
+
+
+
+
+
+

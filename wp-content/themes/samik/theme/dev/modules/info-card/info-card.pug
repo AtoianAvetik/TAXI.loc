@@ -1,0 +1,15 @@
+mixin info-card(data)
+    .info-card(class=data.class)
+        if data.icon_image
+            .info-card_image
+                img.info-card_image(src='img/icons/'+data.icon_image+'.svg' alt="")
+        if data.image
+            .info-card_image
+                img(src=data.image alt="")
+        if data.icon
+            i.info-card_icon(class=data.icon)
+        .info-card_title(class=data.title_class)= data.title
+        if data.content
+            .info-card_content.text-content !{data.content}
+        if data.bottom
+            .info-card_bottom !{data.bottom}

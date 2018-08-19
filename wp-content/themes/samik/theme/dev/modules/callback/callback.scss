@@ -1,0 +1,59 @@
+.callback {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    z-index: 111;
+    animation: 1.5s linear 0s normal none infinite running callback;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &-bg {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $primary-color;
+        animation: 1.5s linear .5s normal none infinite running callback;
+    }
+
+    &-icon {
+        color: $light;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 45px;
+    }
+
+    &:hover {
+        animation: 1.5s linear 0s normal none infinite running callback_anim;
+    }
+}
+
+@keyframes callback {
+    0% {box-shadow: 0 0 0 0 rgba(0,0,0,0.4);}
+    100% {box-shadow: 0 0 0 20px rgba(0,0,0,0);}
+}
+@-webkit-keyframes callback {
+    0% {box-shadow: 0 0 0 0 rgba(0,0,0,0.4);}
+    100% {box-shadow: 0 0 0 20px rgba(0,0,0,0);}
+}
+@-moz-keyframes callback {
+    0% {box-shadow: 0 0 0 0 rgba(0,0,0,0.4);}
+    100% {box-shadow: 0 0 0 20px rgba(0,0,0,0);}
+}
+@keyframes callback_anim {
+    0% {transform: scale3d(1, 1, 1);}
+    10%, 20% {transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);}
+    30%, 50%, 70%, 90% {transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 3deg);}
+    40%, 60%, 80% {transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -3deg);}
+    100% {transform: scale3d(1, 1, 1);}
+}
+@keyframes callback_anim {
+    0% {transform: scale3d(1, 1, 1);}
+    10%, 20% {transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);}
+    30%, 50%, 70%, 90% {transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 3deg);}
+    40%, 60%, 80% {transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -3deg);}
+    100% {transform: scale3d(1, 1, 1);}
+}

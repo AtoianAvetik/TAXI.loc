@@ -1,13 +1,13 @@
-include ../templates/head
-body
-    .wrapper
-        +header
-        main.content
-            .container.m-gap
-                h2.h2.-underline Form
+extends ../templates/layout
+block content
+    body
+        .wrapper
+            +header
+            main.content
+                .container.m-gap
+                    h2.h2.-underline Form
 
-        +footer
-include ../templates/scripts
+            +footer
 
 
 

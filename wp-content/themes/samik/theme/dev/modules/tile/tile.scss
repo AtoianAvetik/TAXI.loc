@@ -1,0 +1,76 @@
+.tile-row{
+    display: flex;
+    @extend .-equal-height;
+
+    margin-bottom: -20px;
+}
+
+.tile{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    > * {
+        max-width: 100%; //fix IE overflow bug
+    }
+
+    &.-frame{
+        padding: 15px;
+        background: $gray-light;
+        text-align: center;
+        align-items: center;
+
+        .tile_image {
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 60px;
+            }
+        }
+
+        .tile_content{
+            p{
+                margin-bottom: 0;
+            }
+
+            margin-bottom: 0;
+        }
+    }
+
+    &.-solid{
+        position: relative;
+        color: $light;
+        justify-content: flex-end;
+        min-height: 260px;
+        padding: 20px 40px 20px 20px;
+
+        .tile_image{
+            @include overlay;
+            z-index: -1;
+        }
+    }
+
+    &_full-link{
+        @include overlay;
+    }
+
+    &_title {
+        @include createSize(24px);
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    &_content{
+        margin-top: 15px;
+    }
+
+    &_btn{
+        margin-top: 15px;
+    }
+}

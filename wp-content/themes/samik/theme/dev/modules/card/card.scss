@@ -1,40 +1,49 @@
 .card-row{
     display: flex;
+    @extend .-equal-height;
+
+    margin-bottom: -20px;
 }
 
-.card-list {
-    margin-bottom: -30px;
-
-    .card {
-        margin-bottom: 30px;
-    }
-}
-
-.card {
+.card{
     flex: 1;
+    padding: 25px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.15s;
+    margin-bottom: 20px;
+
+    > * {
+        max-width: 100%; //fix IE overflow bug
+    }
 
     &.-frame{
-        padding: 15px;
-        background: $light;
-        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        background: $gray-light;
+
+        @include media(md) {
+            padding: 15px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
 
         .card_image{
-            min-height: 220px;
-            margin: -15px -15px 15px;
+            min-height: 300px;
+            margin: -20px -20px 20px;
+            max-width: none;
+
+            @include media(md) {
+                min-height: 220px;
+                margin: -15px -15px 15px;
+            }
         }
 
         .card_title{
-            margin-bottom: 0;
-            font-weight: 500;
-            flex: 1 1 auto;
-            display: flex;
-            align-items: center;
-        }
-
-        .card_content {
-            margin-bottom: 0;
+            margin-bottom: 10px;
         }
     }
 
@@ -42,58 +51,39 @@
         position: relative;
         color: $light;
         justify-content: flex-end;
-        min-height: 350px;
-        padding: 25px;
+        min-height: 450px;
+        padding: 40px 30px 25px 40px;
 
-        .card_title {
-            color: $light;
+        @include media(md) {
+            padding: 25px;
+            min-height: 300px;
+        }
+
+        &:hover {
+            .card_overlay {
+                background-color: transparent !important;
+            }
         }
 
         .card_image{
             @include overlay;
-
-            &:after{
-                content: '';
-                @include overlay;
-                background: rgba($dark, .7);
-            }
+            z-index: -1;
         }
     }
-
-    &.-form {
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
-        background: $light;
-        margin-bottom: 20px;
-
-        .card_title {
-            color: $primary-color;
-            font-size: 18px;
-            line-height: 45px;
-            height: 45px;
-            margin-bottom: 0;
-            font-weight: 500;
-            position: relative;
-        }
-
-        .card_content {
-            border-top: 1px solid $gray-light;
-            margin-top: -1px;
-            margin-bottom: 0;
-        }
-    }
-
     &.-advantage {
-        color: $light;
-        text-align: center;
+        background-color: $gray-light;
+        padding: 25px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
 
         .card_content {
+            color: $gray-dark;
             font-size: 15px;
             line-height: 1.2;
         }
 
         .card_icon {
             font-size: 90px;
-            color: $light;
+            color: lighten($blue, 30%);
             margin-bottom: 20px;
             margin-left: auto;
             margin-right: auto;
@@ -104,62 +94,70 @@
         }
     }
 
-    &.accordion_item {
-        border: none;
+
+    &_overlay {
+        @include overlay;
+        opacity: 0.4;
+        z-index: -1;
+        transition: background-color 0.5s;
+        background-color: $primary-color;
     }
 
-    &_header {
-        display: inline-block;
-        position: relative;
-        box-sizing: border-box;
-        border-left: 3px solid $gray;
-        padding: 0 32px;
+    &_title {
+        font-weight: bold;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        @include createSize(32px);
+    }
 
-        &.-primary {
-            border-left: 3px solid $primary-color;
-        }
+    &_link {
+        @include underline-hover();
+    }
 
-        &.accordion_link {
-            padding: 0 32px;
-            cursor: pointer;
-        }
+    &_full-link{
+        @include overlay;
     }
 
     &_image{
-        @include bg;
-        min-height: 250px;
-        margin-bottom: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px;
+
+        &.-bg{
+            @include bg;
+            min-height: 250px;
+        }
 
         img{
-            max-width: 60%;
-            max-height: 60%;
+            max-width: 100px;
+            max-height: 100px;
         }
     }
 
-    .card_title {
-        position: relative;
-    }
-
     &_content{
-        margin-bottom: 15px;
-        flex: 1 1 auto;
+        margin-bottom: 0;
+        display: flex;
         position: relative;
+
+        p{
+            margin-bottom: 0;
+        }
+
     }
 
-    &_row {
-        margin: 5px 0;
-        padding: 0 32px;
-    }
-
-    &_pd {
-        padding-top: 15px;
-        padding-bottom: 5px;
-    }
-    
     &_btn{
         align-self: flex-start;
+        margin-top: auto;
+        margin-left: 20px;
+
+        &.-only-icon i:before {
+            font-size: 17px;
+            margin-left: 0.2em;
+        }
+
+        @include media(md) {
+            margin-left: 15px;
+        }
     }
 }

@@ -1,0 +1,12 @@
+mixin tile(data)
+    .tile(class='-' + data.type style=data.bg_color && "background-color:" + data.bg_color)
+        if (data.full_link)
+            a.tile_full-link(href=data.full_link data-lightbox=data.full_link)
+        .tile_image(style=data.bg_image && "background-image: url(" + data.bg_image + ")" class=data.bg_image && "-bg")
+            img(src=data.img alt="")
+        .tile_title(class=data.heading_class ? data.heading_class : '')= data.title
+        .tile_content !{data.content}
+        if (data.btn_text)
+            a.tile_btn(href="#" class=data.btn_class ? data.btn_class : 'btn-primary')
+                span= data.btn_text
+

@@ -1,13 +1,23 @@
 mixin card(data)
     .card(class='-' + data.type style=data.bg_color && "background-color:" + data.bg_color)
-        if ( data.type !== 'advantage' )
-            .card_image(style=data.bg_image && "background-image: url(" + data.bg_image + ")")
-                img(src=data.img alt="")
-        if ( data.icon )
-            i.card_icon(class=data.icon)
-        .card_title(class=data.heading_class ? data.heading_class : 'h3')
-            = data.title
-        if ( data.content )
-            .card_content.text-content !{data.content}
-        if ( data.btn_text )
-            a.card_btn.btn-primary(href="#" )= data.btn_text
+        if (data.full_link)
+            a.card_full-link(href=data.full_link data-lightbox=data.full_link)
+        a.card_image(href="/" style=data.bg_image && "background-image: url(" + data.bg_image + ")")
+            img(src=data.img alt="")
+        if data.overlay
+            .card_overlay
+        .card_title(class=data.heading_class ? data.heading_class : '')
+            if ( data.title_link )
+                a.card_link(href=data.title_link) #{data.title}
+            else
+                = data.title
+        if data.content
+            .card_content
+                .text-content !{data.content}
+                if (data.btn_text || data.btn_icon)
+                    a.card_btn(href="#" class=data.btn_class ? data.btn_class : 'btn-primary')
+                        if data.btn_text
+                            span !{data.btn_text}
+                        if data.btn_icon
+                            i(class=data.btn_icon)
+

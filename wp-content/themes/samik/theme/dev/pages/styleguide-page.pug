@@ -1,12 +1,12 @@
-include ../templates/head
-body
-    .wrapper
-        +header
-        main.content
-            +typography
-            +controls
-        +footer
-include ../templates/scripts
+extends ../templates/layout
+block content
+    body
+        .wrapper
+            +header
+            main.content
+                +typography
+                +controls
+            +footer
 
 
 

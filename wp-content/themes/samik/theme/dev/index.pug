@@ -1,17 +1,8 @@
-html
-    include ./templates/head
-    body.-sitemap
-        div.sitemap
-                +sitemap
-    include ./templates/scripts
-
-
-
-
-
-
-
-
-
-
-
+extends templates/layout
+block content
+    .wrapper
+        +header
+        main.content
+            +sitemap
+        +footer-cta()
+        +footer

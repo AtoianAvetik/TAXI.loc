@@ -1,5 +1,5 @@
-html
-    include ./templates/head
+extends templates/layout
+block content
     body
         .wrapper
             +header({active: 'home'})
@@ -16,11 +16,11 @@ html
                         .row.-center.m-gap
                             .col-9.col-md-12
                                 section
-                                    .card.-form
-                                        .card_header.-primary
-                                            .card_title Подача авто
-                                        .card_content.card_pd
-                                            .card_row
+                                    .form-card
+                                        .form-card_header.-primary
+                                            .form-card_title Подача авто
+                                        .form-card_content
+                                            .form-card_row
                                                 .form-group
                                                     .form-group_left
                                                         label Место:
@@ -148,7 +148,7 @@ html
                                                             option(value="Щелкино") Щелкино
                                                             option(value="Щелкино (Азовский)") Щелкино (Азовский)
                                                             option(value="Ялта") Ялта
-                                            .card_row
+                                            .form-card_row
                                                 .row
                                                     .col-6.col-xs-12
                                                         .form-group.form-group_small
@@ -168,11 +168,11 @@ html
                                                             .form-group_right
                                                                 input(type="text" name="orderInfoTime" class="form-control -wide" id="orderInfoTime" data-toggle="wickedpicker")
                                 section
-                                    .card.-form
-                                        .card_header
-                                            .card_title Куда
-                                        .card_content.card_pd
-                                            .card_row
+                                    .form-card
+                                        .form-card_header
+                                            .form-card_title Куда
+                                        .form-card_content
+                                            .form-card_row
                                                 .form-group
                                                     .form-group_left
                                                         label Город:
@@ -302,11 +302,11 @@ html
                                                             option(value="Щелкино (Азовский)") Щелкино (Азовский)
                                                             option(value="Ялта") Ялта
                                 section.accordion(data-module="accordion")
-                                    .card.-form.accordion_item.-active(data-js="item")
-                                        .card_header.accordion_link(data-js="trigger")
-                                            .card_title Дополнительно
-                                        .card_content.card_pd(data-js="content" )
-                                            .card_row
+                                    .form-card.accordion_item.-active(data-js="item")
+                                        .form-card_header.accordion_link(data-js="trigger")
+                                            .form-card_title Дополнительно
+                                        .form-card_content(data-js="content" )
+                                            .form-card_row
                                                 .form-group
                                                     .form-group_left.-l
                                                         label Когда ехать:
@@ -317,7 +317,7 @@ html
                                                         .form-radio
                                                             input.form-radio-input(type="radio" id="timeLater" name="timeType")
                                                             label.form-radio-label(for="timeLater") Предварительный заказ
-                                            .card_row
+                                            .form-card_row
                                                 .form-group
                                                     .form-group_left.-l
                                                         label Класс авто:
@@ -337,7 +337,7 @@ html
                                                         .form-icon
                                                             input.form-icon-input(type="radio" id="business" name="autoClass")
                                                             label.form-icon-label.icon-crown.tipso(for="business" data-tipso-title="Бизнес" data-tipso="Требуется автомобиль бизнес-класса.")
-                                            .card_row
+                                            .form-card_row
                                                 .form-group
                                                     .form-group_left.-l
                                                         label Доп. услуги:
@@ -360,7 +360,7 @@ html
                                                         .form-icon
                                                             input.form-icon-input(type="checkbox" id="silence" name="silence")
                                                             label.form-icon-label.icon-silence.tipso(for="silence" data-tipso-title="Тишина" data-tipso="Тишина в салоне.")
-                                            .card_row
+                                            .form-card_row
                                                 .row
                                                     .col-12
                                                         .form-group
@@ -386,22 +386,22 @@ html
                                                                     input(type="text" name="reverseTransferInfoTime" class="form-control -wide" id="reverseTransferInfoTime" data-toggle="wickedpicker")
 
                                 section
-                                    .card.-form
-                                        .card_header
-                                            .card_title Оплата
-                                        .card_content.card_pd
-                                            .card_row
+                                    .form-card
+                                        .form-card_header
+                                            .form-card_title Оплата
+                                        .form-card_content
+                                            .form-card_row
                                                 .form-group
                                                     .form-group_left.-l
                                                         label Способ оплаты:
                                                     .form-group_right
                                                         input(type="text" readonly="readonly" name="orderInfoPayType" class="form-control -wide" value="Наличные")
                                 section
-                                    .card.-form
-                                        .card_header
-                                            .card_title Контактная информация
-                                        .card_content.card_pd
-                                            .card_row
+                                    .form-card
+                                        .form-card_header
+                                            .form-card_title Контактная информация
+                                        .form-card_content
+                                            .form-card_row
                                                 .row
                                                     .col-6.col-xs-12
                                                         .form-group.form-group_small
@@ -416,72 +416,132 @@ html
                                                             .form-group_right
                                                                 input(type="text" name="orderInfoClientPhoneNumber" class="form-control -wide" placeholder="в формате: 7978 123 45 67")
                                 section
-                                    .card.-form
-                                        .card_header
-                                            .card_title Комментарий к заказу
-                                        .card_content.card_pd
-                                            .card_row
+                                    .form-card
+                                        .form-card_header
+                                            .form-card_title Комментарий к заказу
+                                        .form-card_content
+                                            .form-card_row
                                                 .form-group
                                                     textarea.form-control.-textarea(rows="6")
                                 .row.-center
                                     button.btn-primary ЗАКАЗАТЬ
                 section.-bg-primary.-bg-city.p-gap
                     .container
-                        .container.mb-3
-                            .content-heading.text-center.text-white
-                                .h1 Почему мы
-                        .row.-around.-equal-height.card-list
+                        .content-heading.text-white.mb-3
+                            .h1 Наши преимущества
+                        .row.-around.info-card-row
                             .col-4.col-md-6.col-sm-12
-                                +card({
-                                    type: 'advantage',
+                                +info-card({
+                                    class: '-solid -light-content',
                                     title: 'Ожидание Бесплатно',
-                                    heading_class: 'h3',
+                                    title_class: 'h3',
                                     icon: 'icon-waiting',
                                     content: 'Ожидание в аэропорту Симферополя БЕСПЛАТНО'
                                 })
                             .col-4.col-md-6.col-sm-12
-                                +card({
-                                    type: 'advantage',
+                                +info-card({
+                                    class: '-solid -light-content',
                                     title: 'Провоз Багажа',
-                                    heading_class: 'h3',
+                                    title_class: 'h3',
                                     icon: 'icon-baggage',
                                     content: 'Багаж БЕСПЛАТНО'
                                 })
                             .col-4.col-md-6.col-sm-12
-                                +card({
-                                    type: 'advantage',
+                                +info-card({
+                                    class: '-solid -light-content',
                                     title: 'Бесплатный WI-FI',
-                                    heading_class: 'h3',
+                                    title_class: 'h3',
                                     icon: 'icon-wifi',
                                     content: 'WI-FI в машине БЕСПЛАТНО'
                                 })
                             .col-4.col-md-6.col-sm-12
-                                +card({
-                                    type: 'advantage',
+                                +info-card({
+                                    class: '-solid -light-content',
                                     title: 'Лучшие Цены',
-                                    heading_class: 'h3',
+                                    title_class: 'h3',
                                     icon: 'icon-price',
                                     content: 'Цены фиксированные и никаких дополнительных затрат'
                                 })
                             .col-4.col-md-6.col-sm-12
-                                +card({
-                                    type: 'advantage',
+                                +info-card({
+                                    class: '-solid -light-content',
                                     title: 'Поездка с Комфортом',
-                                    heading_class: 'h3',
+                                    title_class: 'h3',
                                     icon: 'icon-snowflake',
                                     content: 'Комфорт бизнесс кдасса с кондиционером'
                                 })
                             .col-4.col-md-6.col-sm-12
-                                +card({
-                                    type: 'advantage',
+                                +info-card({
+                                    class: '-solid -light-content',
                                     title: 'Економте Сразу',
-                                    heading_class: 'h3',
+                                    title_class: 'h3',
                                     icon: 'icon-percentage',
                                     content: 'Забронируйте поездку в обе стороны и получите скидку от 100руб до 500руб!'
                                 })
+                section.m-gap
+                    .container
+                        .content-heading.mb-3
+                            .h1 Отзывчивый сервис
+                        .row.-around.info-card-row
+                            .col-4.col-md-6.col-sm-12
+                                +info-card({
+                                    class: '-solid',
+                                    image: 'img/clock.png',
+                                    content: 'Быстрая подача машины от 5 минут'
+                                })
+                            .col-4.col-md-6.col-sm-12
+                                +info-card({
+                                    class: '-solid',
+                                    image: 'img/15.png',
+                                    content: 'Постоянным клиентам скидки от 5 до 15 %'
+                                })
+                            .col-4.col-md-6.col-sm-12
+                                +info-card({
+                                    class: '-solid',
+                                    image: 'img/checklist.png',
+                                    content: 'Фиксированные тарифы от 13 руб./км'
+                                })
+                +lane({
+                    type: 'light',
+                    direction: 'left',
+                    title: 'Нужно быстро и надежно доехать?',
+                    heading_class: 'h2',
+                    image: 'img/tmp/hero-2.jpg',
+                    image_type: 'bg',
+                    btn_text: 'Заказать Сейчас',
+                    btn_anchor: '#onlineOrder',
+                    btn_class: ''
+                })
+                section.m-gap
+                    .container
+                        .content-heading.mb-3
+                            .h1 Вопросы и ответы
+                        +accordion([
+                            {
+                                title: 'Angular',
+                                content: '<p>Angular comes with a long list of features that enable building everything, ranging from web to desktop and mobile. Framework is built with TypeScript from Microsoft with an eye to making JavaScript more agile and attractive for large enterprises. ng2 features a component-based architecture, improved DI (dependency injection), efficient logging service, inter-component communications and more.</p>',
+                                active: true
+                            },
+                            {
+                                title: 'React',
+                                content: '<p>It is rightly considered the fastest growing JS framework: as of today, there are about 1,000 contributors on Github. In MVC (Model-View-Controller) pattern React.js acts as “V” and can be smoothly integrated with any architecture. Due to the usage of virtual DOM it provides a great performance boost, comparing to Angular 1.x. In addition to that, React components can be created and re-used among applications or even transferred for public use.</p>'
+                            },
+                            {
+                                title: 'VueJS',
+                                content: '<p>Vue 2.0 was also introduced in 2016 and it took the best from Ember, React and Angular, putting all that into a handy package. It is proved to be faster and leaner, comparing to React and Angular 2.0.</p> <p>Going deeper, Vue.js offers two-way data binding (seen in AngularJS), server-side rendering (like in Angular2 and ReactJS), Vue-cli (scaffolding tool for quick start) and optional JSX support. Its founder states that Vue 2 is one of the fastest frameworks all in all.</p>'
+                            },
+                            {
+                                title: 'Ember',
+                                content: '<p>Back in 2015 Ember was called the best javascript framework for web application, leaving behind React and AngularJS. Today it boasts a huge online community, regular updates and wide appliance of JavaScript best practices to guarantee ultimate experience right out of the box.</p>'
+                            },
+                            {
+                                title: 'Backbone.js',
+                                content: '<p>Backbone supplies structure to JavaScript-heavy applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing application over a RESTful JSON interface.</p>'
+                            }
+                        ])
             +footer
             +feedback
-    include ./templates/scripts
+            +callback
 
 
 

@@ -140,3 +140,19 @@ p{
         font-size: 16px;
     }
 }
+
+
+/*--------------------------------------/
+ Sizes
+--------------------------------------*/
+@mixin createSize($font-size) {
+    font-size: $font-size;
+
+    @include media(sm){
+        font-size: $font-size * 0.85;
+    }
+
+    @include media(xs){
+        font-size: $font-size * 0.75;
+    }
+}
