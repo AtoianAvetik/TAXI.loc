@@ -1,8 +1,16 @@
 mixin promo(data)
-    section.p-gap.promo(class='-'+data.type style=data.image && "background-image: url(" + data.image + ")" )
-        .container.-narrow
-            span.promo_title.h2= data.title
+    section.promo(class=data.class style=!data.parallax  && "background-image: url(" + data.image + ")" )
+        if (data.parallax)
+            +bg-parallax({
+                image: data.image,
+                class: '-absolute'
+            })
+        .promo-container.container.-narrow(style="color:" + data.text_color + ";")
+            span.promo_title(class=data.heading_class ? data.heading_class : '')= data.title
             .promo_content.text-content !{data.content}
-            if ( data.btn_text )
-                a(href="#" class=data.type === 'light' ? 'btn-dark' : 'btn-light' data-anchor=data.btn_anchor).hero_btn= data.btn_text
+            if (data.btn_text)
+                .promo_btn-block
+                    a(href="#" class=data.btn_class data-anchor=data.btn_anchor).promo_btn= data.btn_text
+                    if (data.btn2_text)
+                        a(href="#" class=data.btn2_class data-anchor=data.btn2_anchor).promo_btn= data.btn2_text
 

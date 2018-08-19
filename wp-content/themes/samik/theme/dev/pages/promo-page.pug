@@ -1,47 +1,93 @@
 extends ../templates/layout
 block content
-    body
-        .wrapper
-            +header
-            main.content
-                +promo({
-                    type: 'dark',
-                    title: 'Dark promo block',
-                    heading_class: 'h2',
-                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
-                    btn_text: 'Read more',
-                    btn_class: 'btn-primary'
-                })
-                +promo({
-                    type: 'light',
-                    title: 'Light promo block',
-                    heading_class: 'h2',
-                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
-                    btn_text: 'Read more',
-                    btn_class: 'btn-dark'
+    .wrapper
+        +header
+        main.content
+            //we still need -dark and -light to define text color
+            +promo({
+                image: 'img/tmp/promo-1.jpg',
+                title: 'Titel van het vlak',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                text_color: '#fff',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-primary'
+            })
+            +promo({
+                class: '-secondary',
+                title: 'Titel van het vlak',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-tertiary'
+            })
+            +slider([
+                {
+                    module: 'promo',
+                    settings: {
+                        class: '-primary',
+                        title: 'Titel van het vlak',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                        text_color: '#fff',
+                        btn_text: 'BUTTON',
+                        btn_class: 'btn-light -hollow'
+                    }
+                },
+                {
+                    module: 'promo',
+                    settings: {
+                        class: '-secondary',
+                        title: 'Titel van het vlak',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                        btn_text: 'BUTTON',
+                        btn_class: 'btn-dark'
+                    }
+                },
+                {
+                    module: 'promo',
+                    settings: {
+                        class: '-tertiary',
+                        title: 'Titel van het vlak',
+                        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                        text_color: '#fff',
+                        btn_text: 'BUTTON',
+                        btn_class: 'btn-light'
+                    }
+                },
+            ])
+            +promo({
+                image: 'img/tmp/promo-dark.png',
+                title: 'Titel van het vlak',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                text_color: '#fff',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-light'
 
-                })
-                +promo({
-                    type: 'dark',
-                    image: 'img/tmp/promo-dark.jpg',
-                    title: 'Image dark promo block',
-                    heading_class: 'h2',
-                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
-                    btn_text: 'Read more',
-                    btn_class: 'btn-light'
+            })
+            +promo({
+                image: 'img/tmp/promo-light.jpg',
+                title: 'Titel van het vlak',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                text_color: '#000',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-dark'
+            })
+            +promo({
+                class: '-dark',
+                title: 'Titel van het vlak',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-primary',
+                btn2_text: 'BUTTON',
+                btn2_class: 'btn-light'
+            })
+            +promo({
+                class: '-light',
+                title: 'Titel van het vlak',
+                content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc positum in Phaedro a Platone probavit Epicurus sensitque in omni disputatione id fieri oportere. Duo enim genera quae erant, fecit tria. Duo Reges: constructio interrete. Summum ením bonum exposuit vacuitatem doloris; Miserum hominem! Si dolor summum malum est, dici aliter non potest.</p>',
+                btn_text: 'BUTTON',
+                btn_class: 'btn-dark'
 
-                })
-                +promo({
-                    type: 'light',
-                    image: 'img/tmp/promo-light.jpg',
-                    title: 'Image light promo block',
-                    heading_class: 'h2',
-                    content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
-                    btn_text: 'Read more',
-                    btn_class: 'btn-dark'
-
-                })
-            +footer
+            })
+        +footer
 
 
 

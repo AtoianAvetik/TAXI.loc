@@ -1,11 +1,24 @@
 .promo{
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: row;
     @include bg;
 
-    > *{
-        position: relative;
+    &-container {
+        min-height: 350px;
         z-index: 1;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+
+        > * {
+            max-width: 100%; //fix IE overflow bug
+        }
     }
 
     &.-light{
@@ -30,42 +43,34 @@
         }
     }
 
-    &.-blue{
-        background-color: $primary-color;
-        color: $light;
+    &.-primary{
+        background: $primary-color;
+    }
 
-        &:before{
-            content: '';
-            @include overlay;
-            background: rgba($primary-color, .4);
-        }
+    &.-secondary{
+        background: $secondary-color;
+    }
+
+    &.-tertiary{
+        background: $tertiary-color;
+    }
+
+    &_title{
+        margin-bottom: 0;
+        font-weight: bold;
+        @include createSize(40px);
     }
 
     &_content{
-        margin: 20px 0;
+        margin: 25px 0 0;
     }
 
-    &.-large-icon {
-        .promo_content {
-            margin: 0;
-        }
+    &_btn{
+        margin: 5px 5px 0;
+    }
 
-        p {
-            margin-bottom: 0;
-        }
-
-        i[class*="phone-call"] {
-            font-size: 70px;
-            margin-right: 15px;
-            vertical-align: middle;
-
-            @include media(sm) {
-                font-size: 50px;
-            }
-
-            @include media(xs) {
-                font-size: 40px;
-            }
-        }
+    &_btn-block{
+        margin: 20px 0 0;
     }
 }
+
