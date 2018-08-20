@@ -1,0 +1,23 @@
+.bg-video{
+    @include overlay;
+    overflow: hidden;
+
+    &:before{
+        content: '';
+        @include overlay;
+        background: rgba($dark, .3);
+        z-index: 1;
+    }
+
+    video{
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+}

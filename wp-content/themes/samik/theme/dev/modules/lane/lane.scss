@@ -2,37 +2,52 @@
 .lane{
     display: flex;
 
-    &.-light{
-        color: red;
-        .lane-details{
-            background: $light;
-            color: $dark;
-        }
+    &.-primary{
+        background: $primary-color;
+        color: $light;
     }
 
-    &.-dark{
-        .lane-details{
-            background-color: $dark;
-            color: $light;
-        }
+    &.-secondary{
+        background: $secondary-color;
+        color: $light;
+    }
+
+    &.-tertiary{
+        background: $tertiary-color;
+        color: $light;
     }
 
     &.-left{
-        .lane-image{
+        .lane_block:first-child{
             order: 0;
         }
     }
 
     &.-right{
-        .lane-image{
+        .lane_block:first-child{
             order: 1;
+
+            @include media(md) {
+                order: 0;
+            }
         }
     }
 
+    &_title {
+        max-width: 100%;
+        font-weight: bold;
+        @include createSize(40px);
+    }
+
     &_block{
-        min-height: 350px;
+        min-height: 425px;
         display: flex;
-        padding: 25px;
+        padding: 40px 40px 50px;
+
+        @include media(xl) {
+            min-height: 350px;
+            padding: 25px;
+        }
 
         @include media(md){
             min-height: 300px;
@@ -48,8 +63,20 @@
     }
 
     &_content{
-        margin-bottom: 20px;
+        margin-top: 20px;
         max-width: 100%;
+    }
+
+    &_btn-block{
+        margin: 20px -5px -5px;
+    }
+
+    &_btn{
+        margin: 5px 5px 0;
+    }
+
+    .map, .video-block, .video-block_inner{
+        @include overlay;
     }
 }
 
@@ -62,7 +89,6 @@
 
 .lane-image{
 
-
     figure{
         @include overlay;
         @include bg;
@@ -72,5 +98,6 @@
         max-width: 100%;
         align-self: center;
         justify-self: center;
+        flex: 0 0 auto;
     }
 }

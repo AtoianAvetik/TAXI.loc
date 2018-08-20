@@ -17,7 +17,6 @@
 @import "../../node_modules/font-awesome/scss/font-awesome";
 @import "../../node_modules/wickedpicker/dist/wickedpicker.min";
 @import "../../node_modules/@fengyuanchen/datepicker/dist/datepicker.min";
-@import "../../node_modules/jquery.background-parallax-scroll/dist/jquery.background-parallax-scroll.min";
 @import "plugins/tipso";
 @import "plugins/mask";
 @import "../../node_modules/select2/dist/css/select2.min";
@@ -96,4 +95,9 @@
 @import "../modules/tile/tile";
 @import "../modules/footer-cta/footer-cta";
 @import "../modules/callback/callback";
+@import "../modules/bg-video/bg-video";
+@import "../modules/masonry-gallery/masonry-gallery";
 @import "../modules/filter-block/filter-block";
+@import "../modules/tip/tip";
+@import "../modules/datepicker/datepicker";
+@import "../modules/timepicker/timepicker";

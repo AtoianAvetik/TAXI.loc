@@ -5,6 +5,10 @@ mixin promo(data)
                 image: data.image,
                 class: '-absolute'
             })
+        if(data.bg_video)
+            +bg-video({
+                src: data.bg_video
+            })
         .promo-container.container.-narrow(style="color:" + data.text_color + ";")
             span.promo_title(class=data.heading_class ? data.heading_class : '')= data.title
             .promo_content.text-content !{data.content}

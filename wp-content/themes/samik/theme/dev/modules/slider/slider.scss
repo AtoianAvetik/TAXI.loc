@@ -1,7 +1,26 @@
 .slider{
+    max-width: 100%;
+
     .swiper-pagination-bullet{
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
+        opacity: 1;
+        background: transparent;
+        border-radius: 50%;
+        border: 3px solid #fff;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #fff;
+    }
+
+    .swiper-pagination-black {
+        .swiper-pagination-bullet{
+            border-color: #0b0020;
+        }
+        .swiper-pagination-bullet-active {
+            background: #0b0020;
+        }
     }
 
     .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
@@ -12,6 +31,13 @@
     .swiper-button-prev{
         @include media(sm){
             display: none;
+        }
+    }
+
+    .swiper-container-with-bullets {
+        .swiper-slide .hero-container,
+        .swiper-slide .promo-container{
+            padding-bottom: 60px;
         }
     }
 }

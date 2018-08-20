@@ -1,14 +1,26 @@
 mixin lane(data)
-    section.m-gap.lane(class='-' + data.type + ' ' + '-' + data.direction)
+    section.lane(class=data.class)
         .container.-full
             .row
-                .col-6.col-md-12.lane_block.lane-image
+                .col-6.col-md-12.lane_block(class=data.image_type && 'lane-image')
+                    if (data.video)
+                        +video-block({
+                            cover: 'img/tmp/hero-large.jpg',
+                            autoplay: true,
+                            src: 'http://www.youtube.com/embed/cITN7lnCeFE'
+                        })
+                    if (data.map)
+                        +map
                     if (data.image_type === 'bg')
                         figure(style=data.image && "background-image: url(" + data.image + ")")
                     if (data.image_type === 'img')
                         img(src=data.image alt="")
                 .col-6.col-md-12.lane_block.lane-details
-                    span.lane_title.h2= data.title
+                    span.lane_title(class=data.heading_class ? data.heading_class : '')= data.title
                     .lane_content.text-content !{data.content}
-                    a(href="#" class=data.type === 'light' ? 'btn-dark' : 'btn-light' data-anchor=data.btn_anchor).lane_btn= data.btn_text
+                    if (data.btn_text)
+                        .lane_btn-block
+                            a(href="#" class=data.btn_class).lane_btn= data.btn_text
+                            if (data.btn2_text)
+                                a(href="#" class=data.btn2_class).lane_btn= data.btn2_text
 

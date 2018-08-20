@@ -17,10 +17,8 @@ module.exports = {
     ],
     main: [
         "dev/js/core/jquery.snippets.js",
-        "dev/js/core/anchors.js",
         "dev/js/core/module.js",
         "dev/js/core/media.js",
-        "dev/js/core/main.js",
         "dev/modules/modal/modal.js",
 		"dev/modules/typography/typography.js",
 		"dev/modules/tabs/tabs.js",
@@ -67,6 +65,11 @@ module.exports = {
         "dev/modules/footer-cta/footer-cta.js",
 		"dev/modules/bg-parallax/bg-parallax.js",
 		"dev/modules/callback/callback.js",
-		"dev/modules/filter-block/filter-block.js"
+		"dev/modules/bg-video/bg-video.js",
+		"dev/modules/masonry-gallery/masonry-gallery.js",
+		"dev/modules/filter-block/filter-block.js",
+		"dev/modules/tip/tip.js",
+		"dev/modules/datepicker/datepicker.js",
+		"dev/modules/timepicker/timepicker.js"
     ]
 };

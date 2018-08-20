@@ -1,5 +1,10 @@
 mixin hero(data)
     section.hero(class=data.class style=!data.parallax && "background-image: url(" + data.image + ")" )
+        if (data.bg_video)
+            if(data.bg_video)
+                +bg-video({
+                    src: data.bg_video
+                })
         if (data.parallax)
             +bg-parallax({
                 image: data.image,

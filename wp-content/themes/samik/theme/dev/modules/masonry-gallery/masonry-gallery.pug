@@ -1,0 +1,6 @@
+mixin masonry-gallery(data)
+    .masonry-gallery(class=data.class data-module='masonryGallery')
+        each image, index in data.images
+            .masonry-gallery_item
+                a(href=image.full_url data-lightbox="image-#{index}")
+                    img(src=image.url)
