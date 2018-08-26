@@ -10,6 +10,6 @@ require $shortcodes_extension->get_shortcode('contact_form')->get_declared_path(
 $options[] = array(
     'form-title' => array(
         'type' => 'text',
-        'label' => __('Form title', '{domain}'),
+        'label' => __('Form title', 'samik'),
     ),
 );

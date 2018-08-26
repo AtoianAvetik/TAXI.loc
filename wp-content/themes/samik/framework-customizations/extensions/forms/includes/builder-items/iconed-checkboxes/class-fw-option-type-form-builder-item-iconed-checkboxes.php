@@ -24,7 +24,7 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
 					'<div class="item-type-icon">' .
 					'<img src="' . esc_attr(  fw_get_template_customizations_directory_uri('/extensions/forms/includes/builder-items/iconed-checkboxes/static/images/icon.png' ) ) . '" />' .
 					'</div>' .
-					'<div class="item-type-title">' . __( 'Multiple Choice With Icon', 'fw' ) . '</div>' .
+					'<div class="item-type-title">' . __( 'Multiple Choice With Icon', 'samik' ) . '</div>' .
 					'</div>'
 			)
 		);
@@ -51,14 +51,14 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
             'fw_form_builder_item_type_iconed_checkboxes',
             array(
                 'l10n'     => array(
-                    'item_title'      => __( 'Multiple Choice With Icon', 'fw' ),
-                    'label'           => __( 'Label', 'fw' ),
-                    'toggle_required' => __( 'Toggle mandatory field', 'fw' ),
-                    'edit'            => __( 'Edit', 'fw' ),
-                    'delete'          => __( 'Delete', 'fw' ),
-                    'edit_label'      => __( 'Edit Label', 'fw' ),
-                    'x_more'          => __( '{x} More', 'fw' ),
-                    'close'           => __( 'Close', 'fw' ),
+                    'item_title'      => __( 'Multiple Choice With Icon', 'samik' ),
+                    'label'           => __( 'Label', 'samik' ),
+                    'toggle_required' => __( 'Toggle mandatory field', 'samik' ),
+                    'edit'            => __( 'Edit', 'samik' ),
+                    'delete'          => __( 'Delete', 'samik' ),
+                    'edit_label'      => __( 'Edit Label', 'samik' ),
+                    'x_more'          => __( '{x} More', 'samik' ),
+                    'close'           => __( 'Close', 'samik' ),
                 ),
                 'options'  => $this->get_options(),
                 'defaults' => array(
@@ -81,16 +81,16 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
 						array(
 							'label' => array(
 								'type'  => 'text',
-								'label' => __( 'Label', 'fw' ),
-								'desc'  => __( 'Enter field label (it will be displayed on the web site)', 'fw' ),
-								'value' => __( 'Multiple Choice With Icon', 'fw' ),
+								'label' => __( 'Label', 'samik' ),
+								'desc'  => __( 'Enter field label (it will be displayed on the web site)', 'samik' ),
+								'value' => __( 'Multiple Choice With Icon', 'samik' ),
 							)
 						),
 						array(
 							'required' => array(
 								'type'  => 'switch',
-								'label' => __( 'Mandatory Field', 'fw' ),
-								'desc'  => __( 'Make this field mandatory?', 'fw' ),
+								'label' => __( 'Mandatory Field', 'samik' ),
+								'desc'  => __( 'Make this field mandatory?', 'samik' ),
 								'value' => true,
 							)
 						),
@@ -104,8 +104,8 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
 						array(
 							'choices' => array(
                                 'type'  => 'addable-box',
-                                'label' => __('Choices', 'fw'),
-                                'help'  => __('Add choice', 'fw'),
+                                'label' => __('Choices', 'samik'),
+                                'help'  => __('Add choice', 'samik'),
                                 'template' => '<i class="{{= o["icon"]["icon-class"] }}"></i>', // box title
                                 'box-options' => array(
                                     array(
@@ -117,16 +117,16 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
                                                         'type'  => 'icon-v2',
                                                         'preview_size' => 'medium',
                                                         'modal_size' => 'medium',
-                                                        'label' => __('Icon', 'fw'),
-                                                        'desc'  => __('Choose icon', 'fw'),
+                                                        'label' => __('Icon', 'samik'),
+                                                        'desc'  => __('Choose icon', 'samik'),
                                                     ),
                                                 ),
                                                 array(
                                                     'checked' => array(
                                                         'type'  => 'checkbox',
                                                         'value' => false, // checked/unchecked
-                                                        'label' => __('Checked', 'fw'),
-                                                        'help'  => __('Checked', 'fw'),
+                                                        'label' => __('Checked', 'samik'),
+                                                        'help'  => __('Checked', 'samik'),
                                                     ),
                                                 ),
                                             ),
@@ -152,8 +152,8 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
 						array(
 							'randomize' => array(
 								'type'  => 'switch',
-								'label' => __( 'Randomize', 'fw' ),
-								'desc'  => __( 'Do you want choices to be displayed in random order?', 'fw' ),
+								'label' => __( 'Randomize', 'samik' ),
+								'desc'  => __( 'Do you want choices to be displayed in random order?', 'samik' ),
 								'value' => false,
 							)
 						),
@@ -163,21 +163,21 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
             array(
                 'layout' => array(
                     'type'    => 'select',
-                    'label'   => __( 'Field Layout', 'fw' ),
-                    'desc'    => __( 'Select choice display layout', 'fw' ),
+                    'label'   => __( 'Field Layout', 'samik' ),
+                    'desc'    => __( 'Select choice display layout', 'samik' ),
                     'choices' => array(
-                        'one-column'    => __( 'One column', 'fw' ),
-                        'two-columns'   => __( 'Two columns', 'fw' ),
-                        'three-columns' => __( 'Three columns', 'fw' ),
-                        'side-by-side'  => __( 'Side by side', 'fw' ),
+                        'one-column'    => __( 'One column', 'samik' ),
+                        'two-columns'   => __( 'Two columns', 'samik' ),
+                        'three-columns' => __( 'Three columns', 'samik' ),
+                        'side-by-side'  => __( 'Side by side', 'samik' ),
                     ),
                 )
             ),
 			array(
 				'info' => array(
 					'type'  => 'textarea',
-					'label' => __( 'Instructions for Users', 'fw' ),
-					'desc'  => __( 'The users will see these instructions in the tooltip near the field', 'fw' ),
+					'label' => __( 'Instructions for Users', 'samik' ),
+					'desc'  => __( 'The users will see these instructions in the tooltip near the field', 'samik' ),
 				)
 			),
 			$this->get_extra_options()
@@ -220,7 +220,7 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
 		}
 
 		if ( empty( $attributes['options']['choices'] ) ) {
-			$attributes['options']['choices'][] = __( 'Multiple Choice', 'fw' );
+			$attributes['options']['choices'][] = __( 'Multiple Choice', 'samik' );
 		}
 
 		return $attributes;
@@ -286,12 +286,12 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
 			'required'             => str_replace(
 				array( '{label}' ),
 				array( $options['label'] ),
-				__( 'The {label} field is required', 'fw' )
+				__( 'The {label} field is required', 'samik' )
 			),
 			'not_existing_choices' => str_replace(
 				array( '{label}' ),
 				array( $options['label'] ),
-				__( '{label}: Submitted data contains not existing choices', 'fw' )
+				__( '{label}: Submitted data contains not existing choices', 'samik' )
 			),
 		);
 

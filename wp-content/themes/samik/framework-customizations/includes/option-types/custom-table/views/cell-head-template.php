@@ -24,6 +24,6 @@
 <?php endforeach; ?>
 
 <a href="#" class="fw-table-add-column button button-large">
-	<span class="text"><?php echo __( 'Add Column', 'fw' ) ?></span>
+	<span class="text"><?php echo __( 'Add Column', 'samik' ) ?></span>
 	<span class="plus">+</span>
 </a>

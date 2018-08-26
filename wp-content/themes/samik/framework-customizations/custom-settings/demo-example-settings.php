@@ -31,8 +31,8 @@ final class _Demo_Unyson_Settings_Page
     public static function _action_admin_menu()
     {
         add_menu_page(
-            __( 'Demo Settings', 'fw' ),
-            __( 'Demo Settings', 'fw' ),
+            __( 'Demo Settings', 'samik' ),
+            __( 'Demo Settings', 'samik' ),
             'manage_options',
             'demo-settings',
             array(__CLASS__, '_print_settings_page')
@@ -43,7 +43,7 @@ final class _Demo_Unyson_Settings_Page
     {
         echo '<div class="wrap">';
 
-        echo '<h2>' . __('Demo Settings', 'fw') . '</h2><br/>';
+        echo '<h2>' . __('Demo Settings', 'samik') . '</h2><br/>';
 
         self::$settings_form->render();
 
@@ -71,7 +71,7 @@ final class _Demo_Unyson_Settings_Page
         $data['submit']['html'] = fw_html_tag('input', array(
             'type' => 'submit',
             'name' => 'demo_settings_save',
-            'value' => __('Save', 'fw'),
+            'value' => __('Save', 'samik'),
             'class' => 'button-primary button-large',
         ));
 
@@ -83,7 +83,7 @@ final class _Demo_Unyson_Settings_Page
     public static function _settings_form_validate($errors)
     {
         if (!current_user_can('manage_options')) {
-            $errors['_no_permission'] = __('You have no permissions to change settings options', 'fw');;
+            $errors['_no_permission'] = __('You have no permissions to change settings options', 'samik');;
         }
 
         return $errors;
@@ -99,7 +99,7 @@ final class _Demo_Unyson_Settings_Page
 
         FW_Flash_Messages::add(
             'demo_settings_form_save',
-            __('The options were successfully saved', 'fw'),
+            __('The options were successfully saved', 'samik'),
             'success'
         );
 

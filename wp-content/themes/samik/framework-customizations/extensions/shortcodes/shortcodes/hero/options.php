@@ -41,6 +41,22 @@ $options = array(
         ),
         'limit' => 2, // limit the number of boxes that can be added
     ),
+    'size' => array(
+        'type'  => 'select',
+        'value' => 'medium',
+        'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
+        'label' => __('Размер блока', '{domain}'),
+        'choices' => array(
+            'small' => __('Маленький', '{domain}'),
+            'medium' => __('Средний', '{domain}'),
+            'large' => __('Большой', '{domain}'),
+        ),
+        /**
+         * Allow save not existing choices
+         * Useful when you use the select to populate it dynamically from js
+         */
+        'no-validate' => false,
+    ),
     'bg_parallax' => array(
         'type'  => 'checkbox',
         'value' => true, // checked/unchecked

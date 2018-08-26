@@ -3,6 +3,12 @@
 }
 
 $options = array(
+    'title' => array(
+        'label' => __('Заголовок секции', '{domain}'),
+        'type' => 'text',
+        'value' => '',
+        'desc' => __('Заголовок секции', '{domain}'),
+    ),
 	'advantages' => array(
        'type' => 'addable-popup',
        'label' => __('Преимущества', '{domain}'),
@@ -26,12 +32,6 @@ $options = array(
                'type' => 'text',
                'value' => '',
                'desc' => __('Заголовок', '{domain}'),
-           ),
-           'colored_title' => array(
-               'label' => __('Заголовок с синим цветом', '{domain}'),
-               'type' => 'text',
-               'value' => '',
-               'desc' => __('Заголовок с синим цветом', '{domain}'),
            ),
            'text_content' => array(
                'label' => __('Описание', '{domain}'),

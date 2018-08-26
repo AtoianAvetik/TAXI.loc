@@ -18,13 +18,21 @@ function _action_theme_rates_fw_settings_form() {
 }
 add_action('fw_init', '_action_theme_rates_fw_settings_form');
 
-function _action_theme_order_form_fw_settings_form() {
+function _action_theme_cities_list_fw_settings_form() {
     if (class_exists('FW_Settings_Form')) {
-        require_once dirname(__FILE__) . '/custom-settings/class-fw-settings-form-order-form.php';
-        new FW_Settings_Form_Order_Form('order-form');
+        require_once dirname(__FILE__) . '/custom-settings/class-fw-settings-form-cities-list.php';
+        new FW_Settings_Form_Cities_List('cities-list');
     }
 }
-add_action('fw_init', '_action_theme_order_form_fw_settings_form');
+add_action('fw_init', '_action_theme_cities_list_fw_settings_form');
+
+function _action_theme_forms_fw_settings_form() {
+    if (class_exists('FW_Settings_Form')) {
+        require_once dirname(__FILE__) . '/custom-settings/class-fw-settings-form-forms.php';
+        new FW_Settings_Form_Forms('forms');
+    }
+}
+add_action('fw_init', '_action_theme_forms_fw_settings_form');
 
 
 

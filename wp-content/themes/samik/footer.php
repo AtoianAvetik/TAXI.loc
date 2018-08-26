@@ -45,6 +45,22 @@
             <p>© <?php echo date("Y"); ?></p>
         </div>
     </footer>
+    <div class="backstage" data-module="backstage">
+        <div class="modal-container" data-module="modal">
+            <div class="modal -top" data-js="modal" id="modal-callback">
+                <button class="modal_close-btn" data-js="closeBtn"></button>
+                <div class="modal_body">
+                    <section class="promo" style="background-image: url(undefined)">
+                        <div class="promo-container container -narrow" style="color:undefined;"><span class="promo_title">Light promo block</span>
+                            <div class="promo_content text-content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p></div>
+                            <div class="promo_btn-block"><a class="promo_btn" href="#">Read more</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="feedback" data-module="feedback">
         <button class="feedback-launch-button btn-pure feedback-hide" data-js="expandBtn"><i class="icon-email"></i><span>Свяжитесь с Нами!</span></button>
         <div class="feedback-container feedback-hide" data-js="container">
@@ -71,6 +87,12 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="callback" data-modal="modal-callback">
+        <div class="callback-bg"></div>
+        <div class="callback-content">
+            <div class="callback-icon"><i class="thin-icon-phone-call"></i></div>
         </div>
     </div>
 

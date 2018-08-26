@@ -116,12 +116,13 @@ $select-multiple: (
         background: map-get($select, 'arrow-color');
         top: 50%;
         margin-top: -1px;
+        border-radius: 3px;
         transition: transform .3s linear;
     }
 
     &:after{
         transform: rotate(40deg);
-        right: 9px;
+        right: 8px;
     }
 
     &:before{

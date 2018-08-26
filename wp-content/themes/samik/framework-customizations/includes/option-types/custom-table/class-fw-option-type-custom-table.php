@@ -42,7 +42,7 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
             'fw-option-' . $this->get_type(),
             'localizeTableBuilder',
             array(
-                'msgEdit' => __( 'Edit', 'fw' ),
+                'msgEdit' => __( 'Edit', 'samik' ),
                 'maxCols' => apply_filters( 'fw_ext_shortcodes_custom_table_max_columns', 6 )
             )
         );
@@ -203,11 +203,11 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
             'header_options'  => array(
                 'table_purpose' => array(
                     'type'    => 'select',
-                    'label'   => __( 'Table Styling', 'fw' ),
-                    'desc'    => __( 'Choose the table styling options', 'fw' ),
+                    'label'   => __( 'Table Styling', 'samik' ),
+                    'desc'    => __( 'Choose the table styling options', 'samik' ),
                     'choices' => array(
-                        'pricing' => __( 'Use the table as a pricing table', 'fw' ),
-                        'tabular' => __( 'Use the table to display tabular data', 'fw' ),
+                        'pricing' => __( 'Use the table as a pricing table', 'samik' ),
+                        'tabular' => __( 'Use the table to display tabular data', 'samik' ),
                     ),
                     'value'   => 'pricing',
                     'attr'    => array(
@@ -229,11 +229,11 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
                     'label'   => false,
                     'desc'    => false,
                     'choices' => array(
-                        'default-row' => __( 'Default row', 'fw' ),
-                        'heading-row' => __( 'Heading row', 'fw' ),
-                        'pricing-row' => __( 'Pricing row', 'fw' ),
-                        'button-row'  => __( 'Button row', 'fw' ),
-                        'switch-row'  => __( 'Row switch', 'fw' )
+                        'default-row' => __( 'Default row', 'samik' ),
+                        'heading-row' => __( 'Heading row', 'samik' ),
+                        'pricing-row' => __( 'Pricing row', 'samik' ),
+                        'button-row'  => __( 'Button row', 'samik' ),
+                        'switch-row'  => __( 'Row switch', 'samik' )
                     ),
                 )
             ),
@@ -243,10 +243,10 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
                     'label'   => false,
                     'desc'    => false,
                     'choices' => array(
-                        'default-col'   => __( 'Default column', 'fw' ),
-                        'desc-col'      => __( 'Description column', 'fw' ),
-                        'highlight-col' => __( 'Highlight column', 'fw' ),
-                        'center-col'    => __( 'Center text column', 'fw' )
+                        'default-col'   => __( 'Default column', 'samik' ),
+                        'desc-col'      => __( 'Description column', 'samik' ),
+                        'highlight-col' => __( 'Highlight column', 'samik' ),
+                        'center-col'    => __( 'Center text column', 'samik' )
                     ),
                 )
             ),
@@ -283,7 +283,7 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
                         'desc'         => false,
                         'value'        => '',
                         'attr'         => array(
-                            'placeholder' => __( 'per month', 'fw' )
+                            'placeholder' => __( 'per month', 'samik' )
                         ),
                         'wrapper_attr' => array(
                             'class' => 'fw-col-sm-6'
@@ -294,8 +294,8 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
                     'button' => ( $button = $this->get_button_shortcode() )
                         ? array(
                             'type'          => 'popup',
-                            'popup-title'   => __( 'Button', 'fw' ),
-                            'button'        => __( 'Add', 'fw' ),
+                            'popup-title'   => __( 'Button', 'samik' ),
+                            'button'        => __( 'Add', 'samik' ),
                             'popup-options' => $button->get_options()
                         )
                         : array(
@@ -309,11 +309,11 @@ class FW_Option_Type_Custom_Table extends FW_Option_Type
                         'type'         => 'switch',
                         'right-choice' => array(
                             'value' => 'yes',
-                            'label' => __( 'Yes', 'fw' )
+                            'label' => __( 'Yes', 'samik' )
                         ),
                         'left-choice'  => array(
                             'value' => 'no',
-                            'label' => __( 'No', 'fw' )
+                            'label' => __( 'No', 'samik' )
                         ),
                         'value'        => 'no',
                         'desc'         => false,

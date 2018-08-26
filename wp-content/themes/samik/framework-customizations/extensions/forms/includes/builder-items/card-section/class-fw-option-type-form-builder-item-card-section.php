@@ -18,8 +18,8 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
 		return array(
 			array(
 				'html' =>
-					'<div class="item-type-icon-title" data-hover-tip="' . __( 'Add an Section', 'fw' ) . '">' .
-					'<div class="item-type-title">' . __( 'Section', 'fw' ) . '</div>' .
+					'<div class="item-type-icon-title" data-hover-tip="' . __( 'Add an Section', 'samik' ) . '">' .
+					'<div class="item-type-title">' . __( 'Section', 'samik' ) . '</div>' .
 					'</div>'
 			)
 		);
@@ -48,11 +48,11 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
             'fw_form_builder_item_type_card_section',
             array(
                 'l10n'     => array(
-                    'item_title'      => __( 'Section', 'fw' ),
-                    'title'           => __( 'Title', 'fw' ),
-                    'edit'            => __( 'Edit', 'fw' ),
-                    'delete'          => __( 'Delete', 'fw' ),
-                    'edit_title'      => __( 'Edit Label', 'fw' ),
+                    'item_title'      => __( 'Section', 'samik' ),
+                    'title'           => __( 'Title', 'samik' ),
+                    'edit'            => __( 'Edit', 'samik' ),
+                    'delete'          => __( 'Delete', 'samik' ),
+                    'edit_title'      => __( 'Edit Label', 'samik' ),
                 ),
                 'options'  => $this->get_options(),
                 'defaults' => array(
@@ -75,9 +75,9 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
 						array(
 							'title' => array(
 								'type'  => 'text',
-								'label' => __( 'Title', 'fw' ),
-								'desc'  => __( 'Enter section title (it will be displayed on the web site)', 'fw' ),
-								'value' => __( 'Section', 'fw' ),
+								'label' => __( 'Title', 'samik' ),
+								'desc'  => __( 'Enter section title (it will be displayed on the web site)', 'samik' ),
+								'value' => __( 'Section', 'samik' ),
 							)
 						)
 					)
@@ -91,22 +91,22 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
 							'accordion' => array(
                                 'type'  => 'checkbox',
                                 'value' => false, // checked/unchecked
-                                'label' => __('Accordion', 'fw'),
-                                'help'  => __('Accordion', 'fw'),
+                                'label' => __('Accordion', 'samik'),
+                                'help'  => __('Accordion', 'samik'),
                             )
 						),
                         array(
                             'header-border-color' => array(
                                 'type'  => 'select',
                                 'value' => '-default',
-                                'label' => __('Title border color', 'fw'),
-                                'help'  => __('Title border color', 'fw'),
+                                'label' => __('Title border color', 'samik'),
+                                'help'  => __('Title border color', 'samik'),
                                 'choices' => array(
                                     '-primary' => array(
-                                        'text' => __('Main', 'fw'),
+                                        'text' => __('Main', 'samik'),
                                     ),
                                     '-default' => array(
-                                        'text' => __('Default', 'fw'),
+                                        'text' => __('Default', 'samik'),
                                     ),
                                 ),
                                 /**
@@ -152,7 +152,7 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
         $method->setAccessible(true);
         $item_types = $method->invoke(new FW_Option_Type_Form_Builder);
 
-        $row_class  = ($row_class  = fw_ext('builder')->get_config('grid.row.class')) ? 'card_row' : 'fw-row';
+        $row_class  = ($row_class  = fw_ext('builder')->get_config('grid.row.class')) ? 'form-card_row' : 'fw-row';
         $html       = '<div class="'. esc_attr($row_class) .'"><div class="row">';
         $width      = 0;
         $counter    = 0;

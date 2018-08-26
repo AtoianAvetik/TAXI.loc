@@ -22,9 +22,9 @@ class FW_Option_Type_Form_Builder_Item_Date_Picker extends FW_Option_Type_Form_B
         return array(
             array(
                 'html' =>
-                    '<div class="item-type-icon-title" data-hover-tip="' . __( 'Add an Date picker field', 'fw' ) . '">'.
+                    '<div class="item-type-icon-title" data-hover-tip="' . __( 'Add an Date picker field', 'samik' ) . '">'.
                     '    <div class="item-type-icon"><span class="dashicons dashicons-calendar-alt"></span></div>'.
-                    '    <div class="item-type-title">'. __('Date', 'fw') .'</div>'.
+                    '    <div class="item-type-title">'. __('Date', 'samik') .'</div>'.
                     '</div>',
             )
         );
@@ -55,12 +55,12 @@ class FW_Option_Type_Form_Builder_Item_Date_Picker extends FW_Option_Type_Form_B
             'fw_form_builder_item_type_date_picker',
             array(
                 'l10n' => array(
-                    'item_title'        => __('Date', 'fw'),
-                    'label'             => __('Label', 'fw'),
-                    'toggle_required'   => __('Toggle mandatory field', 'fw'),
-                    'edit'              => __('Edit', 'fw'),
-                    'delete'            => __('Delete', 'fw'),
-                    'edit_label'        => __('Edit Label', 'fw'),
+                    'item_title'        => __('Date', 'samik'),
+                    'label'             => __('Label', 'samik'),
+                    'toggle_required'   => __('Toggle mandatory field', 'samik'),
+                    'edit'              => __('Edit', 'samik'),
+                    'delete'            => __('Delete', 'samik'),
+                    'edit_label'        => __('Edit Label', 'samik'),
                 ),
                 'options'  => $this->get_options(),
                 'defaults' => array(
@@ -130,7 +130,7 @@ class FW_Option_Type_Form_Builder_Item_Date_Picker extends FW_Option_Type_Form_B
             'required' => str_replace(
                 array('{label}'),
                 array($options['label']),
-                __('This {label} field is required', 'fw')
+                __('This {label} field is required', 'samik')
             )
         );
 
@@ -149,16 +149,16 @@ class FW_Option_Type_Form_Builder_Item_Date_Picker extends FW_Option_Type_Form_B
                         array(
                             'label' => array(
                                 'type'  => 'text',
-                                'label' => __('Label', 'fw'),
-                                'desc'  => __('The label of the field that will be displayed to the users', 'fw'),
-                                'value' => __('Date', 'fw'),
+                                'label' => __('Label', 'samik'),
+                                'desc'  => __('The label of the field that will be displayed to the users', 'samik'),
+                                'value' => __('Date', 'samik'),
                             )
                         ),
                         array(
                             'required' => array(
                                 'type'  => 'switch',
-                                'label' => __('Mandatory Field?', 'fw'),
-                                'desc'  => __('If this field is mandatory for the user', 'fw'),
+                                'label' => __('Mandatory Field?', 'samik'),
+                                'desc'  => __('If this field is mandatory for the user', 'samik'),
                                 'value' => true,
                             )
                         ),
@@ -172,8 +172,8 @@ class FW_Option_Type_Form_Builder_Item_Date_Picker extends FW_Option_Type_Form_B
                         array(
                             'placeholder' => array(
                                 'type'  => 'text',
-                                'label' => __( 'Placeholder', 'fw' ),
-                                'desc'  => __( 'This text will be used as field placeholder', 'fw' ),
+                                'label' => __( 'Placeholder', 'samik' ),
+                                'desc'  => __( 'This text will be used as field placeholder', 'samik' ),
                             )
                         )
                     )

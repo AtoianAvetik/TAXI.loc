@@ -169,7 +169,7 @@ unset(
 		<div class="fw-table-row fw-table-cols-delete">
 
 			<div class="fw-table-cell fw-table-cell-options">
-				<a href="#" class="fw-table-add-row button button-large"><?php echo __( 'Add Row', 'fw' ) ?></a>
+				<a href="#" class="fw-table-add-row button button-large"><?php echo __( 'Add Row', 'samik' ) ?></a>
 			</div>
 
 			<?php for ( $j = 0; $j <= $last_col; $j ++ )  : ?>

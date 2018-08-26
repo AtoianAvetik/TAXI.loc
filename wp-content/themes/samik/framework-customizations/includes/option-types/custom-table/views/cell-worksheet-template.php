@@ -34,9 +34,9 @@
 			?>
 
 			<?php if ( $row_name == 'button-row' ): ?>
-				<?php $options['button'] = __( 'Edit', 'fw' );
+				<?php $options['button'] = __( 'Edit', 'samik' );
 				if ( empty( $cell_value['button'] ) ) {
-					$options['button'] = __( 'Add', 'fw' );
+					$options['button'] = __( 'Add', 'samik' );
 				} ?>
 			<?php endif; ?>
 

@@ -18,8 +18,8 @@ class FW_Option_Type_Form_Builder_Item_Additional_Block extends FW_Option_Type_F
 		return array(
 			array(
 				'html' =>
-					'<div class="item-type-icon-title" data-hover-tip="' . __( 'Add an Additional Block', 'fw' ) . '">' .
-					'<div class="item-type-title">' . __( 'Additional Block', 'fw' ) . '</div>' .
+					'<div class="item-type-icon-title" data-hover-tip="' . __( 'Add an Additional Block', 'samik' ) . '">' .
+					'<div class="item-type-title">' . __( 'Additional Block', 'samik' ) . '</div>' .
 					'</div>'
 			)
 		);
@@ -48,11 +48,11 @@ class FW_Option_Type_Form_Builder_Item_Additional_Block extends FW_Option_Type_F
             'fw_form_builder_item_type_additional_block',
             array(
                 'l10n'     => array(
-                    'item_title'      => __( 'Additional block', 'fw' ),
-                    'title'           => __( 'Title', 'fw' ),
-                    'edit'            => __( 'Edit', 'fw' ),
-                    'delete'          => __( 'Delete', 'fw' ),
-                    'edit_title'      => __( 'Edit Label', 'fw' ),
+                    'item_title'      => __( 'Additional block', 'samik' ),
+                    'title'           => __( 'Title', 'samik' ),
+                    'edit'            => __( 'Edit', 'samik' ),
+                    'delete'          => __( 'Delete', 'samik' ),
+                    'edit_title'      => __( 'Edit Label', 'samik' ),
                 ),
                 'options'  => $this->get_options(),
                 'defaults' => array(
@@ -75,9 +75,9 @@ class FW_Option_Type_Form_Builder_Item_Additional_Block extends FW_Option_Type_F
 						array(
 							'title' => array(
 								'type'  => 'text',
-								'label' => __( 'Title', 'fw' ),
-								'desc'  => __( 'Enter additional block title (it will be displayed on the web site)', 'fw' ),
-								'value' => __( 'Additional block', 'fw' ),
+								'label' => __( 'Title', 'samik' ),
+								'desc'  => __( 'Enter additional block title (it will be displayed on the web site)', 'samik' ),
+								'value' => __( 'Additional block', 'samik' ),
 							)
 						)
 					)
@@ -90,16 +90,16 @@ class FW_Option_Type_Form_Builder_Item_Additional_Block extends FW_Option_Type_F
                         array(
                             'label' => array(
                                 'type'  => 'text',
-                                'label' => __( 'Title', 'fw' ),
-                                'desc'  => __( 'Enter checkbox label (it will be displayed on the web site)', 'fw' ),
-                                'value' => __( 'Label', 'fw' ),
+                                'label' => __( 'Title', 'samik' ),
+                                'desc'  => __( 'Enter checkbox label (it will be displayed on the web site)', 'samik' ),
+                                'value' => __( 'Label', 'samik' ),
                             )
                         ),
                         array(
                             'checked' => array(
                                 'type'  => 'checkbox',
                                 'value' => false,
-                                'label' => __('Collapsed', 'fw'),
+                                'label' => __('Collapsed', 'samik'),
                             )
                         )
                     )

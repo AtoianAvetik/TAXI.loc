@@ -13,7 +13,7 @@
 <?php if ($form->get_is_side_tabs()): ?>
 	<div class="fw-settings-form-header fw-row">
 		<div class="fw-col-xs-12 fw-col-sm-6">
-			<h2><?php echo $form->get_string('title'); ?></h2>
+			<h2><?php echo __($form->get_string('title'), 'samik') ?></h2>
 		</div>
 		<div class="fw-col-xs-12 fw-col-sm-6">
 			<div class="form-header-buttons">

@@ -19,7 +19,7 @@ class FW_Settings_Form_Rates extends FW_Settings_Form {
 
         $this->set_is_side_tabs(true);
         $this->set_is_ajax_submit(true);
-        $this->set_string( 'title', __('Rates', 'fw') );
+        $this->set_string( 'title', 'Rates' );
     }
 
     /**
@@ -31,8 +31,8 @@ class FW_Settings_Form_Rates extends FW_Settings_Form {
         }
 
         add_menu_page(
-            'Rates',
-            'Rates',
+            __('Rates', 'samik'),
+            __('Rates', 'samik'),
             'manage_options',
             /** used in @see _action_admin_enqueue_scripts() */
             'rates',
