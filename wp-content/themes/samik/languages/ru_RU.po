@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unyson\n"
 "POT-Creation-Date: 2016-02-02 15:48+0300\n"
-"PO-Revision-Date: 2018-09-02 18:49+0300\n"
+"PO-Revision-Date: 2018-09-02 18:59+0300\n"
 "Last-Translator: moldcraft <hello@themefuse.com>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/themefuse/unyson/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -6280,3 +6280,31 @@ msgstr "Главный слайдер"
 #: ../framework-customizations/extensions/shortcodes/shortcodes/advantages/config.php
 msgid "Section with advantages"
 msgstr "Секция с преимуществами"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/cities-select/class-fw-option-type-form-builder-item-cities-select.php
+msgid "Add an cities select"
+msgstr "Добавить выпадающий список городов"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/additional-block/class-fw-option-type-form-builder-item-additional-block.php
+msgid "Add an Additional Block"
+msgstr "Добавить дополнительный раскрывающийся блок"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/card-section/class-fw-option-type-form-builder-item-card-section.php
+msgid "Add an Section"
+msgstr "Добавить секцию"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/date-picker/class-fw-option-type-form-builder-item-date-picker.php
+msgid "Add an Date picker field"
+msgstr "Добавить поле выбора даты"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/iconed-checkboxes/class-fw-option-type-form-builder-item-iconed-checkboxes.php
+msgid "Add a Multiple Choices field With Icons"
+msgstr "Добавить поле нескольких вариантов с иконками"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/iconed-radio/class-fw-option-type-form-builder-item-iconed-radio.php
+msgid "Add a Single Choice field with icon"
+msgstr "Добавить поле единственного варианта с иконкой"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/time-picker/class-fw-option-type-form-builder-item-time-picker.php
+msgid "Add an Time picker field"
+msgstr "Добавить поле выбора времени"

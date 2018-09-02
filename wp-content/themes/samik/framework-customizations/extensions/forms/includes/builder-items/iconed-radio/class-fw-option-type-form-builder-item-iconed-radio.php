@@ -20,7 +20,7 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Radio extends FW_Option_Type_Form_
 			array(
 				'html' =>
 					'<div class="item-type-icon-title" data-hover-tip="' . __( 'Add a Single Choice field with icon',
-						'fw' ) . '">' .
+						'samik' ) . '">' .
 					'<div class="item-type-icon">' .
                     '<img src="' . esc_attr(  fw_get_template_customizations_directory_uri('/extensions/forms/includes/builder-items/iconed-radio/static/images/icon.png' ) ) . '" />' .
                     '</div>' .
