@@ -34,6 +34,14 @@ function _action_theme_forms_fw_settings_form() {
 }
 add_action('fw_init', '_action_theme_forms_fw_settings_form');
 
+function _action_theme_autopark_fw_settings_form() {
+    if (class_exists('FW_Settings_Form')) {
+        require_once dirname(__FILE__) . '/custom-settings/class-fw-settings-form-autopark.php';
+        new FW_Settings_Form_Autopark('autopark');
+    }
+}
+add_action('fw_init', '_action_theme_autopark_fw_settings_form');
+
 
 
 /** @internal */

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unyson\n"
 "POT-Creation-Date: 2016-02-02 15:48+0300\n"
-"PO-Revision-Date: 2018-08-26 21:18+0300\n"
+"PO-Revision-Date: 2018-09-02 02:25+0300\n"
 "Last-Translator: moldcraft <hello@themefuse.com>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/themefuse/unyson/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -6182,3 +6182,11 @@ msgstr "Единственный вариант вариантов с иконк
 #: ../framework-customizations/extensions/forms/includes/builder-items/additional-block/class-fw-option-type-form-builder-item-additional-block.php
 msgid "Additional Block"
 msgstr "Дополнительный раскрывающийся блок"
+
+#: ../framework-customizations/custom-settings/class-fw-settings-form-autopark.php
+msgid "Autopark"
+msgstr "Автопарк"
+
+#: ../framework-customizations/custom-settings/class-fw-settings-form-autopark.php
+msgid "Car"
+msgstr "Автомобиль"

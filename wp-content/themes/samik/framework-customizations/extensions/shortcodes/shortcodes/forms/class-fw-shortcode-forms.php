@@ -1,6 +1,6 @@
 <?php if (!defined('FW')) die('Forbidden');
 
-class FW_Shortcode_Order_Form extends FW_Shortcode
+class FW_Shortcode_Forms extends FW_Shortcode
 {
 	public static function my_thecat() {
 
@@ -16,4 +16,15 @@ class FW_Shortcode_Order_Form extends FW_Shortcode
 
 		return $result;
 	}
+
+    public function get_forms_from_db()
+    {
+        $forms_data = get_option('forms_fw_settings_form', array());
+
+        $forms_array = array_map(function($form) {
+            return $form['title'];
+        }, $forms_data);
+
+        return $forms_array;
+    }
 }

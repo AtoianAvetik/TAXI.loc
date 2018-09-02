@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+## Unyson addable options type templates styling
+--------------------------------------------------------------*/
+.add-popup-template {
+    display: flex;
+    align-items: center;
+}
+.add-popup-template_image {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 80px;
+}
+.add-popup-template_image img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+}
+.add-popup-template_title {
+    font-weight: 600;
+    margin-left: 20px;
+    font-size: 22px;
+    padding: 7px 0;
+}
+
+/*--------------------------------------------------------------
+## Unyson addable popup full styles
+--------------------------------------------------------------*/
+.fw-backend-option-input.width-type-full .fw-option-type-addable-popup .items-wrapper {
+    border: none;
+}
+.fw-backend-option-input.width-type-full .fw-option-type-addable-popup .item + .item {
+    border-top: none;
+}
+.fw-backend-option-input.width-type-full .fw-option-type-addable-popup .item {
+    margin-bottom: 15px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.fw-backend-option-input.width-type-full .fw-option-type-addable-popup .item .content {
+    padding: 0 30px;
+}
+
