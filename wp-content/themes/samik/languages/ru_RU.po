@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unyson\n"
 "POT-Creation-Date: 2016-02-02 15:48+0300\n"
-"PO-Revision-Date: 2018-09-02 19:24+0300\n"
+"PO-Revision-Date: 2018-09-02 20:16+0300\n"
 "Last-Translator: moldcraft <hello@themefuse.com>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/themefuse/unyson/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -6347,3 +6347,15 @@ msgstr "Текст подсказки"
 #: ../framework-customizations/extensions/forms/includes/builder-items/iconed-checkboxes/class-fw-option-type-form-builder-item-iconed-checkboxes.php
 msgid "Change Icon"
 msgstr "Изменить иконку"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/cards/options.php
+msgid "Cards"
+msgstr "Карты"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/cards/options.php
+msgid "Blocks with image and text"
+msgstr "Блоки с картинкой и текстом"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/cards/config.php
+msgid "Section blocks with images and texts"
+msgstr "Секция блоков с картинкой и текстом"

@@ -71,7 +71,7 @@ class FW_Option_Type_Icon_v2 extends FW_Option_Type {
 			'fw-option-type-'. $this->get_type() .'-backend-previews',
 			'fw_icon_v2_data',
 			array(
-				'edit_icon_label' => __('Change Icon', 'fw'),
+				'edit_icon_label' => __('Change Icon', 'samik'),
 				'add_icon_label' => __('Add Icon', 'fw')
 			)
 		);
