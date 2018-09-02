@@ -6252,3 +6252,35 @@ msgstr "Преимущества"
 #: ../framework-customizations/extensions/shortcodes/shortcodes/advantages/options.php
 msgid "Choose icon"
 msgstr "Выберите иконку"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/advantages/options.php
+msgid "Choose icon"
+msgstr "Выберите иконку"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero/config.php
+msgid "Site elements"
+msgstr "Элементы сайта"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero/config.php
+msgid "Hero"
+msgstr "Главная картинка"
+
+#: ../framework-customizations/theme/options/cities-list.php
+msgid "Cities"
+msgstr "Города"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/promo-1/config.php
+msgid "Promo block with header and phone"
+msgstr "Промо блок с заголовком и телефоном"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/promo-1/config.php
+msgid "Promo block"
+msgstr "Промо блок"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero-slider/config.php
+msgid "Hero slider"
+msgstr "Главный слайдер"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/advantages/config.php
+msgid "Section with advantages"
+msgstr "Секция с преимуществами"

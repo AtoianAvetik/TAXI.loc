@@ -2,9 +2,9 @@
 
 $cfg = array(
     'page_builder' => array(
-        'title'         => __('Главный слайдер', '{domain}'),
-        'description'   => __('Главный слайдер', '{domain}'),
-        'tab'           => __('Элементы сайта', '{domain}'),
+        'title'         => __('Hero slider', 'samik'),
+        'description'   => __('Hero slider', 'samik'),
+        'tab'           => __('Site elements', 'samik'),
         'popup_size'    => 'small',
     )
 );

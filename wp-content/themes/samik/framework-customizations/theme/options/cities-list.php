@@ -6,9 +6,9 @@ $options = array(
     'choices' => array(
         'type'  => 'addable-option',
         'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-        'label' => __('Города', '{domain}'),
+        'label' => __('Cities', 'samik'),
         'option' => array( 'type' => 'text' ),
-        'add-button-text' => __('Add', '{domain}'),
+        'add-button-text' => __('Add', 'samik'),
         'sortable' => true,
     )
 );

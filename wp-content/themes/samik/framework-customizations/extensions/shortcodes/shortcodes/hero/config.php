@@ -2,9 +2,9 @@
 
 $cfg = array(
     'page_builder' => array(
-        'title'         => __('Hero', '{domain}'),
-        'description'   => __('Hero', '{domain}'),
-        'tab'           => __('Элементы сайта', '{domain}'),
+        'title'         => __('Hero', 'samik'),
+        'description'   => __('Hero', 'samik'),
+        'tab'           => __('Site elements', 'samik'),
         'popup_size'    => 'small',
     )
 );

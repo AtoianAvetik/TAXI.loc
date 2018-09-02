@@ -2,9 +2,9 @@
 
 $cfg = array(
     'page_builder' => array(
-        'title'         => __('Промо блок', '{domain}'),
-        'description'   => __('Промо блок с заголовком и телефоном', '{domain}'),
-        'tab'           => __('Элементы сайта', '{domain}'),
+        'title'         => __('Promo block', 'samik'),
+        'description'   => __('Promo block with header and phone', 'samik'),
+        'tab'           => __('Site elements', 'samik'),
         'popup_size'    => 'small',
     )
 );

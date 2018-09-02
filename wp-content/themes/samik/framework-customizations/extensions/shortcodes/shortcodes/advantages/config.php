@@ -2,9 +2,9 @@
 
 $cfg = array(
     'page_builder' => array(
-        'title'         => __('Преимущества', '{domain}'),
-        'description'   => __('Секция с преимуществами', '{domain}'),
-        'tab'           => __('Элементы сайта', '{domain}'),
+        'title'         => __('Advantages', 'samik'),
+        'description'   => __('Section with advantages', 'samik'),
+        'tab'           => __('Site elements', 'samik'),
         'popup_size'    => 'small',
     )
 );

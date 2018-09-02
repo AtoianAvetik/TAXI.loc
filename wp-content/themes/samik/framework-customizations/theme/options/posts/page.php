@@ -5,11 +5,11 @@ if (is_admin()) {
 //        $options = array(
 //            'main' => array(
 //                'type' => 'box',
-//                'title' => __('Home Options', '{domain}'),
+//                'title' => __('Home Options', 'samik'),
 //                'options' => array(
 //                    'text' => array(
 //                        'type' => 'text',
-//                        'label' => __('Text', '{domain}')
+//                        'label' => __('Text', 'samik')
 //                    ),
 //                ),
 //            ),
