@@ -21,14 +21,30 @@ $options = array(
     ),
     'tab2' => array(
         'type' => 'tab',
-        'title' => 'Form 2',
+        'title' => 'Форма обратной связи',
         'options' => array (
             'form-2' => array(
                 'type'  => 'multi',
                 'inner-options' => array(
                     'title' => array(
                         'type'  => 'hidden',
-                        'value' => 'Form 2'
+                        'value' => 'Форма обратной связи'
+                    ),
+                    fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->get_options()
+                )
+            ),
+        )
+    ),
+    'tab3' => array(
+        'type' => 'tab',
+        'title' => 'Форма заказа звонка',
+        'options' => array (
+            'form-3' => array(
+                'type'  => 'multi',
+                'inner-options' => array(
+                    'title' => array(
+                        'type'  => 'hidden',
+                        'value' => 'Форма заказа звонка'
                     ),
                     fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->get_options()
                 )

@@ -51,6 +51,27 @@
         max-width: 400px;
     }
 
+    &.-gallery {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 2px;
+
+        .modal_close-btn {
+            width: 20px;
+            height: 20px;
+            right: -22px;
+            top: -22px;
+
+            &:before, &:after {
+                background: #fff;
+            }
+        }
+
+        .gallery {
+            margin-bottom: 0;
+        }
+    }
+
     .container{
         padding: 0;
     }

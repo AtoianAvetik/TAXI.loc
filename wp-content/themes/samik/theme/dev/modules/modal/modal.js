@@ -50,6 +50,7 @@ module('modal', function() {
         $body.addClass('-backdrop');
         $activeModal.fadeIn(10, function() {
             $activeModal.addClass('-active');
+            $activeModal.trigger('modal.opened')
         });
         isOpened = true;
     }
@@ -62,6 +63,7 @@ module('modal', function() {
             $activeModal.hide();
             isOpened = false;
             setScrollTop();
+            $activeModal.trigger('modal.closed')
         }
     }
 

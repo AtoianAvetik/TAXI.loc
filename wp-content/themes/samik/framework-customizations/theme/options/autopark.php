@@ -17,20 +17,23 @@ $options = array(
                     'cars' => array(
                         'type' => 'addable-popup-full',
                         'label' => false,
-                        'template' => '<div class="add-popup-template"><div class="add-popup-template_image"><img src="{{= image[0]["url"] }}"></img></div><div class="add-popup-template_title">{{= name }}</div></div>',
+                        'template' => '<div class="add-popup-template"><div class="add-popup-template_image"><img src="{{= gallery[0]["url"] }}"></img></div><div class="add-popup-template_title">{{= name }}</div></div>',
                         'size' => 'small', // small, medium, large
                         'limit' => 0, // limit the number of popup`s that can be added
                         'popup-title' => ' ',
                         'add-button-text' => __('Add', 'samik'),
                         'sortable' => true,
                         'popup-options' => array(
+                            'id'       => array(
+                                'type'  => 'unique',
+                            ),
                             'name' => array(
                                 'label' => __('Name', 'samik'),
                                 'type' => 'text'
                             ),
-                            'image' => array(
+                            'gallery' => array(
                                 'type' => 'multi-upload',
-                                'label' => __('Image', '{domain}'),
+                                'label' => __('Gallery', 'samik'),
                                 'images_only' => true,
                             ),
                         ),
@@ -53,20 +56,23 @@ $options = array(
                     'cars' => array(
                         'type' => 'addable-popup-full',
                         'label' => false,
-                        'template' => '<div class="add-popup-template"><div class="add-popup-template_image"><img src="{{= image[0]["url"] }}"></img></div><div class="add-popup-template_title">{{= name }}</div></div>',
+                        'template' => '<div class="add-popup-template"><div class="add-popup-template_image"><img src="{{= gallery[0]["url"] }}"></img></div><div class="add-popup-template_title">{{= name }}</div></div>',
                         'size' => 'small', // small, medium, large
                         'limit' => 0, // limit the number of popup`s that can be added
                         'popup-title' => ' ',
                         'add-button-text' => __('Add', 'samik'),
                         'sortable' => true,
                         'popup-options' => array(
+                            'id'       => array(
+                                'type'  => 'unique',
+                            ),
                             'name' => array(
                                 'label' => __('Name', 'samik'),
                                 'type' => 'text'
                             ),
-                            'image' => array(
+                            'gallery' => array(
                                 'type' => 'multi-upload',
-                                'label' => __('Image', '{domain}'),
+                                'label' => __('Gallery', 'samik'),
                                 'images_only' => true,
                             ),
                         ),
@@ -89,20 +95,23 @@ $options = array(
                     'cars' => array(
                         'type' => 'addable-popup-full',
                         'label' => false,
-                        'template' => '<div class="add-popup-template"><div class="add-popup-template_image"><img src="{{= image[0]["url"] }}"></img></div><div class="add-popup-template_title">{{= name }}</div></div>',
+                        'template' => '<div class="add-popup-template"><div class="add-popup-template_image"><img src="{{= gallery[0]["url"] }}"></img></div><div class="add-popup-template_title">{{= name }}</div></div>',
                         'size' => 'small', // small, medium, large
                         'limit' => 0, // limit the number of popup`s that can be added
                         'popup-title' => ' ',
                         'add-button-text' => __('Add', 'samik'),
                         'sortable' => true,
                         'popup-options' => array(
+                            'id'       => array(
+                                'type'  => 'unique',
+                            ),
                             'name' => array(
                                 'label' => __('Name', 'samik'),
                                 'type' => 'text'
                             ),
-                            'image' => array(
+                            'gallery' => array(
                                 'type' => 'multi-upload',
-                                'label' => __('Image', '{domain}'),
+                                'label' => __('Gallery', 'samik'),
                                 'images_only' => true,
                             ),
                         ),

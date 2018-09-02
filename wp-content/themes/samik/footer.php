@@ -47,6 +47,37 @@
     </footer>
     <div class="backstage" data-module="backstage">
         <div class="modal-container" data-module="modal">
+            <?php
+                if ( is_page('autopark-page') ) {
+                    $data = get_option('autopark_fw_settings_form');
+
+                foreach ($data as $cat_key => $cat) :
+                foreach ($cat['cars'] as $car) : ?>
+                    <div class="modal -top -gallery" data-js="modal" id="modal-<?php echo $car['id'] ?>">
+                        <button class="modal_close-btn" data-js="closeBtn"></button>
+                        <div class="modal_body">
+                            <div class="gallery" data-module="gallery">
+                                <div class="gallery_inner">
+                                    <div class="swiper-container gallery_top" data-js="top">
+                                        <div class="swiper-wrapper">
+                                            <?php foreach ($car['gallery'] as $image) : ?>
+                                                <div class="swiper-slide" style="background-image: url(<?php echo $image['url'] ?>)"></div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-container gallery_thumbs" data-js="thumbs">
+                                        <div class="swiper-wrapper">
+                                            <?php foreach ($car['gallery'] as $image) : ?>
+                                                <div class="swiper-slide" style="background-image: url(<?php echo $image['url'] ?>)"></div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach;endforeach;
+            } ?>
             <div class="modal -top" data-js="modal" id="modal-callback">
                 <button class="modal_close-btn" data-js="closeBtn"></button>
                 <div class="modal_body">

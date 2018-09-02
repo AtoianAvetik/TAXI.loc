@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unyson\n"
 "POT-Creation-Date: 2016-02-02 15:48+0300\n"
-"PO-Revision-Date: 2018-09-02 02:25+0300\n"
+"PO-Revision-Date: 2018-09-02 18:37+0300\n"
 "Last-Translator: moldcraft <hello@themefuse.com>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/themefuse/unyson/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -659,6 +659,7 @@ msgid "%s"
 msgstr "%s"
 
 #: ../framework/extensions/portfolio/class-fw-extension-portfolio.php:232
+#: ../framework-customizations/theme/options/autopark.php
 msgid "Gallery"
 msgstr "Галерея"
 
@@ -6177,7 +6178,7 @@ msgstr "Несколько вариантов с иконкой"
 
 #: ../framework-customizations/extensions/forms/includes/builder-items/iconed-radio/class-fw-option-type-form-builder-item-iconed-radio.php
 msgid "Single Choice With Icon"
-msgstr "Единственный вариант вариантов с иконкой"
+msgstr "Единственный вариант с иконкой"
 
 #: ../framework-customizations/extensions/forms/includes/builder-items/additional-block/class-fw-option-type-form-builder-item-additional-block.php
 msgid "Additional Block"
@@ -6190,3 +6191,64 @@ msgstr "Автопарк"
 #: ../framework-customizations/custom-settings/class-fw-settings-form-autopark.php
 msgid "Car"
 msgstr "Автомобиль"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero-slider/options.php
+msgid "Slides"
+msgstr "Cлайды"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero-slider/options.php
+#: ../framework-customizations/extensions/shortcodes/shortcodes/promo-1/options.php
+msgid "Add button"
+msgstr "Добавить кнопку"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero-slider/options.php
+msgid "Slide header"
+msgstr "Заголовок слайда"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero-slider/options.php
+msgid "Choose image for slide"
+msgstr "Выберите изображение для слайда"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero-slider/options.php
+msgid "Header"
+msgstr "Заголовок"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/promo-1/options.php
+msgid "Parallax on background"
+msgstr "Параллакс на фоне"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/promo-1/options.php
+msgid "Add parallax effect for the background image"
+msgstr "Добавить параллакс еффект для фонновой картинки"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/promo-1/options.php
+msgid "Choose image"
+msgstr "Выберите картинку"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero/options.php
+msgid "Block size"
+msgstr "Размер блока"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero/options.php
+msgid "Small"
+msgstr "Маленький"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero/options.php
+msgid "Medium"
+msgstr "Средний"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/hero/options.php
+msgid "Large"
+msgstr "Большой"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/advantages/options.php
+msgid "Section header"
+msgstr "Заголовок секции"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/advantages/options.php
+msgid "Advantages"
+msgstr "Преимущества"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/advantages/options.php
+msgid "Choose icon"
+msgstr "Выберите иконку"

@@ -2,15 +2,16 @@ module('gallery', function() {
     
     var $container = $(this),
         $top = $container.find('*[data-js=top]'),
-        $thumbs = $container.find('*[data-js=thumbs]');
+        $thumbs = $container.find('*[data-js=thumbs]'),
+        galleryTop, galleryThumbs;
     
     
     function init(){
-        var galleryTop = new Swiper($top, {
+        galleryTop = new Swiper($top, {
             spaceBetween: 10
         });
 
-        var galleryThumbs = new Swiper($thumbs, {
+        galleryThumbs = new Swiper($thumbs, {
             spaceBetween: 10,
             centeredSlides: true,
             slidesPerView: 'auto',
@@ -18,10 +19,25 @@ module('gallery', function() {
             slideToClickedSlide: true
         });
 
-        galleryTop.params.control = galleryThumbs;
-        galleryThumbs.params.control = galleryTop;
+        galleryTop.controller.control = galleryThumbs;
+        galleryThumbs.controller.control = galleryTop;
+
+        if ( $container.closest('[data-js=modal]').length ) {
+            $container.closest('[data-js=modal]').on('modal.opened', function () {
+                update();
+            });
+        }
     }
 
     init();
+
+    function update() {
+        galleryTop.update();
+        galleryThumbs.update();
+    }
+
+    return {
+        update: update
+    }
 });
 

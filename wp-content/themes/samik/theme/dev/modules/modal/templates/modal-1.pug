@@ -1,10 +1,15 @@
-.modal(data-js="modal" id="modal-1").-top
+.modal(data-js="modal" id="modal-1").-top.-gallery
     button.modal_close-btn(data-js="closeBtn")
     .modal_body
-        +promo({
-            type: 'light',
-            title: 'Light promo block',
-            content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p>',
-            btn_text: 'Read more'
-        })
+        +gallery([
+            'img/tmp/photo-1.jpg',
+            'img/tmp/photo-2.jpg',
+            'img/tmp/photo-3.jpg',
+            'img/tmp/photo-4.jpg',
+            'img/tmp/photo-5.jpg',
+            'img/tmp/photo-6.jpg',
+            'img/tmp/photo-7.jpg',
+            'img/tmp/photo-8.jpg',
+            'img/tmp/photo-9.jpg'
+        ])
 

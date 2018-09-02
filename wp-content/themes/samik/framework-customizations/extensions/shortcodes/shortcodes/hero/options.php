@@ -6,33 +6,33 @@ $options = array(
     'title' => array(
         'type'  => 'text',
         'value' => '',
-        'label' => __('Заголовок', '{domain}')
+        'label' => __('Header', 'samik')
     ),
     'text_content' => array(
-        'label' => __('Описание', '{domain}'),
+        'label' => __('Description', 'samik'),
         'type' => 'wp-editor',
         'teeny' => true,
         'reinit' => true,
-        'desc' => __('Описание', '{domain}'),
+        'desc' => __('Description', 'samik'),
     ),
     'bg_image' => array(
         'type' => 'upload',
-        'label' => __('Изображение', '{domain}'),
-        'desc'  => __('Выберите изображение', '{domain}'),
+        'label' => __('Image', 'samik'),
+        'desc'  => __('Choose image', 'samik'),
     ),
     'button' => array(
         'type'  => 'addable-box',
         'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-        'label' => __('Кнопка', '{domain}'),
-        'desc'  => __('Добавить кнопку', '{domain}'),
+        'label' => __('Button', 'samik'),
+        'desc'  => __('Add button', 'samik'),
         'box-options' => array(
             'button_label' => array(
                 'type' => 'text',
-                'label' => __('Текст', '{domain}'),
+                'label' => __('Text', 'samik'),
             ),
             'attrs' => array(
                 'type' => 'textarea',
-                'label' => __('Attr', '{domain}'),
+                'label' => __('Attr', 'samik'),
             ),
         ),
         'template' => '{{- button_label }}', // box title
@@ -45,11 +45,11 @@ $options = array(
         'type'  => 'select',
         'value' => 'medium',
         'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-        'label' => __('Размер блока', '{domain}'),
+        'label' => __('Block size', 'samik'),
         'choices' => array(
-            'small' => __('Маленький', '{domain}'),
-            'medium' => __('Средний', '{domain}'),
-            'large' => __('Большой', '{domain}'),
+            'small' => __('Small', 'samik'),
+            'medium' => __('Medium', 'samik'),
+            'large' => __('Large', 'samik'),
         ),
         /**
          * Allow save not existing choices
@@ -61,8 +61,8 @@ $options = array(
         'type'  => 'checkbox',
         'value' => true, // checked/unchecked
         'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-        'label' => __('Параллакс на фоне', '{domain}'),
-        'desc'  => __('Добавить параллакс еффект для фонновой картинки', '{domain}'),
-        'text'  => __('Да', '{domain}'),
+        'label' => __('Parallax on background', 'samik'),
+        'desc'  => __('Add parallax effect for the background image', 'samik'),
+        'text'  => __('Yes', 'samik'),
     )
 );

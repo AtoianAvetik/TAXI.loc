@@ -4,19 +4,19 @@
 
 $options = array(
     'title' => array(
-        'label' => __('Заголовок секции', '{domain}'),
+        'label' => __('Section header', 'samik'),
         'type' => 'text',
         'value' => '',
-        'desc' => __('Заголовок секции', '{domain}'),
+        'desc' => __('Section header', 'samik'),
     ),
 	'advantages' => array(
        'type' => 'addable-popup',
-       'label' => __('Преимущества', '{domain}'),
+       'label' => __('Advantages', 'samik'),
        'template' => '{{- title }}',
        'popup-title' => null,
        'size' => 'medium', // small, medium, large
        'limit' => 0, // limit the number of popup`s that can be added
-       'add-button-text' => __('Добавить', '{domain}'),
+       'add-button-text' => __('Add', 'samik'),
        'sortable' => true,
        'popup-options' => array(
            'icon' => array(
@@ -24,21 +24,21 @@ $options = array(
                'preview_size' => 'medium',
                'modal_size' => 'medium',
                'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-               'label' => __('Иконка', '{domain}'),
-               'desc'  => __('Выберите иконку', '{domain}'),
+               'label' => __('Icon', 'samik'),
+               'desc'  => __('Choose icon', 'samik'),
            ),
            'title' => array(
-               'label' => __('Заголовок', '{domain}'),
+               'label' => __('Header', 'samik'),
                'type' => 'text',
                'value' => '',
-               'desc' => __('Заголовок', '{domain}'),
+               'desc' => __('Header', 'samik'),
            ),
            'text_content' => array(
-               'label' => __('Описание', '{domain}'),
+               'label' => __('Description', 'samik'),
                'type' => 'wp-editor',
                'teeny' => true,
                'reinit' => true,
-               'desc' => __('Описание', '{domain}'),
+               'desc' => __('Description', 'samik'),
            )
        ),
    )
