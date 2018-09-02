@@ -41,12 +41,12 @@ switch ($options['layout']) {
                             <?php
                                 $choice['attr']['id'] = 'rand-'. fw_unique_increment();
                                 $choice_attrs = $choice['attr'];
-                                $choice_options = $choice['options']; ?>
+                                $choice_options = $choice['options']; fw_print($choice_options)?>
                             <div class="form-icon">
                                 <input class="form-icon-input" <?php echo fw_attr_to_html($choice_attrs) ?> />
-                                <label class="form-icon-label tipso tipso_style <?php echo $choice_options['icon']['icon-class-without-root'] ?>"
-                                       <?php if ($choice_options['hint-title']) { ?>data-tipso-title="<?php echo $choice_options['hint-title']; } ?>"
-                                       <?php if ($choice_options['hint-content']) { ?>data-tipso="<?php echo $choice_options['hint-content']; } ?>"
+                                <label class="form-icon-label <?php if ( ! empty( $choice_options['hint-title'] ) || ! empty( $choice_options['hint-content'] ) ) { ?>tipso tipso_style<?php } ?> <?php echo $choice_options['icon']['icon-class-without-root'] ?>"
+                                       <?php if ( ! empty( $choice_options['hint-title'] ) ) { ?>data-tipso-title="<?php echo $choice_options['hint-title']; } ?>"
+                                       <?php if ( ! empty( $choice_options['hint-content'] ) ) { ?>data-tipso="<?php echo $choice_options['hint-content']; } ?>"
                                        for="<?php echo esc_attr($choice_attrs['id']) ?>"></label>
                             </div>
                             <?php if (!(++$counter % $choices_per_column)): ?>
@@ -59,11 +59,12 @@ switch ($options['layout']) {
                             $choice['attr']['id'] = 'rand-'. fw_unique_increment();
                             $choice_attrs = $choice['attr'];
                             $choice_options = $choice['options']; ?>
+
                             <div class="form-icon">
                                 <input class="form-icon-input" <?php echo fw_attr_to_html($choice_attrs) ?> />
-                                <label class="form-icon-label tipso tipso_style <?php echo $choice_options['icon']['icon-class-without-root'] ?>"
-                                       <?php if ($choice_options['hint-title']) { ?>data-tipso-title="<?php echo $choice_options['hint-title']; } ?>"
-                                       <?php if ($choice_options['hint-content']) { ?>data-tipso="<?php echo $choice_options['hint-content']; } ?>"
+                                <label class="form-icon-label <?php if ( ! empty( $choice_options['hint-title'] ) || ! empty( $choice_options['hint-content'] ) ) { ?>tipso tipso_style<?php } ?> <?php echo $choice_options['icon']['icon-class-without-root'] ?>"
+                                       <?php if ( ! empty( $choice_options['hint-title'] ) ) { ?>data-tipso-title="<?php echo $choice_options['hint-title']; } ?>"
+                                       <?php if ( ! empty( $choice_options['hint-content'] ) ) { ?>data-tipso="<?php echo $choice_options['hint-content']; } ?>"
                                        for="<?php echo esc_attr($choice_attrs['id']) ?>"></label>
                             </div>
                         <?php endforeach; ?>

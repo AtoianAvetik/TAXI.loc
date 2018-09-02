@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unyson\n"
 "POT-Creation-Date: 2016-02-02 15:48+0300\n"
-"PO-Revision-Date: 2018-09-02 18:59+0300\n"
+"PO-Revision-Date: 2018-09-02 19:24+0300\n"
 "Last-Translator: moldcraft <hello@themefuse.com>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/themefuse/unyson/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -6293,6 +6293,22 @@ msgstr "Добавить дополнительный раскрывающийс
 msgid "Add an Section"
 msgstr "Добавить секцию"
 
+#: ../framework-customizations/extensions/forms/includes/builder-items/card-section/class-fw-option-type-form-builder-item-card-section.php
+msgid "Section type"
+msgstr "Тип секции"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/card-section/class-fw-option-type-form-builder-item-card-section.php
+msgid "Choose section type(color of title left border will be different)"
+msgstr "Выберите тип секции(цвет левой границы заголовка будет отличаться)"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/card-section/class-fw-option-type-form-builder-item-card-section.php
+msgid "Main"
+msgstr "Главный"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/card-section/class-fw-option-type-form-builder-item-card-section.php
+msgid "Enter section title (it will be displayed on the web site)"
+msgstr "Введите заголовок секции (он будет отображаться на веб-сайте)"
+
 #: ../framework-customizations/extensions/forms/includes/builder-items/date-picker/class-fw-option-type-form-builder-item-date-picker.php
 msgid "Add an Date picker field"
 msgstr "Добавить поле выбора даты"
@@ -6308,3 +6324,26 @@ msgstr "Добавить поле единственного варианта с
 #: ../framework-customizations/extensions/forms/includes/builder-items/time-picker/class-fw-option-type-form-builder-item-time-picker.php
 msgid "Add an Time picker field"
 msgstr "Добавить поле выбора времени"
+
+#: ../framework-customizations/extensions/forms/form-builder/items/radio/options/options.php
+msgid "Checked variant"
+msgstr "Выбранный вариант"
+
+#: ../framework-customizations/extensions/forms/form-builder/items/radio/options/options.php
+msgid "Set index of variant, which must be checked on load"
+msgstr "Установить индекс варианта, который необходимо выбрать при загрузке"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/iconed-radio/class-fw-option-type-form-builder-item-iconed-radio.php
+#: ../framework-customizations/extensions/forms/includes/builder-items/iconed-checkboxes/class-fw-option-type-form-builder-item-iconed-checkboxes.php
+msgid "Hint title"
+msgstr "Заголовок подсказки"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/iconed-radio/class-fw-option-type-form-builder-item-iconed-radio.php
+#: ../framework-customizations/extensions/forms/includes/builder-items/iconed-checkboxes/class-fw-option-type-form-builder-item-iconed-checkboxes.php
+msgid "Hint content"
+msgstr "Текст подсказки"
+
+#: ../framework-customizations/extensions/forms/includes/builder-items/iconed-radio/class-fw-option-type-form-builder-item-iconed-radio.php
+#: ../framework-customizations/extensions/forms/includes/builder-items/iconed-checkboxes/class-fw-option-type-form-builder-item-iconed-checkboxes.php
+msgid "Change Icon"
+msgstr "Изменить иконку"

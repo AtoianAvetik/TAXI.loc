@@ -59,6 +59,7 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Radio extends FW_Option_Type_Form_
                     'edit_label'      => __( 'Edit Label', 'samik' ),
                     'x_more'          => __( '{x} More', 'samik' ),
                     'close'           => __( 'Close', 'samik' ),
+                    'edit_icon_label' => __( 'Change Icon', 'samik' ),
                 ),
                 'options'  => $this->get_options(),
                 'defaults' => array(
@@ -137,10 +138,16 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Radio extends FW_Option_Type_Form_
                                             'type'    => 'group',
                                             'options' => array(
                                                 array(
-                                                    'hint-title' => array( 'type' => 'text' ),
+                                                    'hint-title' => array(
+                                                        'type' => 'text',
+                                                        'label' => __('Hint title', 'samik'),
+                                                    ),
                                                 ),
                                                 array(
-                                                    'hint-content' => array( 'type' => 'text' ),
+                                                    'hint-content' => array(
+                                                        'type' => 'text',
+                                                        'label' => __('Hint content', 'samik'),
+                                                    ),
                                                 ),
                                             )
                                         )

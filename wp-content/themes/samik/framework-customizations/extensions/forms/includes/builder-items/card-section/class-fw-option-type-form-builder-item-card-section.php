@@ -99,8 +99,8 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
                             'header-border-color' => array(
                                 'type'  => 'select',
                                 'value' => '-default',
-                                'label' => __('Title border color', 'samik'),
-                                'help'  => __('Title border color', 'samik'),
+                                'label' => __('Section type', 'samik'),
+                                'help'  => __('Choose section type(color of title left border will be different)', 'samik'),
                                 'choices' => array(
                                     '-primary' => array(
                                         'text' => __('Main', 'samik'),
