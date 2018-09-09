@@ -12,7 +12,7 @@ module('map', function() {
         lat = $map.data('lat'),
         lng = $map.data('lng'),
         googleMap,
-        markerImage = 'img/elements/map-marker.png';
+        markerImage = '../wp-content/themes/samik/theme/build/img/elements/map-marker.png';
 
     function createMap() {
         googleMap = new google.maps.Map($map[0], {

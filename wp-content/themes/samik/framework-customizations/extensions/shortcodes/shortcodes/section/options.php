@@ -5,12 +5,38 @@
 $options = array(
 	'is_fullwidth' => array(
 		'label'        => __('Full Width', 'samik'),
+        'value'        => 'yes',
 		'type'         => 'switch',
+        'left-choice' => array(
+            'value' => 'yes',
+            'label' => __('Yes', 'samik'),
+        ),
+        'right-choice' => array(
+            'value' => 'no',
+            'label' => __('No', 'samik'),
+        ),
 	),
 	'view_name' => array(
         'label'        => __('Section name', 'samik'),
         'type'         => 'text',
     ),
+	'content_heading' => array(
+        'label'        => __('Content heading', 'samik'),
+        'type'         => 'text',
+    ),
+	'gaps' => array(
+        'label'        => __('Top and bottom indents', 'samik'),
+        'value'        => 'no',
+        'type'         => 'switch',
+        'left-choice' => array(
+            'value' => 'yes',
+            'label' => __('Yes', 'samik'),
+        ),
+        'right-choice' => array(
+            'value' => 'no',
+            'label' => __('No', 'samik'),
+        ),
+	),
 	'custom_class' => array(
 		'label'        => __('Custom class', 'samik'),
 		'desc'  => __('Insert custom class for section', 'samik'),

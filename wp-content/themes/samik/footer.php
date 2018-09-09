@@ -93,28 +93,18 @@
         </div>
     </div>
     <div class="feedback" data-module="feedback">
-        <button class="feedback-launch-button btn-pure feedback-hide" data-js="expandBtn"><i class="icon-email"></i><span>Свяжитесь с Нами!</span></button>
+        <button class="feedback-launch-button btn-pure feedback-hide" data-js="expandBtn"><i class="icon-email"></i><span><?php echo get_option('forms_fw_settings_form')['form-2']['form-title'] ?></span></button>
         <div class="feedback-container feedback-hide" data-js="container">
             <div class="feedback-top-bar">
-                <div class="feedback-top-bar_text heading">Свяжитесь с Нами!</div>
+                <div class="feedback-top-bar_text heading"><?php echo get_option('forms_fw_settings_form')['form-2']['form-title'] ?></div>
                 <div class="feedback-top-bar_button" data-js="collapseBtn"><i class="icon-arrow-down"></i></div>
             </div>
             <div class="feedback-conversation-container">
                 <div class="feedback-form-container">
                     <form class="feedback-form">
-                        <div class="form-group float-label">
-                            <input class="form-control -wide" type="text" name="userName" id="userName" required>
-                            <label class="form-control-placeholder" for="userName">Введите Ваше имя</label>
-                        </div>
-                        <div class="form-group float-label">
-                            <input class="form-control -wide" type="text" name="userEmail" id="userEmail" required>
-                            <label class="form-control-placeholder" for="userEmail">Введите Ваш email</label>
-                        </div>
-                        <div class="form-group float-label">
-                            <textarea class="form-control -textarea -wide" name="userNote" id="userNote" placeholder="Напишите то что думаете" rows="5"></textarea>
-                        </div>
-                        <p class="error">Вы должны заполнить все поля и указать действительный адрес электронной почты</p>
-                        <button class="btn-primary -wide">Отправить</button>
+                        <?php
+                            echo do_shortcode( fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->render(get_option('forms_fw_settings_form')['form-2'] ) );
+                        ?>
                     </form>
                 </div>
             </div>
@@ -127,7 +117,8 @@
         </div>
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Mz1aKebyyOWgKLGPkg1KioLdFA9ig2Y"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Mz1aKebyyOWgKLGPkg1KioLdFA9ig2Y&callback=module.mapInit" type="text/javascript"></script>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

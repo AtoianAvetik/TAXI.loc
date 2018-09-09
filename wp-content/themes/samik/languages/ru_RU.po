@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unyson\n"
 "POT-Creation-Date: 2016-02-02 15:48+0300\n"
-"PO-Revision-Date: 2018-09-02 20:16+0300\n"
+"PO-Revision-Date: 2018-09-09 06:26+0300\n"
 "Last-Translator: moldcraft <hello@themefuse.com>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/themefuse/unyson/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -6359,3 +6359,63 @@ msgstr "Блоки с картинкой и текстом"
 #: ../framework-customizations/extensions/shortcodes/shortcodes/cards/config.php
 msgid "Section blocks with images and texts"
 msgstr "Секция блоков с картинкой и текстом"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/section/options.php
+msgid "Section name"
+msgstr "Название секции"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/section/options.php
+msgid "Top and bottom indents"
+msgstr "Верхний и нижний отступы"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/section/options.php
+msgid "Custom class"
+msgstr "Пользовательский класс"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/section/options.php
+msgid "Insert custom class for section"
+msgstr "Добавьте пользовательский класс секции"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/section/options.php
+msgid "Section ID"
+msgstr "ID секции"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/custom-map/config.php
+msgid "Custom map"
+msgstr "Пользовательская карта"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/custom-map/config.php
+msgid "Find a location by searching or select on the map"
+msgstr "Найдите местоположение с помощью поиска или выберите на карте"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/text-card/options.php
+msgid "Text"
+msgstr "Текст"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/text-card/options.php
+msgid "Text to be displayed in the block"
+msgstr "Текст который будет отображаться в блоке"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/text-card/options.php
+msgid "Header to be displayed in the block"
+msgstr "Заголовок который будет отображаться в блоке"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/text-card/config.php
+msgid "White text block"
+msgstr "Белый текстовый блок"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/text-card/config.php
+msgid "White text block with title"
+msgstr "Белый текстовый блок с заголовком"
+
+#: ../framework-customizations/extensions/shortcodes/shortcodes/section/options.php
+msgid "Content heading"
+msgstr "Заголовок контента"
+
+#: ../framework-customizations/extensions/forms/form-builder/items/text/options/options.php
+msgid "Float label"
+msgstr "Плавающий ярлык"
+
+#: ../framework-customizations/extensions/forms/form-builder/items/text/options/options.php
+msgid "Read only"
+msgstr "Только чтение"
