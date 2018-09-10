@@ -10,11 +10,21 @@ $options = array(
             'form-1' => array(
                 'type'  => 'multi',
                 'inner-options' => array(
-                    'title' => array(
-                        'type'  => 'hidden',
-                        'value' => 'Главная форма заказа'
+                    'g1' => array(
+                        'type' => 'group',
+                        'options' => array(
+                            'title' => array(
+                                'type'  => 'hidden',
+                                'value' => 'Главная форма заказа'
+                            )
+                        )
                     ),
-                    fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->get_options()
+                    'g2' => array(
+                        'type' => 'group',
+                        'options' => array(
+                            fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->get_options()
+                        ),
+                    ),
                 )
             ),
         )
@@ -26,11 +36,21 @@ $options = array(
             'form-2' => array(
                 'type'  => 'multi',
                 'inner-options' => array(
-                    'title' => array(
-                        'type'  => 'hidden',
-                        'value' => 'Форма обратной связи'
+                    'g1' => array(
+                        'type' => 'group',
+                        'options' => array(
+                            'title' => array(
+                                'type'  => 'hidden',
+                                'value' => 'Форма обратной связи'
+                            ),
+                        )
                     ),
-                    fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->get_options()
+                    'g2' => array(
+                        'type' => 'group',
+                        'options' => array(
+                            fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->get_options()
+                        ),
+                    ),
                 )
             ),
         )
@@ -42,11 +62,21 @@ $options = array(
             'form-3' => array(
                 'type'  => 'multi',
                 'inner-options' => array(
-                    'title' => array(
-                        'type'  => 'hidden',
-                        'value' => 'Форма заказа звонка'
+                    'g1' => array(
+                        'type' => 'group',
+                        'options' => array(
+                            'title' => array(
+                                'type'  => 'hidden',
+                                'value' => 'Форма заказа звонка'
+                            ),
+                        )
                     ),
-                    fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->get_options()
+                    'g2' => array(
+                        'type' => 'group',
+                        'options' => array(
+                            fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->get_options()
+                        ),
+                    ),
                 )
             ),
         )
