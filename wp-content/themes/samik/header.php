@@ -74,7 +74,7 @@
                             <div class="contact-box"><i class="icon icon-phone-call"></i>
                                 <dl>
                                     <dt>Позвоните Нам:</dt>
-                                    <dd></dd><a href="callto:#">+7(978) xxx xx xx</a>
+                                    <dd></dd><a href="callto:<?php echo fw_get_db_settings_option('phonenumber'); ?>"><?php echo fw_get_db_settings_option('phonenumber'); ?></a>
                                 </dl>
                             </div>
                         </div>

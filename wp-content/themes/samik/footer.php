@@ -25,7 +25,7 @@
                     <div class="contact-box"><i class="icon thin-icon-phone-call"></i>
                         <dl>
                             <dt>Позвоните Нам:</dt>
-                            <dd></dd><a href="callto:#">+7(978) xxx xx xx</a>
+                            <dd></dd><a href="callto:<?php echo fw_get_db_settings_option('phonenumber'); ?>"><?php echo fw_get_db_settings_option('phonenumber'); ?></a>
                         </dl>
                     </div>
                 </div>
@@ -81,13 +81,11 @@
             <div class="modal -top" data-js="modal" id="modal-callback">
                 <button class="modal_close-btn" data-js="closeBtn"></button>
                 <div class="modal_body">
-                    <section class="promo" style="background-image: url(undefined)">
-                        <div class="promo-container container -narrow" style="color:undefined;"><span class="promo_title">Light promo block</span>
-                            <div class="promo_content text-content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis eaque earum est ex exercitationem fugit, illo itaque nisi nostrum possimus quis recusandae repellat suscipit tempore vero vitae voluptates.</p></div>
-                            <div class="promo_btn-block"><a class="promo_btn" href="#">Read more</a>
-                            </div>
-                        </div>
-                    </section>
+                    <div class="callback-form">
+                        <?php
+                            echo do_shortcode( fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->render(get_option('forms_fw_settings_form')['form-3'] ) );
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,10 +99,11 @@
             </div>
             <div class="feedback-conversation-container">
                 <div class="feedback-form-container">
+                    <div class="feedback-form">
                         <?php
                             echo do_shortcode( fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->render(get_option('forms_fw_settings_form')['form-2'] ) );
                         ?>
-
+                    </div>
                 </div>
             </div>
         </div>
