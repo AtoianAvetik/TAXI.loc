@@ -2,7 +2,6 @@ module.exports = {
     libs: [
         "node_modules/jquery/dist/jquery.js",
         "node_modules/swiper/dist/js/swiper.min.js",
-        "node_modules/select2/dist/js/select2.min.js",
         "node_modules/highlightjs/highlight.pack.js",
         "node_modules/jquery-validation/dist/jquery.validate.js",
         "node_modules/wickedpicker/dist/wickedpicker.min.js",
@@ -13,12 +12,13 @@ module.exports = {
         "node_modules/tipso/src/tipso.min.js",
         "dev/js/plugins/masking-input.js",
         "node_modules/filterizr/dist/jquery.filterizr.min.js",
-		"node_modules/select2/dist/js/select2.min.js"
+		"node_modules/select2/dist/js/select2.js"
     ],
     main: [
         "dev/js/core/jquery.snippets.js",
         "dev/js/core/module.js",
         "dev/js/core/media.js",
+        "dev/js/core/main.js",
         "dev/modules/modal/modal.js",
 		"dev/modules/typography/typography.js",
 		"dev/modules/tabs/tabs.js",

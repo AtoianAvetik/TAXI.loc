@@ -29,7 +29,7 @@
                     <div class="row -around no-gutters navbar-inner">
                         <div class="navbar_block navbar_panel">
                             <div class="logo logo-container"><a class="logo_link" href="/"><img src="<?php echo fw_get_db_settings_option('logo')['url']; ?>" alt=""></a>
-                                <div class="logo-text"><span class="logo-label">24/7</span><span class="logo-sub-label">сервис вызова авто</span></div>
+                                <div class="logo-text"><span class="logo-label"><?php echo get_bloginfo('name');?></span><span class="logo-sub-label"><?php echo get_bloginfo('description');?></span></div>
                             </div>
                             <button class="menu-btn btn-pure"><span class="hamburger"><span class="hamburger_box"><span class="hamburger_inner"></span></span></span>
                             </button>
@@ -66,8 +66,8 @@
                 <div class="container">
                     <div class="row -around no-gutters navbar-inner">
                         <div class="navbar_block navbar_panel">
-                            <div class="logo logo-container"><a class="logo_link" href="/"><img src="img/logo/logo.png" alt=""></a>
-                                <div class="logo-text"><span class="logo-label">24/7</span><span class="logo-sub-label">сервис вызова авто</span></div>
+                            <div class="logo logo-container"><a class="logo_link" href="/"><img src="<?php echo fw_get_db_settings_option('logo')['url']; ?>" alt=""></a>
+                                <div class="logo-text"><span class="logo-label"><?php echo get_bloginfo('name');?></span><span class="logo-sub-label"><?php echo get_bloginfo('description');?></span></div>
                             </div>
                         </div>
                         <div class="navbar_block navbar_contact-box-wrap">

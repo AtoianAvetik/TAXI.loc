@@ -19,31 +19,31 @@ body{
     }
 
     &.admin-bar {
-        .wrapper {
-            padding-top: $header-height + 32px;
+        //.wrapper {
+        //    padding-top: $header-height + 32px;
+        //
+        //    @include media(782) {
+        //        padding-top: $header-height + 46px;
+        //    }
+        //}
 
-            @include media(782) {
-                padding-top: $header-height + 46px;
-            }
-        }
-
-        .navbar {
-            top: 32px;
-
-            @include media(782) {
-                top: 46px;
-            }
-        }
-
-        .menu {
-            @include media(md) {
-                top: $header-height + 32px;
-            }
-
-            @include media(782) {
-                top: $header-height + 46px;
-            }
-        }
+        //.navbar {
+        //    top: 32px;
+        //
+        //    @include media(782) {
+        //        top: 46px;
+        //    }
+        //}
+        //
+        //.menu {
+        //    @include media(md) {
+        //        top: $header-height + 32px;
+        //    }
+        //
+        //    @include media(782) {
+        //        top: $header-height + 46px;
+        //    }
+        //}
     }
 
     #wpadminbar {
@@ -105,7 +105,7 @@ body{
     &.-narrow{
         width: $container-width / 2;
     }
-    
+
     &.-full{
         width: 100%;
     }

@@ -1,0 +1,42 @@
+.fw-flash-messages {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+
+    .fw-flash-type-error {
+        color: #fff !important;
+        padding: 20px;
+        background: #e24f4f;
+        width: 100%;
+    }
+
+    .fw-flash-type-warning {
+        color: #000 !important;
+        padding: 20px;
+        background: #eae53e;
+        width: 100%;
+    }
+
+    .fw-flash-type-success {
+        color: #fff !important;
+        padding: 20px;
+        background: #66bf6d;
+        width: 100%;
+    }
+
+    .fw-flash-type-info {
+        color: #fff !important;
+        padding: 20px;
+        background: #3ea3ea;
+        width: 100%;
+    }
+
+    .fw-flash-message {
+
+    }
+}

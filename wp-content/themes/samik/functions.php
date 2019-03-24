@@ -171,6 +171,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/tgm/samik.php';
 
+/**
+ * Load static php.
+ */
+require get_template_directory() . '/inc/static.php';
+
 
 /**
  * Custom Settings.

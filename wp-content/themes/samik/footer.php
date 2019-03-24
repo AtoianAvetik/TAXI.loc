@@ -21,7 +21,7 @@
                         <div class="logo-text"><span class="logo-label">24/7</span><span class="logo-sub-label">сервис вызова авто</span></div>
                     </div>
                 </div>
-                <div class="footer_block col-3 col-md-6 col-xs-12">
+                <div class="footer_block col-6 col-md-6 col-xs-12">
                     <div class="contact-box"><i class="icon thin-icon-phone-call"></i>
                         <dl>
                             <dt>Позвоните Нам:</dt>
@@ -29,16 +29,16 @@
                         </dl>
                     </div>
                 </div>
-                <div class="footer_block col-4 col-md-6 col-xs-12">
-                    <section class="social-block">
-                        <ul class="social-block_list">
-                            <li><a class="social-link" href="/"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="social-link" href="/"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="social-link" href="/"><i class="fa fa-instagram"></i></a></li>
-                            <li><a class="social-link" href="/"><i class="fa fa-vk"></i></a></li>
-                        </ul>
-                    </section>
-                </div>
+<!--                <div class="footer_block col-4 col-md-6 col-xs-12">-->
+<!--                    <section class="social-block">-->
+<!--                        <ul class="social-block_list">-->
+<!--                            <li><a class="social-link" href="/"><i class="fa fa-twitter"></i></a></li>-->
+<!--                            <li><a class="social-link" href="/"><i class="fa fa-facebook"></i></a></li>-->
+<!--                            <li><a class="social-link" href="/"><i class="fa fa-instagram"></i></a></li>-->
+<!--                            <li><a class="social-link" href="/"><i class="fa fa-vk"></i></a></li>-->
+<!--                        </ul>-->
+<!--                    </section>-->
+<!--                </div>-->
             </div>
         </div>
         <div class="footer_bottom">
@@ -101,11 +101,10 @@
             </div>
             <div class="feedback-conversation-container">
                 <div class="feedback-form-container">
-                    <form class="feedback-form">
                         <?php
                             echo do_shortcode( fw()->extensions->get( 'shortcodes' )->get_shortcode( 'contact_form' )->render(get_option('forms_fw_settings_form')['form-2'] ) );
                         ?>
-                    </form>
+
                 </div>
             </div>
         </div>
