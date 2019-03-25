@@ -6,10 +6,23 @@
 
 ?>
 
-<table border="0" cellpadding="10">
+<table border="1" cellpadding="10" style="border-collapse: collapse;width: 100%;">
 	<tbody>
 	<?php foreach ($form_values as $shortcode => $form_value): ?>
 		<?php
+        $title = '';
+        $value = '';
+
+        if ($shortcode_to_item[$shortcode]['type'] === 'card-section') {
+            $title = $shortcode_to_item[$shortcode]['options']['title'];
+        ?>
+                </tbody>
+            </table>
+            <br>
+            <h3><?php echo $title?></h3>
+            <table border="1" cellpadding="10" style="border-collapse: collapse;width: 100%;">
+                <tbody>
+        <?php }
 
 		if ( ! isset( $shortcode_to_item[ $shortcode ] ) ) {
 			continue;
@@ -33,26 +46,52 @@
 
 				$value = implode(', ', $form_value);
 				break;
+			case 'iconed-checkboxes':
+				$title = ( isset( $item_options['label'] ) ) ? fw_htmlspecialchars($item_options['label']) : '';
+
+				if ( ! is_array( $form_value ) || empty( $form_value ) ) {
+					break;
+				}
+
+				$value = implode(', ', $form_value);
+				break;
 			case 'textarea':
-				$title = fw_htmlspecialchars($item_options['label']);
+				$title = ( isset( $item_options['label'] ) ) ? fw_htmlspecialchars($item_options['label']) : '';
 				$value = '<pre>'. fw_htmlspecialchars($form_value) .'</pre>';
 				break;
+			case 'additional-block':
+				$title = ( isset( $item_options['label'] ) ) ? fw_htmlspecialchars($item_options['label']) : '';
+                ?>
+                <tr>
+                    <td colspan="2" valign="top"><b><?php echo $title ?></b></td>
+<!--                    <td valign="top">--><?php //echo print_r($item_options, true) ?><!--</td>-->
+                </tr>
+                <?php
+                continue 2;
 			case 'recaptcha':
 				continue 2;
 			default:
-				$title = fw_htmlspecialchars($item_options['label']);
+				$title = ( isset( $item_options['label'] ) ) ? fw_htmlspecialchars($item_options['label']) : '';
 
 				if (is_array($form_value)) {
-					$value = '<pre>'. fw_htmlspecialchars( print_r($form_value, true) ) .'</pre>';
+                    $value .= '<pre>';
+                    foreach ($form_value as $array_value) {
+                        $value .= '<span style="display: block">'. fw_htmlspecialchars( print_r($array_value, true) ) .'</span>';
+                    }
+                    $value .= '</pre>';
 				} else {
 					$value = fw_htmlspecialchars( $form_value );
 				}
 		}
+		if (!empty($value) || !empty($title)) {
 		?>
-		<tr>
-			<td valign="top"><b><?php echo $title ?></b></td>
-			<td valign="top"><?php echo $value ?></td>
-		</tr>
+            <tr>
+                <td width="35%" valign="top"><b><?php echo $title ?></b></td>
+                <td valign="top"><?php echo $value ?></td>
+<!--                <td valign="top">--><?php //echo $item['type'] ?><!--</td>-->
+<!--                <td valign="top">--><?php //echo print_r($item_options, true) ?><!--</td>-->
+            </tr>
+        <?php } ?>
 	<?php endforeach; ?>
 	</tbody>
 </table>

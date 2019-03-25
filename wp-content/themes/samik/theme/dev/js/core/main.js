@@ -1,5 +1,5 @@
 $(function () {
     fwForm.initAjaxSubmit({
-        selector: 'form[data-fw-form-id][data-fw-ext-forms-type="contact-forms"]'
+        selector: '.callback-form form[data-fw-form-id][data-fw-ext-forms-type="contact-forms"],.feedback-form form[data-fw-form-id][data-fw-ext-forms-type="contact-forms"]'
     });
 });
