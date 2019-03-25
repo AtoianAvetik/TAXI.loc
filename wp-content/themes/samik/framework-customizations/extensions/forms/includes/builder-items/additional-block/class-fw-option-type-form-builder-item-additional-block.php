@@ -139,7 +139,7 @@ class FW_Option_Type_Form_Builder_Item_Additional_Block extends FW_Option_Type_F
 	 * {@inheritdoc}
 	 */
 	public function frontend_validate( array $item, $input_value ) {
-		return true;
+		return;
 	}
 
     public function render_items( array $items, array $input_values ) {
