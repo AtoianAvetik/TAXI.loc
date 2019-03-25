@@ -11,6 +11,6 @@ function fw_scripts() {
 }
 
 if (!is_admin()) {
-//    add_action( 'wp_enqueue_scripts', 'fw_scripts' );
+    add_action( 'wp_enqueue_scripts', 'fw_scripts' );
 }
 
