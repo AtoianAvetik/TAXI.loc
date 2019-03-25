@@ -140,7 +140,7 @@ class FW_Option_Type_Form_Builder_Item_Card_Section extends FW_Option_Type_Form_
 	 * {@inheritdoc}
 	 */
 	public function frontend_validate( array $item, $input_value ) {
-		return true;
+		return;
 	}
 
     public function render_items( array $items, array $input_values ) {
