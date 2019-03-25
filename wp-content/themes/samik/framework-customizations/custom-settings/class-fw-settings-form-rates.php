@@ -33,7 +33,7 @@ class FW_Settings_Form_Rates extends FW_Settings_Form {
         add_menu_page(
             __('Rates', 'samik'),
             __('Rates', 'samik'),
-            'manage_options',
+            'edit_posts',
             /** used in @see _action_admin_enqueue_scripts() */
             'rates',
             array($this, 'render'),

@@ -33,7 +33,7 @@ class FW_Settings_Form_Cities_List extends FW_Settings_Form {
         add_menu_page(
             __('Cities List', 'samik'),
             __('Cities List', 'samik'),
-            'manage_options',
+            'edit_posts',
             /** used in @see _action_admin_enqueue_scripts() */
             'cities-list',
             array($this, 'render'),

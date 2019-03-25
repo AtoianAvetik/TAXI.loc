@@ -33,7 +33,7 @@ class FW_Settings_Form_Autopark extends FW_Settings_Form {
         add_menu_page(
             __('Autopark', 'samik'),
             __('Autopark', 'samik'),
-            'manage_options',
+            'edit_posts',
             /** used in @see _action_admin_enqueue_scripts() */
             'autopark',
             array($this, 'render'),

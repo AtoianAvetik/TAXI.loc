@@ -37,7 +37,7 @@ class FW_Settings_Form_Forms extends FW_Settings_Form {
         add_menu_page(
             __('Forms', 'samik'),
             __('Forms', 'samik'),
-            'manage_options',
+            'edit_posts',
             /** used in @see _action_admin_enqueue_scripts() */
             'forms',
             array($this, 'render'),
