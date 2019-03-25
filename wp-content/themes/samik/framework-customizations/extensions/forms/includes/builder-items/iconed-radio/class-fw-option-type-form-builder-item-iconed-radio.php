@@ -114,6 +114,19 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Radio extends FW_Option_Type_Form_
                                             'type'    => 'group',
                                             'options' => array(
                                                 array(
+                                                    'value' => array(
+                                                        'type'  => 'text',
+                                                        'label' => __('Value', 'samik')
+                                                    ),
+                                                ),
+                                            ),
+                                        )
+                                    ),
+                                    array(
+                                        'g22' => array(
+                                            'type'    => 'group',
+                                            'options' => array(
+                                                array(
                                                     'icon' => array(
                                                         'type'  => 'icon-v2',
                                                         'preview_size' => 'medium',
@@ -134,7 +147,7 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Radio extends FW_Option_Type_Form_
                                         )
                                     ),
                                     array(
-                                        'g22' => array(
+                                        'g23' => array(
                                             'type'    => 'group',
                                             'options' => array(
                                                 array(
@@ -256,7 +269,7 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Radio extends FW_Option_Type_Form_
 				$attr = array(
 					'type'  => 'radio',
 					'name'  => $item['shortcode'],
-                    'value' => $choice['hint-title'],
+                    'value' => $choice['value'],
                     'checked' => $choice['checked']
 				);
 
@@ -312,9 +325,12 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Radio extends FW_Option_Type_Form_
 		}
 
 		// check if has not existing choices
-		if ( ! empty( $input_value ) && ! in_array( $input_value, $options['choices'] ) ) {
+		if ( ! empty( $input_value ) && 1 === array_filter( $options['choices'], function ($var) use($input_value){
+                return($var['value'] === $input_value);
+            } ) ) {
 			return $messages['not_existing_choice'];
 		}
+
 	}
 }
 

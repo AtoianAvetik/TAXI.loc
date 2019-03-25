@@ -114,6 +114,19 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
                                             'type'    => 'group',
                                             'options' => array(
                                                 array(
+                                                    'value' => array(
+                                                        'type'  => 'text',
+                                                        'label' => __('Value', 'samik')
+                                                    ),
+                                                ),
+                                            ),
+                                        )
+                                    ),
+                                    array(
+                                        'g22' => array(
+                                            'type'    => 'group',
+                                            'options' => array(
+                                                array(
                                                     'icon' => array(
                                                         'type'  => 'icon-v2',
                                                         'preview_size' => 'medium',
@@ -134,7 +147,7 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
                                         )
                                     ),
                                     array(
-                                        'g22' => array(
+                                        'g23' => array(
                                             'type'    => 'group',
                                             'options' => array(
                                                 array(
@@ -252,11 +265,11 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
 		{
 			$choices = array();
 
-			foreach ( $options['choices'] as $choice ) {
+			foreach ( $options['choices'] as $key=>$choice ) {
 				$attr = array(
 					'type'  => 'checkbox',
 					'name'  => $item['shortcode'] . '[]',
-					'value' => $choice['hint-title'],
+					'value' => $choice['value'],
                     'checked' => $choice['checked']
 				);
 
@@ -311,12 +324,21 @@ class FW_Option_Type_Form_Builder_Item_Iconed_Checkboxes extends FW_Option_Type_
 			return $messages['required'];
 		}
 
+        function compare_by_value($a, $b) {
+            if ($a['value']===$b)
+            {
+                return 0;
+            }
+            return -1;
+        }
+
 		// check if has not existing choices
-		if ( ! empty( $input_value ) && count( $input_value ) != count( array_intersect( $options['choices'],
-				$input_value ) )
+		if ( ! empty( $input_value ) && count( $input_value ) != count( array_uintersect($options['choices'], $input_value, 'compare_by_value') )
 		) {
 			return $messages['not_existing_choices'];
 		}
+
+
 	}
 }
 
