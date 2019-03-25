@@ -80,7 +80,7 @@
             } ?>
             <div class="modal -top" data-js="modal" id="modal-callback">
                 <button class="modal_close-btn" data-js="closeBtn"></button>
-                <div class="modal_heading"><?php echo get_option('forms_fw_settings_form')['form-2']['form-title'] ?></div>
+                <div class="modal_heading"><?php echo get_option('forms_fw_settings_form')['form-3']['form-title'] ?></div>
                 <div class="modal_body">
                     <div class="callback-form">
                         <?php
